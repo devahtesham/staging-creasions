@@ -1,0 +1,609 @@
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --font-poppins-regular: "Poppins", sans-serif;
+  --font-poppins-bold: "Poppins", sans-serif;
+  --font-domine: "Domine", sans-serif;
+  --font-domine-bold: "Domine", sans-serif;
+}
+
+html.lenis,
+html.lenis body {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain !important;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "poppins", sans-serif;
+}
+
+body {
+  font-family: "Domine", serif;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+html,
+body {
+  overflow-x: hidden !important;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: blue;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: white;
+}
+
+.Boardline-header {
+  position: absolute;
+  left: 0;
+  margin: auto;
+  right: 0;
+  top: 20px;
+}
+
+.Boardline-header a img {
+  height: 60px;
+  width: 270px;
+}
+
+section.Hero-banner {
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 950px;
+}
+
+.container {
+  max-width: 1170px !important;
+}
+
+.Hero-banner {
+  height: 800px !important;
+}
+
+.Hero-banner .text h5::after {
+  content: "";
+  color: #ffffff;
+  background-color: #fff;
+  height: 2px;
+  width: 45px;
+  top: 10px;
+  left: 2px;
+  position: absolute;
+}
+
+.Hero-banner .text h5 {
+  color: #ffffff;
+  font-size: 20px;
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 55px;
+  font-family: "Acumin Variable Concept";
+}
+
+.Hero-banner .text h1 {
+  font-size: 50px;
+  color: #ffffff;
+  font-weight: 600 !important;
+  font-family: "Poppins", serif;
+  line-height: 1.4em;
+}
+
+/* Section 1 */
+.Boardline-01 {
+  padding: 80px 0;
+  background-position: 100% 100%;
+}
+
+.Boardline-01 .text h3 {
+  font-size: 30px !important;
+  padding: 2px 0;
+}
+
+.text h3 {
+  color: #063349;
+  font-size: 25px;
+  font-weight: 500;
+  padding: 5px 0;
+}
+
+.Boardline-01 .text p {
+  max-width: 85%;
+  margin-bottom: 50px;
+  line-height: 1.7em;
+  padding-left: 40px;
+}
+
+.text p {
+  font-size: 18px !important;
+}
+
+.Boardline-01 .text p {
+  max-width: 90%;
+}
+
+.Boardline-01 .Tool-text {
+  display: flex;
+  align-items: center;
+}
+
+.Boardline-01 .Tool-text img {
+  width: 22% !important;
+}
+
+.Boardline-01 .Visit-text {
+  float: right;
+}
+
+.Boardline-01 .t-btn {
+  padding-left: 10px;
+  padding-top: 6px;
+  font-size: 22px;
+  margin-right: 80px;
+  color: #419f9a;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.Boardline-01 .t-btn i {
+  padding-left: 10px;
+}
+
+.Boardline-01 .t-btn:hover {
+  color: #000;
+}
+
+/* Section 2 */
+.Boardline-02 {
+  padding: 80px 0;
+}
+
+.Boardline-02 .text h2 {
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 45px;
+  margin-bottom: 40px;
+}
+
+.Boardline-02 .list-text h4 {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+
+.Boardline-02 .list-text ul li {
+  color: #fff;
+  list-style: none;
+  font-size: 16px;
+  font-weight: 300;
+  display: flex;
+  column-gap: 10px;
+  margin-bottom: 25px;
+  max-width: 80%;
+}
+
+.Boardline-02 .list-text ul li i {
+  margin-top: 3px;
+}
+
+.Boardline-02 .list-text ul {
+  padding: 0px;
+}
+
+.Boardline-02 .text-bottom {
+  padding-top: 30px;
+}
+
+.Boardline-02 .text-bottom h4 {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.Boardline-02 .text-bottom p {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 300;
+  max-width: 520px;
+}
+
+.Boardline-02 .text-down h4 {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.Boardline-02 .text-down p {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 300;
+  max-width: 520px;
+}
+
+.Boardline-02 .left-down h6 {
+  font-size: 12px;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.Boardline-02 .img-bottom img {
+  margin-top: 80px;
+  width: 100%;
+}
+
+.Boardline-02 img.mobile {
+  display: none;
+}
+
+/* Section 3 */
+.Boardline-03 {
+  padding: 80px 0;
+  text-align: center;
+  position: relative;
+}
+.Boardline-03 .text h3 {
+  font-size: 32px;
+  padding: 7px 0;
+  color: #00648c;
+  font-weight: 500;
+}
+
+
+/* Section 4 */
+.Boardline-04 {
+  padding: 70px 0px;
+}
+
+.Boardline-04 .text h3 {
+  font-size: 45px;
+  font-weight: 600;
+  color: #000000;
+}
+
+
+.Boardline-04 .text p {
+  font-size: 18px;
+  color: #000000;
+  font-weight: 400;
+  max-width: 770px;
+  line-height: 32px;
+}
+
+
+
+/* Section 5 */
+.Boardline-05 {
+  position: relative;
+}
+
+
+.Boardline-05 .img-text img {
+  width: 100%;
+}
+
+
+
+/* Section 6 */
+.Boardline-06 {
+  padding: 100px 0px 50px 0px;
+  background-color: #e5eff3;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.Boardline-06 .text h3 {
+  font-size: 45px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.Boardline-06 .text p {
+  font-size: 18px ;
+  color: #000000;
+  font-weight: 400;
+  max-width: 770px;
+  line-height: 32px;
+}
+
+
+
+/* Section 7 */
+.Boardline-07 {
+    background-color: #e4eef2;
+}
+.Boardline-07 .box-img img {
+    width: 100%;
+}
+img.mobile-img {
+    display: none !important;
+}
+
+
+
+/* Section 8 */
+.Boardline-08 {
+  padding: 80px 0px;
+}
+.Boardline-08 .text {
+  padding-left: 50px;
+}
+
+.Boardline-08 .text h3 {
+  color: #000000;
+  font-size: 45px;
+  font-weight: 600;
+  padding: 5px 0;
+}
+
+.Boardline-08 .text p {
+  font-size: 18px;
+  line-height: 30px;
+  color: #000000;
+  max-width: 750px;
+}
+
+
+.Boardline-08 .img-box img {
+  width: 90% !important;
+  display: block;
+  margin: auto;
+}
+
+.Boardline-08 .img-box-1 img {
+  width: 90% !important;
+  display: block;
+  margin: auto;
+}
+
+
+
+
+
+/* Section 9 */
+.Boardline-09 {
+    padding: 80px 0;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.Boardline-09 .text h2 {
+    font-size: 45px;
+    font-weight: 500;
+    color: white;
+}
+
+.Boardline-09 .text-img-box {
+    margin: 40px 0 20px;
+}
+
+.Boardline-09 .two-text {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.Boardline-09 span {
+    color: rgba(255, 255, 255, 0);
+    border-top: 1px solid white;
+    height: 10px;
+}
+
+.Boardline-09 .text-img-box h6 {
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+}
+
+.Boardline-09 .text-img-box h4 {
+    font-size: 22px;
+    color: white;
+    font-weight: 500;
+}
+
+.Boardline-09 .text-img-box p {
+    color: white;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.Boardline-09 .text-img-box-2 {
+    padding-left: 50px;
+    margin: 40px 0 20px;
+
+}
+
+.Boardline-09 .img-box img, .Boardline-09 .text-img-box-2 img {
+    width: 100%;
+    height: 500px;
+}
+
+.Boardline-09 .text-img-box-2 h6 {
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+}
+
+.Boardline-09 .text-img-box-2 h4 {
+    font-size: 22px;
+    color: white;
+    font-weight: 500;
+}
+
+
+.Boardline-09 .text-img-box-2 p {
+    color: white;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+
+@media only screen and (max-width: 1024px) {
+
+  .Boardline-03 img {
+    width: 100%;
+    text-align: center;
+    margin-right: -20px;
+  }
+
+  .Boardline-04 {
+    padding: 20px 0;
+  }
+
+  .Boardline-09 .text-img-box-2 {
+    padding-left: 0;
+  }
+
+  .Boardline-09 .img-box img,
+  .Boardline-09 .text-img-box-2 img {
+    height: 400px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+
+  .Boardline-01 .text h3 {
+    font-size: 25px !important;
+  }
+
+  .Boardline-02 {
+    text-align: center;
+  }
+
+  .Boardline-02 .list-text ul li,
+  .Boardline-02 .text-bottom p,
+  .Boardline-02 .text-down p {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .Boardline-04,
+  .Boardline-06,
+  .Boardline-09 {
+    text-align: center;
+  }
+
+  .Boardline-08 .text {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  br {
+    display: none;
+  }
+
+  .Boardline-09 .two-text {
+    justify-content: center;
+  }
+
+  .Boardline-09 .img-box img,
+  .Boardline-09 .text-img-box-2 img {
+    height: 300px;
+    object-fit: cover;
+  }
+
+}
+
+@media only screen and (max-width: 767px) {
+
+  .Hero-banner .text h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Hero-banner .text h5 {
+    width: fit-content;
+  }
+
+  .Boardline-01 .text p {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .Boardline-01 .text {
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    display: flex;
+  }
+
+  .Boardline-01 .Tool-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .Boardline-01 .t-btn {
+    margin: 0;
+  }
+
+}
+
+@media only screen and (max-width: 575px) {
+
+  .Boardline-02 .text h2,
+  .Boardline-04 .text h3,
+  .Boardline-06 .text h3,
+  .Boardline-08 .text h3,
+  .Boardline-09 .text h2 {
+    font-size: 35px;
+  }
+
+  .Boardline-08 .img-box img,
+  .Boardline-08 .img-box-1 img {
+    width: 100% !important;
+  }
+
+  .Boardline-03 img {
+    margin-right: -10px;
+  }
+
+}

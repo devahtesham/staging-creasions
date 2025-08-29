@@ -1,0 +1,1193 @@
+body {
+  overflow-x: clip;
+}
+
+.digital-marketing .inner-title {
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+.digital-marketing .inner-title .heading {
+  max-width: 1100px;
+  margin-top: 100px;
+}
+
+.digital-marketing .mission-sec .box-2 h4 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.digital-marketing .inner-title .heading h1 {
+  color: #fff;
+  font-size: 56px;
+}
+
+.digital-marketing .inner-title .heading p {
+  color: #fff;
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+.digital-marketing .inner-title .heading p a{
+  color: #fff;
+}
+
+/* Section 1 */
+
+.digital-marketing .digital-sec-1 .row {
+  margin: 0;
+}
+
+.digital-marketing .digital-sec-1 .col-lg-3 {
+  padding: 0;
+}
+
+.digital-marketing .digital-sec-1 .box {
+  overflow: hidden;
+  position: relative;
+}
+
+.digital-marketing .digital-sec-1 .box img {
+  width: 100%;
+  transition: 0.5s;
+  filter: grayscale(100%);
+}
+.digital-marketing .digital-sec-1 .box:hover img {
+  filter: grayscale(0%);
+}
+.digital-marketing .digital-sec-1 .box:hover:after {
+  content: "";
+  position: absolute;
+  box-shadow: 0px 0px 230px 170px #000000d1;
+  /* background: #00000080 !important; */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 0px;
+}
+
+.digital-marketing .digital-sec-1 .box .text {
+  position: absolute;
+  z-index: 99;
+  transition: 0.5s;
+  bottom: -250px;
+  padding: 0 30px;
+  min-height: 320px;
+}
+
+.digital-marketing .digital-sec-1 .box .text h4 {
+  font-size: 26px;
+  font-weight: bold;
+  background: linear-gradient(270deg, #9d77ff 0%, #c4c2ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.digital-marketing .digital-sec-1 .box .text p {
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.digital-marketing .digital-sec-1 .box:hover .text {
+  bottom: -20px;
+}
+
+.digital-marketing .digital-sec-1 .box:hover .text p {
+  opacity: 1;
+  color: #ffffffa6;
+  font-size: 16px;
+  line-height: 1.7em;
+}
+
+/* Section 2 */
+.digital-marketing .web-sec-2 .text span {
+  color: #fff;
+  display: block;
+  margin-top: -24px;
+}
+
+.digital-marketing .sticky-sec .row {
+  position: sticky;
+  top: 0;
+  background: #080413;
+}
+
+.digital-marketing .web-sec-2 {
+  padding: 5% 0 5%;
+}
+
+.digital-marketing .web-sec-2 .text h4 {
+  font-size: 40px;
+  font-weight: bold;
+  background: linear-gradient(270deg, #9d77ff 0%, #c4c2ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.digital-marketing .web-sec-2 .text p {
+  color: #ffffffa6;
+  font-size: 16px;
+  line-height: 1.7em;
+}
+
+.digital-marketing .web-sec-2 .row {
+  border-bottom: 1px solid #ffffff75;
+  padding: 80px 0;
+}
+.digital-marketing .web-sec-2 .video-box video {
+  width: 100%;
+  transform: scale(1, 1) !important;
+}
+.digital-marketing .web-sec-2 .text.box-2 h2 {
+  font-size: 30px;
+}
+
+.digital-marketing .row {
+  flex-direction: row;
+}
+
+.digital-marketing .reverse-digital {
+  flex-direction: row-reverse;
+}
+
+.digital-marketing .web-sec-2 .row:last-child {
+  border: 0;
+}
+
+/* Section 3 */
+.digital-marketing section#services_provide {
+  background: #000;
+}
+
+.digital-marketing section#services_provide {
+  background: #000;
+}
+
+.digital-marketing .brading-sec-5 {
+  padding: 120px 0;
+  background-image: url(/tab-btn.webp) !important;
+  background-position: bottom center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.digital-marketing .home-sec-service {
+  overflow: hidden;
+  padding: 100px 0;
+  background-image: url(/Services-We-Provide-bg-1-1.webp) !important;
+  background-size: 100% 100%;
+  background-position: top center;
+  position: relative;
+  transition: 0.5s;
+  background-size: 356.867%;
+  top: -385.3%;
+}
+
+.digital-marketing #services_provide .p-0 {
+  padding: 0 !important;
+}
+
+.digital-marketing #services_provide .border-0 {
+  border: 0 !important;
+}
+
+.digital-marketing #services_provide .text-center {
+  text-align: center !important;
+}
+
+.digital-marketing section#services_provide .text h2 {
+  text-align: center;
+}
+
+.digital-marketing #services_provide .text h2 {
+  font-size: 60px;
+  font-weight: bold;
+  letter-spacing: 1.1px;
+  background: linear-gradient(270deg, #9d77ff 0%, #c4c2ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  margin-bottom: 30px;
+}
+.digital-marketing #services_provide .tab-content .tab-pane h2 {
+  margin-bottom: 0;
+  font-family:'Lato', 'sans-serif';
+}
+
+.digital-marketing .home-sec-service .nav-tabs {
+  margin: 20px 0 50px;
+}
+
+.digital-marketing .brading-sec-5 .nav-tabs {
+  justify-content: normal;
+  column-gap: 0;
+  margin: 20px 0 50px;
+  row-gap: 10px;
+}
+
+.digital-marketing #services_provide .nav-tabs {
+  border: none;
+}
+
+.digital-marketing #services_provide .tab-content > .tab-pane {
+  display: none;
+}
+
+.digital-marketing .home-sec-service ul.hom {
+  padding-left: 0;
+}
+
+.digital-marketing .home-sec-service .hom li {
+  list-style: none;
+  color: #fff;
+}
+
+.digital-marketing .new-btn-style .text a,
+.digital-marketing .brand-mobile-slider .hom a {
+  min-width: fit-content;
+  margin-bottom: 15px;
+  max-width: 360px !important;
+  width: 360px;
+  line-height: 2;
+}
+
+.digital-marketing #services_provide .t-btn.t-btn-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+  max-width: 250px;
+  padding: 4px 20px;
+  border-radius: 40px;
+  border: 0.8px solid rgba(47, 39, 198, 0.75);
+  -o-transition: all 0.4s ease-in-out;
+  background-size: 300% 100%;
+  color: #fff;
+  font-size: 16px;
+  transition: 0.3s;
+  background: rgba(255, 255, 255, 0.21);
+}
+
+.digital-marketing #services_provide .t-btn.t-btn-arrow:hover {
+  color: #fff;
+  text-decoration: none !important;
+  background-image: linear-gradient(
+    118deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.55),
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.55)
+  );
+  background-position: 50% 0;
+}
+
+.digital-marketing #services_provide .tab-content > .active {
+  display: block;
+}
+
+.digital-marketing .brading-sec-5 ul.nav.nav-tabs .nav-link {
+  border-radius: 30px;
+  padding: 16px 15px;
+  border: 0;
+  background-image: url(/tab-btn.webp) !important;
+  background-size: cover;
+  color: #fff;
+  background-position: center center;
+}
+
+.digital-marketing #services_provide .nav-tabs .nav-link {
+  border: 1px solid rgba(255, 255, 255, 0);
+  border: none;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  color: #fff;
+  padding: 16px 15px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-image: url(/small-tabbing-bg.png);
+  background-size: cover;
+  margin-right: 10px;
+  background-repeat: no-repeat;
+}
+
+.digital-marketing #services_provide ul.nav.nav-tabs a.nav-link.active,
+.digital-marketing #services_provide ul.nav.nav-tabs a.nav-link:hover {
+  background: linear-gradient(268deg, #2d26c8 0%, #5531af 100%) !important;
+  box-shadow: 8px 8px 16px 0 rgba(48, 39, 198, 0.5) !important;
+  background-image: linear-gradient(
+    268deg,
+    #2d26c8 0%,
+    #5531af 100%
+  ) !important;
+  cursor: pointer;
+}
+
+/* Section 4 */
+
+.digital-marketing .digital-sec-3 .img-box {
+  width: 100%;
+  padding: 8%;
+}
+
+.digital-marketing .digital-sec-3 .text p {
+  color: #100923;
+  margin-top: 10px;
+}
+
+.digital-marketing .digital-sec-3 .box-2 {
+  max-width: 100%;
+  padding: 8%;
+  margin: 0;
+}
+
+.digital-marketing .digital-sec-3 .col-lg-6 {
+  padding: 0;
+  border: 1px solid grey;
+}
+
+.digital-marketing .digital-sec-3 .row-reverse {
+  flex-direction: row-reverse;
+}
+
+.digital-marketing .digital-sec-3 .border-right-0 {
+  border-right: 0 !important;
+}
+.digital-marketing .digital-sec-3 .border-bottom-0 {
+  border-bottom: 0 !important;
+}
+
+/* Section 5 */
+.digital-marketing .digital-sec-05 {
+  padding: 150px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-position: center bottom; */
+  background-image: url("/services/digital-marketing/sec05-bg.webp") !important;
+}
+
+.digital-marketing .digital-sec-05 .text h3 {
+  font-size: 55px;
+}
+
+.digital-marketing .text h3 {
+  font-size: 65px;
+  line-height: 0.9em;
+  background: linear-gradient(270deg, #9d77ff 0%, #c4c2ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.digital-marketing .digital-sec-05 ul.nav.nav-tabs {
+  margin-top: 40px;
+  border: none;
+  column-gap: 15px;
+}
+.digital-marketing .digital-sec-05 ul.nav.nav-tabs a.nav-link {
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: none;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-image: url(/small-tabbing-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.digital-marketing .digital-sec-05 ul.nav.nav-tabs a.nav-link.active,
+.digital-marketing .digital-sec-05 ul.nav.nav-tabs a.nav-link:hover {
+  background: linear-gradient(268deg, #2d26c8 0%, #5531af 100%) !important;
+  box-shadow: 8px 8px 16px 0px rgba(48, 39, 198, 0.5) !important;
+  background-image: linear-gradient(
+    268deg,
+    #2d26c8 0%,
+    #5531af 100%
+  ) !important;
+  cursor: pointer;
+}
+.digital-marketing .digital-sec-05 .main-tabbing-content .main-box h5 {
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.digital-marketing .digital-sec-05 .main-tabbing-content {
+  margin-top: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 40px;
+  row-gap: 40px;
+  align-items: flex-end;
+}
+
+.digital-marketing .digital-sec-05 .tab-content {
+  margin-top: 25px;
+}
+
+.digital-marketing .digital-sec-05 .main-tabbing-content .main-box .box {
+  position: relative;
+  display: inline-flex;
+}
+
+.digital-marketing .digital-sec-05 .main-tabbing-content .main-box .box .content-box {
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #5431b0;
+  background: #fff;
+  box-shadow: 10px 10px 15px 0 rgb(48 39 199 / 0.25);
+  width: 280px;
+  padding: 16px;
+  display: none;
+  transition: 1.5s;
+  position: absolute;
+  top: 85px;
+  left: 0;
+  z-index: 999;
+}
+
+.digital-marketing .digital-sec-05 .main-tabbing-content .main-box .box .content-box h6 {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Lato", sans-serif;
+  background: linear-gradient(270deg, #8354ff 0%, #9591ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #fff0;
+}
+
+.digital-marketing .digital-sec-05 .main-tabbing-content .main-box .box .content-box p {
+  font-size: 12px;
+  color: #1e1e1e;
+  line-height: 1.3em;
+}
+
+.digital-marketing .digital-sec-05 .main-tabbing-content .main-box .box:hover .content-box {
+  display: block;
+  position: absolute;
+  /* bottom: -150px; */
+  left: 0;
+  z-index: 999;
+}
+/* .digital-sec-05 .main-tabbing-content .main-box .box .img-box {
+  background-color: white;
+  width: 83px;
+  height: 83px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.digital-sec-05 .main-tabbing-content .main-box .box .img-box img {
+  height: 65px;
+  object-fit: contain;
+} */
+.digital-marketing .digital-sec-05 .main-tabbing-content .main-box .align-boxes {
+  display: flex;
+  column-gap: 15px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 20px;
+}
+.digital-marketing .digital-sec-05 .main-tabbing-content .main-box.two-heading h6 {
+  color: white;
+  font-size: 14px;
+  font-family: "Lato", sans-serif;
+  margin-bottom: 10px;
+}
+.digital-marketing .digital-sec-05 .main-tabbing-content .main-box.two-heading h5 {
+  margin-top: 50px;
+  margin-bottom: 5px;
+}
+
+.digital-marketing .home-sec-07 {
+  padding: 100px 0 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.digital-marketing .home-sec-07 .main-testi-large-box {
+  color: white;
+  z-index: 999;
+}
+.digital-marketing .home-sec-07 .main-testi-box {
+  padding: 50px 150px;
+  text-align: center;
+  margin-top: 0px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 998;
+  border-radius: 10px;
+  position: relative;
+  /* background-color: #000000b3; */
+  background-image: url(/testi-main-box-bg.png);
+  backdrop-filter: blur(2px);
+}
+.digital-marketing .home-sec-07 .main-testi-box::after {
+  content: "";
+  background-image: url(/testi-details-left.png);
+  width: 88px;
+  height: 66px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 70px;
+  left: 5%;
+}
+.digital-marketing .home-sec-07 .main-testi-box::before {
+  content: "";
+  background-image: url(/testi-details-right.png);
+  width: 88px;
+  height: 66px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 70px;
+  right: 5%;
+}
+
+.digital-marketing .home-sec-07 .main-testi-box h4 {
+  background: linear-gradient(270deg, #9d77ff 0%, #c4c2ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.digital-marketing .home-sec-07 .main-testi-box h5 {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
+  margin: 10px 0 15px;
+}
+
+.digital-marketing .home-sec-07 .main-testi-box p {
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.7em;
+}
+
+.digital-marketing .home-sec-07 .main-testi-box h6 {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Lato", sans-serif;
+  margin-top: 15px;
+}
+.digital-marketing .home-sec-07 .two-imges-testi img.testi-img-01 {
+  position: absolute;
+  bottom: 50px;
+  right: 10%;
+}
+
+.digital-marketing .home-sec-07 .two-imges-testi img.testi-img-02 {
+  position: absolute;
+  bottom: 130px;
+  left: 13%;
+}
+.digital-marketing .home-sec-07 .main-testi-nav .box img {
+  cursor: pointer;
+}
+
+.digital-marketing .home-sec-07 .slick-track {
+  padding: 5px 0 25px;
+}
+
+.digital-marketing .home-sec-07 .testi-img-01 {
+  animation: zoom 5s ease-in-out infinite;
+}
+
+.digital-marketing .home-sec-07 .rotating-img {
+  animation: rotate 7s linear infinite;
+}
+.digital-marketing .main-testi-nav .slick-slide {
+  opacity: 30%;
+}
+
+.digital-marketing .main-testi-large-box .slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+  z-index: 9999;
+}
+.digital-marketing .main-testi-nav .slick-active.slick-center.slick-current {
+  opacity: 100% !important;
+}
+
+.digital-marketing .main-testi-nav .slick-list {
+  padding: 0 !important;
+}
+
+.digital-marketing .main-testi-nav .slick-active.slick-center.slick-current .box img {
+  box-shadow: 5px 5px 25px 0px rgba(157, 119, 255, 0.9);
+  border-radius: 10px;
+}
+
+.digital-marketing .text h2 {
+  font-size: 55px;
+  letter-spacing: 1.1px;
+  background: linear-gradient(270deg, #9d77ff 0%, #c4c2ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+@keyframes zoom {
+  0%,
+  100% {
+    transform: scale(1);
+    filter: brightness(1.2) saturate(120%) blur(10px);
+  }
+  50% {
+    transform: scale(1.1);
+    transform: scale(1.2);
+    filter: brightness(1) saturate(100%) blur(0);
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  .digital-marketing .digital-marketing-sec-4 a.t-btn.t-btn-arrow-contact.t-btn-arrow {
+    max-width: 310px !important;
+  }
+
+  .digital-marketing .digital-sec-05 .box img {
+    max-width: 65px;
+    object-fit: contain;
+  }
+  .digital-marketing .digital-sec-05 .main-tabbing-content .main-box .box:hover .content-box {
+    display: block;
+    position: absolute;
+    left: -30px;
+    z-index: 999;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .digital-marketing .web-sec-2 .row {
+    padding: 30px 0;
+  }
+  .digital-marketing .web-sec-2 .text h4 {
+    font-size: 30px;
+  }
+  .digital-marketing .digital-sec-3 .col-lg-6 {
+    border: 0px solid grey;
+  }
+  .digital-marketing .digital-sec-3 .box-2 {
+    max-width: 100%;
+    padding: 5% 20px;
+    margin: 0;
+  }
+
+  .digital-marketing .digital-marketing-sec-4 a.t-btn.t-btn-arrow-contact.t-btn-arrow {
+    max-width: 280px !important;
+  }
+
+  .digital-marketing .digital-sec-05 .main-tabbing-content {
+    padding-right: 150px;
+  }
+  .digital-marketing .digital-sec-05 .t-btn.t-btn-arrow {
+    font-size: 14px;
+  }
+  .digital-marketing .digital-sec-05 {
+    padding: 60px 0 0;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .digital-marketing .inner-title {
+    min-height: 500px;
+  }
+  .digital-marketing .web-sec-2 .row {
+    padding: 10px 0 30px;
+  }
+  .digital-marketing .web-sec-2 {
+    padding: 3% 0;
+  }
+  .digital-marketing .digital-sec-05 .text h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  .digital-marketing .digital-sec-05 .t-btn.t-btn-arrow {
+    font-size: 13px;
+  }
+  .digital-marketing .digital-sec-05 .nav-tabs .nav-link {
+    font-size: 11px;
+    padding: 13px 10px;
+  }
+  .digital-marketing .digital-sec-05 {
+    padding: 40px 0 0;
+  }
+  .digital-marketing .digital-sec-05 .main-box {
+    max-width: 100%;
+  }
+  .digital-marketing .digital-sec-05 .main-tabbing-content .main-box .align-boxes {
+    display: flex;
+    column-gap: 10px;
+    row-gap: 10px;
+    flex-wrap: wrap;
+  }
+  .digital-marketing .digital-sec-05 .main-tabbing-content .main-box h5 {
+    color: #fff;
+    font-family: Lato, sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .digital-marketing .digital-sec-05 .text h3 {
+    font-size: 34px;
+  }
+  .digital-marketing .digital-sec-05 .main-tabbing-content {
+    padding-right: 170px;
+  }
+
+  .digital-marketing .home-sec-07 .slick-slide img {
+    max-width: 65px;
+    object-fit: contain;
+    height: auto;
+  }
+  .digital-marketing .home-sec-07 .two-imges-testi img.testi-img-01 {
+    bottom: 60px;
+    max-width: 270px;
+    object-fit: contain;
+  }
+  .digital-marketing .home-sec-07 .two-imges-testi img.testi-img-02 {
+    position: absolute;
+    bottom: 130px;
+    left: 13%;
+  }
+  .digital-marketing .home-sec-07 {
+    padding: 70px 0 100px;
+  }
+  .digital-marketing .home-sec-07 .slick-slide img {
+    max-width: 65px;
+    object-fit: contain;
+    height: auto;
+  }
+  .digital-marketing .home-sec-07 .two-imges-testi img.testi-img-01 {
+    bottom: 60px;
+    max-width: 270px;
+    object-fit: contain;
+  }
+  .digital-marketing .home-sec-07 .two-imges-testi img.testi-img-02 {
+    position: absolute;
+    bottom: 130px;
+    left: 13%;
+  }
+  .digital-marketing .home-sec-07 .two-imges-testi img.testi-img-01,
+  .digital-marketing .home-sec-07 .two-imges-testi img.testi-img-02 {
+    display: none;
+  }
+  .digital-marketing .home-sec-07 .text h2 {
+    font-size: 40px;
+  }
+  .digital-marketing .home-sec-07 .main-testi-box::after,
+  .digital-marketing .home-sec-07 .main-testi-box::before {
+    width: 48px;
+    height: 36px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .digital-marketing .web-sec-2 .text h4 br {
+    display: none;
+  }
+  .digital-marketing .digital-marketing-sec-4 .hom a,
+  .digital-marketing .new-btn-style .text a {
+    max-width: 340px !important;
+    width: 340px;
+  }
+  .digital-marketing .text.box-2 {
+    padding: 30px 20px;
+  }
+  .digital-marketing .web-sec-2 .text h4 {
+    text-align: center;
+    font-size: 25px;
+  }
+  .digital-marketing section#services_provide .text h2 {
+    text-align: center;
+  }
+  .digital-marketing .text.box-2 {
+    padding: 10px 25px 30px;
+    text-align: center;
+  }
+
+  .digital-marketing .digital-sec-3 .img-box {
+    padding: 3%;
+  }
+  .digital-marketing .inner-title .heading h1 {
+    font-size: 38px;
+  }
+  .digital-marketing .inner-title .heading p {
+    font-size: 15px;
+  }
+  .digital-marketing .inner-title {
+    min-height: 450px;
+  }
+  .digital-marketing .digital-marketing-sec-4 {
+    display: none;
+  }
+  .digital-marketing .text.box-2 {
+    text-align: center;
+  }
+
+  .digital-marketing .digital-sec-05 {
+    padding: 40px 0 0;
+  }
+  .digital-marketing .digital-sec-05 .main-tabbing-content {
+    padding-right: 160px;
+  }
+  .digital-marketing .digital-sec-05 .main-tabbing-content .main-box h5 {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+
+  .digital-marketing .digital-sec-05 .text h3 {
+    font-size: 26px;
+  }
+  .digital-marketing .digital-sec-05 .box img {
+    max-width: 55px;
+    object-fit: contain;
+  }
+  .digital-marketing .digital-sec-05 .text h2 {
+    text-align: center;
+  }
+  .digital-marketing .digital-sec-05 .box img {
+    max-width: 55px;
+    object-fit: contain;
+  }
+  .digital-marketing .digital-sec-05 .main-tabbing-content .main-box .align-boxes {
+    display: flex;
+    column-gap: 10px;
+    row-gap: 10px;
+    flex-direction: row;
+    padding-right: 0px !important;
+    flex-wrap: wrap;
+  }
+  .digital-marketing .digital-sec-05 .text h2 {
+    text-align: center;
+  }
+  .digital-marketing .digital-sec-05 .main-tabbing-content {
+    row-gap: 20px;
+  }
+  .digital-marketing .digital-sec-05 .main-tabbing-content {
+    padding-right: 90px;
+  }
+
+  .digital-marketing .home-sec-07 .slick-slide img {
+    max-width: 45px;
+    object-fit: contain;
+    height: auto;
+    border-radius: 0px;
+  }
+  .digital-marketing .home-sec-07 .main-testi-box {
+    padding: 20px 30px;
+  }
+  .digital-marketing .home-sec-07 .main-testi-box p {
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.5em;
+  }
+  .digital-marketing .home-sec-07 .two-imges-testi img.testi-img-01 {
+    bottom: 0px;
+    max-width: 200px;
+    object-fit: contain;
+  }
+
+  .digital-marketing .two-imges-testi {
+    bottom: 60px;
+    max-width: 60px;
+    object-fit: contain;
+  }
+
+  .digital-marketing img.testi-img-02.rotating-img {
+    bottom: 60px;
+    max-width: 100px;
+    object-fit: contain;
+  }
+  .digital-marketing .home-sec-07 .two-imges-testi img.testi-img-02 {
+    position: absolute;
+    bottom: 50px;
+    left: 13%;
+  }
+  .digital-marketing .home-sec-07 .main-testi-box h6 {
+    font-size: 13px;
+    margin-top: 5px;
+  }
+  .digital-marketing .home-sec-07 {
+    padding: 40px 0 40px;
+  }
+  .digital-marketing .home-sec-07 .main-testi-box:after,
+  .digital-marketing .home-sec-07 .main-testi-box:before {
+    width: 38px;
+    height: 36px;
+    top: 60px;
+  }
+  .digital-marketing .home-sec-07 .text h2 {
+    font-size: 28px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .digital-marketing .web-sec-2 .text h4 {
+    text-align: center;
+    font-size: 20px;
+  }
+  .digital-marketing .web-sec-2 .text p {
+    font-size: 14px;
+    text-align: center;
+    margin: 0;
+  }
+
+  .digital-marketing .digital-marketing-sec-4 {
+    display: none;
+  }
+
+  .digital-marketing .web-sec-2 .row {
+    padding: 40px 0 20px;
+  }
+  .digital-marketing .web-sec-2 .row {
+    padding: 20px 0 20px;
+  }
+
+  .digital-marketing .digital-sec-3 .img-box img {
+    max-width: 100%;
+    height: auto;
+  }
+  .digital-marketing .inner-title .heading h1 {
+    font-size: 28px;
+  }
+  .digital-marketing .inner-title {
+    text-align: center;
+  }
+  .digital-marketing .inner-title {
+    min-height: 400px;
+  }
+  .digital-marketing .inner-title .heading p {
+    font-size: 13px;
+  }
+  .digital-marketing .web-sec-2 .row {
+    padding: 20px 0 20px;
+  }
+  .digital-marketing .digital-sec-1 .box .text h4 {
+    font-size: 22px;
+  }
+  .digital-marketing .text.box-2 {
+    padding: 10px 5px 30px;
+  }
+
+  .digital-marketing .digital-sec-05 .text h2 {
+    text-align: center;
+    font-size: 28px;
+  }
+  .digital-marketing .digital-sec-05 .text h3 {
+    font-size: 26px;
+  }
+  .digital-marketing .digital-sec-05 .box img {
+    max-width: 55px;
+    object-fit: contain;
+  }
+  .digital-marketing .digital-sec-05 .main-box {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .digital-marketing .digital-sec-05 .main-tabbing-content {
+    padding-right: 120px;
+  }
+  .digital-marketing .digital-sec-05 .main-tabbing-content .main-box .box .content-box h6 {
+    font-size: 13px;
+  }
+  .digital-marketing .digital-sec-05 .main-tabbing-content .main-box .box .content-box {
+    width: 220px;
+  }
+  .digital-marketing .digital-sec-05 .main-tabbing-content .main-box .box .content-box p {
+    margin-bottom: 0;
+  }
+  .digital-marketing .digital-sec-05 .main-tabbing-content .main-box .box:hover .content-box {
+    display: block;
+    position: absolute;
+    left: -5px;
+    z-index: 999;
+  }
+  .digital-marketing .digital-sec-05 .main-tabbing-content .main-box .align-boxes {
+    display: flex;
+    column-gap: 10px;
+    row-gap: 10px;
+    flex-direction: row;
+  }
+
+  .digital-marketing .home-sec-07 .main-testi-box h4 {
+    font-size: 22px;
+  }
+  .digital-marketing .home-sec-07 .main-testi-box {
+    padding: 20px 30px;
+  }
+  .digital-marketing .home-sec-07 .main-testi-box p {
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.5em;
+  }
+  .digital-marketing .home-sec-07 .main-testi-box:after,
+  .digital-marketing .home-sec-07 .main-testi-box:before {
+    width: 38px;
+    height: 46px;
+  }
+  .digital-marketing .home-sec-07 .main-testi-box h5 {
+    font-size: 14px;
+  }
+  .digital-marketing .home-sec-07 .slick-slide img {
+    max-width: 65px;
+  }
+  .digital-marketing .home-sec-07 {
+    padding: 40px 0 40px;
+  }
+  .digital-marketing .home-sec-07 .two-imges-testi img.testi-img-01 {
+    bottom: 0px;
+    max-width: 200px;
+    object-fit: contain;
+  }
+  .digital-marketing img.testi-img-02.rotating-img {
+    max-width: 100px;
+    object-fit: contain;
+  }
+  .digital-marketing .home-sec-07 .two-imges-testi img.testi-img-02 {
+    bottom: 50px;
+  }
+
+  .digital-marketing .home-sec-07 .main-testi-box:after,
+  .digital-marketing .home-sec-07 .main-testi-box:before {
+    width: 38px;
+    height: 36px;
+    top: 60px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .digital-marketing .inner-title .heading p {
+    font-size: 13px;
+  }
+  .digital-marketing .inner-title .heading h1 {
+    font-size: 28px;
+  }
+  .digital-marketing .inner-title {
+    min-height: 400px;
+  }
+
+  .digital-marketing .web-sec-2 .text p {
+    font-size: 13px;
+    text-align: center;
+    margin: 0;
+  }
+  .digital-marketing .text.box-2 {
+    padding: 10px 5px 20px;
+  }
+  .digital-marketing .web-sec-2 .text h4 {
+    font-size: 19px;
+  }
+  .digital-marketing .digital-sec-05 .main-tabbing-content .main-box h5 {
+    font-size: 12px;
+    margin-bottom: 5px;
+    line-height: 1.5em;
+  }
+
+  .digital-marketing .digital-sec-05 {
+    padding: 40px 0 50px;
+}
+
+  .digital-marketing .digital-sec-05 .text h3 br {
+    display: none;
+  }
+
+  .digital-marketing .digital-sec-05 .text h3 {
+    font-size: 20px;
+  }
+  .digital-marketing .digital-sec-05 .box img {
+    max-width: 50px;
+    object-fit: contain;
+  }
+  .digital-marketing .digital-sec-05 .main-box {
+    row-gap: 5px;
+  }
+  .digital-marketing .digital-sec-05 .main-tabbing-content .main-box h5 {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+  .digital-marketing .digital-sec-05 .main-tabbing-content .main-box .box .content-box {
+    padding: 12px;
+    top: 45px;
+  }
+  .digital-marketing .digital-sec-05 .text h2 {
+    text-align: center;
+    font-size: 22px;
+  }
+  .digital-marketing .digital-sec-05 .main-tabbing-content .main-box .box .content-box {
+    width: 170px;
+  }
+  .digital-marketing .digital-sec-05 .main-tabbing-content .main-box .box .content-box p {
+    font-size: 11px;
+  }
+  .digital-marketing .digital-sec-05 .main-tabbing-content .main-box .box .content-box h6 {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+
+  /* Testimonials */
+
+  .digital-marketing .home-sec-07 .text h2 {
+    text-align: center;
+    font-size: 22px;
+  }
+  .digital-marketing .home-sec-07 .main-testi-box p {
+    font-size: 13px;
+  }
+  .digital-marketing .home-sec-07 .main-testi-box:after,
+  .digital-marketing .home-sec-07 .main-testi-box:before {
+    width: 20px;
+    height: 26px;
+  }
+  .digital-marketing .home-sec-07 .main-testi-box {
+    padding: 20px 20px;
+  }
+  .digital-marketing .home-sec-07 .two-imges-testi img.testi-img-01 {
+    max-width: 130px;
+  }
+  .digital-marketing img.testi-img-02.rotating-img {
+    max-width: 80px;
+    object-fit: contain;
+  }
+  .digital-marketing .home-sec-07 .two-imges-testi img.testi-img-02 {
+    bottom: 50px;
+  }
+  .digital-marketing .home-sec-07 {
+    padding: 40px 0 0;
+  }
+}

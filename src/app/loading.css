@@ -1,0 +1,53 @@
+@keyframes fade {
+  0%, 100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.loading-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  background-color: black;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out; /* Smooth transition */
+}
+
+.logo-container {
+  position: relative;
+  width: 30%; /* Adjust based on your logo's dimensions */
+  height: 30%; /* Adjust based on your logo's dimensions */
+  overflow: hidden;
+  animation: pulse 1.5s infinite; /* Pulse animation */
+}
+
+/* Class for when loading is completed */
+.loading-finish {
+  transform: translateY(-100%); /* Move up the loading screen */
+}
+
+/* Optional: Style for the main content */
+.main-content {
+  transition: opacity 0.5s ease-in; /* Optional fade-in effect for main content */
+}

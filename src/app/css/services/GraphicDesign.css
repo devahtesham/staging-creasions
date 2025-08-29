@@ -1,0 +1,1591 @@
+.graphic-designing {
+  background-size: cover;
+  background: linear-gradient(to bottom, #000000, #130a2c);
+}
+
+.graphic-designing .inner-title {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background: linear-gradient(to bottom, #ffffff04, #f5f5f502);
+  position: relative;
+}
+
+.graphic-designing .inner-title .heading {
+  max-width: 100%;
+  /* margin-top: 100px; */
+  text-align: center;
+}
+
+.graphic-designing .inner-title .heading h1 {
+  font-size: 170px;
+  position: relative;
+  font-weight: bold;
+  z-index: 10;
+}
+
+.graphic-designing .inner-title .heading h3 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 80px;
+  position: relative;
+  z-index: 10;
+}
+
+.graphic-designing .bg {
+  position: absolute;
+  background-color: transparent;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  border: 50px;
+  z-index: 0;
+  left: 0px;
+  top: 0px;
+  transform: translate(0, 0);
+  transition: all 1s ease-in-out;
+}
+
+.graphic-designing .bg .banner-bg {
+  opacity: 0;
+  width: 100%;
+  animation: banner-bg 6s infinite;
+}
+
+@keyframes banner-bg {
+  0% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.6;
+  }
+}
+
+.graphic-designing .sec-01 {
+  height: 100vh;
+  background: linear-gradient(to bottom,
+      #37058ea4 5%,
+      #37058e,
+      #0e081f 95%,
+      #0e081fa4 100%);
+  padding: 200px 0;
+  backdrop-filter: blur(10px);
+}
+
+.graphic-designing .sec-01 h4 {
+  font-size: 15px;
+  font-weight: 400;
+  color: #fff;
+  text-align: left;
+  line-height: 18px;
+  font-family: "Lato", sans-serif;
+}
+
+.graphic-designing .sec-01 p {
+  padding-top: 30px;
+  padding-right: 100px;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 34px;
+  color: #e5deff;
+  letter-spacing: 2px;
+}
+
+.graphic-designing .sec-01 .circle-1 {
+  transform: scale(0);
+  animation: circle-popin-rotate 12s ease-in-out infinite;
+}
+
+@keyframes circle-popin-rotate {
+  0% {
+    transform: scale(0);
+  }
+
+  20% {
+    transform: scale(1);
+  }
+
+  21% {
+    transform: rotate(0deg);
+  }
+
+  70% {
+    transform: rotate(-360deg);
+  }
+
+  90% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+.graphic-designing .sec-02 {
+  background: rgb(0, 0, 0, 0.4);
+}
+
+.graphic-designing .sec-02 .first-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 100px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.graphic-designing .sec-02 .first-row .first {
+  border-right: 4px solid #e5deff;
+  border-radius: 20px;
+  padding-right: 30px;
+}
+
+.graphic-designing .sec-02 .first-row .first h3 {
+  font-size: 60px;
+  font-family: "Lato", sans-serif;
+  color: #e5deff;
+  font-weight: 400;
+  line-height: 94px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.graphic-designing .sec-02 .first-row .first h4 {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 400;
+  line-height: 44px;
+  letter-spacing: 2px;
+  font-family: "Lato", sans-serif;
+  text-align: center;
+}
+
+.graphic-designing .sec-03 {
+  padding: 200px 0;
+  position: relative;
+  z-index: 0;
+}
+
+.graphic-designing .sec-03 .bg {
+  position: absolute;
+  background-color: transparent;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  border: 50px;
+  z-index: -1;
+  left: 0px;
+  top: 0px;
+  transform: translate(0, 0);
+  transition: all 1s ease-in-out;
+}
+
+.graphic-designing .sec-03 .cards-row {
+  column-gap: 100px;
+}
+
+.graphic-designing .sec-03 .bg .blur-circle-1 {
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: #3127c6;
+  filter: blur(15px);
+  opacity: 0.35;
+  transition: all 1s ease-in-out;
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  transform: translate(45%, 155%);
+  z-index: -1;
+}
+
+.graphic-designing .sec-03 .bg .blur-circle-2 {
+  width: 750px;
+  height: 750px;
+  border-radius: 50%;
+  background: #3127c6;
+  filter: blur(25px);
+  opacity: 0.22;
+  transition: all 1s ease-in-out;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translate(50%, 110%);
+  z-index: -1;
+}
+
+.graphic-designing .sec-03 h2 {
+  font-size: 55px;
+  font-weight: 700;
+  font-family: "Syne", sans-serif;
+  line-height: 60px;
+  text-align: center;
+  background: linear-gradient(270deg, #9d77ff 0%, #c4c2ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.graphic-designing .sec-03 p {
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 300;
+  font-family: "Lato", sans-serif;
+  color: #fff;
+  text-align: center;
+  padding-top: 20px;
+  opacity: 0.7;
+}
+
+.graphic-designing .sec-03 .nav-tabs {
+  justify-content: center;
+  column-gap: 10px;
+  margin: 20px 0 80px;
+  row-gap: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.graphic-designing .sec-03 ul.nav.nav-tabs .nav-link {
+  text-transform: uppercase;
+  border-radius: 30px;
+  padding: 20px 30px;
+  border: 0;
+  background-image: url(/tab-btn.webp);
+  background-position: center center;
+  background-color: #000;
+  background-size: cover;
+  color: #fff;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.graphic-designing .sec-03 ul.nav.nav-tabs .nav-link.active,
+.graphic-designing .sec-03 ul.nav.nav-tabs .nav-link:hover {
+  background: linear-gradient(268deg, #2d26c8 0%, #5531af 100%);
+  box-shadow: 8px 8px 16px 0px rgba(48, 39, 198, 0.5);
+  background-image: linear-gradient(268deg, #2d26c8 0%, #5531af 100%);
+  border: 0;
+  color: #fff;
+}
+
+.graphic-designing .sec-03 .justify-content-stretch {
+  justify-content: stretch !important;
+}
+
+.graphic-designing .sec-03 .card {
+  width: 400px;
+  height: 380px;
+}
+
+.graphic-designing .sec-03 .card-blur-bg-1 {
+  padding: 60px 30px 30px 30px;
+  background-position: center;
+  display: flex;
+  align-items: flex-start;
+  text-align: center;
+  background: linear-gradient(to right, #fafafa0a, #75757511);
+  border: 1.8px solid #231f6a;
+  border-radius: 20px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.graphic-designing .sec-03 .card .card-img-top {
+  width: 75px;
+  height: 75px;
+}
+
+.graphic-designing .sec-03 .card .card-title {
+  padding-top: 20px;
+  font-size: 21px;
+  font-weight: 600;
+  font-family: "Syne", sans-serif;
+  line-height: 24px;
+  text-align: left;
+  color: #fff;
+}
+
+.graphic-designing .sec-03 .card .card-subtitle {
+  padding-top: 5px;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
+  line-height: 20px;
+  color: #9d77ff;
+  letter-spacing: 1.2px;
+  text-align: left;
+  opacity: 0.7;
+}
+
+.graphic-designing .sec-03 .card .card-text {
+  padding-top: 10px;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
+  line-height: 20px;
+  color: #fff;
+  letter-spacing: 0;
+  text-align: left;
+  opacity: 0.7;
+}
+
+/* Section 04 */
+
+.graphic-designing .bg-gredient-1 {
+  background: linear-gradient(0deg, #0c0717 0%, #130d45 100%);
+  position: relative;
+  z-index: 1;
+}
+
+.graphic-designing .sec-04 {
+  padding: 100px 0;
+}
+
+.graphic-designing .sec-04 .header h4 {
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
+  color: #fff;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.graphic-designing .sec-04 .header p {
+  font-size: 35px;
+  font-weight: 300;
+  font-family: "Lato", sans-serif;
+  color: #e5deff;
+  line-height: 54px;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.graphic-designing .sec-04 .row {
+  margin: 0;
+}
+
+.graphic-designing .sec-04 .col-lg-3 {
+  padding: 0;
+}
+
+.graphic-designing .sec-04 .box {
+  overflow: hidden;
+  position: relative;
+}
+
+.graphic-designing .sec-04 .slick-slider {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.graphic-designing .sec-04 .box img {
+  width: 100%;
+  transition: 0.5s;
+  filter: grayscale(80%);
+}
+
+.graphic-designing .sec-04 .box:hover img {
+  filter: grayscale(0%);
+}
+
+.graphic-designing .sec-04 .box:hover:after {
+  content: "";
+  position: absolute;
+  box-shadow: 0px 0px 230px 170px #000000d1;
+  /* background: #00000080 !important; */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 0px;
+}
+
+.graphic-designing .sec-04 .box .text {
+  position: absolute;
+  z-index: 99;
+  transition: 0.5s;
+  bottom: -250px;
+  padding: 0 30px;
+  min-height: 320px;
+}
+
+.graphic-designing .sec-04 .box .text h4 {
+  font-size: 26px;
+  font-weight: bold;
+  background: linear-gradient(270deg, #9d77ff 0%, #c4c2ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.graphic-designing .sec-04 .box .text p {
+  opacity: 0;
+  transition: 0.5s;
+}
+
+/* 
+.graphic-designing .sec-04 .box:hover .text {
+  bottom: -20px;
+}
+
+.graphic-designing .sec-04 .box:hover .text p {
+  opacity: 1;
+  color: #ffffffa6;
+  font-size: 16px;
+  line-height: 1.7em;
+} */
+
+/* Testimonials */
+.graphic-designing .sec-05 {
+  background-color: transparent;
+  position: relative;
+  z-index: 100;
+}
+
+.graphic-designing .sec-05 .container {
+  max-width: 100%;
+}
+
+.graphic-designing .sec-05 .text.let h2 {
+  margin-bottom: 10px;
+}
+
+.graphic-designing .sec-05 .text h2 {
+  font-size: 55px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  background: linear-gradient(270deg, #9d77ff 0%, #c4c2ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #fff0;
+  margin-bottom: 30px;
+}
+
+.graphic-designing .sec-05 .text p {
+  color: #ffffffa6;
+  font-size: 16px;
+  line-height: 1.7em;
+}
+
+.graphic-designing .sec-05 .header p {
+  color: #e5deff;
+  font-size: 35px;
+  line-height: 54px;
+  font-weight: 300;
+  font-family: "Lato", sans-serif;
+  text-align: center;
+}
+
+.graphic-designing .sec-05 .header h4 {
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
+  line-height: 18px;
+  text-align: center;
+  color: #fff;
+}
+
+.graphic-designing .sec-05 .row.virtual-slide {
+  margin-top: 50px;
+}
+
+.graphic-designing .sec-05 .testim-box {
+  padding: 0px 20px;
+  margin: 0px 10px;
+  background-position: center;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background: #0d0d0d5e;
+  border: 1px solid #231f6a;
+  border-radius: 20px;
+}
+
+.graphic-designing .sec-05 .testim-box .text h4 {
+  font-size: 28px;
+  color: #e5deff;
+}
+
+.graphic-designing .sec-05 .testim-box .text h6 {
+  color: #b7a9ff;
+  padding: 5px 0 0 0;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.graphic-designing .sec-05 .testim-box img {
+  text-align: center !important;
+  margin: auto;
+}
+
+.graphic-designing .sec-05 .slick-track {
+  height: 80vh;
+}
+
+.graphic-designing .sec-05 .slick-initialized .slick-slide {
+  margin: 0px 0px;
+}
+
+.graphic-designing .sec-05 .slick-dots {
+  z-index: 1;
+  left: 0px;
+}
+
+.graphic-designing .sec-05 .slick-dots {
+  position: absolute;
+  bottom: 105px;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.graphic-designing .sec-05 ul.slick-dots {
+  display: flex;
+  justify-content: center;
+  margin-bottom: -50px !important;
+}
+
+.graphic-designing .sec-05 .slick-dots li {
+  width: 14px;
+  height: 14px;
+  margin: 0 5px;
+}
+
+.graphic-designing .sec-05 .slick-dots li button::before {
+  background-color: #392e91;
+  color: transparent;
+  width: 14px;
+  height: 14px;
+  border-radius: 50px;
+  opacity: 100%;
+}
+
+.graphic-designing .sec-05 .slick-dots li.slick-active button::before {
+  background-color: #fff;
+  color: transparent;
+  width: 14px;
+  height: 14px;
+}
+
+.graphic-designing .sec-06 {
+  background: url(/services/graphic-designing/gd-sec06-bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+  padding: 100px 0;
+}
+
+.graphic-designing .sec-06 h4 {
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
+  line-height: 18px;
+  text-align: center;
+  color: #fff;
+}
+
+.graphic-designing .sec-06 h2 {
+  font-size: 35px;
+  line-height: 54px;
+  font-weight: 300;
+  font-family: "Lato", sans-serif;
+  color: #e5deff;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.graphic-designing .sec-06 .catelog {
+  display: flex;
+  direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.graphic-designing .sec-06 .card-agency {
+  position: relative;
+  padding: 10px;
+}
+
+.graphic-designing .sec-06 .card-content {
+  position: absolute;
+  bottom: 0;
+  padding: 15px;
+  z-index: 1;
+}
+
+.graphic-designing .sec-06 .card-agency h4 {
+  text-align: left;
+  font-family: "Syne", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #fff;
+}
+
+.graphic-designing .sec-06 .card-agency p {
+  text-align: left;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 1.5px;
+  color: #fff;
+  opacity: 0.7;
+}
+
+.graphic-designing .sec-06 .card-overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  z-index: 1;
+
+  font-size: 35px;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  line-height: 42px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #e5deff;
+}
+
+
+
+
+
+/* Circle Animation */
+.animation-component {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+.main-image {
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.outline-image-01,
+.outline-image-02,
+.outline-image-03,
+.outline-image-04 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 400px;
+  width: 400px;
+  opacity: 0;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.outline-image-01 {
+  animation-name: anim1;
+}
+
+.outline-image-02 {
+  animation-name: anim2;
+}
+
+.outline-image-03 {
+  animation-name: anim3;
+}
+
+.outline-image-04 {
+  animation-name: anim4;
+}
+
+@keyframes anim1 {
+  0% {
+    transform: scale(1) translate(0, 0);
+    opacity: 0;
+  }
+
+  10% {
+    transform: scale(0.95) translate(0, 0);
+    opacity: 1;
+  }
+
+  25% {
+    transform: scale(0.95) translate(0, 0px);
+    opacity: 1;
+  }
+
+  40% {
+    transform: scale(0.95) translate(0, 0);
+    opacity: 1;
+  }
+
+  55% {
+    transform: scale(1) translate(0, 0);
+    opacity: 0.8;
+  }
+
+  65% {
+    transform: scale(1) translate(-50px, 0);
+    opacity: 1;
+  }
+
+  80% {
+    transform: scale(1) translate(0, 0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1) translate(0, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes anim2 {
+  0% {
+    transform: scale(1) translate(0, 0);
+    opacity: 0;
+  }
+
+  10% {
+    transform: scale(0.75) translate(0, 0);
+    opacity: 1;
+  }
+
+  25% {
+    transform: scale(0.75) translate(0, -60px);
+    opacity: 1;
+  }
+
+  40% {
+    transform: scale(0.75) translate(0, 0);
+    opacity: 1;
+  }
+
+  55% {
+    transform: scale(1) translate(0, 0);
+    opacity: 0.8;
+  }
+
+  65% {
+    transform: scale(1) translate(-20px, 0);
+    opacity: 1;
+  }
+
+  80% {
+    transform: scale(1) translate(0, 0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1) translate(0, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes anim3 {
+  0% {
+    transform: scale(1) translate(0, 0);
+    opacity: 1;
+  }
+
+  10% {
+    transform: scale(0.6) translate(0, 0);
+    opacity: 1;
+  }
+
+  25% {
+    transform: scale(0.6) translate(0, -125px);
+    opacity: 1;
+  }
+
+  40% {
+    transform: scale(0.6) translate(0, 0);
+    opacity: 1;
+  }
+
+  55% {
+    transform: scale(1) translate(0, 0);
+    opacity: 0.8;
+  }
+
+  65% {
+    transform: scale(1) translate(20px, 0);
+    opacity: 1;
+  }
+
+  80% {
+    transform: scale(1) translate(0, 0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1) translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes anim4 {
+  0% {
+    transform: scale(1) translate(0, 0);
+    opacity: 1;
+  }
+
+  10% {
+    transform: scale(0.4) translate(0, 0);
+    opacity: 1;
+  }
+
+  25% {
+    transform: scale(0.4) translate(0, -285px);
+    opacity: 1;
+  }
+
+  40% {
+    transform: scale(0.4) translate(0, 0);
+    opacity: 1;
+  }
+
+  55% {
+    transform: scale(1) translate(0, 0);
+    opacity: 0.8;
+  }
+
+  65% {
+    transform: scale(1) translate(50px, 0);
+    opacity: 1;
+  }
+
+  80% {
+    transform: scale(1) translate(0, 0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1) translate(0, 0);
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+@media only screen and (max-width: 1600px) {
+  .graphic-designing .sec-06 .catelog {
+    display: flex;
+    direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .graphic-designing .sec-05 .testim-box {
+    height: 320px;
+  }
+
+  .graphic-designing .sec-05 .testim-box .text h4 {
+    font-size: 18px;
+  }
+
+  .graphic-designing .sec-04 .box .text h4 {
+    font-size: 18px;
+  }
+
+  .graphic-designing .sec-04 .box .text {
+    bottom: -270px;
+  }
+
+  .graphic-designing .sec-04 .header p {
+    font-size: 24px;
+    line-height: 30px;
+    padding-bottom: 20px;
+  }
+
+  .graphic-designing .sec-03 {
+    padding: 100px 0;
+  }
+
+  .graphic-designing .sec-03 .card {
+    width: 310px;
+    height: 400px;
+  }
+
+  .graphic-designing .sec-03 .card .card-subtitle,
+  .graphic-designing .sec-03 .card .card-text {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: Lato, sans-serif;
+    line-height: 19px;
+    text-align: center;
+  }
+
+  .graphic-designing .sec-03 .card .card-title {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .graphic-designing .sec-03 h2 {
+    font-size: 35px;
+    line-height: 45px;
+  }
+
+  .graphic-designing .sec-06 .card-overlay-text {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .graphic-designing .sec-02 .first-row {
+    padding: 40px;
+  }
+
+  .graphic-designing .sec-02 .first-row .first h3 {
+    font-size: 37px;
+    line-height: 60px;
+  }
+
+  .graphic-designing .inner-title .heading h1 {
+    font-size: 100px;
+  }
+
+  img.circle-1 {
+    width: 100%;
+    max-width: 350px;
+    object-fit: contain;
+    margin: auto;
+    display: block;
+  }
+
+  .graphic-designing .bg .banner-bg {
+    object-fit: cover;
+    height: 100vh;
+    object-position: left;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .graphic-designing .inner-title .heading h1 {
+    font-size: 82px;
+  }
+
+  .graphic-designing .sec-02 .first-row .first h4 {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .graphic-designing .sec-02 .first-row .first h3 {
+    font-size: 27px;
+    line-height: 48px;
+  }
+
+  .graphic-designing .sec-03 {
+    padding: 60px 0;
+  }
+
+  .graphic-designing .sec-03 h2 {
+    font-size: 30px;
+    line-height: 38px;
+  }
+
+  .graphic-designing .sec-03 .card {
+    width: 320px;
+    height: 400px;
+    display: block;
+  }
+
+  .graphic-designing .sec-03 .card-blur-bg-1 {
+    padding: 30px 20px 20px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .graphic-designing .sec-03 .nav-tabs {
+    margin: 20px 0 30px;
+  }
+
+  .graphic-designing .sec-01 p {
+    padding-top: 10px;
+    padding-right: 10px;
+    font-size: 17px;
+    line-height: 28px;
+  }
+
+  .graphic-designing .sec-01 {
+    height: 90vh;
+    padding: 100px 0;
+  }
+
+  .graphic-designing .sec-02 .first-row {
+    padding: 40px 10px;
+  }
+
+  .graphic-designing .sec-03 {
+    padding: 50px 0;
+  }
+
+  .graphic-designing .sec-03 .justify-content-stretch {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    column-gap: 10px;
+    row-gap: 20px;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .graphic-designing .inner-title .heading h1 {
+    font-size: 62px;
+  }
+
+  .graphic-designing .sec-01 {
+    height: 80vh;
+    padding: 50px 0;
+  }
+
+  img.circle-1 {
+    width: 100%;
+    max-width: 260px;
+    object-fit: contain;
+    margin: auto;
+    display: block;
+  }
+
+  .graphic-designing .sec-01 p {
+    padding-top: 5px;
+    padding-right: 0px;
+    font-size: 15px;
+    line-height: 23px;
+    text-align: center;
+  }
+
+  .graphic-designing .sec-02 .first-row .first h3 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .graphic-designing .sec-02 .first-row .first h4 {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .graphic-designing .sec-02 .first-row {
+    padding: 40px 10px;
+  }
+
+  .graphic-designing .sec-03 ul.nav.nav-tabs .nav-link {
+    padding: 13px 15px;
+    font-size: 12px;
+  }
+
+  .graphic-designing .sec-03 .nav-tabs {
+    margin: 20px 0 30px;
+  }
+
+  .graphic-designing .sec-03 .justify-content-stretch {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    column-gap: 10px;
+    row-gap: 20px;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: auto;
+  }
+
+  .graphic-designing .sec-03 .card .card-subtitle,
+  .graphic-designing .sec-03 .card .card-text {
+    text-align: center;
+  }
+
+  .graphic-designing .sec-03 .card .card-title {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .graphic-designing .sec-03 .card {
+    width: 100%;
+    height: 350px;
+    display: block;
+  }
+
+  .graphic-designing .sec-06 {
+    padding: 40px 0;
+  }
+
+  .graphic-designing .sec-01 h4 {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .graphic-designing .inner-title .heading h1 {
+    font-size: 36px;
+  }
+
+  .graphic-designing .sec-01 h4 {
+    font-size: 13px;
+    font-weight: 400;
+    color: #fff;
+    text-align: left;
+    line-height: 10px;
+    font-family: Lato, sans-serif;
+    text-align: center;
+  }
+
+  .graphic-designing .sec-01 p {
+    padding-top: 5px;
+    padding-right: 0px;
+    font-size: 13px;
+    line-height: 21px;
+    text-align: center;
+  }
+
+  .graphic-designing .sec-01 {
+    height: 80vh;
+    padding: 50px 0;
+  }
+
+  .graphic-designing .sec-02 .first-row {
+    display: flex;
+    justify-content: space-between;
+    row-gap: 30px;
+    flex-direction: column;
+  }
+
+  .graphic-designing .sec-02 .first-row .first {
+    padding-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+
+  .graphic-designing .sec-03 {
+    padding: 50px 0;
+  }
+
+  .graphic-designing .sec-03 h2 {
+    font-size: 25px;
+    line-height: 32px;
+  }
+
+  .graphic-designing .sec-03 p {
+    font-size: 16px;
+    line-height: 22px;
+    padding-top: 5px;
+    opacity: 0.7;
+  }
+
+  .graphic-designing .sec-04 {
+    padding: 40px 0;
+  }
+
+  .graphic-designing .sec-04 .header p {
+    font-size: 20px;
+    line-height: 25px;
+    padding-bottom: 20px;
+  }
+
+  .graphic-designing .sec-04 .box .text h4 {
+    font-size: 18px;
+  }
+
+  .graphic-designing .sec-05 .header p {
+    font-size: 26px;
+  }
+
+  .graphic-designing .sec-04 .header p {
+    font-size: 17px;
+    line-height: 22px;
+    padding-bottom: 10px;
+  }
+
+  .graphic-designing .sec-05 .testim-box {
+    height: 310px;
+  }
+
+  .graphic-designing .sec-06 h2 {
+    font-size: 24px;
+    padding-top: 0px;
+  }
+
+  .graphic-designing .sec-04 {
+    padding: 40px 0;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .graphic-designing .inner-title .heading h1 {
+    font-size: 36px;
+  }
+
+  .graphic-designing .sec-03 ul.nav.nav-tabs .nav-link {
+    padding: 13px 15px;
+    font-size: 12px;
+  }
+
+  .graphic-designing .sec-03 h2 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .graphic-designing .sec-03 p {
+    font-size: 16px;
+    line-height: 22px;
+    padding-top: 5px;
+    opacity: 0.7;
+  }
+
+  .graphic-designing .sec-03 .card {
+    width: 100%;
+    height: 350px;
+    display: block;
+  }
+
+  .graphic-designing .sec-03 .card .card-title {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .graphic-designing .sec-04 .header p {
+    font-size: 15px;
+    line-height: 24px;
+    padding-bottom: 10px;
+  }
+
+  .graphic-designing .sec-05 .text p {
+    font-size: 14px;
+  }
+
+  .graphic-designing .sec-05 .testim-box .text h4 {
+    font-size: 17px;
+  }
+
+  .graphic-designing .sec-05 .testim-box {
+    height: 400px;
+  }
+
+  .graphic-designing .sec-06 h2 {
+    font-size: 24px;
+    padding-top: 0px;
+  }
+
+  .graphic-designing .sec-06 .catelog {
+    display: flex;
+    direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+
+  .graphic-designing .sec-06 .card-overlay-text {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .graphic-designing .sec-06 {
+    padding: 40px 0;
+  }
+
+  .graphic-designing .sec-06 .card-agency h4 {
+    font-size: 15px;
+    line-height: 18px;
+    color: #fff;
+  }
+
+  .graphic-designing .sec-06 .card-agency p {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .graphic-designing .sec-02 .first-row .first {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+
+  .graphic-designing .sec-02 .first-row .first h3 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .graphic-designing .sec-01 p {
+    font-size: 13px;
+    line-height: 21px;
+    text-align: center;
+  }
+
+  img.circle-1 {
+    max-width: 260px;
+  }
+
+  .graphic-designing .sec-04 .header p {
+    font-size: 15px;
+    line-height: 24px;
+    padding-bottom: 10px;
+  }
+
+  .graphic-designing .sec-03 .card .card-img-top {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .graphic-designing .sec-05 .testim-box {
+    height: 400px;
+  }
+
+  .graphic-designing .sec-05 .testim-box {
+    padding: 0 15px;
+  }
+
+  .graphic-designing .sec-05 .text p {
+    font-size: 13px;
+  }
+
+  .graphic-designing .sec-05 .testim-box .text h4 {
+    font-size: 17px;
+  }
+}
+
+
+@media only screen and (max-width: 1600px) {
+  .graphic-designing .sec-03 .justify-content-stretch {
+    justify-content: center !important;
+  }
+
+  .graphic-designing .sec-06 .card-agency .card-img img {
+    height: 200px !important;
+    width: 200px !important;
+  }
+
+  .graphic-designing .sec-03 .card {
+    width: 350px !important;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+
+  .graphic-designing .sec-01 {
+    height: 70vh !important;
+    padding: 100px 0 !important;
+    align-content: center !important;
+  }
+
+  .graphic-designing .sec-03 .cards-row {
+    column-gap: 0px !important;
+  }
+
+  .graphic-designing .sec-03 .card {
+    width: 100% !important;
+    height: 500px;
+  }
+
+  .graphic-designing .sec-05 .slick-track {
+    height: 500px !important;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+
+  .graphic-designing .sec-03 .cards-row .col-lg-3 {
+    width: 33% !important;
+  }
+
+  .graphic-designing .sec-03 .card {
+    height: 400px !important;
+  }
+
+  .graphic-designing .sec-03 .nav-tabs {
+    margin: 20px 0 40px;
+  }
+
+  .graphic-designing .sec-03 ul.nav.nav-tabs .nav-link {
+    padding: 15px 23px;
+    font-size: 13px;
+  }
+
+  .graphic-designing .sec-05 .slick-track {
+    height: 450px;
+  }
+
+  .graphic-designing .sec-06 .card-agency h4 {
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  .graphic-designing .sec-06 .card-agency p {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .graphic-designing .sec-06 .card-agency .card-img img {
+    height: 160px !important;
+    width: 160px !important;
+  }
+
+  footer .three-align-box {
+    column-gap: 25px;
+  }
+
+  footer .copy-right-text.text-center p {
+    margin-top: 30px;
+  }
+
+}
+
+@media only screen and (max-width: 1024px) {
+
+  .graphic-designing .sec-01 .col-lg-8 {
+    align-content: center;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .graphic-designing .sec-01 {
+    height: 80vh !important;
+  }
+
+  .graphic-designing .sec-03 .cards-row .col-lg-3 {
+    width: 100% !important;
+  }
+
+  .graphic-designing .sec-03 .card {
+    height: 300px !important;
+  }
+
+  .graphic-designing .sec-05 .slick-track {
+    height: 450px !important;
+  }
+
+  .graphic-designing .sec-06 .card-agency .card-img img {
+    height: 200px !important;
+    width: 200px !important;
+  }
+
+
+
+  /* Circle Animation */
+  .animation-component {
+    position: relative;
+    width: 30vw;
+    height: 30vw;
+    margin: auto;
+  }
+
+  .main-image {
+    height: 30vw;
+    width: 30vw;
+  }
+
+  .outline-image-01,
+  .outline-image-02,
+  .outline-image-03,
+  .outline-image-04 {
+    height: 30vw;
+    width: 30vw;
+
+  }
+
+}
+
+@media only screen and (max-width: 767px) {
+  .graphic-designing .sec-01 {
+    height: 70vh !important;
+    padding: 50px 0 !important;
+  }
+
+  .graphic-designing .sec-05 .slick-track {
+    height: 400px !important;
+  }
+
+  .graphic-designing .sec-06 .card-agency .card-img img {
+    height: 150px !important;
+    width: 150px !important;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+
+  .graphic-designing .inner-title .heading h3 {
+    font-size: 25px;
+    line-height: 40px;
+  }
+
+  .graphic-designing .inner-title,
+  .graphic-designing .bg .banner-bg {
+    min-height: 70vh;
+  }
+
+  .graphic-designing .sec-03 .card {
+    height: fit-content !important;
+  }
+
+  .graphic-designing .sec-05 .slick-track {
+    height: 500px !important;
+  }
+
+  .graphic-designing .sec-06 .card-agency .card-img img {
+    height: fit-content !important;
+    width: 100% !important;
+  }
+
+  .graphic-designing .sec-06 .card-agency {
+    width: 100%;
+  }
+
+  
+
+  /* Circle Animation */
+  .animation-component {
+    position: relative;
+    width: 50vw;
+    height: 50vw;
+    margin: auto;
+  }
+
+  .main-image {
+    height: 50vw;
+    width: 50vw;
+  }
+
+  .outline-image-01,
+  .outline-image-02,
+  .outline-image-03,
+  .outline-image-04 {
+    height: 50vw;
+    width: 50vw;
+
+  }
+
+}

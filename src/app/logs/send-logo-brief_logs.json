@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "timestamp": "2025-01-24T17:08:18.778Z",
+    "contactPersonName": "Test",
+    "contactEmailAddress": "nehy@mailinator.com",
+    "contactPhoneNumber": "+1 (294) 929-7163",
+    "logoName": "Helen Lambert",
+    "companySlogan": "Golden and Battle Traders",
+    "businessDescription": "Velit nulla sunt er",
+    "logoDetails": "Incidunt omnis sint",
+    "primaryColor": "Quae veniam enim es",
+    "secondaryColor": "Quae veniam enim es",
+    "status": "success",
+    "message": "Email sent successfully"
+  }
+]

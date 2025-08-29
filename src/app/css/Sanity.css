@@ -1,0 +1,52 @@
+html,
+body {
+  overflow-x: clip;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html.lenis,
+html.lenis body {
+  scroll-behavior: auto !important;
+  overflow-x: clip;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: auto !important;
+}
+
+.lenis.lenis-stopped {
+  overflow: auto;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+header,
+footer {
+  display: none;
+}
+
+.flow-social-links {
+  display: none;
+}
+
+.tawk-min-container {
+  display: none !important;
+}
+
+.sticky-effect {
+  display: none;
+}
+
+
+.widget-visible {
+  display: none ! important;
+}

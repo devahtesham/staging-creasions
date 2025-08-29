@@ -1,0 +1,2039 @@
+/* Hero Section */
+
+.re-hero-banner {
+  height: 100vh;
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;
+  /* position: relative; */
+}
+
+.re-hero-banner .text {
+  margin-top: 80px;
+}
+
+.re-hero-banner .text p {
+  font-size: 20px;
+  max-width: 1000px;
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.sec-8.nitro-onscreen {
+    position: relative;
+}
+
+.sec-8.nitro-onscreen::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: #00000073;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.sec-8.nitro-onscreen .container {
+    position: relative;
+    z-index: 1;
+}
+
+.re-hero-banner .text p a {
+  color: #fff !important;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  z-index: 1;
+}
+
+.slick-dots li button:before {
+  font-family: "slick";
+  font-size: 6px;
+  line-height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  content: "•";
+  text-align: center;
+  opacity: 0.25;
+  color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 0.75;
+  color: transparent;
+}
+
+.re-hero-banner ul.slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3%;
+  left: -45%;
+  list-style: none;
+}
+
+.re-hero-banner .slick-dots li {
+  width: 20px !important;
+  height: 6px !important;
+}
+
+.re-hero-banner .slick-dots li button {
+  width: 20px;
+  height: 6px;
+}
+
+.re-hero-banner .slick-dots li button::before {
+  background-color: #999999;
+  width: 20px;
+  height: 6px;
+  border-radius: 50px;
+  opacity: 100%;
+}
+
+.re-hero-banner .slick-dots li.slick-active button::before {
+  background-color: #746fff;
+}
+
+.re-hero-banner .scroll-down-box {
+  position: absolute;
+  bottom: 10px;
+  z-index: 999;
+  right: 20px;
+}
+
+.re-hero-banner .scroll-down-box .two-imges {
+  position: relative;
+}
+
+.re-hero-banner .scroll-down-box .two-imges img.Scrol-Down-Mouse {
+  position: absolute;
+  top: 37%;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+.re-hero-banner .scroll-down-box .two-imges a:hover img.Scrol-Down-Mouse {
+  filter: brightness(100);
+}
+
+.text h1 {
+  font-size: 75px;
+  font-weight: 400;
+  /* display: inline-flex; */
+  line-height: 1em;
+}
+
+.text h1 span {
+  font-weight: 600; /* display: inline-flex; */
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.text h1 span img {
+  display: inline;
+}
+
+.rotating-img {
+  animation: rotate 7s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Hero Video */
+.banner-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.banner-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.fade-in {
+  animation: fade-in 0.4s ease-in;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.real-estate-banner {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  display: flex !important;
+  align-items: center;
+  z-index: 999999999 !important;
+}
+
+.real-estate-banner .case-text h2 {
+  font-size: 65px;
+  font-weight: 400;
+  color: #fff !important;
+  text-align: left;
+}
+.real-sec-2 .case-text {
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px 43px;
+  height: 200px;
+  width: 225px;
+  display: flex;
+  align-items: center;
+}
+
+.case-hero-slider ul.slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  left: 365px;
+  column-gap: 3px;
+  top: 350px;
+}
+.case-hero-slider .slick-dots li.slick-active button::before {
+  background-color: #746fff;
+  width: 20px;
+  height: 6px;
+}
+
+.case-hero-slider .slick-dots li button::before {
+  background-color: #999999;
+  width: 20px;
+  height: 6px;
+  border-radius: 50px;
+  opacity: 100%;
+}
+.case-hero-slider .slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
+  opacity: 1;
+  width: 20px;
+  height: 6px;
+}
+.case-text p {
+  color: white;
+  font-size: 22px;
+  line-height: 1.7em;
+  text-align: justify;
+}
+.case-hero-sliderul.case-list li {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 300;
+}
+.real-estate-banner ul.case-list {
+  margin-top: 20px;
+  padding-left: 0px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.real-estate-banner ul.case-list li {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 10px;
+}
+
+.real-estate-banner ul.case-list img {
+  margin-top: 16px;
+  max-width: 100px !important;
+}
+.real-estate-banner .case-text span {
+  font-weight: 600;
+  color: #fff;
+}
+
+.real-estate-banner .case-text p {
+  color: #fff;
+}
+
+.text p {
+  color: #ffffffa6;
+  font-size: 16px;
+  margin-top: 5px !important;
+  margin-bottom: 10px !important;
+}
+
+.case-bg-marker {
+  margin-top: -10px;
+  background: linear-gradient(#0e081f 100%, #5e52e2 0%);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.real-sec-2 {
+  padding-bottom: 100px;
+  padding-top: 70px;
+}
+.real-sec-2 .case-text {
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px 47px;
+  height: 200px;
+  width: 218px;
+  display: flex;
+  align-items: center;
+}
+
+.case-text-brand h2 {
+  font-size: 40px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 40px;
+  text-transform: capitalize;
+}
+.real-sec-2 .case-text h4 {
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.4em;
+  font-weight: 400;
+}
+.case-text:hover h4 {
+  transform: translateY(-10px);
+  transition: transform 0.3s ease-in-out;
+}
+
+.sec-7.nitro-offscreen {
+  background: #000000;
+  padding: 100px 0;
+  background: linear-gradient(#0e081f 100%, #5e52e2 0%);
+}
+
+.sec-7 .row {
+  background: linear-gradient(90deg, #54126a, #65177a, #337ab8);
+  padding: 0 50px;
+  border-radius: 15px;
+}
+
+.bounce-in {
+  animation: bounce-in 2s ease infinite;
+}
+
+@keyframes bounce-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.fade-in-left {
+  animation: fade-in-left 2s ease infinite;
+}
+
+section.sec-7.nitro-offscreen .text h2 {
+  font-size: 20px;
+  margin-bottom: 0;
+  color: #fff !important;
+  -webkit-text-fill-color: #ffffff;
+  font-family: "Syne";
+  font-weight: 600;
+}
+
+.disc-price h3 {
+  color: #fff;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.sec-7 ul li a {
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px 16px;
+  border-radius: 19px;
+  min-width: 128px;
+  height: 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+a.discount-call-btn:hover {
+  transform: scale(1.1);
+  transition: 0.4s;
+}
+
+li {
+  list-style: none;
+}
+
+.order-btn {
+  font-size: 16px;
+  min-width: 171px;
+  height: 50px;
+  display: inline-flex;
+  width: auto;
+  padding: 10px 30px;
+  background-image: linear-gradient(to right, #6a47f4, #4daedb);
+  display: flex;
+  width: 160px;
+  padding: 11px 0px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 93px;
+  color: white;
+  transition: 1.5s;
+  transition: all 0.4s ease-in-out;
+  font-size: 18px;
+  text-transform: uppercase;
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  background-size: 300% 100%;
+}
+
+.order-btn:hover {
+  background-image: linear-gradient(to right, #6246d3, #58caff);
+  color: white;
+  transition: 1.5s;
+  transition: all 0.4s ease-in-out;
+  font-size: 18px;
+  text-transform: uppercase;
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  background-size: 300% 100%;
+  transform: scale(1.1);
+  transition: 0.4s;
+}
+
+.order-btn a {
+  color: #fff;
+  text-transform: capitalize;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.case-bread {
+  padding-right: 90px;
+  margin-bottom: 50px;
+}
+
+.real-sec-3 .case-bread h2 {
+  font-size: 40px;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.real-sec-3 .case-bread p {
+  color: #ffffffbd;
+  font-size: 18px;
+  line-height: 1.7em;
+  max-width: 480px;
+  font-weight: 400;
+}
+
+.real-sec-3 ul.case-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  margin-bottom: 30px;
+  padding-left: 20px;
+}
+
+.real-sec-3 ul.case-list li {
+  color: #ffffffbd;
+  max-width: 680px;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  font-size: 18px;
+  list-style: disc;
+}
+
+a.t-btn.t-btn-arrow.real-bg {
+  max-width: 420px;
+  padding: 13px 25px;
+  background: linear-gradient(347deg, #0d071e, #ffffff5c);
+  backdrop-filter: blur(51px);
+}
+a.t-btn.t-btn-arrow.real-bg:hover {
+  background: linear-gradient(270deg, #172ecf 29%, #6966cf 100%);
+}
+
+.real-sec-4 {
+  height: 1460px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  display: flex;
+  align-items: flex-end;
+  margin-top: -285px;
+  padding-bottom: 160px;
+}
+
+.real-sec-4 .container,
+.case-last-bg .container {
+  max-width: 1320px;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+.case-last-bg {
+  margin-top: -155px;
+}
+.case-brand-text h5,
+.case-text.manage,
+.case-text-brand h5 {
+  text-transform: uppercase;
+}
+
+.case-brand-text h5 {
+  font-size: 15px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.case-brand-text h4 {
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.case-brand-text h3 {
+  color: #e5deff;
+  font-size: 36px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.4em;
+  margin-bottom: 20px;
+  font-family: "Lato";
+}
+
+.case-last-bg {
+  background-color: #00162f;
+}
+.real-sec-5 .text h3 {
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: 600;
+}
+.real-sec-5 .case-box {
+  text-align: center;
+  background-color: #817cdd1f;
+  padding: 30px 15px;
+  backdrop-filter: blur(70px);
+  margin-top: 30px;
+  border-radius: 30px;
+  border: 0.8px solid rgba(47, 39, 198, 0.75);
+  cursor: pointer;
+  height: 370px;
+}
+.real-sec-5 .case-brand-text {
+  text-align: center;
+}
+.real-sec-5 .text p {
+  line-height: 22px;
+  color: #a3b3c6b3;
+}
+
+.real-sec-5 {
+  padding: 10px 0 60px;
+}
+.case-brand-text h4 {
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.case-brand-text h5 {
+  font-size: 15px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 5px;
+}
+.case-text-brand h2 {
+  font-size: 40px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 40px;
+  text-transform: capitalize;
+}
+.real-sec-5 a.t-btn.t-btn-arrow {
+  margin-top: 50px;
+  max-width: 160px;
+  padding: 12px 17px;
+  background: linear-gradient(321deg, #2f27c600, #817cdd85);
+  backdrop-filter: brightness(0.3);
+}
+
+.real-sec-6 {
+  background: linear-gradient(#0e081f 100%, #5e52e2 0%);
+  padding: 100px 0;
+}
+.real-sec-6 .mark-box {
+  padding: 30px 0;
+  border-bottom: 1px solid #ffffff33;
+  display: flex;
+  align-items: center;
+}
+.real-sec-6 .text h3 {
+  font-size: 30px;
+  line-height: 1.1em;
+
+  max-width: 410px;
+  font-weight: 600;
+}
+.real-sec-5 .case-box:hover {
+  background: linear-gradient(#5e52e2 0%, #292cc0 100%);
+}
+.real-sec-5 .col-xl-3.col-lg-6.col-md-6.col-sm-6 {
+  padding: 0 10px;
+}
+
+.text h3 {
+  font-size: 65px;
+  line-height: 0.9em;
+  background: linear-gradient(270deg, #9d77ff 0%, #c4c2ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.real-sec-5 a.t-btn.t-btn-arrow {
+  margin-top: 50px;
+  padding: 12px 17px;
+  background: linear-gradient(321deg, #2f27c600, #817cdd85);
+  backdrop-filter: brightness(0.3);
+}
+
+.real-sec-5 a.t-btn.t-btn-arrow {
+  margin-top: 50px;
+  padding: 12px 17px;
+  background: linear-gradient(321deg, #2f27c600, #817cdd85);
+  backdrop-filter: brightness(0.3);
+}
+
+a.t-btn.t-btn-arrow:hover {
+  background: linear-gradient(270deg, #172ecf 29%, #6966cf 100%);
+}
+
+/* Section 6 */
+.case-text.manage h6 {
+  font-size: 15px;
+  color: #fff;
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.case-text.manage h2 {
+  font-size: 40px;
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 40px;
+  text-transform: capitalize;
+}
+
+.mid-bg-marker {
+  background-image: url(/industry/real-estate/re-mid-bg.webp);
+  background-size: cover;
+}
+
+/* Section 7 */
+.real-sec-7 {
+  padding: 100px 0;
+}
+
+.case-img-box img {
+  width: 425px;
+  height: 294px;
+  border-radius: 10px;
+}
+
+.case-img-box img:hover {
+  transform: scale(1.05);
+  transition: 0.5s;
+}
+
+.case-img-box h5 {
+  color: #fff;
+  text-align: center;
+  margin-top: 20px;
+  max-width: 300px;
+  margin: auto;
+  padding-top: 20px;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.real-sec-7 .web-btn {
+  padding-top: 50px;
+  text-align: center;
+}
+
+/* Section 8 */
+
+.sec-8.nitro-onscreen {
+  background-attachment: scroll;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.sec-8.nitro-onscreen .text h2 {
+  font-size: 40px;
+  letter-spacing: 1.1px;
+  background: linear-gradient(270deg, #9d77ff 0%, #c4c2ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #ffffff;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.order-t-btn {
+  background-color: #fff;
+  padding: 14px 45px;
+  border-radius: 24px;
+  font-family: "Lato";
+  transition: 0.3s;
+  display: block;
+  margin: auto;
+  width: auto;
+}
+
+.order-t-btn a {
+  font-size: 15px;
+  font-weight: 500;
+  font-family: "Syne";
+  color: #000000;
+}
+
+.order-t-btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.order-t-btn:hover a {
+  color: #fff;
+}
+.sec-8.nitro-onscreen .info-box {
+  justify-content: center;
+}
+
+.sec-8.nitro-onscreen .order-t-btn {
+  background-color: #fff;
+  padding: 14px 45px;
+  border-radius: 24px;
+  font-family: Neometric-Medium;
+  display: inline-block;
+  transition: .3s;
+  width: auto;
+}
+
+
+/* Section 9 */
+.Benefit-box {
+  text-align: center;
+  border-radius: 80%;
+  padding: 30px 0px;
+  height: 210px;
+  width: 210px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(/industry/real-estate/re-sec09-benefixBox.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.Benefit-box h5 {
+  font-size: 15px;
+  color: #fff;
+  margin-top: 20px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.Benefit-img img {
+  padding-top: 30px;
+  max-width: 630px;
+}
+.Benefit-box img {
+  max-width: 70px;
+  object-fit: contain;
+}
+.Benefits-sec {
+  position: relative;
+  padding: 50px 0;
+}
+
+.Benefit-box.last-brom:before {
+  content: "";
+  background-image: url(/industry/real-estate/re-sec09-ellipse.webp);
+  background-repeat: no-repeat;
+  height: 190px;
+  width: 470px;
+  position: absolute;
+  top: 265px;
+  rotate: 351deg;
+  left: 160px;
+}
+.Benefit-box.last-brom:before {
+  top: 270px;
+  rotate: 351deg;
+  left: 350px;
+}
+
+.Benefit-box.first-brom:after {
+  content: "";
+  background-image: url(/industry/real-estate/re-sec09-ellipse.webp);
+  background-repeat: no-repeat;
+  height: 190px;
+  width: 470px;
+  position: absolute;
+  top: 225px;
+  rotate: 62deg;
+  left: 730px;
+}
+.Benefit-box.first-brom:after {
+  top: 225px;
+  rotate: 63deg;
+  left: 930px;
+}
+.testimonial-and-portfolio {
+  background-image: url(/industry/real-estate/re-testimonial-bg.webp);
+  margin-top: -12px;
+  background-size: cover;
+}
+/* Testimonial */
+
+/* Section 7 (Testimonials) */
+.home-sec-07 {
+  padding: 100px 0 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.home-sec-07 .main-testi-large-box {
+  color: white;
+  z-index: 999;
+}
+.home-sec-07 .main-testi-box {
+  padding: 50px 150px;
+  text-align: center;
+  margin-top: 0px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 998;
+  border-radius: 10px;
+  position: relative;
+  /* background-color: #000000b3; */
+  background-image: url(/testi-main-box-bg.png);
+  backdrop-filter: blur(2px);
+}
+.home-sec-07 .main-testi-box::after {
+  content: "";
+  background-image: url(/testi-details-left.png);
+  width: 88px;
+  height: 66px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 70px;
+  left: 5%;
+}
+.home-sec-07 .main-testi-box::before {
+  content: "";
+  background-image: url(/testi-details-right.png);
+  width: 88px;
+  height: 66px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 70px;
+  right: 5%;
+}
+
+.home-sec-07 .main-testi-box h4 {
+  background: linear-gradient(270deg, #9d77ff 0%, #c4c2ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.home-sec-07 .main-testi-box h5 {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
+  margin: 10px 0 15px;
+}
+
+.home-sec-07 .main-testi-box p {
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.7em;
+}
+
+.home-sec-07 .main-testi-box h6 {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Lato", sans-serif;
+  margin-top: 15px;
+}
+.home-sec-07 .two-imges-testi img.testi-img-01 {
+  position: absolute;
+  bottom: 50px;
+  right: 10%;
+}
+
+.home-sec-07 .two-imges-testi img.testi-img-02 {
+  position: absolute;
+  bottom: 130px;
+  left: 13%;
+}
+.home-sec-07 .main-testi-nav .box img {
+  cursor: pointer;
+}
+
+.home-sec-07 .slick-track {
+  padding: 5px 0 25px;
+}
+
+.home-sec-07 .testi-img-01 {
+  animation: zoom 5s ease-in-out infinite;
+}
+
+.home-sec-07 .rotating-img {
+  animation: rotate 7s linear infinite;
+}
+.main-testi-nav .slick-slide {
+  opacity: 30%;
+}
+
+.main-testi-large-box .slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+  z-index: 9999;
+}
+.main-testi-nav .slick-active.slick-center.slick-current {
+  opacity: 100% !important;
+}
+
+.main-testi-nav .slick-list {
+  padding: 0 !important;
+}
+
+.main-testi-nav .slick-active.slick-center.slick-current .box img {
+  box-shadow: 5px 5px 25px 0px rgba(157, 119, 255, 0.9);
+  border-radius: 10px;
+}
+
+.case-text-brand {
+  text-align: center;
+}
+
+.case-text-brand h5 {
+  color: #fff;
+  font-size: 16px;
+  padding-bottom: 10px;
+  font-weight: 400;
+}
+
+.home-sec-07 .slick-dots {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  z-index: 1;
+}
+
+.home-sec-07 ul.slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  column-gap: 3px;
+  bottom: -20px;
+}
+
+.home-sec-07 .slick-dots li {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.home-sec-07 .slick-dots li button::before {
+  background-color: #fff;
+  width: 14px;
+  height: 14px;
+  border-radius: 50px;
+  opacity: 100%;
+}
+
+.home-sec-07 .slick-dots li.slick-active button::before {
+  background-color: #746fff;
+  width: 14px;
+  height: 14px;
+}
+
+/* Sectoion 10 - Portfolio */
+.real-sec-8 {
+  padding: 120px 0;
+}
+
+.real-sec-8 .img-box {
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 0.3s;
+  margin-bottom: 30px;
+}
+
+.real-sec-8 .img-box img {
+  width: 100%;
+  height: 400px;
+  object-position: top;
+  object-fit: cover;
+  transition: 8s;
+}
+
+.real-sec-8 .img-box:hover img {
+  object-position: bottom;
+}
+
+.real-sec-8 .web-btn {
+  text-align: center;
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 1600px) {
+  .real-sec-5 .case-box {
+    height: 370px;
+  }
+  .case-hero-slider ul.slick-dots {
+    top: 435px !important;
+    left: 14% !important;
+  }
+  /*.case-mail-form .submit-btn {*/
+
+  /*    right: 129px;*/
+  /*}*/
+  .testimoan-sec-case ul.slick-dots {
+    left: 0px;
+  }
+  .case-hero-slider.hero-slider2 ul.slick-dots {
+    left: 0% !important;
+    top: 104% !important;
+  }
+  .case-hero-slider.hero-slider2 .main-testi-box p {
+    font-size: 20px;
+    font-style: italic;
+    color: white;
+    font-weight: 400;
+    line-height: 28px;
+  }
+  .real-estate-banner .case-text h2 {
+    font-size: 60px;
+    font-weight: 400;
+    color: #fff !important;
+    text-align: left;
+  }
+  /*.real-sec-2 .col-xl-2 {*/
+  /*    flex: 0 0 18%;*/
+  /*    max-width: 18%;*/
+  /*}*/
+
+  .Benefit-box.first-brom:after, .Benefit-box.last-brom:before {
+    content: "";
+    background-image: url("/industry/real-estate/re-eclipse.webp");
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 480px;
+    position: absolute;
+  }
+  .Benefit-box.last-brom:before {
+      top: 270px;
+      rotate: 351deg;
+      left: 191px;
+  }
+  .Benefit-box img {
+      max-width: 70px;
+      object-fit: contain;
+  }
+  .Benefit-box.first-brom:after {
+      top: 215px;
+      rotate: 63deg;
+      left: 770px;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .case-hero-slider ul.slick-dots {
+    top: 415px !important;
+    left: 145px !important;
+  }
+  .case-hero-slider.hero-slider2 ul.slick-dots {
+    left: 0% !important;
+    top: 104% !important;
+  }
+  .real-estate-banner .container {
+    padding-top: 80px;
+  }
+
+  
+  .Benefit-box.last-brom:before {
+    top: 270px;
+    rotate: 347deg;
+    left: 111px;
+  }
+
+  .Benefit-box.first-brom:after {
+    top: 215px;
+    rotate: 63deg;
+    left: 667px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .real-estate-banner .container {
+    padding-top: 0px;
+  }
+  .real-sec-4 {
+    height: 750px;
+  }
+
+  .real-estate-banner .case-text h2 {
+    font-size: 50px;
+    margin-top: 100px;
+  }
+
+  .re-hero-banner ul.slick-dots {
+    margin-bottom: 4%;
+    left: -44%;
+  }
+  .real-estate-banner .text p{
+    font-size: 16px;
+  }
+  /*.case-hero-slider .slick-slide {*/
+  /*    float: left;*/
+  /*    height: 80vh !important;*/
+  /*}*/
+  .real-sec-3 .case-bread h2,
+  .case-text.manage h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  .case-bread {
+    padding-right: 40px;
+  }
+  .case-text-brand h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+  .real-sec-5 .text h3 {
+    font-size: 23px;
+    line-height: 27px;
+  }
+  .real-sec-5 .case-box {
+    height: 305px;
+  }
+  .real-sec-2 .case-text {
+    margin: 0 auto !important;
+    margin-top: 25px !important;
+  }
+  /*.case-mail-form .submit-btn {*/
+  /*    right: 120px;*/
+  /*}*/
+  .testimoan-sec-case .slick-slide.slick-current.slick-active {
+    background-size: contain !important;
+  }
+  .main-testi-box p {
+    font-size: 16px;
+    font-style: italic;
+    color: white;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  .case-hero-slider ul.slick-dots {
+    top: 415px !important;
+    left: 140px !important;
+  }
+  .real-sec-2 .col-xl-2 {
+    flex: 0 0 33%;
+    max-width: 33%;
+  }
+  .case-mail-form .submit-btn {
+    right: 21px;
+  }
+
+  
+  .Benefit-box.first-brom:after {
+    top: 215px;
+    rotate: 69deg;
+    left: 609px;
+  }
+  .Benefit-box.last-brom:before {
+    top: 270px;
+    rotate: 352deg;
+    left: 84px;
+  }
+  .Benefit-box.first-brom:after, .Benefit-box.last-brom:before {
+  
+    height: 200px;
+    width: 410px;
+    position: absolute;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .sec-7 .row {
+    padding: 30px 30px !important;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  .sec-7.nitro-offscreen img {
+    margin-top: -55px;
+    margin-bottom: -75px;
+  }
+  .sec-7 ul li a {
+    padding: 10px 5px;
+    min-width: 128px;
+    height: 32px;
+    font-size: 13px;
+  }
+  section.sec-7.nitro-offscreen .text h2{
+    font-size: 19px;
+  }
+  .disc-price h3 {
+    font-size: 20px;
+  }
+  .sec-7.nitro-offscreen .order-btn{
+    min-width: 132px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .real-sec-3 {
+    padding-bottom: 60px;
+  }
+  .real-sec-4{
+    height: 900px;
+  }
+  .real-sec-4 .container, .case-last-bg .container{
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 920px;
+  }
+  .case-brand-text h3{
+    font-size: 28px;
+  }
+
+  .real-sec-6 .text h3 {
+    font-size: 30px;
+    max-width: 380px;
+  }
+  .real-sec-7 .case-img-box img {
+    width: 288px;
+    height: 254px;
+  }
+
+  
+  .Benefit-box.last-brom:before {
+    top: 270px;
+    rotate: 352deg;
+    left: 20px;
+  }
+  .Benefit-box.first-brom:after {
+    top: 215px;
+    rotate: 69deg;
+    left: 543px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .home-sec-07 .slick-slide img {
+    max-width: 65px;
+    object-fit: contain;
+    height: auto;
+  }
+  .home-sec-07 .two-imges-testi img.testi-img-01 {
+    bottom: 60px;
+    max-width: 270px;
+    object-fit: contain;
+  }
+  .home-sec-07 .two-imges-testi img.testi-img-02 {
+    position: absolute;
+    bottom: 130px;
+    left: 13%;
+  }
+  .home-sec-07 {
+    padding: 70px 0 100px;
+  }
+  .home-sec-07 .slick-slide img {
+    max-width: 65px;
+    object-fit: contain;
+    height: auto;
+  }
+  .home-sec-07 .two-imges-testi img.testi-img-01 {
+    bottom: 60px;
+    max-width: 270px;
+    object-fit: contain;
+  }
+  .home-sec-07 .two-imges-testi img.testi-img-02 {
+    position: absolute;
+    bottom: 130px;
+    left: 13%;
+  }
+  .home-sec-07 .two-imges-testi img.testi-img-01,
+  .home-sec-07 .two-imges-testi img.testi-img-02 {
+    display: none;
+  }
+  .home-sec-07 .text h2 {
+    font-size: 40px;
+  }
+  .home-sec-07 .main-testi-box::after,
+  .home-sec-07 .main-testi-box::before {
+    width: 48px;
+    height: 36px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .real-sec-5 .case-box {
+    height: 300px;
+  }
+  .case-brand-text h3 {
+    font-size: 24px !important;
+    line-height: 32px;
+  }
+
+  .case-brand-text h3 {
+    font-size: 22px !important;
+  }
+
+  .real-sec-3 .case-bread h2,
+  .case-text.manage h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  .case-bread {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .real-sec-3 .case-bread h2,
+  .case-text.manage h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .case-text-brand h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  .case-mail-form .submit-btn {
+    right: 93px;
+  }
+  .real-estate-banner .case-text h2 {
+    font-size: 40px;
+    padding-left: 10px;
+    margin-top: 30px;
+  }
+  
+  .testimoan-content.slick-slide.slick-current.slick-active {
+    background-image: none !important;
+    background-color: #3c3b40 !important;
+  }
+  .testimoan-content {
+    padding: 60px;
+  }
+  .real-sec-7 .col-lg-4.col-md-6.col-sm-12 {
+    margin-bottom: 30px;
+  }
+  .row2 {
+    display: flex;
+    flex-direction: column;
+  }
+  .row2 .col1 {
+    order: 1;
+    padding: 80px 0px;
+    max-width: 30% !important;
+  }
+  .row2 .col2 {
+    order: 3;
+    padding: 80px 0px;
+  }
+  .row2 .col3 {
+    order: 2;
+    max-width: 30% !important;
+    margin-right: 30px;
+  }
+  .row2 .col2 .Benefit-img img {
+    max-width: 100% !important;
+  }
+  .row1 .col-md-3 {
+    max-width: 30% !important;
+    margin-right: 30px;
+  }
+  .Benefit-box.first-brom:after,
+  .Benefit-box.last-brom:before {
+    background-image: none !important;
+  }
+  .real-sec-2 .col-xl-2 {
+    flex: 0 0 33%;
+    max-width: 100%;
+  }
+  .case-mail-form .submit-btn {
+    right: 20px;
+  }
+  .case-hero-slider ul.slick-dots {
+    top: 415px !important;
+    left: 175px !important;
+  }
+
+  .sec-8.nitro-onscreen .text h2 {
+    font-size: 25px !important;
+  }
+  .order-t-btn {
+    padding: 12px 35px !important;
+  }
+  .order-t-btn a {
+    font-size: 13px !important;
+  }
+  .sec-8.nitro-onscreen {
+    height: 280px !important;
+  }
+
+  .order-btn {
+    margin: auto;
+  }
+  .sec-7.nitro-offscreen img {
+    margin-top: -30px;
+    margin-bottom: -160px;
+    max-width: 54px;
+  }
+
+  section.sec-7.nitro-offscreen .text h2 br {
+    display: none !important;
+  }
+
+  .re-hero-banner .text p {
+    font-size: 14px;
+    padding-left: 11px;
+  }
+  .sec-7.nitro-offscreen {
+    padding: 30px 20px;
+  }
+  .sec-7 ul {
+    display: flex;
+    width: 200px !important;
+    align-items: center;
+  }
+  .col.img-box.bounce-in {
+    display: none;
+  }
+  .real-sec-3 .case-bread p {
+    font-size: 15px;
+  }
+  .case-brand-text h3 {
+    font-size: 21px !important;
+    line-height: 28px;
+  }
+  .sec-7.nitro-offscreen .order-btn {
+    min-width: 90px;
+    height: 35px;
+    font-size: 14px;
+    width: 125px;
+}
+  .real-sec-7 {
+    padding: 70px 0;
+  }
+  .real-sec-7 .case-img-box img {
+    width: 100%;
+    height: 300px;
+  }
+
+  .real-sec-7 .case-text-brand h2 {
+    margin-bottom: 30px;
+  }
+
+  a.t-btn.t-btn-arrow.real-bg {
+    font-size: 11px;
+    margin: auto;
+  }
+
+  .Benefits-sec{
+    display: none;
+  }
+  .real-sec-5 .text h3 {
+    font-size: 22px;
+    line-height: 22px;
+  }
+  .real-sec-5 {
+    padding: 10px 20px 40px;
+  }
+  .real-sec-3 ul.case-list li {
+    font-size: 15px;
+  }
+  .real-sec-5 .case-box {
+    height: 370px;
+  }
+  .real-sec-6 {
+    padding: 50px 15px;
+    text-align: left;
+  }
+  .real-sec-6 .text h3 {
+    font-size: 20px;
+    line-height: 1.3em;
+    max-width: 90%;
+  }
+  .case-img-box img {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  .case-img-box h5 {
+    font-size: 15px;
+  }
+  .real-sec-7 .web-btn {
+    padding-top: 20px;
+  }
+  .real-estate-banner {
+    display: flex !important;
+    align-content: flex-start;
+    align-items: flex-start;
+  }
+  .re-hero-banner .text {
+    margin-top: 40px;
+  }
+  .disc-price h3 {
+    font-size: 18px;
+  }
+  section.sec-7.nitro-offscreen .text h2 {
+    text-align: left;
+  }
+
+  .home-sec-07 .slick-slide img {
+    max-width: 45px;
+    object-fit: contain;
+    height: auto;
+    border-radius: 0px;
+  }
+  .home-sec-07 .main-testi-box {
+    padding: 20px 30px;
+  }
+  .home-sec-07 .main-testi-box p {
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.5em;
+  }
+  .home-sec-07 .two-imges-testi img.testi-img-01 {
+    bottom: 0px;
+    max-width: 200px;
+    object-fit: contain;
+  }
+
+  .two-imges-testi {
+    bottom: 60px;
+    max-width: 60px;
+    object-fit: contain;
+  }
+
+  img.testi-img-02.rotating-img {
+    bottom: 60px;
+    max-width: 100px;
+    object-fit: contain;
+  }
+  .home-sec-07 .two-imges-testi img.testi-img-02 {
+    position: absolute;
+    bottom: 50px;
+    left: 13%;
+  }
+  .home-sec-07 .main-testi-box h6 {
+    font-size: 13px;
+    margin-top: 5px;
+  }
+  .home-sec-07 {
+    padding: 40px 0 40px;
+  }
+  .home-sec-07 .main-testi-box:after,
+  .home-sec-07 .main-testi-box:before {
+    width: 38px;
+    height: 36px;
+    top: 60px;
+  }
+  .home-sec-07 .text h2 {
+    font-size: 28px;
+  }
+
+  .real-estate-banner {
+    display: flex !important;
+    align-content: flex-start;
+    align-items: center;
+  }
+  .re-hero-banner ul.slick-dots {
+    margin-bottom: 0%;
+    left: -41%;
+  }
+  .case-last-bg .container,
+  .real-sec-4 .container {
+    max-width: 1320px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .case-text-brand h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .real-sec-2 .case-text {
+    height: 150px;
+    max-width: 100%;
+  }
+  .real-sec-2 .case-text h4 {
+    font-size: 13px;
+    line-height: 1.4em;
+    width: 100%;
+  }
+  .real-sec-8 .web-btn {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .real-sec-2 {
+    padding-bottom: 20px;
+    padding-top: 40px;
+  }
+  .real-sec-3 .case-bread p {
+    font-size: 13px;
+  }
+  .real-sec-3 ul.case-list li {
+    font-size: 13px;
+  }
+  .case-brand-text h3 {
+    font-size: 16px !important;
+    line-height: 25px;
+  }
+  .re-hero-banner ul.slick-dots {
+    margin-bottom: 0%;
+    left: -35%;
+  }
+  .real-sec-5 .case-box {
+    height: 300px;
+  }
+  .real-sec-5 .text h3 {
+    font-size: 20px;
+    line-height: 15px;
+  }
+  .real-sec-4 {
+    height: 630px;
+  }
+  .real-sec-8 .img-box img {
+    height: 270px;
+  }
+  .case-img-box img {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  .real-sec-8 {
+    padding: 40px 15px;
+  }
+  .real-sec-7 {
+    padding: 40px 15px;
+  }
+  .real-sec-6 .mark-box {
+    padding: 10px 0;
+    flex-direction: column;
+  }
+  .real-sec-6 .text h3 {
+    font-size: 17px;
+    line-height: 1.3em;
+    max-width: 100%;
+  }
+  .sec-8.nitro-onscreen .text h2 {
+    font-size: 20px !important;
+  }
+  .real-sec-4 {
+    padding-bottom: 0px;
+  }
+  .re-hero-banner .text p {
+    font-size: 14px;
+    padding-left: 11px;
+  }
+  .real-estate-banner .case-text h2 {
+    font-size: 25px;
+    padding-left: 10px;
+  }
+
+  .home-sec-07 .main-testi-box h4 {
+    font-size: 22px;
+  }
+  .home-sec-07 .main-testi-box {
+    padding: 20px 30px;
+  }
+  .home-sec-07 .main-testi-box p {
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.5em;
+  }
+  .home-sec-07 .main-testi-box:after,
+  .home-sec-07 .main-testi-box:before {
+    width: 38px;
+    height: 46px;
+  }
+  .home-sec-07 .main-testi-box h5 {
+    font-size: 14px;
+  }
+  .home-sec-07 .slick-slide img {
+    max-width: 65px;
+  }
+  .home-sec-07 {
+    padding: 40px 0 40px;
+  }
+  .home-sec-07 .two-imges-testi img.testi-img-01 {
+    bottom: 0px;
+    max-width: 200px;
+    object-fit: contain;
+  }
+  img.testi-img-02.rotating-img {
+    max-width: 100px;
+    object-fit: contain;
+  }
+  .home-sec-07 .two-imges-testi img.testi-img-02 {
+    bottom: 50px;
+  }
+
+  .home-sec-07 .main-testi-box:after,
+  .home-sec-07 .main-testi-box:before {
+    width: 38px;
+    height: 36px;
+    top: 60px;
+  }
+  .re-hero-banner .text {
+    margin-top: 70px;
+  }
+  .sec-7 ul {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 10px 2px;
+  }
+  .real-estate-banner {
+    display: flex !important;
+    align-content: center;
+
+    flex-direction: column;
+  }
+  .re-hero-banner .text p {
+    font-size: 13px;
+    padding-left: 5px;
+  }
+  .real-estate-banner .case-text h2 br {
+    display: none;
+  }
+  .re-hero-banner ul.slick-dots {
+    margin-bottom: -10px;
+    left: -31%;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .case-text-brand h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .real-sec-2 .col-xl-2 {
+    max-width: 100%;
+  }
+  .sec-7 .row {
+    padding: 20px 20px !important;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    row-gap: 6px;
+  }
+  .disc-price h3 {
+    font-size: 18px;
+    text-align: center;
+  }
+  .order-btn {
+    font-size: 12px;
+    min-width: 141px;
+    height: 45px;
+
+    width: 150px;
+  }
+  section.sec-7.nitro-offscreen .text h2 {
+    font-size: 18px;
+    text-align: center;
+  }
+  .sec-7.nitro-offscreen {
+    padding: 30px 20px;
+  }
+  .real-sec-3 .case-bread h2,
+  .case-text.manage h2 {
+    font-size: 17px;
+  }
+  .case-bread {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .case-bread {
+    margin-bottom: 20px;
+  }
+  .real-sec-3 ul.case-list {
+    row-gap: 10px;
+
+    padding-left: 30px;
+    padding-right: 10px;
+  }
+  a.t-btn.t-btn-arrow.real-bg {
+    font-size: 11px;
+    margin: auto;
+    display: block;
+    width: 275px;
+  }
+  .case-brand-text h3 {
+    font-size: 16px !important;
+    line-height: 25px;
+  }
+  .real-sec-4 {
+    height: 900px;
+    padding-bottom: 150px;
+  }
+  .real-sec-5 .text h3 {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .text p {
+    font-size: 13px;
+  }
+  .real-sec-5 {
+    padding: 10px 20px 40px;
+  }
+  .real-sec-6 {
+    padding: 30px 15px;
+    text-align: left;
+  }
+  .real-sec-6 .text h3 {
+    font-size: 17px;
+    line-height: 1.3em;
+    max-width: 100%;
+    text-align: center;
+  }
+  .real-sec-3 .case-bread h2,
+  .case-text.manage h2 {
+    font-size: 17px;
+  }
+
+  .real-sec-7 {
+    padding: 40px 15px;
+  }
+  .case-img-box img {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  .t-btn.t-btn-arrow img {
+    margin-left: 8px;
+  }
+  .case-img-box h5 {
+    font-size: 15px;
+  }
+  .sec-8.nitro-onscreen .text h2 {
+    font-size: 20px !important;
+  }
+  .sec-8.nitro-onscreen {
+    height: 280px !important;
+  }
+  .real-sec-8 {
+    padding: 40px 15px;
+  }
+  .real-sec-8 .img-box img {
+    height: 270px;
+  }
+  .real-sec-5 a.t-btn.t-btn-arrow {
+    max-width: 190px;
+    margin-top: 30px;
+  }
+  .t-btn.t-btn-arrow,
+  header .t-btn.t-btn-arrow {
+    font-size: 13px;
+  }
+  .real-sec-5 .case-box {
+    height: auto;
+  }
+  .real-sec-3 ul.case-list li {
+    font-size: 13px;
+  }
+  .real-sec-3 .case-bread p {
+    font-size: 13px;
+  }
+  .sec-7 ul {
+    display: flex;
+    width: 200px !important;
+    justify-content: center;
+    margin: 10px 2px;
+  }
+  .sec-7 ul li a {
+    font-size: 14px;
+  }
+
+  a.discount-call-btn {
+    margin: auto;
+    display: block;
+    text-align: center;
+  }
+
+  .case-text .col-md-6.col-md-12 {
+    padding-left: 30px;
+  }
+
+  .home-sec-07 .text h2 {
+    text-align: center;
+    font-size: 22px;
+  }
+  .home-sec-07 .main-testi-box p {
+    font-size: 13px;
+  }
+  .home-sec-07 .main-testi-box:after,
+  .home-sec-07 .main-testi-box:before {
+    width: 20px;
+    height: 26px;
+  }
+  .home-sec-07 .main-testi-box {
+    padding: 20px 20px;
+  }
+  .home-sec-07 .two-imges-testi img.testi-img-01 {
+    max-width: 130px;
+  }
+  img.testi-img-02.rotating-img {
+    max-width: 80px;
+    object-fit: contain;
+  }
+  .home-sec-07 .two-imges-testi img.testi-img-02 {
+    bottom: 50px;
+  }
+  .real-sec-3 a.t-btn.t-btn-arrow.real-bg{
+    font-size: 11px;
+    width: 300px;
+  }
+  .sec-7 ul {
+    display: flex;
+    width: 100% !important;
+    justify-content: center !important;
+    margin: 10px 0px;
+    padding-left: 0;
+  }
+  .re-hero-banner ul.slick-dots{
+    margin-bottom: 0;
+    left: 0%;
+  }
+  .real-estate-banner{
+    height: 75vh;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .real-estate-banner .text{
+    margin-top: 0;
+  }
+  .real-estate-banner .case-text h2 br {
+    display: block;
+  }
+  .real-estate-banner .case-text h2 {
+    font-size: 7vw;
+  }
+  .real-estate-banner .case-text p, .re-hero-banner .text p{
+    padding-left: 10px;
+  }
+  .real-estate-banner ul.case-list{
+    display: none;
+  }
+
+  .real-sec-5 .case-box p {
+    line-height: 24px;
+    font-size: 13px;
+}
+.newsletter-form .text form input {
+    font-size: 10px;
+    padding: 10px 0px;
+}
+}

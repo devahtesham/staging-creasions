@@ -1,0 +1,50 @@
+.not-found {
+  height: 100vh;
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: linear-gradient(264deg, #191697 0%, #200d49 100%);
+  font-family: 'Syne', sans-serif;
+}
+
+.not-found .container{
+    text-align: center;
+}
+
+.not-found .error-message {
+  font-size: 6rem;
+  font-weight: bold;
+  color: #ff4430;
+}
+
+.not-found .message {
+  font-size: 2.2rem;
+  font-family: 'Lato', sans-serif;
+  margin-top: 1rem;
+  color: #d3d3d3;
+}
+
+.not-found .t-btn{
+    background: linear-gradient(264deg, #2724cb 0%, #5931ad 100%);
+    margin-top: 1rem;
+    padding: 10px 20px;
+    transition: color 3s ease-in-out;
+}
+
+.not-found .t-btn:hover{
+    background: linear-gradient(264deg, #5931ad 0%, #2724cb 100%);
+}
+
+
+@media (max-width: 991px) {
+    .not-found .error-message {
+        font-size: 4rem;
+    }
+    
+    .not-found .message {
+        font-size: 1.5rem;
+    }
+}

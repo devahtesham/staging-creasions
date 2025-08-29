@@ -1,0 +1,71 @@
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION BEGIN
+PassengerAppRoot "/home/creapkxk/creasions.com"
+PassengerBaseURI "/"
+PassengerNodejs "/home/creapkxk/nodevenv/creasions.com/22/bin/node"
+PassengerAppType node
+PassengerStartupFile server.js
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END
+# DO NOT REMOVE OR MODIFY. CLOUDLINUX ENV VARS CONFIGURATION BEGIN
+<IfModule Litespeed>
+</IfModule>
+# DO NOT REMOVE OR MODIFY. CLOUDLINUX ENV VARS CONFIGURATION END
+
+
+# Redirect Old URLs to New URLs
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^creasions\.com$ [NC]
+
+# Redirect for Website Development
+RewriteRule ^service/website-development-services-in-usa$ https://creasions.com/services/website-development-dallas [R=301,L]
+
+# Redirect for Website Design
+RewriteRule ^service/website-design-services-in-usa$ https://creasions.com/services/website-design-dallas [R=301,L]
+
+# Redirect for Branding Services
+RewriteRule ^service/branding-services-in-usa$ https://creasions.com/services/branding-agency-dallas [R=301,L]
+
+# Redirect for Digital Marketing
+RewriteRule ^service/digital-marketing-services-in-usa$ https://creasions.com/services/digital-marketing-dallas [R=301,L]
+
+# Redirect for Software Development
+RewriteRule ^service/software-development-company-in-usa$ https://creasions.com/services/software-development-dallas [R=301,L]
+
+# Redirect for Application Development
+RewriteRule ^service/application-development-services-in-usa$ https://creasions.com/services/application-development-dallas [R=301,L]
+
+# Redirect for Virtual Employees Services
+RewriteRule ^service/virtual-employees-services-in-usa$ https://creasions.com/services/virtual-employees-services-dallas [R=301,L]
+
+# Redirect for Real Estate Website Services
+RewriteRule ^industry/real-estate-website-services$ https://creasions.com/industry/real-estate-website-services-dallas [R=301,L]
+
+# Redirect for Cleaning Company Website Services
+RewriteRule ^industry/cleaning-company-website-services$ https://creasions.com/industry/cleaning-company-website-services-dallas [R=301,L]
+
+# Redirect for Beauty Salons Spa Website Services
+RewriteRule ^industry/beauty-salons-spa-website-services$ https://creasions.com/industry/beauty-salons-spa-website-services-dallas [R=301,L]
+
+
+# Redirect for about pages
+RewriteRule ^mission$ https://creasions.com/about/our-mission [R=301,L]
+RewriteRule ^our-company$ https://creasions.com/about/our-company [R=301,L]
+RewriteRule ^about-us$ https://creasions.com/about/our-company [R=301,L]
+
+
+# Force HTTPS and non-www
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\.creasions\.com$ [NC]
+RewriteRule ^(.*)$ https://creasions.com/$1 [R=301,L]
+
+# HSTS Header (Strict HTTPS policy)
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+</IfModule>
+
+
+# Custom Error Pages
+ErrorDocument 404 /404.html
+ErrorDocument 500 /500.html
+
+# Disable directory listing if no index file is present
+Options -Indexes

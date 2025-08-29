@@ -1,0 +1,593 @@
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --font-poppins-regular: "Poppins", sans-serif;
+  --font-poppins-bold: "Poppins", sans-serif;
+  --font-domine: "Domine", sans-serif;
+  --font-domine-bold: "Domine", sans-serif;
+}
+
+html.lenis,
+html.lenis body {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain !important;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "poppins", sans-serif;
+}
+
+body {
+  font-family: "Domine", serif;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+html,
+body {
+  overflow-x: hidden !important;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: blue;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: white;
+}
+
+.Clairmont-header {
+  position: absolute;
+  left: 0;
+  margin: auto;
+  right: 0;
+  top: 20px;
+}
+
+.Clairmont-header a img {
+  height: 60px;
+  width: 270px;
+}
+
+section.Hero-banner {
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 950px;
+}
+
+.container {
+  max-width: 1170px !important;
+}
+
+.Hero-banner {
+  height: 800px !important;
+}
+
+.Hero-banner .text h5::after {
+  content: "";
+  color: #ffffff;
+  background-color: #fff;
+  height: 2px;
+  width: 45px;
+  top: 10px;
+  left: 2px;
+  position: absolute;
+}
+
+.Hero-banner .text h5 {
+  color: #ffffff;
+  font-size: 20px;
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 55px;
+  font-family: "Acumin Variable Concept";
+}
+
+.Hero-banner .text h1 {
+  font-size: 50px;
+  color: #ffffff;
+  font-weight: 200 !important;
+  font-family: "Domine", serif;
+  line-height: 1.4em;
+}
+
+/* Section 1 */
+.Clairmont-01 {
+  padding: 80px 0;
+  background-position: 100% 100%;
+}
+
+.Clairmont-01 .text h3 {
+  font-size: 30px !important;
+  padding: 2px 0;
+}
+
+.text h3 {
+  color: #063349;
+  font-size: 25px;
+  font-weight: 500;
+  padding: 5px 0;
+}
+
+.Clairmont-01 .text p {
+  max-width: 85%;
+  margin-bottom: 50px;
+  line-height: 1.7em;
+  padding-left: 40px;
+}
+
+.text p {
+  font-size: 18px !important;
+}
+
+.Clairmont-01 .text p {
+  max-width: 90%;
+}
+
+.Clairmont-01 .Tool-text {
+  display: flex;
+  align-items: center;
+}
+
+.Clairmont-01 .Tool-text img {
+  width: 22% !important;
+}
+
+.Clairmont-01 .Visit-text {
+  float: right;
+}
+
+.Clairmont-01 .t-btn {
+  padding-left: 10px;
+  padding-top: 6px;
+  font-size: 22px;
+  margin-right: 80px;
+  color: #419f9a;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.Clairmont-01 .t-btn i {
+  padding-left: 10px;
+}
+
+.Clairmont-01 .t-btn:hover {
+  color: #000;
+}
+
+/* Section 2 */
+.Clairmont-02 {
+  padding: 80px 0;
+}
+
+.Clairmont-02 .text h2 {
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 45px;
+  margin-bottom: 40px;
+}
+
+.Clairmont-02 .list-text h4 {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+
+.Clairmont-02 .list-text ul li {
+  color: #fff;
+  list-style: none;
+  font-size: 16px;
+  font-weight: 300;
+  display: flex;
+  column-gap: 10px;
+  margin-bottom: 25px;
+  max-width: 80%;
+}
+
+.Clairmont-02 .list-text ul li i {
+  margin-top: 3px;
+}
+
+.Clairmont-02 .list-text ul {
+  padding: 0px;
+}
+
+.Clairmont-02 .text-bottom {
+  padding-top: 30px;
+}
+
+.Clairmont-02 .text-bottom h4 {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.Clairmont-02 .text-bottom p {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 300;
+  max-width: 520px;
+}
+
+.Clairmont-02 .text-down h4 {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.Clairmont-02 .text-down p {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 300;
+  max-width: 520px;
+}
+
+.Clairmont-02 .left-down h6 {
+  font-size: 12px;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.Clairmont-02 .img-bottom img {
+  margin-top: 80px;
+  width: 100%;
+}
+
+.Clairmont-02 img.mobile {
+  display: none;
+}
+
+/* Section 3 */
+.Clairmont-03 {
+  text-align: center;
+  padding: 80px 0;
+}
+
+.Clairmont-03 .text h2 {
+  color: #000;
+  font-size: 40px;
+  font-weight: 400;
+  font-family: "Domine", serif;
+  text-transform: uppercase;
+  padding-bottom: 15px;
+}
+
+.Clairmont-03 .text img {
+  margin-bottom: 35px;
+}
+
+.Clairmont-03 .text p {
+  color: #000;
+  font-size: 20px;
+  font-weight: 400;
+  max-width: 780px;
+  display: block;
+  margin: auto;
+  margin-bottom: 60px;
+}
+
+.Clairmont-03 .bottom-img img {
+  width: 100% !important;
+}
+
+.Clairmont-03 .text img {
+  margin-bottom: 35px;
+}
+
+/* Section 4 */
+.Clairmont-04 {
+  padding: 100px 0px 50px 0px;
+  background-color: #e5eff3;
+  margin-top: -160px;
+}
+
+.Clairmont-04 .text h3 {
+  font-size: 40px;
+}
+
+.Clairmont-04 .text h3 {
+  font-size: 40px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.Clairmont-04 .text p {
+  font-size: 18px ;
+  color: #000000;
+  font-weight: 300;
+  max-width: 770px;
+  line-height: 32px;
+}
+
+
+
+/* Section 5 */
+.Clairmont-05 {
+    background-color: #e4eef2;
+}
+.Clairmont-05 .box-img img {
+    width: 100%;
+}
+img.mobile-img {
+    display: none !important;
+}
+
+
+
+/* Section 6 */
+.Clairmont-06 {
+    padding: 100px 0px;
+    background-position: 100% 177%;
+    background-repeat: no-repeat;
+    background-size: 100% 77%;
+}
+
+.Clairmont-06 .text {
+    margin-bottom: 20px;
+    padding-left: 30px;
+}
+
+.Clairmont-06 .text h3 {
+    color: #000000;
+    font-size: 40px;
+    font-weight: 600;
+    padding: 5px 0;
+}
+
+.Clairmont-06 .text p {
+    color: #000000;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    max-width: 750px;
+}
+
+
+
+/* Section 7 */
+.Clairmont-07 {
+    padding: 80px 0;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.Clairmont-07 .text h2 {
+    font-size: 45px;
+    font-weight: 600;
+    color: white;
+}
+
+.Clairmont-07 .text-img-box {
+    margin: 40px 0 20px;
+}
+
+.Clairmont-07 .two-text {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.Clairmont-07 span {
+    color: rgba(255, 255, 255, 0);
+    border-top: 1px solid white;
+    height: 10px;
+}
+
+.Clairmont-07 .text-img-box h6 {
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+}
+
+.Clairmont-07 .text-img-box h4 {
+    font-size: 22px;
+    color: white;
+    font-weight: 500;
+}
+
+.Clairmont-07 .text-img-box p {
+    color: white;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.Clairmont-07 .text-img-box-2 {
+    padding-left: 50px;
+    margin: 40px 0 20px;
+
+}
+
+.Clairmont-07 .img-box img, .Clairmont-07 .text-img-box-2 img {
+    width: 100%;
+    height: 500px;
+}
+
+.Clairmont-07 .text-img-box-2 h6 {
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+}
+
+.Clairmont-07 .text-img-box-2 h4 {
+    font-size: 22px;
+    color: white;
+    font-weight: 500;
+}
+
+
+.Clairmont-07 .text-img-box-2 p {
+    color: white;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+
+
+
+@media only screen and (max-width: 1199px) {
+  .Clairmont-06 img {
+    width: 100%;
+  }
+
+  .Clairmont-07 .img-box img,
+  .Clairmont-07 .text-img-box-2 img {
+    height: 400px;
+    object-fit: cover;
+  }
+
+  .Clairmont-07 .text-img-box-2 {
+    padding-left: 0;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  section.Hero-banner .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .Hero-banner .text h1 {
+    font-size: 35px;
+  }
+
+  .Hero-banner {
+    height: 500px !important;
+  }
+
+  .Clairmont-01 .text h3 {
+    font-size: 25px !important;
+  }
+
+  .Clairmont-01 .text p {
+    max-width: 100%;
+  }
+
+  .Clairmont-01 .t-btn {
+    margin-right: 30px;
+  }
+
+  .Clairmont-02 {
+    padding: 50px 0;
+    text-align: center;
+  }
+
+  .Clairmont-02 .list-text ul li {
+    max-width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .Clairmont-02 .text-bottom p,
+  .Clairmont-02 .text-down p {
+    max-width: 100%;
+  }
+
+  .Clairmont-04 .text {
+    text-align: center;
+  }
+
+  .Clairmont-06 .text {
+    text-align: center;
+    padding: 0;
+  }
+
+  .Clairmont-07 .img-box img,
+  .Clairmont-07 .text-img-box-2 img {
+    height: 300px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+
+  .Clairmont-01 .text {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .Clairmont-01 .text p {
+    max-width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+
+  .Clairmont-01 .Tool-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Clairmont-01 .Visit-text {
+    float: unset !important;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .Clairmont-01 .t-btn {
+    margin: 0 !important;
+  }
+
+  .Clairmont-07 .two-text {
+    justify-content: center;
+  }
+
+  .Clairmont-07 {
+    padding: 40px 0;
+    text-align: center;
+  }
+
+
+}
+
+@media only screen and (max-width: 575px) {
+
+  .Hero-banner .text h1 {
+    font-size: 25px;
+  }
+
+  .Clairmont-02 .text h2,
+  .Clairmont-03 .text h2,
+  .Clairmont-04 .text h3,
+  .Clairmont-06 .text h3,
+  .Clairmont-07 .text h2 {
+    font-size: 35px;
+  }
+}

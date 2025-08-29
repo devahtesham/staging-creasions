@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "timestamp": "2025-01-24T17:10:08.570Z",
+    "contactPersonName": "Test",
+    "contactEmailAddress": "koko@mailinator.com",
+    "contactPhoneNumber": "+1 (153) 447-9992",
+    "currentWebsiteURL": "https://www.pexycezyvop.cm",
+    "currentWebHost": "Pariatur Facere nul",
+    "domainPurchaseInfo": "Voluptatem Ut volup",
+    "willProvideImages": "https://www.dejaqamajezeg.in",
+    "allContentAvailable": "Et architecto odio d",
+    "companyDescription": "Molestias qui eligen",
+    "themeFeel": "Qui ea enim iusto ip",
+    "designColors": "Asperiores ipsam hic",
+    "competitorSites": "Ullam eos minus corr",
+    "additionalInfo": "Hic eos ipsum odit ",
+    "requiredPages": "Nisi molestias volup",
+    "servicesOrProducts": "Similique consequat",
+    "competitiveAdvantage": "Ut adipisicing quisq",
+    "customerAttraction": "Omnis minim ea quo m",
+    "socialMediaPlatforms": "Tempore nihil velit",
+    "status": "success",
+    "message": "Email sent successfully"
+  },
+  {
+    "id": 2,
+    "timestamp": "2025-01-24T17:11:14.319Z",
+    "name": "Test",
+    "email": "test.insitech@gmail.com",
+    "phone": "123214214214",
+    "message": "Email sent successfully",
+    "page": "http://localhost:3000/lp-social-media",
+    "status": "success"
+  },
+  {
+    "id": 3,
+    "timestamp": "2025-01-24T17:12:20.913Z",
+    "name": "Check1",
+    "email": "Check1@abc.com",
+    "phone": "123123124",
+    "message": "Email sent successfully",
+    "page": "http://localhost:3000/lp-social-media",
+    "status": "success"
+  }
+]

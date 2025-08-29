@@ -1,0 +1,1303 @@
+.virtual-employees .inner-title {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background: linear-gradient(to bottom, #130a2c, #000000);
+  position: relative;
+}
+
+.virtual-employees .inner-title .heading {
+  max-width: 100%;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.virtual-employees .inner-title .heading h2 {
+  font-size: 170px;
+  position: relative;
+  font-weight: bold;
+  z-index: 10;
+}
+
+.virtual-employees .bg {
+  position: absolute;
+  background-color: transparent;
+  border: 50px;
+  z-index: 0;
+  left: 0px;
+  top: 0px;
+  transform: translate(0, 0);
+  transition: all 1s ease-in-out;
+}
+
+.virtual-employees .bg .banner-bg {
+  opacity: 0;
+  animation: banner-bg 6s infinite;
+}
+
+.virtual-employees .bg .banner-circle {
+  position: absolute;
+  top: 20%;
+  left: 23%;
+  transform: translate(-50%, -50%);
+  animation: banner-circle-round 8s infinite;
+  z-index: 2;
+  transition: all 1s ease-in-out;
+}
+
+@keyframes banner-circle-round {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes banner-bg {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+.virtual-employees .sec-01 {
+  height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    #000000a4 2%,
+    #211cbb,
+    #0e081f 95%,
+    #000000a4 100%
+  );
+  padding: 200px 0;
+  backdrop-filter: blur(10px);
+}
+
+.virtual-employees .sec-01 h4 {
+  font-size: 15px;
+  font-weight: 400;
+  color: #fff;
+  text-align: left;
+  line-height: 18px;
+  font-family: "Lato", sans-serif;
+}
+
+.virtual-employees .sec-01 p {
+  padding-top: 30px;
+  padding-right: 100px;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 34px;
+  color: #e5deff;
+  letter-spacing: 2px;
+}
+
+.virtual-employees .sec-01 .circle-1 {
+  transform: scale(0);
+  animation: circle-popin-rotate 12s ease-in-out infinite;
+}
+
+@keyframes circle-popin-rotate {
+  0% {
+    transform: scale(0);
+  }
+  20% {
+    transform: scale(1);
+  }
+  21% {
+    transform: rotate(0deg);
+  }
+  70% {
+    transform: rotate(-360deg);
+  }
+  90% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+.virtual-employees .sec-02 .first-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 100px;
+}
+.virtual-employees .sec-02 .first-row .first {
+  border-right: 4px solid #e5deff;
+  border-radius: 20px;
+  padding-right: 30px;
+}
+
+.virtual-employees .sec-02 .first-row .first h3 {
+  font-size: 60px;
+  font-family: "Lato", sans-serif;
+  color: #e5deff;
+  font-weight: 400;
+  line-height: 94px;
+}
+
+.virtual-employees .sec-02 .first-row .first h4 {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 400;
+  line-height: 44px;
+  letter-spacing: 2px;
+  font-family: "Lato", sans-serif;
+  text-align: center;
+}
+
+.virtual-employees .bg-gredient-1 {
+  background: linear-gradient(0deg, #130a2c 0%, #000000 100%);
+}
+
+.virtual-employees .sec-03 {
+  padding: 100px 0;
+}
+
+.virtual-employees .sec-03 h4 {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  font-family: "Lato", sans-serif;
+  color: #fff;
+}
+
+.virtual-employees .sec-03 h2 {
+  font-size: 35px;
+  font-weight: 700;
+  font-family: "Syne", sans-serif;
+  line-height: 40px;
+  background: linear-gradient(270deg, #9d77ff 0%, #c4c2ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.virtual-employees .sec-03 p {
+  padding-top: 10px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #e5deff;
+  letter-spacing: 3px;
+  opacity: 0.7;
+}
+
+.virtual-employees .card-blur-bg-1 {
+  padding: 60px 30px;
+  margin: 0px 10px;
+  background-position: center;
+  display: flex;
+  align-items: flex-start;
+  text-align: center;
+  background: linear-gradient(to right, #fafafa2f, #7575752f);
+  border: 1.8px solid #231f6a;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.virtual-employees .sec-03 .card-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.virtual-employees .sec-03 .card-row .card h3 {
+  padding-top: 20px;
+  width: 160px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #fff;
+  font-family: "Syne", sans-serif;
+  text-align: left;
+}
+
+.virtual-employees .sec-03 .card-row .card p {
+  padding-top: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "Lato", sans-serif;
+  color: #e5deff;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.virtual-employees .sec-04 {
+  padding: 100px 0;
+  position: relative;
+}
+.virtual-employees .sec-04 .container {
+  max-width: 100%;
+}
+
+.virtual-employees .sec-04 h2 {
+  font-size: 85px;
+  line-height: 94px;
+  font-weight: 800;
+  text-align: center;
+  color: #e5deff;
+}
+
+.virtual-employees .sec-04 .main-logo-slider-box {
+  background-color: #f5f4fc00;
+  border-radius: 10px;
+  color: white;
+  transform: translateY(-30px);
+}
+
+.virtual-employees .sec-04 .main-logo-slider-box .box {
+  display: flex !important;
+  flex-direction: column;
+  margin: auto;
+  width: 100%;
+  height: 220px;
+}
+
+.virtual-employees .card-blur-bg-2 {
+  padding: 60px 30px 30px 30px;
+  background-position: center;
+  display: flex;
+  align-items: flex-start;
+  text-align: center;
+  background: linear-gradient(to right, #fafafa0a, #75757511);
+  border: 1.8px solid #231f6a;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+.virtual-employees .slick-initialized .slick-slide {
+  margin: 0px 10px;
+}
+
+.virtual-employees .sec-04 .main-logo-slider-box .box img {
+  width: 60px;
+  height: 60px;
+}
+
+.virtual-employees .sec-04 .main-logo-slider-box .box h3 {
+  padding-top: 20px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.virtual-employees .sec-04 p {
+  margin-top: -190px;
+  padding-left: 90px;
+  padding-right: 90px;
+  font-size: 22px;
+  line-height: 30px;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  opacity: 0.7;
+  color: #fff;
+}
+
+.virtual-employees .sec-05 {
+  padding: 100px 0;
+  position: relative;
+}
+
+.virtual-employees .sec-05 h4 {
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
+  text-align: center;
+  color: #fff;
+}
+
+.virtual-employees .sec-05 p {
+  padding-top: 50px;
+  font-size: 35px;
+  line-height: 54px;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
+  color: #e5deff;
+  text-align: center;
+}
+
+.virtual-employees .sec-05 .bg {
+  position: absolute;
+  background-color: transparent;
+  border: 50px;
+  z-index: 0;
+  left: 25%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  transition: all 1s ease-in-out;
+}
+
+.virtual-employees .sec-05 .bg .blur-circle {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: #3127c6;
+  filter: blur(25px);
+  opacity: 0.2;
+  transition: all 1s ease-in-out;
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  transform: translate(280%, -150%);
+}
+
+.virtual-employees .sec-05 .bg .banner-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: banner-circle-round 24s infinite;
+  z-index: 2;
+  transition: all 1s ease-in-out;
+}
+
+.virtual-employees .sec-05 .vertul-t-btn {
+  backdrop-filter: blur(10px);
+  text-align: center;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 500;
+  font-family: "Lato", sans-serif;
+  background: linear-gradient(90deg, #ffffff07 0%, #ffffff13 100%);
+  border: 0.8px solid #231f6a;
+  border-radius: 40px;
+  color: #fff;
+  display: block;
+  margin: 0 auto;
+  margin-top: 80px;
+  padding: 30px 40px;
+  max-width: 250px;
+}
+
+.virtual-employees .bg-gredient-2 {
+  background: linear-gradient(180deg, #0c0717 0%, #130d45 100%);
+  position: relative;
+  z-index: 1;
+}
+
+.virtual-employees .sec-06 {
+  padding: 200px 0;
+}
+
+.virtual-employees .sec-06 h2 {
+  padding-right: 150px;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: left;
+  line-height: 40px;
+  font-family: "Syne", sans-serif;
+  background: linear-gradient(270deg, #9d77ff 0%, #c4c2ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.virtual-employees .sec-06 p {
+  padding-top: 30px;
+  padding-right: 150px;
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 34px;
+  color: #e5deff;
+  letter-spacing: 0px;
+}
+
+.virtual-employees .sec-06 .circle-1 {
+  transform: scale(0);
+  animation: circle-popin-rotate 12s ease-in-out infinite;
+}
+
+/* Testimonials */
+.virtual-employees .virtual-sec-7 {
+  background-color: transparent;
+  position: relative;
+  z-index: 100;
+}
+
+.virtual-employees .virtual-sec-7 .container {
+  max-width: 100%;
+}
+
+.virtual-employees .virtual-sec-7 .text.let h2 {
+  margin-bottom: 10px;
+}
+
+.virtual-employees .virtual-sec-7 .text h2 {
+  font-size: 55px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  background: linear-gradient(270deg, #9d77ff 0%, #c4c2ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #fff0;
+  margin-bottom: 30px;
+}
+
+.virtual-employees .virtual-sec-7 .text p {
+  color: #ffffffa6;
+  font-size: 16px;
+  line-height: 1.7em;
+}
+
+.virtual-employees .virtual-sec-7 .text.let p {
+  font-size: 25px;
+}
+
+.virtual-employees .virtual-sec-7 .text h4 {
+  font-size: 40px;
+  font-weight: 700;
+  background: linear-gradient(270deg, #9d77ff 0%, #c4c2ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #fff0;
+}
+
+.virtual-employees .virtual-sec-7 .row.virtual-slide {
+  margin-top: 50px;
+}
+
+.virtual-employees .virtual-sec-7 .testim-box {
+  padding: 0px 20px;
+  margin: 0px 10px;
+  background-position: center;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background: #0d0d0d5e;
+  border: 1px solid #231f6a;
+  border-radius: 20px;
+}
+
+.virtual-employees .virtual-sec-7 .testim-box .text h4 {
+  font-size: 28px;
+}
+
+.virtual-employees .virtual-sec-7 .testim-box .text h6 {
+  color: #b7a9ff;
+  padding: 15px 0;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.virtual-employees .virtual-sec-7 .testim-box img {
+  text-align: center !important;
+  margin: auto;
+}
+
+.virtual-employees .virtual-sec-7 .slick-track {
+  height: 80vh;
+}
+
+.virtual-employees .virtual-sec-7 .slick-initialized .slick-slide {
+  margin: 0px 0px;
+}
+
+.virtual-employees .virtual-sec-7 .slick-dots {
+  z-index: 1;
+  left: 0px;
+}
+
+.virtual-employees .virtual-sec-7 .slick-dots {
+  position: absolute;
+  bottom: 105px;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.virtual-employees .virtual-sec-7 ul.slick-dots {
+  display: flex;
+  justify-content: center;
+  margin-bottom: -50px !important;
+}
+
+.virtual-employees .virtual-sec-7 .slick-dots li {
+  width: 14px;
+  height: 14px;
+  margin: 0 5px;
+}
+.virtual-employees .virtual-sec-7 .slick-dots li button::before {
+  background-color: #494949;
+  color: transparent;
+  width: 14px;
+  height: 14px;
+  border-radius: 50px;
+  opacity: 100%;
+}
+
+.virtual-employees .virtual-sec-7 .slick-dots li.slick-active button::before {
+  background-color: #fff;
+  color: transparent;
+  width: 14px;
+  height: 14px;
+}
+
+/* Section 7 */
+.virtual-employees .sec-07 {
+  color: #fff;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background: linear-gradient(to bottom, #130a2c, #000000);
+  position: relative;
+}
+
+.virtual-employees .sec-07 .bg {
+  position: absolute;
+  background-color: transparent;
+  border: 50px;
+  z-index: 0;
+  left: 0px;
+  top: 0px;
+  transform: translate(0, 0);
+  transition: all 1s ease-in-out;
+}
+
+.virtual-employees .sec-07 .container {
+  position: relative;
+  z-index: 1;
+}
+
+.virtual-employees .sec-07 .bg .banner-bg {
+  opacity: 0;
+  animation: banner-bg 8s infinite;
+}
+
+.virtual-employees .sec-07 .logo-img {
+  position: absolute;
+  top: 46%;
+  left: 14.5%;
+  width: 200px;
+  height: auto;
+}
+
+.virtual-employees .sec-07 .raffle-anim {
+  animation: raffle-rotate 10s linear infinite;
+}
+
+@keyframes raffle-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.virtual-employees .sec-07 .content {
+  display: flex;
+  padding: 100px 0;
+  align-items: center;
+}
+
+.virtual-employees .sec-07 .content .right {
+  padding-left: 100px;
+}
+
+.virtual-employees .sec-07 .content h2 {
+  font-size: 35px;
+  line-height: 40px;
+  font-weight: 700;
+  font-family: "Syne", sans-serif;
+  background: linear-gradient(270deg, #9d77ff 0%, #c4c2ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.virtual-employees .sec-07 .content p {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 34px;
+  color: #fff;
+  letter-spacing: 2px;
+  opacity: 0.7;
+}
+
+.virtual-employees .sec-08 {
+  border-top: 1.5px solid #231f6a;
+  border-bottom: 1.5px solid #231f6a;
+  padding: 100px 0;
+  background: linear-gradient(to bottom, #130a2c, #000000);
+  position: relative;
+}
+
+.virtual-employees .sec-08 h4 {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 18px;
+  font-family: "Lato", sans-serif;
+  color: #fff;
+  text-align: center;
+}
+
+.virtual-employees .sec-08 h2 {
+  font-size: 35px;
+  line-height: 54px;
+  font-weight: 700;
+  font-family: "Lato", sans-serif;
+  color: #e5deff;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.virtual-employees .sec-08 .card-blur-bg-3 {
+  padding: 20px 40px;
+  margin: 0px 10px;
+  width: 100%;
+  height: 100px;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(to bottom, #2f27c628, #817cdd10);
+  border: 1.8px solid #231f6a;
+  border-radius: 10px;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+}
+
+.virtual-employees .sec-08 .card-blur-bg-3 img {
+  width: 100%;
+  margin: auto;
+}
+
+.virtual-employees .sec-08 .client-logos {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* ////desktop/// */
+
+img.banner-bg {
+  width: 100%;
+}
+.virtual-employees .bg {
+  position: absolute;
+  background-color: transparent;
+  border: 50px;
+  z-index: 0;
+  left: 0;
+  top: 0;
+  transform: translate(0);
+  transition: all 1s ease-in-out;
+  width: 100%;
+}
+.virtual-employees .sec-04 .main-logo-slider-box {
+  background-color: #f5f4fc00;
+  border-radius: 10px;
+  color: #fff;
+  transform: translateY(10px);
+}
+
+.virtual-employees .sec-08 .card-blur-bg-3 img {
+  margin: auto;
+  /* width: 0; */
+}
+
+@media only screen and (max-width: 1600px) {
+  .virtual-employees .sec-04 .main-logo-slider-box {
+    transform: translateY(10px);
+  }
+  .virtual-employees .sec-04 {
+    padding: 30px 0;
+    position: relative;
+  }
+  .virtual-employees .sec-06 {
+    padding: 90px 0;
+  }
+  .virtual-employees .sec-08 {
+    padding: 70px 0;
+  }
+  .virtual-employees .sec-04 h2 {
+    font-size: 65px;
+    line-height: 65px;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .virtual-employees .sec-01 p {
+    padding-top: 5px;
+    padding-right: 0px;
+    font-size: 17px;
+    line-height: 25px;
+  }
+
+  .virtual-employees .sec-01 {
+    height: 100vh;
+    padding: 70px 0;
+  }
+  .virtual-employees .sec-02 .first-row .first h3 {
+    font-size: 38px;
+    line-height: 50px;
+  }
+  .virtual-employees .sec-02 .first-row .first h4 {
+    font-size: 13px;
+    line-height: 20px;
+  }
+  .virtual-employees .sec-02 .first-row {
+    display: flex;
+    column-gap: 30px;
+    padding: 30px;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  .virtual-employees .sec-03 {
+    padding: 50px 0;
+  }
+  .virtual-employees .sec-03 h2 {
+    font-size: 25px;
+    font-weight: 700;
+  }
+  .virtual-employees .sec-03 p {
+    padding-top: 0px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+  }
+  .virtual-employees .card-blur-bg-1 {
+    padding: 25px 20px;
+  }
+  .virtual-employees .sec-04 h2 {
+    font-size: 50px;
+    line-height: 65px;
+  }
+  .virtual-employees .sec-04 p {
+    margin-top: -180px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 18px;
+  }
+  .virtual-employees .sec-05 {
+    padding: 30px 0;
+  }
+  .virtual-employees .sec-05 p {
+    padding-top: 10px;
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .virtual-employees .sec-06 p {
+    padding-top: 10px;
+    font-size: 18px;
+    line-height: 31px;
+
+    .virtual-employees .virtual-sec-7 .texth2 {
+      font-size: 35px;
+      margin-bottom: 30px;
+    }
+  }
+  .virtual-employees .sec-06 h2 {
+    padding-right: 40px;
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 30px;
+  }
+  .virtual-employees .virtual-sec-7 .text p {
+    font-size: 13px;
+  }
+  .virtual-employees .sec-07 .content .right {
+    padding-left: 20px;
+  }
+  .virtual-employees .sec-07 .content p {
+    text-align: center;
+    font-size: 16px;
+    line-height: 25px;
+  }
+  .virtual-employees .sec-07 .content {
+    padding: 50px 0;
+  }
+  .virtual-employees .sec-08 .card-blur-bg-3 img {
+    width: 100%;
+    margin: auto;
+    object-fit: contain;
+  }
+  .virtual-employees .sec-08 h2 {
+    font-size: 30px;
+    line-height: 54px;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+  .virtual-employees .virtual-sec-7 .text h2 {
+    font-size: 35px;
+    margin-bottom: 30px;
+  }
+  .virtual-employees .sec-05 .vertul-t-btn {
+    margin-top: 20px;
+    padding: 18px 25px;
+    max-width: 220px;
+  }
+  .virtual-employees .sec-04 h2 {
+    font-size: 41px;
+    line-height: 80px;
+  }
+  .virtual-employees .inner-title .heading h2 {
+    font-size: 100px;
+  }
+  .virtual-employees .bg .banner-circle {
+    top: 10%;
+    left: 17%;
+    width: 100%;
+    max-width: 500px;
+    object-fit: contain;
+  }
+  .virtual-employees .sec-02 .first-row .first h3 {
+    font-size: 30px;
+    line-height: 45px;
+  }
+  .virtual-employees .sec-04 .main-logo-slider-box .box h3 {
+    font-size: 13px;
+  }
+  .virtual-employees .sec-04 p {
+    margin-top: -180px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 16px;
+  }
+  .virtual-employees .sec-07 .logo-img {
+    position: absolute;
+    top: 63%;
+    left: 37.5%;
+    width: 150px;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .virtual-employees .sec-07 .content .right {
+    padding-left: 0px;
+  }
+  .virtual-employees .sec-04 h2 {
+    font-size: 35px;
+    line-height: 50px;
+  }
+  .virtual-employees .card-blur-bg-2 {
+    padding: 40px 20px 20px;
+  }
+  .virtual-employees .bg .banner-circle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-40%) !important;
+  }
+
+}
+@media only screen and (max-width: 991px) {
+  .virtual-employees .sec-07 .content {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .virtual-employees .sec-07 .logo-img {
+    top: 60%;
+    left: 37.5%;
+    width: 180px;
+  }
+  .virtual-employees .virtual-sec-7 .text.let p {
+    font-size: 17px;
+    margin-bottom: 20px;
+  }
+  .virtual-employees .virtual-sec-7 .text h2 {
+    font-size: 30px;
+    margin-bottom: 0px;
+  }
+  .virtual-employees .sec-06 p {
+    padding-top: 5px;
+    font-size: 16px;
+    line-height: 25px;
+    padding-right: 0px;
+  }
+  .virtual-employees .sec-06 h2 {
+    text-align: center;
+    padding-right: 0px;
+    font-size: 22px;
+    line-height: 28px;
+  }
+  img.circle-1 {
+    margin: auto;
+    text-align: center;
+    display: block;
+    padding-top: 40px;
+    max-width: 320px;
+    width: 100%;
+    object-fit: contain;
+  }
+  .virtual-employees .sec-06 {
+    padding: 70px 0;
+  }
+  .virtual-employees .sec-05 p {
+    padding-top: 10px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  
+  .virtual-employees .inner-title .heading h2 {
+    font-size: 75px;
+  }
+  .virtual-employees .sec-02 .first-row {
+    display: flex;
+    column-gap: 30px;
+    padding: 30px;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  .virtual-employees .sec-02 .first-row .first {
+    border-radius: 20px;
+    padding-right: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  .virtual-employees .sec-03 h2 {
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 30px;
+  }
+  .virtual-employees .sec-03 p {
+    padding-top: 0px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 19px;
+  }
+  .virtual-employees .card-blur-bg-1 {
+    padding: 25px 20px;
+  }
+  .virtual-employees .sec-03 {
+    padding: 30px 0;
+  }
+  .virtual-employees .sec-04 h2 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+  .virtual-employees .sec-04 p {
+    margin-top: -150px;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 15px;
+  }
+
+  .virtual-employees .sec-08 .card-blur-bg-3 {
+    margin: 10px 10px;
+    height: 100px;
+  }
+
+  .virtual-employees .virtual-sec-7 ul.slick-dots {
+    margin-bottom: -75px !important;
+}
+}
+
+@media only screen and (max-width: 767px) {
+
+  .virtual-employees .inner-title .heading h2 {
+    font-size: 45px;
+  }
+  .virtual-employees .sec-01 p {
+    padding-top: 5px;
+    padding-right: 0px;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: center;
+  }
+  .virtual-employees .sec-01 {
+    height: 100vh;
+    padding: 50px 0;
+  }
+  .virtual-employees .sec-01 h4 {
+    font-size: 14px;
+
+    text-align: center;
+  }
+  .virtual-employees .sec-01 p {
+    padding-top: 5px;
+    padding-right: 0px;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: center;
+  }
+  .virtual-employees .sec-02 .first-row .first h3 {
+    font-size: 20px;
+    line-height: 40px;
+  }
+  .virtual-employees .sec-03 p {
+    padding-top: 0px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 19px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .virtual-employees .sec-04 .main-logo-slider-box .box h3 {
+    font-size: 13px;
+    text-align: center;
+    line-height: 18px;
+    text-align: center;
+  }
+  .virtual-employees .sec-04 .main-logo-slider-box .box h3 br {
+    display: none;
+  }
+  .virtual-employees .card-blur-bg-2 {
+    padding: 40px 20px 20px;
+  }
+  .virtual-employees .sec-04 .main-logo-slider-box .box {
+    height: 170px;
+  }
+  .virtual-employees .sec-04 h2 {
+    font-size: 22px;
+    line-height: 25px;
+  }
+  .virtual-employees .sec-04 p {
+    margin-top: -120px;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 13px;
+  }
+  .virtual-employees .sec-04 {
+    padding: 30px 0;
+    position: relative;
+  }
+  .virtual-employees .sec-05 p {
+    padding-top: 5px;
+    font-size: 16px;
+    line-height: 25px;
+  }
+  .virtual-employees .sec-05 {
+    padding: 30px 0;
+  }
+  .virtual-employees .sec-06 {
+    padding: 50px 0;
+  }
+  .virtual-employees .sec-04 .main-logo-slider-box .box {
+    align-items: center;
+  }
+  .virtual-employees .sec-04 .main-logo-slider-box .box h3 {
+    font-size: 11px;
+    line-height: 15px;
+    text-align: center;
+  }
+  .virtual-employees .sec-04 .main-logo-slider-box .box img {
+    width: 40px;
+    height: 40px;
+  }
+  .virtual-employees .sec-04 h2 {
+    font-size: 22px;
+    line-height: 25px;
+  }
+  .virtual-employees .sec-05 p {
+    padding-top: 5px;
+    font-size: 14px;
+    line-height: 23px;
+  }
+  .virtual-employees .sec-05 .vertul-t-btn {
+    margin-top: 9px;
+    padding: 15px 20px;
+    max-width: 200px;
+  }
+  .virtual-employees .sec-06 {
+    padding: 30px 0;
+  }
+  .virtual-employees .sec-06 h2 {
+    text-align: center;
+    padding-right: 0px;
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .virtual-employees .sec-06 p {
+    padding-top: 5px;
+    font-size: 15px;
+    line-height: 23px;
+    padding-right: 0px;
+    text-align: center;
+  }
+  .virtual-employees .virtual-sec-7 .text h2 {
+    font-size: 23px;
+    margin-bottom: 4px !important;
+  }
+  .virtual-employees .virtual-sec-7 .text.let p {
+    font-size: 17px;
+    margin-bottom: 20px;
+  }
+  .virtual-employees .virtual-sec-7 .testim-box {
+    height: 400px;
+  }
+  .virtual-employees .virtual-sec-7 .testim-box .text h4 {
+    font-size: 18px;
+  }
+  .virtual-employees .virtual-sec-7 .text p {
+    font-size: 12px;
+  }
+  .virtual-employees .virtual-sec-7 .testim-box .text h6 {
+    padding: 5px 0;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+  }
+  .virtual-employees .sec-07 .content {
+    padding: 50px 0;
+  }
+  .virtual-employees .sec-07 .content h2 {
+    text-align: center;
+    font-size: 30px;
+    line-height: 30px;
+  }
+  .virtual-employees .sec-07 .content p {
+    text-align: center;
+    font-size: 14px;
+    line-height: 23px;
+  }
+  .virtual-employees .sec-07 .content .right {
+    padding-left: 0px;
+  }
+  img.raffle-anim {
+    width: 100%;
+    max-width: 380px;
+    object-fit: contain;
+  }
+  .virtual-employees .sec-03 h4 {
+    text-align: center;
+    font-size: 13px;
+  }
+  .virtual-employees .sec-03 h2 {
+    font-size: 22px;
+    line-height: 30px;
+  }
+  .virtual-employees .sec-03 p {
+    padding-top: 0px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 19px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .virtual-employees .sec-03 .card-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  .virtual-employees .sec-08 .card-blur-bg-3 {
+    margin: 7px 0px;
+    height: 100px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .virtual-employees .inner-title .heading h2 {
+    font-size: 45px;
+  }
+  
+  .virtual-employees .sec-01 {
+    height: 100vh;
+    padding: 50px 0;
+  }
+  .virtual-employees .sec-02 .first-row .first h3 {
+    font-size: 20px;
+    line-height: 40px;
+  }
+  .virtual-employees .sec-02 .first-row .first h4 {
+    font-size: 13px;
+    line-height: 20px;
+  }
+  .virtual-employees .sec-03 .card-row .card h3 {
+    padding-top: 15px;
+    width: 350px;
+    font-size: 16px;
+    line-height: 15px;
+  }
+  .virtual-employees .sec-03 .card-row .card p {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+  .virtual-employees .sec-03 {
+    padding: 30px 0;
+  }
+  .virtual-employees .sec-04 p {
+    margin-top: -120px;
+    font-size: 13px;
+  }
+  .virtual-employees .sec-05 p {
+    padding-top: 5px;
+    font-size: 14px;
+    line-height: 23px;
+  }
+  .virtual-employees .sec-05 .vertul-t-btn {
+    margin-top: 9px;
+    padding: 15px 20px;
+    max-width: 200px;
+  }
+  .virtual-employees .sec-05 .vertul-t-btn {
+    font-size: 15px;
+  }
+  .virtual-employees .sec-06 h2 {
+    text-align: center;
+    padding-right: 0px;
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .virtual-employees .sec-06 {
+    padding: 30px 0;
+  }
+  img.circle-1 {
+    padding-top: 40px;
+    max-width: 320px;
+    width: 100%;
+    object-fit: contain;
+  }
+  .virtual-employees .virtual-sec-7 .text h2 {
+    font-size: 23px;
+    margin-bottom: 4px !important;
+  }
+  .virtual-employees .virtual-sec-7 .text p {
+    font-size: 12px;
+  }
+  .virtual-employees .virtual-sec-7 .testim-box .text h4 {
+    font-size: 18px;
+  }
+  .virtual-employees .virtual-sec-7 .testim-box img {
+    max-width: 70px;
+  }
+  .virtual-employees .virtual-sec-7 .testim-box .text h6 {
+    padding: 5px 0;
+    font-size: 12px;
+  }
+  .virtual-employees .sec-07 .content p {
+    font-size: 14px;
+    line-height: 23px;
+  }
+  .virtual-employees .sec-07 .logo-img {
+    top: 64%;
+    left: 37.5%;
+    width: 90px;
+  }
+}
+
+
+@media only screen and (max-width: 370px) {
+  .virtual-employees .virtual-sec-7 .testim-box {
+    height: 450px;
+    padding: 10px 10px;
+  }
+}

@@ -1,0 +1,1686 @@
+/* Hero Section */
+
+.bs-hero-banner {
+  height: 100vh;
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;
+  /* padding: 200px 0 50px; */
+  /* position: relative; */
+}
+
+.bs-hero-banner .text p {
+  font-size: 20px;
+  font-weight: 500;
+  max-width: 1000px;
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.sec-8.nitro-onscreen {
+    position: relative;
+}
+
+.sec-8.nitro-onscreen::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: #00000073;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.sec-8.nitro-onscreen .container {
+    position: relative;
+    z-index: 1;
+}
+
+.bs-hero-banner .text p a {
+  color: #fff !important;
+}
+
+.bs-hero-banner .slick-dots {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  z-index: 1;
+}
+
+.bs-hero-banner .slick-dots li button:before {
+  font-family: "slick";
+  font-size: 6px;
+  line-height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  content: "•";
+  text-align: center;
+  opacity: 0.25;
+  color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.bs-hero-banner .slick-dots li.slick-active button:before {
+  opacity: 0.75;
+  color: transparent;
+}
+
+.bs-hero-banner ul.slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: -2%;
+  left: -46%;
+  list-style: none;
+}
+
+.bs-hero-banner .slick-dots li {
+  width: 20px !important;
+  height: 6px !important;
+}
+
+.bs-hero-banner .slick-dots li button {
+  width: 20px;
+  height: 6px;
+}
+
+.bs-hero-banner .slick-dots li button::before {
+  background-color: #999999;
+  width: 20px;
+  height: 6px;
+  border-radius: 50px;
+  opacity: 100%;
+}
+
+.bs-hero-banner .slick-dots li.slick-active button::before {
+  background-color: #746fff;
+}
+
+.bs-hero-banner .scroll-down-box {
+  position: absolute;
+  bottom: 10px;
+  z-index: 999;
+  right: 20px;
+}
+
+.bs-hero-banner .scroll-down-box .two-imges {
+  position: relative;
+}
+
+.bs-hero-banner .scroll-down-box .two-imges img.Scrol-Down-Mouse {
+  position: absolute;
+  top: 37%;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+.bs-hero-banner .scroll-down-box .two-imges a:hover img.Scrol-Down-Mouse {
+  filter: brightness(100);
+}
+
+.text h1 {
+  font-size: 75px;
+  font-weight: 400;
+  /* display: inline-flex; */
+  line-height: 1em;
+}
+
+.text h1 span {
+  font-weight: 600; /* display: inline-flex; */
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.text h1 span img {
+  display: inline;
+}
+
+.bs-hero-banner .real-estate-banner {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  display: flex !important;
+  align-items: center;
+  z-index: 999999999 !important;
+}
+
+.bs-hero-banner .real-estate-banner .case-text h2 {
+  font-size: 65px;
+  font-weight: 400;
+  color: #fff !important;
+  text-align: left;
+}
+
+.real-sec-2 .case-text {
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px 47px;
+  height: 200px;
+  width: 225px;
+  display: flex;
+  align-items: center;
+}
+
+.case-hero-slider ul.slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  left: 365px;
+  column-gap: 3px;
+  top: 350px;
+}
+.case-hero-slider .slick-dots li.slick-active button::before {
+  background-color: #746fff;
+  width: 20px;
+  height: 6px;
+}
+
+.case-hero-slider .slick-dots li button::before {
+  background-color: #999999;
+  width: 20px;
+  height: 6px;
+  border-radius: 50px;
+  opacity: 100%;
+}
+.case-hero-slider .slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
+  opacity: 1;
+  width: 20px;
+  height: 6px;
+}
+.case-text p {
+  color: white;
+  font-size: 22px;
+  line-height: 1.7em;
+  text-align: justify;
+}
+.case-hero-sliderul.case-list li {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 300;
+}
+.case-hero-slider ul.case-list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.case-hero-slider ul.case-list li {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 10px;
+}
+
+.case-hero-slider ul.case-list img {
+  margin-top: 8px;
+  max-width: 100px !important;
+}
+.bs-hero-banner .real-estate-banner .case-text span {
+  font-weight: 600;
+  color: #fff;
+}
+
+.bs-hero-banner .real-estate-banner .case-text p {
+  color: #fff;
+}
+
+.text p {
+  color: #ffffffa6;
+  font-size: 16px;
+  margin-top: 5px !important;
+  margin-bottom: 10px !important;
+}
+
+.case-bg-marker {
+  margin-top: -10px;
+  background: linear-gradient(#0e081f 100%, #5e52e2 0%);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-barr {
+  background: linear-gradient(181deg, #0b0a18, #35053e);
+}
+
+/* Section 1 */
+.beauty-sec-1{
+    padding: 80px 0px 10px;
+}
+.beauty-sec-1 .container {
+  padding-left: 50px;
+  padding-right: 50px;
+  max-width: 1200px;
+}
+.beauty-sec-1 .text{
+  display: flex;
+  justify-content: center;
+} 
+
+.beauty-sec-1 .text form {
+  width: 100%;
+  position: relative;
+}
+
+.beauty-sec-1 .text form input {
+  width: 100%;
+  height: 42px;
+  border-radius: 40px;
+  border: 0.8px solid rgba(47, 39, 198, 0.75);
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.6) 0%, rgba(255, 255, 255, 0.25) 200%);
+  -webkit-backdrop-filter: blur(40px);
+  backdrop-filter: blur(40px);
+  color: #ffffff;
+  text-indent: 25px;
+  padding-right: 145px;
+  font-size: 16px;
+  position: relative;
+}
+.beauty-sec-1 .text form input:focus-visible{
+  outline: 0.8px solid rgba(47, 39, 198, 0.75);
+}
+
+.beauty-sec-1 .text form button.submit-btn {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+}
+
+
+.beauty-sec-1 form button.submit-btn:hover {
+  border: 2px solid transparent;
+}
+
+.beauty-sec-1 form button.submit-btn {
+  background: linear-gradient(#5E52E2 0%, #292CC0 100%) !important;
+  color: white;
+  width: 250px;
+  height: 38px;
+  border-radius: 50px;
+  border: 2px solid #5E52E2;
+  display: flex;
+  padding-right: 10px;
+  column-gap: 10px;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+/* Section 2 */
+.beauty-sec-2 {
+  padding-bottom: 80px;
+  padding-top: 40px;
+}
+
+.beauty-sec-2 .container {
+  padding-left: 50px !important;
+  padding-right: 50px !important;
+}
+
+.beauty-text h2 {
+  color: #fff;
+  font-size: 33px;
+  font-weight: 600;
+  text-transform: capitalize;
+  line-height: 1.4em;
+  background: linear-gradient(270deg, #e5deff 0%, #e5deff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: capitalize;
+}
+
+.beauty-text p {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.sec-7.nitro-offscreen {
+  padding: 100px 0;
+}
+
+.sec-7 .row {
+  background: linear-gradient(90deg, #54126a, #65177a, #337ab8);
+  padding: 0 50px;
+  border-radius: 15px;
+}
+
+.bounce-in {
+  animation: bounce-in 2s ease infinite;
+}
+
+@keyframes bounce-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.fade-in-left {
+  animation: fade-in-left 2s ease infinite;
+}
+
+section.sec-7.nitro-offscreen .text h2 {
+  font-size: 20px;
+  margin-bottom: 0;
+  color: #fff !important;
+  -webkit-text-fill-color: #ffffff;
+  font-family: "Syne";
+  font-weight: 600;
+}
+
+.disc-price h3 {
+  color: #fff;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.sec-7 ul li a {
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px 16px;
+  border-radius: 19px;
+  min-width: 128px;
+  height: 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+a.discount-call-btn:hover {
+  transform: scale(1.1);
+  transition: 0.4s;
+}
+
+li {
+  list-style: none;
+}
+
+.order-btn {
+  font-size: 16px;
+  min-width: 171px;
+  height: 50px;
+  display: inline-flex;
+  width: auto;
+  padding: 10px 30px;
+  background-image: linear-gradient(to right, #6a47f4, #4daedb);
+  display: flex;
+  width: 160px;
+  padding: 11px 0px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 93px;
+  color: white;
+  transition: 1.5s;
+  transition: all 0.4s ease-in-out;
+  font-size: 18px;
+  text-transform: uppercase;
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  background-size: 300% 100%;
+}
+
+.order-btn:hover {
+  background-image: linear-gradient(to right, #6246d3, #58caff);
+  color: white;
+  transition: 1.5s;
+  transition: all 0.4s ease-in-out;
+  font-size: 18px;
+  text-transform: uppercase;
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  background-size: 300% 100%;
+  transform: scale(1.1);
+  transition: 0.4s;
+}
+
+.order-btn a {
+  color: #fff;
+  text-transform: capitalize;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+
+
+/* Section 3 */
+.beauty-sec-3 {
+  background: linear-gradient(180deg, #000000, #33063d);
+  padding: 100px 0px;
+  background-position: 0% 0%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.beauty-sec-3 .container {
+  padding-left: 50px!important;
+  padding-right: 50px!important;
+}
+
+.beauty-sec-3 .col-md-12 {
+  text-align: center;
+  padding-bottom: 60px;
+}
+
+.beauty-sec-3 .beauty-text p {
+  max-width: 1100px;
+  margin: auto;
+  margin-top: 15px;
+}
+
+ul.beauty-list {
+  padding-left: 20px;
+  padding-top: 15px;
+}
+
+ul.beauty-list li {
+  color: #fff;
+  margin-bottom: 8px;
+  list-style: disc;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.beauty-sec-3 .beauty-text p.last-part {
+  max-width: 440px;
+  margin: inherit;
+}
+
+
+
+.beauty-last {
+  background: linear-gradient(6deg, #1e0923fc, #33063d);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  height: 1500px;
+}
+
+.beauty-sec-4 {
+  padding: 00px 0;
+  padding-bottom: 100px;
+}
+.beauty-sec-4 .container {
+  padding-left: 50px!important;
+  padding-right: 50px!important;
+}
+
+
+.beauty-sec-4 .beauty-text {
+    padding-left: 40px;
+}
+
+.beauty-sec-4 .beauty-text  h2 {
+  max-width: 430px;
+  padding-bottom: 20px;
+}
+
+.beauty-sec-5 .container {
+  padding-left: 50px!important;
+  padding-right: 50px!important;
+}
+
+
+
+
+
+/* Section 4 */
+.case-last-bg {
+  background-color: #140923;
+}
+
+.beauty-sec-6 {
+  background-position: top right;
+  background-repeat: no-repeat;
+  padding: 100px 0px;
+}
+
+.beauty-sec-6 .container {
+  padding-left: 50px!important;
+  padding-right: 50px!important;
+}
+
+.beauty-sec-6 .beauty-text h2, .main-beauty-sec .beauty-text h2 {
+  max-width: 400px;
+}
+
+
+
+
+
+/* Section 5 */
+/* .clean-sec-7 {
+  background-attachment: fixed;
+} */
+
+.beauty-sec-7 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.clean-sec-7.beauty-sec-7 .container {
+  padding-left: 50px!important;
+  padding-right: 50px!important;
+}
+
+.beauty-sec-7 .case-bread {
+  color: #fff;
+}
+
+.clean-sec-7 .case-bread {
+  padding-right: 0px;
+}
+
+.beauty-sec-7 .case-bread p {
+  margin-bottom: 40px;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.beauty-sec-7 .case-bread h4 {
+  font-size: 33px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 1.4em;
+}
+
+
+
+
+/* Section 6 */
+.main-beauty-sec {
+  height: 597px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  display: flex;
+  align-items: center;
+}
+
+.main-beauty-sec .container {
+  padding-left: 50px!important;
+  padding-right: 50px!important;
+}
+
+.main-beauty-sec .beauty-text p {
+  max-width: 520px;
+  padding: 15px 0 40px;
+}
+
+
+.main-beauty-sec .t-btn.t-btn-arrow {
+  max-width: 400px;
+  padding: 11px 25px;
+}
+
+
+a.t-btn.t-btn-arrow.real-bg {
+  max-width: 420px;
+  padding: 13px 25px;
+}
+
+
+/* Section 7 */
+
+.sec-8.nitro-onscreen {
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.sec-8.nitro-onscreen .container {
+  padding-left: 50px!important;
+  padding-right: 50px!important;
+}
+
+.sec-8.nitro-onscreen .info-box {
+  justify-content: center;
+}
+
+.sec-8.nitro-onscreen .text h2 {
+  font-size: 40px;
+  letter-spacing: 1.1px;
+  background: linear-gradient(270deg,#9D77FF 0%,#C4C2FF 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #ffffff;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.order-t-btn {
+  background-color: #fff;
+  padding: 14px 45px;
+  border-radius: 24px;
+  font-family: Neometric-Medium;
+  display: inline-block;
+  transition: .3s;
+}
+
+.order-t-btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.order-t-btn a {
+  font-size: 15px;
+  font-weight: 500;
+  font-family: 'Syne';
+  color: #000000;
+}
+
+.order-t-btn:hover a {
+  color: #fff;
+}
+
+
+/* Portfolio */
+
+/* Sectoion 10 - Portfolio */
+.beauty-sec-8 {
+  background: linear-gradient(211deg, #181639, #0E081F);
+  padding: 120px 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 -700px;
+}
+
+.beauty-sec-8 .case-text-brand h2 {
+  font-size: 40px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 40px;
+  text-transform: capitalize;
+}
+
+.beauty-sec-8 .img-box {
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 0.3s;
+  margin-bottom: 30px;
+}
+
+.beauty-sec-8 .img-box img {
+  width: 100%;
+  height: 400px;
+  object-position: top;
+  object-fit: cover;
+  transition: 8s;
+}
+
+.beauty-sec-8 .img-box:hover img {
+  object-position: bottom;
+}
+
+.beauty-sec-8 .web-btn {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Testimonial */
+
+/* Section 7 (Testimonials) */
+.beauty-salons .home-sec-07 {
+  padding: 100px 0 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background: linear-gradient(180deg, #0B0A18 0%, #35053E 100%);
+}
+.beauty-salons .home-sec-07 h2 {
+  margin-bottom: 30px;
+}
+.beauty-salons .case-text-brand h2 {
+  font-size: 40px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.beauty-salons .home-sec-07 .main-testi-large-box {
+  color: white;
+  z-index: 999;
+}
+.beauty-salons .home-sec-07 .main-testi-box {
+  padding: 50px 150px;
+  text-align: center;
+  margin-top: 0px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 998;
+  border-radius: 10px;
+  position: relative;
+  /* background-color: #000000b3; */
+  background-image: url(/testi-main-box-bg.png);
+  backdrop-filter: blur(2px);
+}
+.beauty-salons .home-sec-07 .main-testi-box::after {
+  content: "";
+  background-image: url(/testi-details-left.png);
+  width: 88px;
+  height: 66px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 70px;
+  left: 5%;
+}
+.beauty-salons .home-sec-07 .main-testi-box::before {
+  content: "";
+  background-image: url(/testi-details-right.png);
+  width: 88px;
+  height: 66px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 70px;
+  right: 5%;
+}
+
+.beauty-salons .home-sec-07 .main-testi-box h4 {
+  background: linear-gradient(270deg, #9d77ff 0%, #c4c2ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.beauty-salons .home-sec-07 .main-testi-box h5 {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
+  margin: 10px 0 15px;
+}
+
+.beauty-salons .home-sec-07 .main-testi-box p {
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.7em;
+}
+
+.beauty-salons .home-sec-07 .main-testi-box h6 {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Lato", sans-serif;
+  margin-top: 15px;
+}
+.beauty-salons .home-sec-07 .two-imges-testi img.testi-img-01 {
+  position: absolute;
+  bottom: 50px;
+  right: 10%;
+}
+
+.beauty-salons .home-sec-07 .two-imges-testi img.testi-img-02 {
+  position: absolute;
+  bottom: 130px;
+  left: 13%;
+}
+.beauty-salons .home-sec-07 .main-testi-nav .box img {
+  cursor: pointer;
+}
+
+.beauty-salons .home-sec-07 .slick-track {
+  padding: 5px 0 25px;
+}
+
+.beauty-salons .home-sec-07 .testi-img-01 {
+  animation: zoom 5s ease-in-out infinite;
+}
+
+.beauty-salons .home-sec-07 .rotating-img {
+  animation: rotate 7s linear infinite;
+}
+.beauty-salons .main-testi-nav .slick-slide {
+  opacity: 30%;
+}
+
+.beauty-salons .main-testi-large-box .slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+  z-index: 9999;
+}
+.beauty-salons .main-testi-nav .slick-active.slick-center.slick-current {
+  opacity: 100% !important;
+}
+
+.beauty-salons .main-testi-nav .slick-list {
+  padding: 0 !important;
+}
+
+.beauty-salons .main-testi-nav .slick-active.slick-center.slick-current .box img {
+  box-shadow: 5px 5px 25px 0px rgba(157, 119, 255, 0.9);
+  border-radius: 10px;
+}
+
+.beauty-salons .case-text-brand {
+  text-align: center;
+}
+
+.beauty-salons .case-text-brand h5 {
+  color: #fff;
+  font-size: 16px;
+  padding-bottom: 10px;
+  font-weight: 400;
+}
+
+
+.beauty-salons .home-sec-07 .slick-dots {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  z-index: 1;
+}
+
+.beauty-salons .home-sec-07 ul.slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  column-gap: 3px;
+  bottom: -20px;
+}
+
+.beauty-salons .home-sec-07 .slick-dots li {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.beauty-salons .home-sec-07  .slick-dots li button::before {
+  background-color: #fff;
+  width: 14px;
+  height: 14px;
+  border-radius: 50px;
+  opacity: 100%;
+  color: transparent;
+}
+
+.beauty-salons .home-sec-07 .slick-dots li.slick-active button::before {
+  background-color: #746FFF;
+  width: 14px;
+  height: 14px;
+}
+
+
+
+@media only screen and (max-width: 1600px) {
+  .beauty-salons .bs-hero-banner .case-hero-slider ul.slick-dots {
+    top: 415px !important;
+    left: 14% !important;
+  }
+  .beauty-salons .beauty-text {
+    padding-left: 40px;
+  }
+  .beauty-salons .testimoan-sec-case ul.slick-dots {
+    left: 0px;
+  }
+  .beauty-salons .bs-hero-banner.case-hero-slider.hero-slider2 ul.slick-dots {
+    left: 0% !important;
+    top: 104% !important;
+  }
+}
+@media only screen and (max-width: 1500px) {
+  .beauty-salons .real-sec-5 .case-box {
+    height: 436px;
+  }
+  .beauty-salons .case-hero-slider ul.slick-dots {
+    top: 400px !important;
+    left: 193px !important;
+  }
+  .beauty-salons .case-hero-slider.hero-slider2 ul.slick-dots {
+    left: 0% !important;
+    top: 104% !important;
+  }
+}
+@media only screen and (max-width: 1400px) {
+  .beauty-salons .real-sec-5 .case-box {
+    height: 436px;
+  }
+  .beauty-salons .case-hero-slider ul.slick-dots {
+    top: 400px !important;
+    left: 145px !important;
+  }
+  .beauty-salons .case-hero-slider.hero-slider2 ul.slick-dots {
+    left: 0% !important;
+    top: 104% !important;
+  }
+  .beauty-salons .sec-7 ul li a {
+    border-radius: 19px;
+  }
+  .beauty-salons .beauty-text {
+    padding-left: 0px;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .beauty-salons .case-hero-slider ul.slick-dots {
+    left: 155px !important;
+  }
+  .beauty-salons .bs-hero-banner .real-estate-banner .case-text h2 {
+    font-size: 53px;
+  }
+  .beauty-salons .beauty-text p {
+    font-size: 14px;
+  }
+  .beauty-salons .beauty-text h2 {
+    color: #fff;
+    font-size: 26px;
+    line-height: 30px;
+  }
+  .beauty-salons ul.beauty-list li {
+    font-size: 14px;
+  }
+  .beauty-salons .beauty-sec-4,
+  .beauty-salons .beauty-sec-3 {
+    padding: 30px 0;
+  }
+  .beauty-salons .beauty-sec-7 .case-bread h4,
+  .beauty-salons .beauty-sec-8 h2,
+  .beauty-salons .beauty-sec-9 h2 {
+    font-size: 26px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    line-height: 36px;
+  }
+  .beauty-salons .beauty-sec-9 h2 {
+    margin-bottom: 10px;
+  }
+  .beauty-salons .beauty-sec-9 {
+    padding: 50px 0 50px;
+  }
+  .beauty-salons .case-mail-form .submit-btn {
+    position: absolute;
+    top: 2px;
+    right: 174px;
+  }
+  .beauty-salons .beauty-sec-2 .col-md-4 {
+    flex: 100%;
+    max-width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding-top: 0px;
+  }
+  .beauty-salons .beauty-sec-2 p,
+  .beauty-salons .beauty-sec-2 h2 {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .beauty-salons .beauty-image img {
+    max-width: 350px;
+  }
+  .beauty-salons .beauty-text {
+    padding-left: 0px;
+  }
+  .beauty-salons .sec-7.nitro-offscreen {
+    padding: 40px 0;
+  }
+  .beauty-salons .sec-7 .row {
+    padding: 20px 20px !important;
+  }
+  .beauty-salons .beauty-sec-2 {
+    padding-bottom: 0px;
+  }
+  .beauty-salons .bs-hero-banner .text p {
+    font-size: 16px;
+    max-width: 650px;
+    line-height: 27px;
+  }
+  .beauty-salons .beauty-sec-6 {
+    padding: 50px 0;
+  }
+  .beauty-salons .beauty-sec-7 .case-bread h4,
+  .beauty-salons .beauty-sec-8 h2,
+  .beauty-salons .beauty-sec-9 h2 {
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    line-height: 34px;
+  }
+}
+@media only screen and (max-width: 1024px){
+  .beauty-salons .sec-7 ul li a {
+    padding: 10px 0px;
+    min-width: 158px;
+  }
+
+  .beauty-salons .home-sec-07 .slick-slide img {
+    max-width: 65px;
+    object-fit: contain;
+    height: auto;
+  }
+  .beauty-salons .home-sec-07 .two-imges-testi img.testi-img-01 {
+    bottom: 60px;
+    max-width: 270px;
+    object-fit: contain;
+  }
+  .beauty-salons .home-sec-07 .two-imges-testi img.testi-img-02 {
+    position: absolute;
+    bottom: 130px;
+    left: 13%;
+  }
+  .beauty-salons .home-sec-07 {
+    padding: 70px 0 100px;
+  }
+  .beauty-salons .home-sec-07 .slick-slide img {
+    max-width: 65px;
+    object-fit: contain;
+    height: auto;
+  }
+  .beauty-salons .home-sec-07 .two-imges-testi img.testi-img-01 {
+    bottom: 60px;
+    max-width: 270px;
+    object-fit: contain;
+  }
+  .beauty-salons .home-sec-07 .two-imges-testi img.testi-img-02 {
+    position: absolute;
+    bottom: 130px;
+    left: 13%;
+  }
+  .beauty-salons .home-sec-07 .two-imges-testi img.testi-img-01, .home-sec-07 .two-imges-testi img.testi-img-02{
+    display:none;
+  }
+  .beauty-salons .home-sec-07 .text h2 {
+    font-size: 40px;
+  }
+  .beauty-salons .home-sec-07 .main-testi-box::after, .home-sec-07 .main-testi-box::before {
+    width: 48px;
+    height: 36px;
+}
+}
+
+@media only screen and (max-width: 991px) {
+
+  .bs-hero-banner {
+    position: relative;
+}
+  .beauty-salons .beauty-sec-8 .case-text-brand h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    line-height: 1.2em;
+  }
+  .beauty-salons .beauty-sec-8 {
+    padding: 40px 0;
+  }
+  .beauty-salons .sec-8.nitro-onscreen .text h2 {
+    font-size: 22px;
+  }
+  .beauty-salons .beauty-sec-6 .beauty-text h2,
+  .beauty-salons .main-beauty-sec .beauty-text h2 {
+    max-width: 100%;
+    text-align: center;
+  }
+  .beauty-salons .beauty-sec-5 .container {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  .beauty-salons .beauty-image img {
+    max-width: 320px;
+    margin-top: 40px;
+  }
+  .beauty-salons .beauty-text p {
+    font-size: 13px;
+  }
+  .beauty-salons ul.beauty-list li {
+    font-size: 13px;
+  }
+  .beauty-salons .beauty-sec-4 .container {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  .beauty-salons .beauty-text h2 {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .beauty-salons .beauty-sec-4,
+  .beauty-salons .beauty-sec-3 {
+    padding: 50px 0;
+  }
+  .beauty-sec-3 .container {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  .beauty-salons .beauty-sec-4,
+  .beauty-salons .beauty-sec-3 {
+    text-align: center;
+    padding: 20px 0;
+  }
+  .beauty-salons .order-btn {
+    margin: auto;
+  }
+  .beauty-salons .sec-7 .row {
+    padding: 16px 20px;
+  }
+  .beauty-salons .info-box ul {
+    padding-left: 0;
+  }
+
+  .beauty-salons .order-btn {
+    margin: auto;
+  }
+  .beauty-salons a.discount-call-btn {
+    font-size: 13px;
+  }
+
+  .beauty-salons a.discount-call-btn {
+    font-size: 13px;
+  }
+
+  .beauty-salons .col.img-box.bounce-in img {
+    max-width: 90px;
+  }
+  .beauty-salons .sec-7 .row {
+    padding: 15px 10px;
+  }
+  .beauty-salons .order-btn {
+    font-size: 14px;
+    height: 40px;
+    width: 140px;
+  }
+  .beauty-salons .t-btn.t-btn-arrow,
+  header .t-btn.t-btn-arrow {
+    font-size: 13px;
+  }
+  .beauty-salons .bs-hero-banner .text p {
+    font-size: 14px;
+    max-width: 490px;
+    line-height: 24px;
+  }
+  .beauty-salons .bs-hero-banner .real-estate-banner .case-text h2 {
+    font-size: 32px;
+  }
+  .bs-hero-banner ul.slick-dots {
+    margin-bottom: -4%;
+    left: -40%;
+  }
+  .beauty-salons .sec-7.nitro-offscreen {
+    padding: 40px 0;
+  }
+  .beauty-salons .beauty-sec-6 .container {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  .beauty-salons .clean-sec-7.beauty-sec-7 .container {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  .beauty-salons .beauty-sec-7 .case-bread h4,
+  .beauty-salons .beauty-sec-8 h2,
+  .beauty-salons .beauty-sec-9 h2 {
+    font-size: 19px;
+    line-height: 28px;
+  }
+  .beauty-salons .beauty-sec-7 {
+    height: 450px;
+  }
+  .beauty-salons .main-beauty-sec {
+    height: 400px;
+  }
+  .beauty-salons .beauty-sec-2 {
+    padding-bottom: 0px;
+  }
+
+  
+  .beauty-salons .home-sec-07 .slick-slide img {
+    max-width: 45px;
+    object-fit: contain;
+    height: auto;
+    border-radius: 0px;
+  }
+  .beauty-salons .home-sec-07 .main-testi-box {
+    padding: 20px 30px;
+  }
+  .beauty-salons .home-sec-07 .main-testi-box p {
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.5em;
+  }
+  .beauty-salons .home-sec-07 .two-imges-testi img.testi-img-01 {
+    bottom: 0px;
+    max-width: 200px;
+    object-fit: contain;
+  }
+
+  .beauty-salons .two-imges-testi {
+    bottom: 60px;
+    max-width: 60px;
+    object-fit: contain;
+  }
+
+  .beauty-salons img.testi-img-02.rotating-img {
+    bottom: 60px;
+    max-width: 100px;
+    object-fit: contain;
+  }
+  .beauty-salons .home-sec-07 .two-imges-testi img.testi-img-02 {
+    position: absolute;
+    bottom: 50px;
+    left: 13%;
+  }
+  .beauty-salons .home-sec-07 .main-testi-box h6 {
+    font-size: 13px;
+    margin-top: 5px;
+  }
+  .beauty-salons .home-sec-07 {
+    padding: 40px 0 40px;
+  }
+  .beauty-salons .home-sec-07 .main-testi-box:after, .home-sec-07 .main-testi-box:before {
+    width: 38px;
+    height: 36px;
+    top: 60px;
+}
+  .beauty-salons .home-sec-07 .text h2 {
+    font-size: 28px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .beauty-salons .bs-hero-banner .real-estate-banner .case-text h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+  .beauty-salons .bs-hero-banner .text p {
+    font-size: 13px;
+    max-width: 450px;
+    line-height: 21px;
+    text-align: center;
+  }
+  .beauty-salons .bs-hero-banner ul.slick-dots {
+    margin-bottom: -4%;
+    left: -10%;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -50%);
+  }
+  .beauty-salons .beauty-sec-1 {
+    padding: 50px 0 0px;
+  }
+  .beauty-salons .beauty-sec-2 .container {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  .beauty-salons .disc-price h3 {
+    font-weight: 700;
+  }
+  .beauty-salons .beauty-sec-3 .col-md-12 {
+    padding-bottom: 20px;
+  }
+  .beauty-salons .beauty-sec-3 .beauty-text p.last-part {
+    max-width: 80%;
+        margin: 20px auto;
+  }
+  .beauty-salons .beauty-sec-4 .beauty-text {
+    padding-left: 0px;
+  }
+
+  .beauty-salons .sec-7.nitro-offscreen{
+    text-align: center;
+  }
+  .beauty-salons .beauty-image img {
+    max-width: 280px;
+    padding-top: 0px;
+    text-align: center;
+    margin: auto;
+    display: block;
+    padding-bottom: 0px;
+  }
+  .beauty-salons .beauty-sec-6 {
+    padding: 50px 0;
+  }
+
+  .beauty-salons .btn-container {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .beauty-salons .beauty-text h2 br {
+    display: none;
+  }
+
+  .beauty-salons .case-text-brand h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+  .beauty-salons .home-sec-07 .main-testi-box h4 {
+    font-size: 22px;
+  }
+  .beauty-salons .home-sec-07 .main-testi-box {
+    padding: 20px 30px;
+  }
+  .beauty-salons .home-sec-07 .main-testi-box p {
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.5em;
+  }
+  .beauty-salons .home-sec-07 .main-testi-box:after,
+  .beauty-salons .home-sec-07 .main-testi-box:before {
+    width: 38px;
+    height: 46px;
+  }
+  .beauty-salons .home-sec-07 .main-testi-box h5 {
+    font-size: 14px;
+  }
+  .beauty-salons .home-sec-07 .slick-slide img {
+    max-width: 65px;
+  }
+  .beauty-salons .home-sec-07 {
+    padding: 40px 0 40px;
+  }
+  .beauty-salons .home-sec-07 .two-imges-testi img.testi-img-01 {
+    bottom: 0px;
+    max-width: 200px;
+    object-fit: contain;
+  }
+  .beauty-salons img.testi-img-02.rotating-img {
+    max-width: 100px;
+    object-fit: contain;
+  }
+  .beauty-salons .home-sec-07 .two-imges-testi img.testi-img-02 {
+    bottom: 50px;
+  }
+
+  .beauty-salons .home-sec-07 .main-testi-box:after, .home-sec-07 .main-testi-box:before {
+    width: 38px;
+    height: 36px;
+    top: 60px;
+  }
+
+}
+@media only screen and (max-width: 575px) {
+  .beauty-salons .bs-hero-banner .real-estate-banner{
+    justify-content: center;
+  }
+  .beauty-salons .bs-hero-banner .real-estate-banner .case-text h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+  .beauty-salons .bs-hero-banner .text p {
+    font-size: 13px;
+    max-width: 450px;
+    line-height: 21px;
+    text-align: center;
+  }
+  .beauty-salons .bs-hero-banner ul.slick-dots {
+    left: -10%;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -50%);
+  }
+  .beauty-salons .beauty-sec-1 .container {
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 1200px;
+  }
+  .beauty-salons .beauty-text h2 {
+    font-size: 18px;
+    text-align: center;
+    line-height: 25px;
+  }
+  .beauty-salons .beauty-sec-2 .beauty-img img {
+    margin: 15px 0;
+    max-width: 200px;
+  }
+  .beauty-salons .beauty-sec-3 .beauty-text p {
+    font-size: 13px;
+    text-align: center;
+  }
+  .beauty-salons section.sec-7.nitro-offscreen .text h2 {
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+  .beauty-salons .col.img-box.bounce-in img {
+    max-width: 90px;
+  }
+  .beauty-salons .sec-7 .row {
+    padding: 15px 10px;
+  }
+  .beauty-salons .order-btn {
+    font-size: 14px;
+    height: 40px;
+    width: 140px;
+  }
+  .beauty-salons ul.beauty-list {
+    margin: auto;
+        max-width: fit-content;
+        text-align: center;
+    padding-top: 10px;
+  }
+  .beauty-salons .beauty-sec-4 .beauty-image img {
+    max-width: 300px;
+    padding-bottom: 20px;
+  }
+  .beauty-salons .beauty-sec-4 .beauty-image img {
+    padding-bottom: 20px;
+  }
+  .beauty-salons .beauty-sec-4 .beauty-text h2 {
+    max-width: 100%;
+    padding-bottom: 0px;
+    text-align: center;
+  }
+  .beauty-salons .beauty-sec-4,
+  .beauty-salons .beauty-sec-3 {
+    text-align: center;
+    padding: 20px 0;
+  }
+  .beauty-salons ul.beauty-list li {
+    font-size: 13px;
+    text-align: center;
+  }
+  .beauty-salons .btn-container {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .beauty-salons .beauty-sec-7 .case-bread h4,
+  .beauty-salons .beauty-sec-8 h2,
+  .beauty-salons .beauty-sec-9 h2 {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .beauty-salons .main-beauty-sec .container {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  .beauty-salons .beauty-image {
+    margin-bottom: 20px;
+  }
+  .beauty-salons .main-beauty-sec .beauty-text p {
+    max-width: 100%;
+    text-align: center;
+    padding: 15px 0 10px;
+  }
+  .beauty-salons .beauty-sec-6 .beauty-text h2,
+  .beauty-salons .main-beauty-sec .beauty-text h2 {
+    max-width: 100%;
+    text-align: center;
+  }
+  .beauty-salons .main-beauty-sec .t-btn.t-btn-arrow {
+    max-width: 400px;
+    padding: 11px 16px;
+    font-size: 12px;
+  }
+  .beauty-salons .sec-8.nitro-onscreen .container {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  .beauty-salons .sec-8.nitro-onscreen .text h2 {
+    font-size: 20px;
+  }
+  .beauty-salons .order-t-btn {
+    padding: 11px 35px;
+  }
+  .beauty-salons .sec-8.nitro-onscreen {
+    height: 350px;
+  }
+  .beauty-salons .beauty-sec-8 .case-text-brand h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    line-height: 1.2em;
+  }
+  .beauty-salons .beauty-sec-8 {
+    padding: 40px 0;
+  }
+  .beauty-salons .beauty-sec-8 .img-box img {
+    height: 300px;
+  }
+  .beauty-salons .beauty-sec-8 .case-text-brand h2 br {
+    display: none;
+  }
+  .beauty-salons .main-beauty-sec {
+    height: 400px;
+  }
+  .beauty-salons .beauty-sec-7 .case-bread p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .beauty-salons .beauty-sec-7 .case-bread h4,
+  .beauty-salons .beauty-sec-8 h2,
+  .beauty-salons .beauty-sec-9 h2 {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .beauty-salons .beauty-sec-7 {
+    height: 450px;
+  }
+  .beauty-salons .beauty-sec-3 .beauty-text p {
+    font-size: 13px;
+    text-align: center;
+  }
+  .beauty-salons .beauty-sec-3 .beauty-text h2 {
+    font-size: 18px;
+    text-align: center;
+    line-height: 25px;
+  }
+  .beauty-salons form button.submit-btn {
+    width: 120px;
+  }
+  .beauty-salons .beauty-sec-2 .col-md-4 {
+    padding-top: 0px;
+  }
+  .beauty-salons .beauty-sec-2 .beauty-img img {
+    margin: 15px 0;
+    max-width: 200px;
+  }
+  .beauty-salons .t-btn.t-btn-arrow,
+  header .t-btn.t-btn-arrow {
+    font-size: 13px;
+  }
+
+  .beauty-salons .beauty-sec-1 .text form input{
+    font-size: 14px;
+  }
+  .beauty-salons .beauty-sec-1 form button.submit-btn {
+    width: 14vw;
+    justify-content: center;
+    font-size: 0;
+  }
+  
+  .beauty-salons ul.beauty-list li {
+    font-size: 13px;
+    text-align: left;
+  }
+  .beauty-salons .newsletter-form .text form input {
+    font-size: 10px;
+    padding: 10px 0px;
+  }
+
+  p{
+    text-align: center !important;
+  }
+
+  
+  .beauty-salons .home-sec-07 .text h2 {
+    text-align: center;
+    font-size: 22px;
+  }
+  .beauty-salons .home-sec-07 .main-testi-box p {
+    font-size: 13px;
+  }
+  .beauty-salons .home-sec-07 .main-testi-box:after,
+  .beauty-salons .home-sec-07 .main-testi-box:before {
+    width: 20px;
+    height: 26px;
+  }
+  .beauty-salons .home-sec-07 .main-testi-box {
+    padding: 20px 20px;
+  }
+  .beauty-salons .home-sec-07 .two-imges-testi img.testi-img-01 {
+    max-width: 130px;
+  }
+  .beauty-salons img.testi-img-02.rotating-img {
+    max-width: 80px;
+    object-fit: contain;
+  }
+  .beauty-salons .home-sec-07 .two-imges-testi img.testi-img-02 {
+    bottom: 50px;
+  }
+
+}

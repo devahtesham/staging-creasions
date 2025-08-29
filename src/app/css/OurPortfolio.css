@@ -1,0 +1,221 @@
+body {
+  overflow-x: clip;
+}
+
+.inner-title {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+.inner-title .heading {
+  max-width: 1030px;
+  margin-top: 100px;
+}
+
+.inner-title .heading h1 {
+  color: #fff;
+  font-size: 75px;
+}
+.inner-title .heading p {
+  color: #fff;
+  font-size: 22px;
+  margin-top: 10px;
+}
+.parallax-sec > div {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+.parallax-sec .text-div:hover {
+  opacity: 1;
+}
+.parallax-sec .text-div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(0deg, rgb(0 0 0 / 70%) 0%, #fff0 80%);
+  opacity: 0;
+  transition: all 1s ease;
+}
+.parallax-sec .text-div p a {
+  z-index: 999;
+}
+
+.parallax-sec .text-div p a {
+  color: #fff;
+  position: relative;
+}
+a:hover {
+  text-decoration: none;
+}
+.parallax-sec .text-div p {
+  font-size: 50px;
+  color: #fff;
+  font-weight: 700;
+}
+footer {
+  padding: 50px 0 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 9999999;
+  margin-bottom: -40px;
+}
+
+/* Hiding Faq, Newsletter and Contact Form Sections */
+.home-sec-08,
+.home-sec-09,
+.home-sec-10 {
+  display: none;
+}
+
+@media only screen and (max-width: 1600px) {
+  .inner-title .heading {
+    margin-left: 30px;
+  }
+  .parallax-sec .text-div {
+    opacity: 1;
+  }
+  .parallax-sec .text-div p {
+    font-size: 42px;
+    font-weight: bold;
+  }
+  section.parallax-sec img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .inner-title .heading h1 {
+    font-size: 65px;
+  }
+  .inner-title .heading {
+    margin-left: 30px;
+  }
+  .parallax-sec .text-div {
+    opacity: 1;
+  }
+  .parallax-sec .text-div p {
+    font-size: 42px;
+    font-weight: bold;
+  }
+  section.parallax-sec img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .inner-title .heading h1 {
+    font-size: 52px;
+  }
+  .inner-title .heading p {
+    font-size: 20px;
+  }
+  .parallax-sec .text-div {
+    opacity: 1;
+  }
+  .parallax-sec .text-div {
+    opacity: 1;
+  }
+  section.parallax-sec img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .parallax-sec .text-div p {
+    font-size: 42px;
+    font-weight: bold;
+  }
+
+}
+@media only screen and (max-width: 991px) {
+  .inner-title .heading h1 {
+    font-size: 32px;
+  }
+  .inner-title .heading h1 {
+    color: #fff;
+    font-size: 32px;
+    text-align: center;
+  }
+  .inner-title .heading h1 {
+    color: #fff;
+    font-size: 50px;
+    text-align: center;
+  }
+  .inner-title .heading p {
+    font-size: 18px;
+    text-align: center;
+  }
+  .parallax-sec .text-div {
+    opacity: 1;
+  }
+  section.parallax-sec img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .parallax-sec .text-div p {
+    font-size: 32px;
+    font-weight: bold;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .inner-title .heading h1 {
+    font-size: 42px;
+    text-align: center;
+  }
+  .inner-title .heading p {
+    font-size: 18px;
+    text-align: center;
+  }
+  section.parallax-sec img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .parallax-sec .text-div p {
+    font-size: 32px;
+    font-weight: bold;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .inner-title .heading {
+    margin-left: 0px;
+  }
+  .inner-title .heading h1 {
+    font-size: 36px;
+    text-align: center;
+  }
+  .inner-title .heading p {
+    font-size: 13px;
+    text-align: center;
+  }
+  .parallax-sec .text-div {
+    opacity: 1;
+  }
+  section.parallax-sec img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .parallax-sec .text-div p {
+    font-size: 26px;
+    font-weight: bold;
+  }
+}

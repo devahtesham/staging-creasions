@@ -1,0 +1,234 @@
+body {
+  overflow-x: clip;
+}
+
+.single-blog  .inner-title {
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-position: top  center;
+  background-size: cover;
+}
+
+.single-blog .inner-title {
+  background-color: black;
+  min-height: 500px;
+}
+
+.single-blog .container {
+  padding-left: 50px!important;
+  padding-right: 50px!important;
+}
+
+.single-blog .inner-title .heading {
+  max-width: 1030px;
+  margin-top: 100px;
+}
+
+.single-blog .inner-title .heading h1 {
+  color: #fff;
+  font-size: 55px;
+}
+
+.single-blog section.blog-sec {
+  text-align: center;
+  padding: 100px 0px;
+}
+
+.single-blog .blog-sec {
+  background-image: linear-gradient(180deg, black, #130a2c);
+}
+
+.single-blog .print_pdf .text img {
+  padding-bottom: 25px;
+  width: 100%;
+}
+
+
+.single-blog .print_pdf .text p {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.single-blog .blog-sec .text h2 {
+  font-size: 36px;
+  text-align: left;
+}
+
+.single-blog .blog-sec .text h2 {
+  font-size: 45px;
+  letter-spacing: 1.1px;
+  background: linear-gradient(270deg, #9D77FF 0%, #C4C2FF 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 30px;
+}
+
+.single-blog .blog-sec .text p {
+  color: #ffffffa6;
+  font-size: 16px;
+  line-height: 1.7em;
+}
+
+.single-blog .blog-sec .text  h3 {
+  font-size: 30px;
+  text-align: left;
+}
+
+.single-blog .blog-sec .text h3 {
+  font-size: 40px;
+  line-height: 0.9em;
+  background: linear-gradient(270deg, #9D77FF 0%, #C4C2FF 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+
+.single-blog .blog-sec .text h4 {
+  font-size: 22px;
+  margin: 0px;
+  padding-left: 30px;
+  font-weight: bold;
+  background: linear-gradient(270deg, #9D77FF 0%, #C4C2FF 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.single-blog .blog-sec .post-blog .text {
+  margin-top: 25px;
+}
+
+.single-blog .blog-sec .post-blog .text {
+  margin-top: 25px;
+  text-align: justify;
+  padding-left: 30px;
+}
+
+.single-blog .blog-sec .post-blog a { 
+  color: #fff;
+}
+
+.single-blog .blog-sec .post-blog img {
+  width: 100%;
+}
+
+.single-blog .blog-sec .post-blog .text h5 {
+  padding-top: 20px;
+  text-align: left;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+
+.single-blog .blog-sec .text h5 {
+  font-size: 22px;
+  font-weight: bold;
+  background: linear-gradient(270deg, #9D77FF 0%, #C4C2FF 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.single-blog .blog-sec .print_pdf ol li {
+  margin-left: 20px;
+}
+
+.single-blog .blog-sec .print_pdf  li {
+  list-style: circle;
+  text-align: left;
+  color: #ffffffa6;
+}
+
+
+.single-blog .blog-sec .print_pdf  li b{
+  font-weight: 600;
+}
+
+.single-blog .blog-sec .print_pdf  li::marker {
+  color: #746fff;
+  font-size: 20px;
+}
+
+
+.single-blog .blog-sec .print_pdf a {
+  color: #ffffffa6;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+@media only screen and (max-width: 1024px) {
+  .single-blog .inner-title {
+    min-height: 550px;
+  }
+  .single-blog .inner-title .heading h1 {
+    font-size: 56px;
+    text-align: left;
+  }
+
+  .single-blog .inner-title .heading p {
+    font-size: 18px;
+    text-align: justify;
+  }
+
+  .single-blog .blog-sec .text h2{
+    font-size: 34px;
+  }
+
+  .single-blog .blog-sec .text h3{
+    font-size: 32px;
+  }
+
+}
+
+@media only screen and (max-width: 991px) {
+  .single-blog .container{
+    padding-left: 0px!important;
+    padding-right: 0px!important;
+  }
+  .single-blog .blog-sec .post-blog .text{
+    padding-left: 0;
+  }
+  .single-blog .blog-sec .text h4{
+    margin-top: 90px;
+    padding-right: 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .single-blog .blog-sec .text h2{
+    font-size: 27px;
+  }
+
+  .single-blog .blog-sec .text h3{
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .single-blog .container{
+    padding-left: 10px!important;
+    padding-right: 10px!important;
+  }
+  .single-blog .inner-title .heading h1 {
+    font-size: 7vw;
+    text-align: center;
+  }
+  .single-blog .inner-title .heading p {
+    font-size: 13px;
+    text-align: justify;
+  }
+
+}

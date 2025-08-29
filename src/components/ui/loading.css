@@ -1,0 +1,80 @@
+@keyframes fade {
+  0%, 100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.loading-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  background-color: black;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.logo-container {
+  position: relative;
+  width: 20%; 
+  height: 20%; 
+  overflow: hidden;
+  animation: pulse 1.5s infinite;
+}
+
+.loading-finish {
+  overflow-x: clip;
+  animation: finish 1.5s ease-in-out forwards;
+}
+
+.main-content {
+  background-color: black;
+  animation: zoomIn 1.5s ease-out backwards;
+}
+
+@keyframes finish {
+  0% {
+    opacity: 0.8;
+    transform: translateY(0%); 
+  }
+  100% {
+    opacity: 0.3;
+    transform: translateY(-340%);
+  } 
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scaleY(1.05);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .loading-container .logo-container{
+    width: 50%;
+    height: 50%;
+  }
+}

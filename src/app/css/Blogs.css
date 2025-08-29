@@ -1,0 +1,271 @@
+body {
+  overflow-x: clip;
+}
+
+.blogs .inner-title {
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+.blogs .inner-title .heading {
+  max-width: 1030px;
+  margin-top: 100px;
+}
+
+.blogs .mission-sec .box-2 h4 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.blogs .inner-title .heading h1 {
+  color: #fff;
+  font-size: 75px;
+}
+
+.blogs .inner-title .heading p {
+  color: #fff;
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+
+.blogs .product-sec {
+    padding: 120px 0;
+    background-image: linear-gradient(180deg,black,#130a2c);
+}
+
+.blogs .container {
+    padding-left: 50px!important;
+    padding-right: 50px!important;
+}
+
+.blogs .product-sec .post-lest {
+    row-gap: 60px;
+}
+
+.blogs .product-sec .prod-main img {
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+.blogs .product-sec .heading-box h3 {
+    font-size: 28px;
+    font-weight: 700;
+    background: linear-gradient(270deg,#9D77FF 0%,#C4C2FF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #fff0;
+    padding-bottom: 5px;
+}
+
+.blogs .product-sec .heading-box p {
+    color: #fff;
+    letter-spacing: 1px;
+    line-height: 1.5em;
+    max-width: 380px;
+    font-weight: 400;
+}
+
+.blogs .product-sec .pric-box {
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+  justify-content: space-between;
+}
+
+.blogs .pric-box span {
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+.blogs .product-sec .pric-box a {
+  color: #BFB7FF;
+  text-decoration: underline !important;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+
+
+
+.blogs .pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.blogs .pagination-btn {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  color: #000;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.blogs .pagination-btn:hover {
+  background-color: #9E79FF;
+  color: #fff;
+}
+
+.blogs .pagination-btn:disabled {
+  cursor: not-allowed;
+  background-color: #f1f1f1;
+  color: #ccc;
+}
+
+.blogs .pagination-btn.active {
+  background-color: #9E79FF;
+  color: #fff;
+  border-color: #9E79FF;
+}
+
+.blogs .dots {
+  margin: 0 5px;
+  font-size: 30px;
+  cursor: default;
+  color: #9E79FF;
+}
+
+
+.blogs .prev-btn, .next-btn {
+  font-weight: bold;
+}
+
+.blogs .disabled {
+  cursor: not-allowed;
+  background-color: #f1f1f1;
+  color: #ccc;
+}
+
+
+.blogs .product-sec .prod-main img {
+  height: 250px;
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 1024px) {
+  .blogs .inner-title {
+    min-height: 550px;
+  }
+  .blogs .inner-title .heading h1 {
+    font-size: 56px;
+    text-align: left;
+  }
+
+  .blogs .inner-title .heading p {
+    font-size: 18px;
+    text-align: justify;
+  }
+
+  .blogs .product-sec {
+    padding: 80px 0!important;
+  }
+
+  .blogs .product-sec .prod-main img {
+    width: 100%;
+  }
+
+  .blogs .product-sec .heading-box h3{
+    font-size: 22px;
+  }
+  
+}
+
+@media only screen and (max-width: 991px) {
+  .blogs .container{
+    padding-left: 0px!important;
+    padding-right: 0px!important;
+  }
+  .blogs .inner-title .heading h1 {
+    font-size: 44px;
+    text-align: center;
+  }
+  .blogs .inner-title .heading p {
+    font-size: 18px;
+    text-align: justify;
+  }
+  
+  .blogs .product-sec .heading-box h3{
+    text-align: left;
+  }
+  .blogs .product-sec .heading-box p{
+    text-align: left;
+  }
+  
+  .product-sec {
+    padding: 70px 0!important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .product-sec {
+    text-align: center;
+    padding: 50px 0!important;
+  }
+  
+  .product-sec .post-lest {
+    row-gap: 45px!important;
+  }
+
+  .product-sec .heading-box p {
+    max-width: 100%!important;
+  }
+
+  .product-sec .pric-box {
+    display: flex!important;
+    align-items: center !important;
+    padding-top: 10px!important;
+    column-gap: 100px!important;
+    justify-content: center!important;
+  }
+
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .blogs .container{
+    padding-left: 10px!important;
+    padding-right: 10px!important;
+  }
+  .blogs .inner-title .heading h1 {
+    font-size: 7vw;
+    text-align: center;
+  }
+  .blogs .inner-title .heading p {
+    font-size: 13px;
+    text-align: justify;
+  }
+
+  .product-sec .post-lest {
+    row-gap: 40px!important;
+  }
+
+  .product-sec .heading-box h3 {
+    font-size: 22px!important;
+  }
+
+  .product-sec .heading-box p {
+    font-size: 13px!important;
+  }
+
+  .product-sec .pric-box {
+    padding-top: 10px!important;
+    column-gap: 40px!important;
+  }
+}

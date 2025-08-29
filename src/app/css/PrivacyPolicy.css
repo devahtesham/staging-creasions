@@ -1,0 +1,96 @@
+/* privacy policy */
+body {
+    background-color: black !important;
+}
+.privacy-policy {
+  margin-top: 130px;
+  background: linear-gradient(
+    360deg,
+    rgba(19, 10, 43, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  padding-bottom: 100px;
+}
+.text-privacy {
+  color: #fff;
+}
+
+.text-privacy p b {
+  font-size: 38px;
+  font-weight: 700;
+  display: inline-block;
+  padding-bottom: 20px;
+  padding-top: 35px;
+  font-family: "Syne", sans-serif;
+}
+
+.text-privacy p span {
+  font-size: 22px;
+  line-height: 1.3;
+  font-family: "Lato", sans-serif;
+}
+
+.text-privacy ul {
+  padding-left: 30px;
+  font-size: 23px;
+  padding-top: 20px;
+  list-style: unset;
+  font-family: "Lato", sans-serif;
+}
+.text-privacy ul li {
+  list-style: unset;
+}
+.text-privacy a{
+    color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
+    text-decoration: underline;
+}
+@media only screen and (max-width: 991px) {
+  .text-privacy p b {
+    padding-bottom: 10px;
+    padding-top: 20px;
+    font-size: 34px;
+  }
+  .text-privacy p span {
+    font-size: 20px;
+  }
+  .text-privacy ul {
+    font-size: 20px;
+  }
+  .privacy-policy {
+    margin-top: 80px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .container {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  .text-privacy p b {
+    padding-bottom: 12px;
+    padding-top: 20px;
+    font-size: 28px;
+  }
+  .text-privacy p span {
+    font-size: 17px;
+  }
+  .text-privacy ul {
+    font-size: 17px !important;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .text-privacy p b {
+    padding-bottom: 10px;
+    padding-top: 18px;
+    font-size: 28px;
+  }
+  .text-privacy p span {
+    font-size: 15px;
+  }
+  .text-privacy ul {
+    font-size: 15px;
+  }
+  .text-privacy ul li {
+    font-size: 15px !important;
+  }
+}

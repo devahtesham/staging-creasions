@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: http://creasions.com
+
+# Sitemaps
+Sitemap: http://creasions.com/sitemap.xml
