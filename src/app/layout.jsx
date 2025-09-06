@@ -240,6 +240,7 @@ export default function RootLayout({ children, metadata = globalMetadata }) {
           <meta name="title" content={metadataToUse.title} />
           <meta name="description" content={metadataToUse.description} />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta name="robots" content="noindex, nofollow"></meta>
           <link rel="icon" href="/favicon.ico" />
 
 
