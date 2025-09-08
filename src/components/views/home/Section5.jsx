@@ -1,19 +1,34 @@
 "use client";
-import React, { useState } from 'react';
-import { Section5Mocks } from '@/components/mocks/section5mocks';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 
 import Thumbnail from '/public/section5-thumbnail.png'
 import VideoOptimizer from '@/components/ui/VideoOptimizer';
+import { fetchTechnologySectionHome } from '@/utils/helper';
 
 export default function Section5() {
-    const tabs = Section5Mocks.map(section => section.title);
     const [activeTab, setActiveTab] = useState(0);
-
+    const [sectionData, setSectionData] = useState({});
     const handleTabClick = (index) => {
         setActiveTab(index);
     };
+
+    useEffect(() => {
+        fetchTechnologySectionHome()
+            .then((data) => {
+                // console.log('[data]', data)
+                setSectionData(data[0]);
+            })
+    }, []);
+
+    console.log('[TECH_SEC_DATA]', sectionData)
+
+    // Get dynamic tabs from API data
+    const tabs = sectionData?.technologies_section?.cards?.map(card => card.title) || [];
+    const cardsData = sectionData?.technologies_section?.cards || [];
+
+    
 
     return (
         <>
@@ -23,9 +38,12 @@ export default function Section5() {
                         <div className="col-dm-12">
                             <div className="text">
                                 <h3>
-                                    Technologies and Platforms
+                                    {
+                                        sectionData?.technologies_section?.section_heading?.split(" ").slice(0, 3).join(" ")
+                                    }
                                     <br />
-                                    we use for the services we provide
+                                    {sectionData?.technologies_section?.section_heading?.split(" ").slice(3).join(" ")}
+                                   
                                 </h3>
                             </div>
                             <ul className="nav nav-tabs" >
@@ -42,25 +60,26 @@ export default function Section5() {
                             </ul>
                             {/* Tab panes */}
                             <div className="tab-content">
-                                {Section5Mocks.map((section, index) => (
+                                {cardsData.map((card, index) => (
                                     <div key={index} className={`tab-pane ${activeTab === index ? 'active' : ''}`} role="tabpanel">
                                         <div className="main-tabbing-content">
-                                            {Object.entries(section.categories).map(([category, images]) => (
-                                                <div className="main-box" key={category}>
-                                                    <h5>{category}</h5>
+                                            {card.services?.map((service, serviceIndex) => (
+                                                <div className="main-box" key={serviceIndex}>
+                                                    <h5>{service.heading}</h5>
                                                     <div className="align-boxes">
-                                                        {Object.entries(images.images).map(([imageKey, imageSrc]) => (
-                                                            <div className="box" key={imageKey}>
+                                                        {service.items?.map((item, itemIndex) => (
+                                                            <div className="box" key={itemIndex}>
                                                                 <div className="img-box">
                                                                     <Image
-                                                                        src={imageSrc}
-                                                                        loading='lazy'
-                                                                        alt={images.title[imageKey] || "Image description"} // Default alt text if not provided
+                                                                        src={item.image_url}
+                                                                        width={80}
+                                                                        height={80}
+                                                                        alt={item.title || "Image description"}
                                                                     />
                                                                 </div>
-                                                                <div className="content-box" id={imageKey}>
-                                                                    <h6>{images.title[imageKey]}</h6>
-                                                                    <p>{images.content[imageKey]}</p>
+                                                                <div className="content-box">
+                                                                    <h6>{item.title}</h6>
+                                                                    <p>{item.text}</p>
                                                                 </div>
                                                             </div>
                                                         ))}

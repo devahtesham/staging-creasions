@@ -30,7 +30,7 @@ export default function Section1() {
                     id: `tabs-${index + 1}`,
                     tab: service.service_label,
                     title: service.content_heading,
-                    link: service?.link || "/",
+                    link: service?.button_link || "/",
                     image: service.service_img,
                     content: service.service_content,
                     img_alt: service.img_alt,
@@ -39,7 +39,7 @@ export default function Section1() {
                 setAllServicesMobile(services.map((service, index) => ({
                     id: `tabs-${index + 1}`,
                     title: service.content_heading,
-                    link: service?.link || "/",
+                    link: service?.button_link || "/",
                     image: service.service_img,
                     content: service.service_content,
                     img_alt: service.img_alt,

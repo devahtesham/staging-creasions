@@ -69,7 +69,7 @@ export default function Section6() {
                                     <div className="video-box video-box-01">
                                         <Link href={`${sectionData[0]?.item_link ? sectionData[0]?.item_link : 'javascript:void(0)'}`}>
                                             <VideoOptimizer
-                                                src={'/video/our-portfolio-video-01.mp4'}
+                                                src={`${sectionData[0]?.video_url ? sectionData[0]?.video_url : '/video/our-portfolio-video-01.mp4'}`}
                                                 poster={sectionData[0]?.media_url}
                                             />
                                             <div className="last-div"> <p>{sectionData[0]?.item_heading}</p> </div>
@@ -80,7 +80,7 @@ export default function Section6() {
                                     <div className="video-box video-box-02">
                                         <Link href={`${sectionData[1]?.item_link ? sectionData[1]?.item_link : 'javascript:void(0)'}`}>
                                             <VideoOptimizer
-                                                src={'/video/our-portfolio-video-02.mp4'}
+                                                src={`${sectionData[1]?.video_url ? sectionData[1]?.video_url : '/video/our-portfolio-video-02.mp4'}`}
                                                 poster={sectionData[1]?.media_url}
                                             />
                                             <div className="last-div"> <p>{sectionData[1]?.item_heading}</p> </div>
@@ -91,7 +91,7 @@ export default function Section6() {
                                     <div className="video-box video-box-03">
                                         <Link href={`${sectionData[2]?.item_link ? sectionData[2]?.item_link : 'javascript:void(0)'}`}>
                                             <VideoOptimizer
-                                                src={'/video/our-portfolio-video-03.mp4'}
+                                                src={`${sectionData[2]?.video_url ? sectionData[2]?.video_url : '/video/our-portfolio-video-03.mp4'}`}
                                                 poster={sectionData[2]?.media_url}
                                             />
                                             <div className="last-div"> <p>{sectionData[2]?.item_heading}</p> </div>
@@ -104,7 +104,7 @@ export default function Section6() {
                             <div className="video-box video-box-04">
                                 <Link href={`${sectionData[3]?.item_link ? sectionData[3]?.item_link : 'javascript:void(0)'}`}>
                                     <VideoOptimizer
-                                        src={'/video/our-portfolio-video-04.mp4'}
+                                        src={`${sectionData[3]?.video_url ? sectionData[3]?.video_url : '/video/our-portfolio-video-04.mp4'}`}
                                         poster={sectionData[3]?.media_url}
                                     />
                                     <div className="last-div"> <p>{sectionData[3]?.item_heading}</p> </div>

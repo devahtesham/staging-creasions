@@ -90,7 +90,7 @@ export default function Section4() {
                                         <div className="row">
                                             {
                                                 tabItem?.service_content.map((serviceItem, index) => (
-                                                    <div className="col-lg-4 col-md-6">
+                                                    <div className="col-lg-4 col-md-6 mb-3">
                                                         <Link
                                                             className="t-btn t-btn-arrow-contact t-btn-arrow"
                                                             href="javascript:void(0)"

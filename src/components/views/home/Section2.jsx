@@ -29,6 +29,8 @@ export default function Section2() {
       })
   }, []);
 
+  console.log('[WHO_WE_ARE_SEC_DATA]', sectionData)
+
 
   return (
     <section className="home-sec-02" id="home-sec-02">
@@ -78,6 +80,14 @@ export default function Section2() {
               </Link>
 
             </div> */}
+
+            <Link
+              href={sectionData?.button_link ? sectionData?.button_link : '/about/our-company'}
+              className="t-btn t-btn-arrow"
+              tabIndex={0}
+            >
+              {sectionData?.button_text ? sectionData?.button_text : 'Know More'} &nbsp;<Image src={RightArrow} alt="right arrow" width={20} height={20} />
+            </Link>
           </div>
 
         </div>

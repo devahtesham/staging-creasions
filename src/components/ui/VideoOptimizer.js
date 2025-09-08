@@ -5,49 +5,48 @@ import PropTypes from 'prop-types';
 
 const VideoOptimizer = ({ src, poster }) => {
     const videoRef = useRef(null);
-    const [isVisible, setIsVisible] = useState(false);
-    const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+    const [isVisible, setIsVisible] = useState(true);
+    const [isVideoLoaded, setIsVideoLoaded] = useState(true);
 
     const handleVideoLoad = () => {
         setIsVideoLoaded(true);
     };
 
-    useEffect(() => {
-        // Set up an IntersectionObserver to load video when visible
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        setIsVisible(true);
-                        observer.disconnect(); // Stop observing after it becomes visible
-                    }
-                });
-            },
-            { threshold: 0.1 } // Trigger when 10% of the element is visible
-        );
+    // useEffect(() => {
+    //     // Set up an IntersectionObserver to load video when visible
+    //     const observer = new IntersectionObserver(
+    //         (entries) => {
+    //             entries.forEach((entry) => {
+    //                 if (entry.isIntersecting) {
+    //                     setIsVisible(true);
+    //                     observer.disconnect(); // Stop observing after it becomes visible
+    //                 }
+    //             });
+    //         },
+    //         { threshold: 0.1 } // Trigger when 10% of the element is visible
+    //     );
 
-        if (videoRef.current) {
-            observer.observe(videoRef.current);
-        }
+    //     if (videoRef.current) {
+    //         observer.observe(videoRef.current);
+    //     }
 
-        return () => {
-            if (observer) observer.disconnect();
-        };
-    }, []);
+    //     return () => {
+    //         if (observer) observer.disconnect();
+    //     };
+    // }, []);
 
     return (
         <div ref={videoRef} className='video-container' id="video-container" style={{ position: 'relative', width: '100%' }}>
             {isVisible && (
                 <video
-                    
                     autoPlay
                     muted
                     loop
-                    preload="none" 
+                    preload="true" 
                     playsInline
-                    poster={poster.src}
-                    style={{ display: isVideoLoaded ? 'block' : 'none', width: '100%' }}
-                    onCanPlayThrough={handleVideoLoad} 
+                    poster={poster}
+                    style={{ display: 'block', width: '100%' }}
+                    // onCanPlayThrough={handleVideoLoad} 
                 >
                     <source src={src} type="video/mp4" />
                     <source src={src.replace('.mp4', '.ogg')} type="video/ogg" />
@@ -58,7 +57,7 @@ const VideoOptimizer = ({ src, poster }) => {
             {/* Show the thumbnail or placeholder while the video loads */}
             {!isVideoLoaded && (
                 <Image
-                    src={poster.src}
+                    src={poster}
                     alt="Video thumbnail"
                     width={poster.width || 1920} 
                     height={poster.height || 1080}
@@ -71,13 +70,13 @@ const VideoOptimizer = ({ src, poster }) => {
 };
 
 // Prop types for validation
-VideoOptimizer.propTypes = {
-    src: PropTypes.string.isRequired,
-    poster: PropTypes.shape({
-        src: PropTypes.string.isRequired,
-        width: PropTypes.number,
-        height: PropTypes.number,
-    }).isRequired,
-};
+// VideoOptimizer.propTypes = {
+//     src: PropTypes.string.isRequired,
+//     poster: PropTypes.shape({
+//         src: PropTypes.string.isRequired,
+//         width: PropTypes.number,
+//         height: PropTypes.number,
+//     }).isRequired,
+// };
 
 export default VideoOptimizer;

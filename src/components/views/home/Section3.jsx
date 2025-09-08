@@ -51,14 +51,14 @@ export default function Section3() {
                     return {
                         image: award.image_path,
                         alt: award.img_alt,
-                        link: award.link || "#"
+                        link: award.img_link || "#"
                     }
                 }));
                 setPartnersLogos(data.partners_logos.map((partner)=>{
                     return {
                         image: partner.image_path,
                         alt: partner.img_alt,
-                        link: partner.link || "#"
+                        link: partner.img_link || "#"
                     }
                 }));
                 setIconBoxData(data.iconBox);
@@ -214,6 +214,22 @@ export default function Section3() {
         }
     ]
 
+    // Function to generate TypeAnimation sequence from comma-separated string
+    const generateTypeAnimationSequence = (headingString) => {
+        if (!headingString) return ["Achievement", 2000, "Vision", 2000, "Partners", 2000]; // fallback
+        
+        const items = headingString.split(",").map(item => item.trim());
+        const sequence = [];
+        
+        items.forEach(item => {
+            sequence.push(item, 2000);
+        });
+        
+        return sequence;
+    };
+
+    const typeAnimationSequence = generateTypeAnimationSequence(mainSectionData.main_heading_2);
+
     return (
         <section
             className="home-sec-03"
@@ -225,10 +241,10 @@ export default function Section3() {
                         <div className="text">
                             <h4 className={syne.className}>{mainSectionData.main_heading_1}</h4>
                             <div className="animate-div">
-
+                            {/*  */}
                                 <h2 className={syne.className} id="text-animate">
                                     <TypeAnimation
-                                        sequence={["Achievement", 2000, "Vision", 2000, "Partners", 2000]}
+                                        sequence={typeAnimationSequence}
                                         repeat={Infinity}
                                     />
                                 </h2>
