@@ -1,6 +1,9 @@
 
 export const STATIC_TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJzdXBlcl9hZG1pbiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1NjM2MzU1MSwiZXhwIjoxNzU2NDQ5OTUxfQ.wngYY_Mmomb76EW3XN5xPh_5wHO8qopExePmqyK-VYs'
 export const BASE_URL = 'https://crypto-ai.booksbeen.store'
+// export const SITE_BASE_URL = 'https://creasions.com'
+export const SITE_BASE_URL = 'https://staging-creasions.vercel.app'
+
 // export const BASE_URL = 'http://localhost:8000'
 /**
  * Fetches home page services from the API

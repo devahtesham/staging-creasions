@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import { motion } from 'framer-motion';
 import { useSearchParams } from 'next/navigation';
 import '@/app/css/Blogs.css';
@@ -10,7 +10,9 @@ import { fetchBlogPostsListing } from '@/utils/helper';
 import BlogListing from './BlogListing/BlogListing';
 const BLOGS_PER_PAGE = 9;
 const MAX_PAGE_NUMS_TO_SHOW = 50;
-export default function Blogs() {
+
+// Component that uses useSearchParams - needs to be wrapped in Suspense
+function BlogsWithSearchParams() {
   const [blogs, setBlogs] = useState([]);
   const [featuredImages, setFeaturedImages] = useState({});
   const searchParams = useSearchParams();
@@ -207,5 +209,14 @@ export default function Blogs() {
         </div>
       </div> */}
     </main>
+  );
+}
+
+// Main component that wraps BlogsWithSearchParams in Suspense
+export default function Blogs() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <BlogsWithSearchParams />
+    </Suspense>
   );
 }
