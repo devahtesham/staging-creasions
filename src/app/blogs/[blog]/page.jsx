@@ -1,4 +1,5 @@
 import BlogClient from './BlogClient';
+import "./BlogDetail.css"
 
 const getBlog = async (slug) => {
   const res = await fetch(`https://blogs.creasions.com/wp-json/wp/v2/posts?slug=${slug}`);

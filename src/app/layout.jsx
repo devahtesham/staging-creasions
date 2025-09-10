@@ -349,7 +349,7 @@ export default function RootLayout({ children, metadata = globalMetadata }) {
 
         <LenisSmoothScroll>
           <body className={`${lato.className}`}>
-            <LoadingWrapper>
+            {/* <LoadingWrapper> */}
               <Header />
               <HeaderMobile />
               <FixedSocial />
@@ -365,7 +365,7 @@ export default function RootLayout({ children, metadata = globalMetadata }) {
               <ReCaptchaWrapper>
                 <Footer />
               </ReCaptchaWrapper>
-            </LoadingWrapper>
+            {/* </LoadingWrapper> */}
             {/* <SpeedInsights /> */}
           </body>
         </LenisSmoothScroll>

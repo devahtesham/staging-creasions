@@ -1,0 +1,10 @@
+import './LoadingSpinner.css';
+export default function LoadingSpinner() {
+    return (
+        <div className="loading-spinner-container">
+            <span class="loader"></span>
+        </div>
+    )
+
+
+}

@@ -29,6 +29,8 @@ import HeroThumbnail from '/public/hero-banner.webp'
 import { useLenis } from '@/components/ui/LenisSmoothScroll';
 
 import { fetchHomeBanners, transformButtonUrl } from '@/utils/helper';
+import LoadingWrapper from '@/components/ui/LoadingWrapper';
+import CustomLoadingWrapper from '@/components/ui/CustomLoadingWrapper';
 
 export default function Hero({ banners }) {
     const lenis = useLenis();
@@ -46,6 +48,7 @@ export default function Hero({ banners }) {
     const [offsetValue, setOffsetValue] = useState(250);
     const [isOffsetClicked, setIsOffsetClicked] = useState(false);
     const [allBanners, setAllBanners] = useState([]);
+    const [loading, setLoading] = useState(true);
 
 
 
@@ -59,10 +62,13 @@ export default function Hero({ banners }) {
             .catch(error => {
                 console.error('[error]', error)
             })
+            .finally(() => {
+                setLoading(false);
+            })
     }, []);
 
 
-   
+
 
 
     const handleClick = () => {
@@ -84,46 +90,47 @@ export default function Hero({ banners }) {
 
 
     return (
-        <section
-            className="home-hero-banner"
-        // style={{ backgroundImage: `url(/banner.gif)` }}
-        >
-            <div className="banner-video">
-                <VideoOptimizer
-                    src="/video/final-banner-1920-X-1080-1.mp4"
-                    poster={HeroThumbnail}
-                />
-            </div>
+        loading ? <CustomLoadingWrapper /> : (
+            <section
+                className="home-hero-banner"
+            // style={{ backgroundImage: `url(/banner.gif)` }}
+            >
+                <div className="banner-video">
+                    <VideoOptimizer
+                        src="/video/final-banner-1920-X-1080-1.mp4"
+                        poster={HeroThumbnail}
+                    />
+                </div>
 
 
-            <div className="container">
+                <div className="container">
 
-                <div className="row hero-slider">
-                    <Slider {...heroSlider}>
-                        {
-                            allBanners.length > 0 && allBanners.map((banner) => (
-                                <div className="col-md-12" key={banner.id}>
-                                    <div className="text text-center">
-                                        <h1 className={syne.className}>
-                                            {banner?.main_heading?.split(" ").slice(0, 3).join(" ")}
-                                            <span style={{ paddingLeft: 10 }}>
-                                                <Image width={205} height={60} src={banner?.banner_img} alt={banner?.img_alt} loading='lazy' />
-                                            </span>
-                                            <br />
-                                            {banner?.main_heading?.split(" ").slice(3).join(" ")}
-                                        </h1>
-                                        <p>
-                                            {banner?.content}
-                                        </p>
-                                        <Link href={transformButtonUrl(banner?.button_link)} className="t-btn t-btn-arrow">
-                                            {banner?.button_text} <Image src={RightArrow} alt="right arrow" />
-                                        </Link>
+                    <div className="row hero-slider">
+                        <Slider {...heroSlider}>
+                            {
+                                allBanners.length > 0 && allBanners.map((banner) => (
+                                    <div className="col-md-12" key={banner.id}>
+                                        <div className="text text-center">
+                                            <h1 className={syne.className}>
+                                                {banner?.main_heading?.split(" ").slice(0, 3).join(" ")}
+                                                <span style={{ paddingLeft: 10 }}>
+                                                    <Image width={205} height={60} src={banner?.banner_img} alt={banner?.img_alt} loading='lazy' />
+                                                </span>
+                                                <br />
+                                                {banner?.main_heading?.split(" ").slice(3).join(" ")}
+                                            </h1>
+                                            <p>
+                                                {banner?.content}
+                                            </p>
+                                            <Link href={transformButtonUrl(banner?.button_link)} className="t-btn t-btn-arrow">
+                                                {banner?.button_text} <Image src={RightArrow} alt="right arrow" />
+                                            </Link>
+                                        </div>
                                     </div>
-                                </div>
-                            ))
-                        }
+                                ))
+                            }
 
-                        {/* <div className="col-md-12">
+                            {/* <div className="col-md-12">
 
                             <div className="text text-center">
                                 <h1 className={syne.className}>
@@ -159,31 +166,31 @@ export default function Hero({ banners }) {
                                 </Link>
                             </div>
                         </div> */}
-                    </Slider>
+                        </Slider>
+                    </div>
                 </div>
-            </div>
-            <div className="scroll-down-box">
-                <div className="two-imges">
+                <div className="scroll-down-box">
+                    <div className="two-imges">
 
-                    <Link href="#form-sec" to='form-sec' offset={offsetValue} onClick={() => scrollToSection('form-sec')} smooth={true} duration={3000}>
-                        <span className="sr-only">Scroll down to learn more</span>
+                        <Link href="#form-sec" to='form-sec' offset={offsetValue} onClick={() => scrollToSection('form-sec')} smooth={true} duration={3000}>
+                            <span className="sr-only">Scroll down to learn more</span>
 
-                        <Image
-                            className="Scrol-Down-Circle rotating-img"
-                            src={ScrollDownCircle}
-                            alt="creasions-circle-scroll"
-                        />
+                            <Image
+                                className="Scrol-Down-Circle rotating-img"
+                                src={ScrollDownCircle}
+                                alt="creasions-circle-scroll"
+                            />
 
 
-                        <Image
-                            className="Scrol-Down-Mouse"
-                            src={ScrollDownMouse}
-                            alt="creasions-scroll-down"
-                        />
-                    </Link>
+                            <Image
+                                className="Scrol-Down-Mouse"
+                                src={ScrollDownMouse}
+                                alt="creasions-scroll-down"
+                            />
+                        </Link>
+                    </div>
                 </div>
-            </div>
-        </section>
-
+            </section>
+        )
     )
 }

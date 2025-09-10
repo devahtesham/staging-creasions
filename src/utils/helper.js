@@ -321,6 +321,92 @@ export const fetchTechnologySectionHome = async () => {
   }
 };
 
+export const fetchBlogPageBanner = async () => {
+  try {
+    const response = await fetch(`${BASE_URL}/api/page-blog`, {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+        'Authorization': `Bearer ${STATIC_TOKEN}`,
+        'Content-Type': 'application/json'
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    return data?.data
+
+
+  } catch (error) {
+    console.error('Error fetching home banners:', error);
+    return null;
+  }
+};
+
+export const fetchBlogPostsListing = async (is_active = true, is_featured = true) => {
+  try {
+    let params;
+    if (is_active) {
+      params = `?is_active=${is_active}`;
+    } else if (is_featured) {
+      params = `?is_featured=${is_featured}`;
+    } else if (is_active && is_featured) {
+      params = `?is_active=${is_active}&is_featured=${is_featured}`;
+    } else {
+      params = '';
+    }
+
+    const response = await fetch(`${BASE_URL}/api/posts${params}`, {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+        'Authorization': `Bearer ${STATIC_TOKEN}`,
+        'Content-Type': 'application/json'
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    return data?.data
+
+
+  } catch (error) {
+    console.error('Error fetching home banners:', error);
+    return null;
+  }
+};
+
+export const fetchBlogPostBySlug = async (slug) => {
+  try {
+    const response = await fetch(`${BASE_URL}/api/posts/slug/${slug}`, {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+        'Authorization': `Bearer ${STATIC_TOKEN}`,
+        'Content-Type': 'application/json'
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    return data?.data
+
+
+  } catch (error) {
+    console.error('Error fetching home banners:', error);
+    return null;
+  }
+};
+
 /**
  * Transforms a URL by removing the "https:" prefix from the start
  * @param {string} url - The URL to transform (e.g., "https:/services/website-development-dallas")

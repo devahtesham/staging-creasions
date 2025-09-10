@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import BlogContent from './BlogContent';
 import '@/app/css/BlogSingle.css';
+import { fetchBlogPostBySlug, fetchBlogPostsListing } from '@/utils/helper';
 
 const getBlog = async (slug) => {
   const res = await fetch(`https://blogs.creasions.com/wp-json/wp/v2/posts?slug=${slug}`);
@@ -24,7 +25,9 @@ export default function BlogClient({ slug }) {
 
   useEffect(() => {
     const fetchBlogData = async () => {
-      const blogPost = await getBlog(slug);
+      // const blogPost = await getBlog(slug);
+      const blogPost = await fetchBlogPostBySlug(slug);
+      console.log('[blogPost]', blogPost);
       if (!blogPost) {
         router.push('/404');
         return;
@@ -32,8 +35,7 @@ export default function BlogClient({ slug }) {
 
       setPost(blogPost);
 
-      const allPosts = await getAllBlogs(slug);
-      const featured = allPosts.sort(() => 0.5 - Math.random()).slice(0, 4);
+      const featured = await fetchBlogPostsListing(true, true);
       setFeaturedPosts(featured);
     };
 
