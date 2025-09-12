@@ -1687,4 +1687,9 @@ footer .copy-right-text.text-center::after {
   }
 }
 
+.main-blog-content-col a {
+  color: #a17fff !important;
+  text-decoration: underline !important;
+}
+
 /* end: NEW STYLING ..... */

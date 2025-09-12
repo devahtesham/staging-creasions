@@ -225,7 +225,7 @@ export default function BlogContent({ post, featuredPosts }) {
                 )}
               </section>
             </div>
-            <div className="col-lg-5">
+            <div className="col-lg-5 main-blog-content-col">
               <div className="print_pdf">
                 <div className="text">
                   {post?.feature_image && (
