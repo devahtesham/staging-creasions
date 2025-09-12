@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 import TestiImg1 from '/public/testi-img-01.png';
 import TestiImg2 from '/public/testi-img-02.png';
-import { fetchTestimonialsSection } from '@/utils/helper';
+import { fetchTestimonialsSectionHome } from '@/utils/helper';
 
 export default function Section7() {
     const mainSliderRef = useRef(null);
@@ -19,7 +19,7 @@ export default function Section7() {
 
     // effect for fetching hero section banners
     useEffect(() => {
-        fetchTestimonialsSection()
+        fetchTestimonialsSectionHome()
             .then((data) => {
                 // console.log('[servicesWeProvide]', data)
                 setAllReviews(data.map(item => {

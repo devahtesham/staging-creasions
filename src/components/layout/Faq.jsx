@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 
 import FAQ1 from '/public/faq-1.webp';
-import { fetchFaqSection } from '@/utils/helper';
+import { fetchFaqSectionHome } from '@/utils/helper';
 
 export default function Faq({ data }) {
     // Set the first accordion to be open by default (index 0)
@@ -19,7 +19,7 @@ export default function Faq({ data }) {
 
     // effect for fetching hero section banners
     useEffect(() => {
-        fetchFaqSection()
+        fetchFaqSectionHome()
             .then((data) => {
                 // console.log('[servicesWeProvide]', data)
                 setAllFaqs(data.map(item => {

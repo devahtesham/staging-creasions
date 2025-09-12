@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { fetchBlogPostsListing } from '@/utils/helper';
 import { useState, useEffect } from 'react';
 import CardsLoadingSkeleton from '@/components/ui/CardsLoadingSkeleton';
+import { useSearchParams, useRouter } from 'next/navigation';
 
 export default function BlogListing() {
     // Function to clean and truncate the excerpt from content
@@ -15,15 +16,78 @@ export default function BlogListing() {
 
     const [blogs, setBlogs] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [totalPages, setTotalPages] = useState(1);
+    const [totalBlogs, setTotalBlogs] = useState(0);
+    
+    const searchParams = useSearchParams();
+    const router = useRouter();
+    
+    const BLOGS_PER_PAGE = 9;
+
+    useEffect(() => {
+      const pageFromURL = searchParams.get('page') || '1';
+      const pageNumber = parseInt(pageFromURL, 10);
+      setCurrentPage(pageNumber);
+    }, [searchParams]);
 
     useEffect(() => {
       const loadBlogs = async () => {
-        const blogData = await fetchBlogPostsListing(true);
-        setBlogs(blogData || []);
+        setLoading(true);
+        const blogData = await fetchBlogPostsListing(currentPage, BLOGS_PER_PAGE, true, true);
+        console.log('[blogData]', blogData);
+        if (blogData) {
+          setBlogs(blogData.data || []);
+          setTotalPages(blogData.pagination.totalPages || 1);
+          setTotalBlogs(blogData.pagination.total || 0);
+        }
         setLoading(false);
       };
       loadBlogs();
-    }, []);
+    }, [currentPage]);
+
+    // Pagination functions
+    const goToPage = (page) => {
+        if (page >= 1 && page <= totalPages && page !== currentPage) {
+            const newUrl = `/blogs?page=${page}`;
+            router.push(newUrl);
+        }
+    };
+
+    const getPaginationRange = () => {
+        const range = [];
+        const maxVisiblePages = 5;
+        
+        if (totalPages <= maxVisiblePages) {
+            for (let i = 1; i <= totalPages; i++) {
+                range.push(i);
+            }
+        } else {
+            if (currentPage <= 3) {
+                for (let i = 1; i <= 4; i++) {
+                    range.push(i);
+                }
+                range.push('...');
+                range.push(totalPages);
+            } else if (currentPage >= totalPages - 2) {
+                range.push(1);
+                range.push('...');
+                for (let i = totalPages - 3; i <= totalPages; i++) {
+                    range.push(i);
+                }
+            } else {
+                range.push(1);
+                range.push('...');
+                for (let i = currentPage - 1; i <= currentPage + 1; i++) {
+                    range.push(i);
+                }
+                range.push('...');
+                range.push(totalPages);
+            }
+        }
+        
+        return range;
+    };
 
     if (loading) {
         return (
@@ -80,43 +144,45 @@ export default function BlogListing() {
                         <div style={{ textAlign: 'center', fontSize: '2rem', color: '#fff', }}>No blogs found for this page.</div>
                     )}
                 </div>
-                {/* <motion.div
-                    className="pagination"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                >
-                    <motion.button
-                        className={`pagination-btn prev-btn ${currentPage === 1 ? 'disabled' : ''}`}
-                        onClick={() => goToPage(currentPage - 1)}
-                        disabled={currentPage === 1}
-                        whileTap={{ scale: 0.95 }}
+                {totalPages > 1 && (
+                    <motion.div
+                        className="pagination"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
                     >
-                        Prev
-                    </motion.button>
-                    {getPaginationRange().map((page, index) => (
-                        page === '...' ? (
-                            <motion.span key={index} className="dots">...</motion.span>
-                        ) : (
-                            <motion.button
-                                key={index}
-                                className={`pagination-btn ${currentPage === page ? 'active' : ''}`}
-                                onClick={() => goToPage(page)}
-                                whileTap={{ scale: 0.95 }}
-                            >
-                                {page}
-                            </motion.button>
-                        )
-                    ))}
-                    <motion.button
-                        className={`pagination-btn next-btn ${currentPage === totalPages ? 'disabled' : ''}`}
-                        onClick={() => goToPage(currentPage + 1)}
-                        disabled={currentPage === totalPages}
-                        whileTap={{ scale: 0.95 }}
-                    >
-                        Next
-                    </motion.button>
-                </motion.div> */}
+                        <motion.button
+                            className={`pagination-btn prev-btn ${currentPage === 1 ? 'disabled' : ''}`}
+                            onClick={() => goToPage(currentPage - 1)}
+                            disabled={currentPage === 1}
+                            whileTap={{ scale: 0.95 }}
+                        >
+                            Prev
+                        </motion.button>
+                        {getPaginationRange().map((page, index) => (
+                            page === '...' ? (
+                                <motion.span key={index} className="dots">...</motion.span>
+                            ) : (
+                                <motion.button
+                                    key={index}
+                                    className={`pagination-btn ${currentPage === page ? 'active' : ''}`}
+                                    onClick={() => goToPage(page)}
+                                    whileTap={{ scale: 0.95 }}
+                                >
+                                    {page}
+                                </motion.button>
+                            )
+                        ))}
+                        <motion.button
+                            className={`pagination-btn next-btn ${currentPage === totalPages ? 'disabled' : ''}`}
+                            onClick={() => goToPage(currentPage + 1)}
+                            disabled={currentPage === totalPages}
+                            whileTap={{ scale: 0.95 }}
+                        >
+                            Next
+                        </motion.button>
+                    </motion.div>
+                )}
             </div>
         </div>
     );

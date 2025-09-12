@@ -1,4 +1,4 @@
-import { fetchBlogPostBySlug, fetchBlogPostsListing, SITE_BASE_URL } from '@/utils/helper';
+import { fetchAllBlogPost, fetchBlogPostBySlug, fetchBlogPostsListing, SITE_BASE_URL } from '@/utils/helper';
 import BlogClient from './BlogClient';
 import "./BlogDetail.css"
 
@@ -30,7 +30,7 @@ export async function generateStaticParams() {
   //   blog: post.slug,
   // }));
 
-  const blogData = await fetchBlogPostsListing(true);
+  const blogData = await fetchAllBlogPost();
 
   return blogData.map((post) => ({
     blog: post.slug,

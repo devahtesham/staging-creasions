@@ -221,10 +221,10 @@ export const fetchOurPortfolioSection = async () => {
 };
 
 
-export const fetchTestimonialsSection = async () => {
+export const fetchTestimonialsSectionHome = async () => {
   console.log('fetchTestimonialsSection')
   try {
-    const response = await fetch(`${BASE_URL}/api/home/reviews`, {
+    const response = await fetch(`${BASE_URL}/api/home/reviews?show_on_home=true`, {
       method: 'GET',
       headers: {
         'Accept': 'application/json',
@@ -246,10 +246,10 @@ export const fetchTestimonialsSection = async () => {
     return null;
   }
 };
-export const fetchFaqSection = async () => {
+export const fetchFaqSectionHome = async (page) => {
   console.log('fetchFaqSection')
   try {
-    const response = await fetch(`${BASE_URL}/api/home/faqs`, {
+    const response = await fetch(`${BASE_URL}/api/home/faqs?show_on_home=true`, {
       method: 'GET',
       headers: {
         'Accept': 'application/json',
@@ -349,20 +349,41 @@ export const fetchBlogPageBanner = async () => {
   }
 };
 
-export const fetchBlogPostsListing = async (is_active = true, is_featured = true) => {
+export const fetchBlogPostsListing = async (page = 1, limit = 9, is_active = true, is_featured = true) => {
   try {
-    let params;
-    if (is_active) {
-      params = `?is_active=${is_active}`;
-    } else if (is_featured) {
-      params = `?is_featured=${is_featured}`;
-    } else if (is_active && is_featured) {
-      params = `?is_active=${is_active}&is_featured=${is_featured}`;
-    } else {
-      params = '';
+    const params = new URLSearchParams({
+      page: page.toString(),
+      limit: limit.toString(),
+      is_active: is_active.toString(),
+      is_featured: is_featured.toString()
+    });
+
+    const response = await fetch(`${BASE_URL}/api/paginate/posts?${params}`, {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+        'Authorization': `Bearer ${STATIC_TOKEN}`,
+        'Content-Type': 'application/json'
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
     }
 
-    const response = await fetch(`${BASE_URL}/api/posts${params}`, {
+    const data = await response.json();
+    return data
+
+
+  } catch (error) {
+    console.error('Error fetching blog posts:', error);
+    return null;
+  }
+};
+
+export const fetchAllBlogPost = async () => {
+  try {
+    const response = await fetch(`${BASE_URL}/api/posts`, {
       method: 'GET',
       headers: {
         'Accept': 'application/json',
@@ -384,7 +405,6 @@ export const fetchBlogPostsListing = async (is_active = true, is_featured = true
     return null;
   }
 };
-
 export const fetchBlogPostBySlug = async (slug) => {
   try {
     const response = await fetch(`${BASE_URL}/api/posts/slug/${slug}`, {

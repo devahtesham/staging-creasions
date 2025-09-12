@@ -108,16 +108,16 @@ export default function Hero({ banners }) {
                     <div className="row hero-slider">
                         <Slider {...heroSlider}>
                             {
-                                allBanners.length > 0 && allBanners.map((banner) => (
+                                allBanners.length > 0 && allBanners.map((banner,index) => (
                                     <div className="col-md-12" key={banner.id}>
                                         <div className="text text-center">
                                             <h1 className={syne.className}>
-                                                {banner?.main_heading?.split(" ").slice(0, 3).join(" ")}
+                                                { index === 0 ? banner?.main_heading?.split(" ").slice(0, 3).join(" ") : banner?.main_heading?.split(" ").slice(0, 2).join(" ")}
                                                 <span style={{ paddingLeft: 10 }}>
                                                     <Image width={205} height={60} src={banner?.banner_img} alt={banner?.img_alt} loading='lazy' />
                                                 </span>
                                                 <br />
-                                                {banner?.main_heading?.split(" ").slice(3).join(" ")}
+                                                {index === 0 ? banner?.main_heading?.split(" ").slice(3).join(" ") : banner?.main_heading?.split(" ").slice(2).join(" ")}
                                             </h1>
                                             <p>
                                                 {banner?.content}
