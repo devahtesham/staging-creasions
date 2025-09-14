@@ -243,6 +243,8 @@ export default function BlogContent({ post, featuredPosts }) {
             </div>
 
             <div className="col-lg-3 col-md-12">
+               {/* CONTACT FORM FOR LEADS */}
+               <BlogContactForm />
               <div className="text">
                 <h4>FEATURED BLOGS</h4>
                 <div className="post-blog">
@@ -262,8 +264,7 @@ export default function BlogContent({ post, featuredPosts }) {
                     );
                   })}
                 </div>
-                  {/* CONTACT FORM FOR LEADS */}
-                  <BlogContactForm />
+                 
               </div>
             </div>
           </div>
