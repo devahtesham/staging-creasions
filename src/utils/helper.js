@@ -349,13 +349,14 @@ export const fetchBlogPageBanner = async () => {
   }
 };
 
-export const fetchBlogPostsListing = async (page = 1, limit = 9, is_active = true, is_featured = true) => {
+export const fetchBlogPostsListing = async (page = 1, limit = 9, is_active = true, is_featured = true, search = '') => {
   try {
     const params = new URLSearchParams({
       page: page.toString(),
       limit: limit.toString(),
       is_active: is_active.toString(),
-      is_featured: is_featured.toString()
+      is_featured: is_featured.toString(),
+      search: search.toString()
     });
 
     const response = await fetch(`${BASE_URL}/api/paginate/posts?${params}`, {

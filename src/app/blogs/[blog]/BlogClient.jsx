@@ -24,6 +24,9 @@ export default function BlogClient({ slug }) {
   const router = useRouter();
 
   useEffect(() => {
+    // Scroll to top when component loads
+    window.scrollTo(0, 0);
+
     const fetchBlogData = async () => {
       // const blogPost = await getBlog(slug);
       const blogPost = await fetchBlogPostBySlug(slug);

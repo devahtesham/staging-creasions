@@ -9,8 +9,7 @@ export default function BlogContactForm() {
     company: '',
     email: '',
     phone: '',
-    service: '',
-    budget: '',
+    service: '',  
     details: ''
   });
 
@@ -39,30 +38,30 @@ export default function BlogContactForm() {
     };
     console.log('[updatedFormData]', updatedFormData);
 
-    // try {
-    //   const response = await fetch('/api/send-email', {
-    //     method: 'POST',
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //     },
-    //     body: JSON.stringify(updatedFormData),
-    //   });
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(updatedFormData),
+      });
 
-    //   const result = await response.json();
+      const result = await response.json();
 
-    //   if (response.ok) {
-    //     setStatus('Message sent successfully!');
-    //     setTimeout(() => {
-    //       window.location.href = window.location.origin + "/thankyou";
-    //     }, 1500);
-    //   } else {
-    //     setStatus(result.error || 'Failed to send message.');
-    //     setIsSubmitting(false);
-    //   }
-    // } catch (error) {
-    //   setStatus('An error occurred. Please try again.');
-    //   setIsSubmitting(false);
-    // }
+      if (response.ok) {
+        setStatus('Message sent successfully!');
+        setTimeout(() => {
+          window.location.href = window.location.origin + "/thankyou";
+        }, 1500);
+      } else {
+        setStatus(result.error || 'Failed to send message.');
+        setIsSubmitting(false);
+      }
+    } catch (error) {
+      setStatus('An error occurred. Please try again.');
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -105,7 +104,7 @@ export default function BlogContactForm() {
               />
             </div>
             <div className="input-group">
-              <label htmlFor="blog-company">Company <span className="required">*</span></label>
+              <label htmlFor="blog-company">Company <span className=""></span></label>
               <input
                 type="text"
                 id="blog-company"
@@ -113,7 +112,6 @@ export default function BlogContactForm() {
                 placeholder="Your company name"
                 value={formData.company}
                 onChange={handleChange}
-                required
                 disabled={isSubmitting}
               />
             </div>
@@ -167,7 +165,7 @@ export default function BlogContactForm() {
                 <option value="Application Development">Application Development</option>
               </select>
             </div>
-            <div className="input-group">
+            {/* <div className="input-group">
               <label htmlFor="blog-budget">Budget (USD) <span className="required">*</span></label>
               <select
                 id="blog-budget"
@@ -183,7 +181,7 @@ export default function BlogContactForm() {
                 <option value="10k">$10,000</option>
                 <option value="25k">$25,000+</option>
               </select>
-            </div>
+            </div> */}
           </div>
 
           <div className="form-row full-width">

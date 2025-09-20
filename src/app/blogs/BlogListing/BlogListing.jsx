@@ -19,6 +19,8 @@ export default function BlogListing() {
     const [currentPage, setCurrentPage] = useState(1);
     const [totalPages, setTotalPages] = useState(1);
     const [totalBlogs, setTotalBlogs] = useState(0);
+    const [searchQuery, setSearchQuery] = useState('');
+    const [searchInput, setSearchInput] = useState('');
     
     const searchParams = useSearchParams();
     const router = useRouter();
@@ -27,14 +29,17 @@ export default function BlogListing() {
 
     useEffect(() => {
       const pageFromURL = searchParams.get('page') || '1';
+      const searchFromURL = searchParams.get('search') || '';
       const pageNumber = parseInt(pageFromURL, 10);
       setCurrentPage(pageNumber);
+      setSearchQuery(searchFromURL);
+      setSearchInput(searchFromURL);
     }, [searchParams]);
 
     useEffect(() => {
       const loadBlogs = async () => {
         setLoading(true);
-        const blogData = await fetchBlogPostsListing(currentPage, BLOGS_PER_PAGE, true, true);
+        const blogData = await fetchBlogPostsListing(currentPage, BLOGS_PER_PAGE, true, true, searchQuery);
         console.log('[blogData]', blogData);
         if (blogData) {
           setBlogs(blogData.data || []);
@@ -44,12 +49,35 @@ export default function BlogListing() {
         setLoading(false);
       };
       loadBlogs();
-    }, [currentPage]);
+    }, [currentPage, searchQuery]);
+
+    // Search functions
+    const handleSearchSubmit = (e) => {
+        e.preventDefault();
+        const params = new URLSearchParams();
+        if (searchInput.trim()) {
+            params.set('search', searchInput.trim());
+        }
+        params.set('page', '1'); // Reset to first page when searching
+        const newUrl = `/blogs?${params.toString()}`;
+        router.push(newUrl);
+    };
+
+    const handleSearchClear = () => {
+        setSearchInput('');
+        const newUrl = `/blogs?page=1`;
+        router.push(newUrl);
+    };
 
     // Pagination functions
     const goToPage = (page) => {
         if (page >= 1 && page <= totalPages && page !== currentPage) {
-            const newUrl = `/blogs?page=${page}`;
+            const params = new URLSearchParams();
+            params.set('page', page.toString());
+            if (searchQuery) {
+                params.set('search', searchQuery);
+            }
+            const newUrl = `/blogs?${params.toString()}`;
             router.push(newUrl);
         }
     };
@@ -100,6 +128,41 @@ export default function BlogListing() {
     return (
         <div className="product-sec blog-post-sec" id="product-sec">
             <div className="container">
+                {/* Search Section */}
+                <div className="row mb-4">
+                    <div className="col-12">
+                        <form onSubmit={handleSearchSubmit} className="search-form">
+                            <div className="search-input-wrapper">
+                                <input
+                                    type="text"
+                                    placeholder="Search blogs by title..."
+                                    value={searchInput}
+                                    onChange={(e) => setSearchInput(e.target.value)}
+                                    className="search-input"
+                                />
+                                <div className="search-buttons">
+                                    <button type="submit" className="search-btn">
+                                        Search
+                                    </button>
+                                    {searchQuery && (
+                                        <button 
+                                            type="button" 
+                                            onClick={handleSearchClear}
+                                            className="clear-btn"
+                                        >
+                                            Clear
+                                        </button>
+                                    )}
+                                </div>
+                            </div>
+                        </form>
+                        {searchQuery && (
+                            <div className="search-results-info">
+                                <p>Showing results for: <strong>"{searchQuery}"</strong> ({totalBlogs} results found)</p>
+                            </div>
+                        )}
+                    </div>
+                </div>
                 <div className="row post-lest">
                     {blogs.length > 0 ? (
                         blogs.map(blog => (
