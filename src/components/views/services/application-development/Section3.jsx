@@ -19,7 +19,8 @@ import TabbingMobileImage6 from '/public/services/application-development/app-se
 import TabbingMobileImage7 from '/public/services/application-development/app-sec-03-7.png';
 
 
-const tabsData = [
+// Default static data as fallback
+const defaultTabsData = [
   {
     id: 'tabs-1',
     title: 'Custom Application Development',
@@ -32,7 +33,7 @@ const tabsData = [
     id: 'tabs-2',
     title: 'Database Design and Development',
     description:
-      'We excel in providing custom database design and development services tailored to meet the unique needs of your business. Our dedicated team of database design and developers specializes in crafting scalable and efficient database solutions that align perfectly with your requirements. Whether you’re looking to optimize data storage, improve data retrieval speed, or enhance data security, we have the expertise to deliver results.',
+      "We excel in providing custom database design and development services tailored to meet the unique needs of your business. Our dedicated team of database design and developers specializes in crafting scalable and efficient database solutions that align perfectly with your requirements. Whether you're looking to optimize data storage, improve data retrieval speed, or enhance data security, we have the expertise to deliver results.",
     imageUrl: TabbingImage2,
     mobileImageUrl: TabbingMobileImage2
   },
@@ -78,7 +79,7 @@ const tabsData = [
   },
 ];
 
-const TabContent = ({ activeTab, tabId, title, description, imageUrl, mobileImageUrl }) => (
+const TabContent = ({ activeTab, tabId, title, description, imageUrl, mobileImageUrl, buttonLink, buttonText }) => (
   <div
     className={`tab-pane ${tabId === activeTab ? 'active show' : ''}`}
     id={tabId}
@@ -90,8 +91,8 @@ const TabContent = ({ activeTab, tabId, title, description, imageUrl, mobileImag
         <div className="blur"></div>
         <h5>{title}</h5>
         <p>{description}</p>
-        <a href="#" className="t-btn t-btn-arrow-contact t-btn-arrow">
-          Explore Beyond
+        <a href={buttonLink || "#"} className="t-btn t-btn-arrow-contact t-btn-arrow">
+          {buttonText || "Explore Beyond"}
         </a>
       </div>
     </div>
@@ -116,8 +117,8 @@ const TabContent = ({ activeTab, tabId, title, description, imageUrl, mobileImag
             <p>{description}</p>
           </div>
           <div className="explore-btn">
-            <a href="#" className="t-btn t-btn-arrow-contact t-btn-arrow">
-              Explore Beyond
+            <a href={buttonLink || "#"} className="t-btn t-btn-arrow-contact t-btn-arrow">
+              {buttonText || "Explore Beyond"}
             </a>
           </div>
         </div>
@@ -126,7 +127,25 @@ const TabContent = ({ activeTab, tabId, title, description, imageUrl, mobileImag
   </div>
 );
 
-const Section3 = () => {
+const Section3 = ({ pageData }) => {
+  // Transform API data to component format
+  const getTabsData = () => {
+    if (pageData?.services_tab_section?.services) {
+      return pageData.services_tab_section.services.map((service, index) => ({
+        id: `tabs-${index + 1}`,
+        title: service.title,
+        description: service.content.replace(/<[^>]*>/g, ''), // Strip HTML tags for plain text
+        imageUrl: service.icon_url, // Use default images
+        mobileImageUrl: service.icon_url,
+        buttonLink: service.button_link,
+        buttonText: service.button_text,
+        iconUrl: service.icon_url
+      }));
+    }
+    return defaultTabsData;
+  };
+
+  const tabsData = getTabsData();
   const [activeTab, setActiveTab] = useState(tabsData[0].id);
 
   // Handle tab switch
@@ -141,13 +160,11 @@ const Section3 = () => {
           <div className="col-lg-12">
             <div className="text text-center box-1">
               <h4>
-                What Application Development <br />
-                Services We Offers
-
+                {pageData?.our_services_section?.heading || "What Application Development Services We Offers"}
               </h4>
-              <p>
-                We specialize in designing and developing customized software solutions that cater specifically to our clients&apos; needs. Our software development services enable businesses to streamline their operations, increase their productivity, and ultimately.
-              </p>
+              <div dangerouslySetInnerHTML={{
+                __html: pageData?.our_services_section?.content || "<p>We specialize in designing and developing customized software solutions that cater specifically to our clients' needs. Our software development services enable businesses to streamline their operations, increase their productivity, and ultimately.</p>"
+              }} />
             </div>
           </div>
         </div>
@@ -169,7 +186,7 @@ const Section3 = () => {
             </ul>
 
             <div className="tab-content software-mobile-slider">
-              {tabsData.map(({ id, title, description, imageUrl , mobileImageUrl}) => (
+              {tabsData.map(({ id, title, description, imageUrl, mobileImageUrl, buttonLink, buttonText }) => (
                 <TabContent
                   key={id}
                   activeTab={activeTab}
@@ -178,6 +195,8 @@ const Section3 = () => {
                   description={description}
                   imageUrl={imageUrl}
                   mobileImageUrl={mobileImageUrl}
+                  buttonLink={buttonLink}
+                  buttonText={buttonText}
                 />
               ))}
             </div>

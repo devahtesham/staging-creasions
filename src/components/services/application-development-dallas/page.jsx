@@ -1,3 +1,5 @@
+
+
 import '@/app/css/services/ApplicationDevelopment.css'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -11,31 +13,34 @@ import Section4 from '@/components/views/services/application-development/Sectio
 import Section5 from '@/components/views/services/application-development/Section5';
 import Testimonials from '@/components/views/services/application-development/Testimonials'
 import React from 'react'
-import Faq from '@/components/layout/Faq';
 import { faqData } from '@/components/mocks/application-development/faqMocks';
+import { getServiceDetailPage } from '@/utils/helper';
 
 
 import { metadata as pageMetadata } from "@/components/mocks/metadata/application-development/metadata";
+import Faq from './Faq';
 
 
 export const metadata = pageMetadata; 
 
 
 
-export default function ApplicationDevelopmentDallas() {
+export default async function ApplicationDevelopmentDallas({template,slug}) {
+    const pageData = await getServiceDetailPage(template,slug)
+    // console.log('[pageData]',pageData)
     return (
         <main className="application-development">
-            <IntroSection />
+            <IntroSection pageData={pageData} />
             <div className="gradian-bg">
-                <Section1 />
-                <Section2 />
+                <Section1 pageData={pageData} />
+                <Section2 pageData={pageData} />
             </div>
-            <Section3 />
-            <Section4 />
-            <Section5 />
+            <Section3 pageData={pageData} />
+            <Section4 pageData={pageData} />
+            <Section5 pageData={pageData} />
 
-            <Testimonials />
-            <Faq data={faqData} />
+            <Testimonials pageData={pageData} />
+            <Faq allFaqs={pageData?.faqs} />
         </main>
     )
 }

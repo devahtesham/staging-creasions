@@ -3,7 +3,9 @@ import React from 'react'
 import title1 from "/public/services/application-development/title-2.webp"
 import Image from 'next/image'
 
-export default function Section1() {
+export default function Section1({ pageData }) {
+    const imageUrl = pageData?.services_tabs_section_image;
+    
     return (
         <section className="web-sec-1">
             <div className="container-fluid p-0">
@@ -13,9 +15,11 @@ export default function Section1() {
                             <Image
                                 decoding="async"
                                 loading='lazy'
-                                src={title1}
+                                src={imageUrl || title1}
                                 alt=""
                                 className="img-fluid"
+                                width={1200}
+                                height={600}
                             />
                         </div>
                     </div>

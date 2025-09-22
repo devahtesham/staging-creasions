@@ -430,6 +430,56 @@ export const fetchBlogPostBySlug = async (slug) => {
   }
 };
 
+export const getAllMenuPages = async () => {
+  try {
+    const response = await fetch(`${BASE_URL}/api/pages-info`, {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+        'Authorization': `Bearer ${STATIC_TOKEN}`,
+        'Content-Type': 'application/json'
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    return data?.data
+
+
+  } catch (error) {
+    console.error('Error fetching home banners:', error);
+    return null;
+  }
+};
+
+export const getServiceDetailPage = async (template,slug) => {
+  try {
+    const response = await fetch(`${BASE_URL}/api/${template}-service-template/${slug}?slug=true`, {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+        'Authorization': `Bearer ${STATIC_TOKEN}`,
+        'Content-Type': 'application/json'
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    return data?.data
+
+
+  } catch (error) {
+    console.error('Error fetching home banners:', error);
+    return null;
+  }
+};
+
 /**
  * Transforms a URL by removing the "https:" prefix from the start
  * @param {string} url - The URL to transform (e.g., "https:/services/website-development-dallas")
@@ -443,3 +493,9 @@ export const transformButtonUrl = (url) => {
   // Remove "https:" from the start of the URL
   return url.replace(/^https:/, '');
 };
+
+
+export const getpageSlugByHeading = (heading) => {
+  return heading?.toLowerCase()?.split(' ').join('-');
+}
+

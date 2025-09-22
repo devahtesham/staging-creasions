@@ -1,12 +1,23 @@
+"use client";
+
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { getAllMenuPages, getpageSlugByHeading } from '@/utils/helper'
 
 // logo
 import HeaderLogo from '/public/Creasions-Logo.webp'
 import RightArrow from '/public/right-arrow.webp'
 
 export default function Header() {
+  const [menuPages, setMenuPages] = useState([]);
+  useEffect(() => {
+    const fetchMenuPages = async () => {
+      const menuPages = await getAllMenuPages();
+      setMenuPages(menuPages);
+    };
+    fetchMenuPages();
+  }, []);
   return (
     <header>
       <div className="container">
@@ -30,7 +41,16 @@ export default function Header() {
                 <li>
                   <Link href="#">Services <i priority className="fa fa-angle-down" aria-hidden="true"></i></Link>
                   <ul className="sub-menu">
-                    <li>
+                    {
+                      menuPages.map((menuItem) => (
+                        <li key={menuItem.id}>
+                          <Link href={`/services/${menuItem?.template_value}/${menuItem?.meta_data}`}>
+                            {menuItem.page_heading}
+                          </Link>
+                        </li>
+                      ))
+                    }
+                    {/* <li>
                       <Link href="/services/website-development-dallas">
                         Web Development Service
                       </Link>
@@ -122,7 +142,7 @@ export default function Header() {
                       <Link href="/services/virtual-employees-services-dallas">
                         Virtual Employee Services
                       </Link>
-                    </li>
+                    </li> */}
                   </ul>
                 </li>
                 <li>

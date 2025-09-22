@@ -3,7 +3,9 @@ import React from 'react'
 import Title1 from "/public/services/software-development/title-1.webp"
 import Image from 'next/image'
 
-export default function Section1() {
+export default function Section1({ pageData }) {
+    const imageUrl = pageData?.services_tabs_section_image;
+    
     return (
         <>
             <section className="web-sec-1">
@@ -14,9 +16,11 @@ export default function Section1() {
                                 <Image
                                     decoding="async"
                                     loading='lazy'
-                                    src={Title1}
+                                    src={imageUrl || Title1}
                                     alt=""
                                     className="img-fluid"
+                                    width={1200}
+                                    height={600}
                                 />
                             </div>
                         </div>
@@ -28,9 +32,13 @@ export default function Section1() {
                     <div className="row">
                         <div className="col-lg-12">
                             <div className="text text-center text-22">
-                                <p className="">
-                                    Creasions, a trusted software development Dallas company, offers end-to-end software development services, including planning, design, development, integration, testing, and management of cutting-edge solutions. With a strong focus on quality and industry best practices, we cater to startups, enterprises, and businesses across 30+ industries, delivering custom software development Dallas solutions that drive innovation and efficiency.
-                                </p>
+                                {pageData?.services_tabs_section_text ? (
+                                    <div dangerouslySetInnerHTML={{
+                                        __html: pageData.services_tabs_section_text
+                                    }} />
+                                ) : (
+                                    <p className="">{pageData?.services_tabs_section_text}</p>
+                                )}
                             </div>
                         </div>
                     </div>

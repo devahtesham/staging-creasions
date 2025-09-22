@@ -1,8 +1,9 @@
 "use client";
 import { Link } from "react-scroll";
 
-export default function Section3() {
-    const services = [
+export default function Section3({ pageData }) {
+    // Default static services as fallback
+    const defaultServices = [
         [
             "Custom Sofware Development", "Mobile App Development", "Web Application Development", 
             "UI/UX Design for Software", "Quality Assurane and Testing", "Legacy Software Modernization","IoT (Internet of Things) Development"
@@ -17,6 +18,23 @@ export default function Section3() {
         ]
     ];
 
+    // Transform API data to component format
+    const getServicesData = () => {
+        if (pageData?.all_services_grid?.services) {
+            const allServices = pageData.all_services_grid.services;
+            const servicesPerColumn = Math.ceil(allServices.length / 3);
+            
+            return [
+                allServices.slice(0, servicesPerColumn),
+                allServices.slice(servicesPerColumn, servicesPerColumn * 2),
+                allServices.slice(servicesPerColumn * 2)
+            ];
+        }
+        return defaultServices;
+    };
+
+    const services = getServicesData();
+
     return (
         <section
             className="home-sec-service brading-sec-4 mobile-screen-slider"
@@ -26,7 +44,7 @@ export default function Section3() {
                 <div className="row p-0 border-0">
                     <div className="col-lg-12">
                         <div className="text text-22 text-center">
-                            <h2>All Software Development Services </h2>
+                            <h2>{pageData?.all_services_grid?.Services_grid_text || "All Software Development Services"}</h2>
                         </div>
                     </div>
                 </div>

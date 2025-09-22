@@ -21,7 +21,7 @@ import { faqData } from "@/components/mocks/search-engine-marketing/faqMocks";
 export const metadata = pageMetadata; 
 
 
-export default function MainSection() {
+export default function SearchEngineMarketingDallas() {
   return (
     
       <main className="search-engine-marketing">
