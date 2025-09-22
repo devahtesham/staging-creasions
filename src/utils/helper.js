@@ -472,12 +472,12 @@ export const getServiceDetailPage = async (template,slug) => {
     }
 
     const data = await response.json();
-    return data?.data
+    return data?.data || {};
 
 
   } catch (error) {
-    console.error('Error fetching home banners:', error);
-    return null;
+    console.error('Error fetching service detail page:', error);
+    return {};
   }
 };
 

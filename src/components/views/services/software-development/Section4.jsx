@@ -9,8 +9,26 @@ import Image3 from '/public/services/software-development/software-sec-04-3.webp
 const Section4 = ({ pageData }) => {
   const infoCardsData = pageData?.info_cards_section;
   
+  // Default fallback cards data
+  const defaultCards = [
+    {
+      image: Image1,
+      heading: "Dedicated Teams",
+      content: "Build a dedicated team that works exclusively on your project, ensuring focused attention and consistent progress."
+    },
+    {
+      image: Image2,
+      heading: "Staff Augmentation",
+      content: "Enhance your existing team with our skilled developers to accelerate project delivery and fill skill gaps."
+    },
+    {
+      image: Image3,
+      heading: "Project-Based",
+      content: "Complete project outsourcing with defined scope, timeline, and deliverables for maximum efficiency."
+    }
+  ];
  
-  const cards = infoCardsData?.cards;
+  const cards = infoCardsData?.cards || defaultCards;
 
   return (
     <section className="web-sec-3 soft-sec-4 gradian-bg">
@@ -24,20 +42,20 @@ const Section4 = ({ pageData }) => {
         </div>
 
         <div className="row p-0 border-0">
-          {cards.map((card, index) => (
+          {cards && cards.length > 0 && cards.map((card, index) => (
             <div key={index} className="col-lg-4">
               <div className="text text-center box">
                 <Image
                   src={card.image}
                   className="img-fluid"
-                  alt={card.heading}
+                  alt={card.heading || `Card ${index + 1}`}
                   width={120}
                   height={106}
                 />
-                <h5 dangerouslySetInnerHTML={{ __html: card.heading }} />
+                <h5 dangerouslySetInnerHTML={{ __html: card.heading || '' }} />
                 <p>
                   <span style={{ fontWeight: 400 }} dangerouslySetInnerHTML={{
-                    __html: card.content
+                    __html: card.content || ''
                   }} />
                 </p>
               </div>

@@ -56,12 +56,12 @@ export default function Testimonials({ pageData }) {
                             <Slider
                                 {...settings1}
                             >
-                                {testimonialData.map(slide => (
+                                {testimonialData && testimonialData.length > 0 && testimonialData.map(slide => (
                                     <div key={slide.slide_id} className="main-testi-box">
-                                        <h4>{slide.review.company}</h4>
-                                        <h5>{slide.review.client_name}</h5>
-                                        <p>{slide.review.comment}</p>
-                                        <h6>{slide.service}</h6>
+                                        <h4>{slide.review?.company || ''}</h4>
+                                        <h5>{slide.review?.client_name || ''}</h5>
+                                        <p>{slide.review?.comment || ''}</p>
+                                        <h6>{slide.service || ''}</h6>
                                     </div>
                                 ))}
                             </Slider>

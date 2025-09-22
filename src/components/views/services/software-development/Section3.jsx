@@ -54,10 +54,10 @@ export default function Section3({ pageData }) {
                         <div className="tab-content brand-mobile-slider">
                             <div className="tab-pane active show" role="tabpanel">
                                 <div className="row">
-                                    {services.map((column, colIndex) => (
+                                    {services && services.length > 0 && services.map((column, colIndex) => (
                                         <div key={colIndex} className="col-lg-4 col-md-6 col-sm-12">
                                             <ul className="hom">
-                                                {column.map((service, index) => (
+                                                {column && column.length > 0 && column.map((service, index) => (
                                                     <li key={index}>
                                                         <h2>
                                                             <Link

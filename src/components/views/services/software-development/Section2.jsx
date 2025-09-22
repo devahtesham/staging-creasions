@@ -158,7 +158,7 @@ const Section2 = ({ pageData }) => {
   };
 
   const tabsData = getTabsData();
-  const [activeTab, setActiveTab] = useState(tabsData[0].id);
+  const [activeTab, setActiveTab] = useState(tabsData.length > 0 ? tabsData[0].id : 'tabs-1');
 
   // Handle tab switch
   const handleTabClick = (tabId) => {
@@ -184,7 +184,7 @@ const Section2 = ({ pageData }) => {
         <div className="row">
           <div className="col-lg-12">
             <ul className="nav nav-tabs" >
-              {tabsData.map(({ id, title }) => (
+              {tabsData && tabsData.length > 0 && tabsData.map(({ id, title }) => (
                 <li className="nav-item" key={id}>
                   <a
                     className={`nav-link ${activeTab === id ? 'active' : ''}`}
@@ -198,7 +198,7 @@ const Section2 = ({ pageData }) => {
             </ul>
 
             <div className="tab-content software-mobile-slider">
-              {tabsData.map(({ id, title, description, imageUrl, mobileImageUrl, buttonLink, buttonText }) => (
+              {tabsData && tabsData.length > 0 && tabsData.map(({ id, title, description, imageUrl, mobileImageUrl, buttonLink, buttonText }) => (
                 <TabContent
                   key={id}
                   activeTab={activeTab}
