@@ -249,17 +249,14 @@ export default function Section3() {
                                     />
                                 </h2>
                             </div>
-                            <p>
-                                {mainSectionData.content_para_1}
-                            </p>
+                            {/* use react quill for  */}
+                            <div dangerouslySetInnerHTML={{ __html: mainSectionData.content_para_1 }} />
                         </div>
 
                     </div>
                     <div className="col-lg-6 col-md-12">
                         <div className="text">
-                            <p>
-                                {mainSectionData.content_para_2}
-                            </p>
+                            <div dangerouslySetInnerHTML={{ __html: mainSectionData.content_para_2 }} />
                         </div>
                         <div className="three-box-align" ref={ref}>
                             {
