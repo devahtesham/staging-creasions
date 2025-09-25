@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Section2({ achievementsData }) {
     // Fallback to default values if achievementsData is not available
-    const features = achievementsData?.features
+    const features = achievementsData?.features || []
 
     return (
         <section className="sec-02">

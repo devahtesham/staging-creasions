@@ -57,7 +57,7 @@ const Testimonials = ({ clientsData }) => {
     const apiClients = clientsData?.clients || [];
     
     // Transform API clients to component format
-    const transformedClients = apiClients.length > 0 
+    const transformedClients = (apiClients && Array.isArray(apiClients) && apiClients.length > 0) 
         ? apiClients.map(client => ({
             name: client.name,
             testimonial: client.description?.replace(/<[^>]*>/g, '') || '',

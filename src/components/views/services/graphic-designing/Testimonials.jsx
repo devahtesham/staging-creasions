@@ -7,12 +7,12 @@ import Ratings from '/public/services/virtual-employees/ve-testimonial-ratings.p
 
 
 const getClientsData = (clientsData) => {
-    if (clientsData?.clients) {
+    if (clientsData?.clients && Array.isArray(clientsData.clients)) {
         return clientsData.clients.map(client => ({
-            name: client.name,
-            testimonial: client.content?.replace(/<[^>]*>/g, '') || '',
-            position: client.position,
-            imgSrc: client.image_url || Ratings.src
+            name: client?.name || '',
+            testimonial: client?.content?.replace(/<[^>]*>/g, '') || '',
+            position: client?.position || '',
+            imgSrc: client?.image_url || Ratings.src
         }));
     }
     return [

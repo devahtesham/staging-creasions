@@ -3,7 +3,7 @@ import React from 'react'
 
 import Circle from '/public/services/local-listing-management/llm-sec01-circle.png';
 import CircleOutline from '/public/services/local-listing-management/llm-sec01-circle-outline.png';
-import GradientBg from '/public//services/local-listing-management/llm-sec01-bg.png';
+import GradientBg from '/public/services/local-listing-management/llm-sec01-bg.png';
 
 
 export default function Section1({ standOutData }) {

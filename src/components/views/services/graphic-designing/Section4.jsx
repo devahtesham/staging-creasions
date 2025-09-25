@@ -13,10 +13,10 @@ import SliderImg6 from '/public/services/graphic-designing/gd-sec04-06.png';
 
 
 const getSlideData = (industriesData) => {
-    if (industriesData?.industries) {
+    if (industriesData?.industries && Array.isArray(industriesData.industries)) {
         return industriesData.industries.map((industry, index) => ({
-            title: industry.title,
-            imgSrc: industry.image_url
+            title: industry?.title || '',
+            imgSrc: industry?.image_url || ''
         }));
     }
     return [];

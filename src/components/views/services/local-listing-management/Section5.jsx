@@ -41,7 +41,7 @@ export default function Section5({ certificationsData }) {
     ];
     
     // Transform API certifications to component format
-    const transformedChallenges = certifications.length > 0 
+    const transformedChallenges = (certifications && Array.isArray(certifications) && certifications.length > 0) 
         ? certifications.map((cert, index) => ({
             title: cert.title,
             image: cert.icon_url && typeof cert.icon_url === 'string' 

@@ -75,7 +75,7 @@ export default function Section4({ technologiesData }) {
         : "Platforms & Tools We Use For Local Listing Management";
     
     // Get technology tools from the first technology section
-    const dynamicTools = technologies.length > 0 && technologies[0]?.technologies 
+    const dynamicTools = (technologies.length > 0 && technologies[0]?.technologies && Array.isArray(technologies[0].technologies)) 
         ? technologies[0].technologies 
         : [];
     

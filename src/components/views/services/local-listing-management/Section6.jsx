@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import React from 'react'
 
 import Card1 from '/public/services/graphic-designing/gd-sec06-card01.png'

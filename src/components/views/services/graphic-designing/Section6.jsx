@@ -15,7 +15,7 @@ import Card10 from '/public/services/graphic-designing/gd-sec06-card10.png'
 
 export default function Section6({ portfolioData }) {
     // Transform API data to component format or use fallback
-    const projects = portfolioData?.projects || [];
+    const projects = (portfolioData?.projects && Array.isArray(portfolioData.projects)) ? portfolioData.projects : [];
     const sectionSpan = portfolioData?.section_span || "See Our Work";
     const sectionHeading = portfolioData?.section_heading || "Top Graphic Agencies in Dallas";
 

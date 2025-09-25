@@ -15,10 +15,10 @@ export default function Section3({ servicesData }) {
     const [activeTab, setActiveTab] = useState("tabs-1");
 
     // Transform API data to component format or use fallback
-    const transformedServices = servicesData?.services ? servicesData.services.map((service, index) => ({
+    const transformedServices = (servicesData?.services && Array.isArray(servicesData.services)) ? servicesData.services.map((service, index) => ({
         id: `tabs-${index + 1}`,
         title: service.title,
-        cards: service.sub_services.map((subService, subIndex) => ({
+        cards: (service.sub_services || []).map((subService, subIndex) => ({
             id: subIndex + 1,
             image: subService.icon_url ? subService.icon_url : "",
             title: subService.title,

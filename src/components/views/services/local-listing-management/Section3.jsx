@@ -9,10 +9,9 @@ import ServiceImg3 from "/public/services/branding/branding-sec-03-3.webp";
 import ServiceImg4 from "/public/services/branding/branding-sec-03-4.webp";
 import ServiceImg5 from "/public/services/branding/branding-sec-03-5.webp";
 
-import Link from "next/link";
 
 
-export default function Section3({ transformedServicesData }) {
+export default function Section3({ servicesData }) {
     // Helper function to decode HTML entities
     const decodeHtmlEntities = (str) => {
         return str
@@ -24,11 +23,11 @@ export default function Section3({ transformedServicesData }) {
             .replace(/&nbsp;/g, ' ');
     };
 
-    const sectionHeading = transformedServicesData?.section_heading || "Our Local Listing Management Services in Dallas";
-    const apiServices = transformedServicesData?.transformedServices || [];
+    const sectionHeading = servicesData?.section_heading || "Our Local Listing Management Services in Dallas";
+    const apiServices = servicesData?.services || [];
     
-    // Transform API transformedServices to component format
-    const transformedServices = apiServices.length > 0 ? apiServices.map((service, index) => {
+    // Transform API services to component format
+    const transformedServices = (apiServices && Array.isArray(apiServices) && apiServices.length > 0) ? apiServices.map((service, index) => {
         // Parse HTML content to extract text and list items
         const parseContent = (htmlContent) => {
             if (!htmlContent) return { text: '', listItems: [] };
