@@ -12,8 +12,12 @@ import Category5Img from '/public/services/new-virtual-employees/ve-sec04-05.png
 import Category6Img from '/public/services/new-virtual-employees/ve-sec04-06.png'
 import Category7Img from '/public/services/new-virtual-employees/ve-sec04-07.png'
 
-export default function Section5() {
-    var challenges = [
+export default function Section5({ certificationsData }) {
+    const sectionHeading = certificationsData?.section_heading || "Certified & Experienced in";
+    const sectionSpan = certificationsData?.section_span || "Let's optimize your business presence";
+    const certifications = certificationsData?.certifications || [];
+    
+    const defaultChallenges = [
         {
             title: "Google Business Profile Optimization",
             image: Category1Img,
@@ -34,7 +38,19 @@ export default function Section5() {
             title: "Multi-Location Business Listings",
             image: Category5Img,
         },
-    ]
+    ];
+    
+    // Transform API certifications to component format
+    const transformedChallenges = certifications.length > 0 
+        ? certifications.map((cert, index) => ({
+            title: cert.title,
+            image: cert.icon_url && typeof cert.icon_url === 'string' 
+                ? cert.icon_url 
+                : defaultChallenges[index]?.image || Category1Img
+          }))
+        : defaultChallenges;
+    
+    var challenges = transformedChallenges;
 
     var settings = {
         dots: false,
@@ -75,12 +91,16 @@ export default function Section5() {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-12">
-                        <h2>Certified & Experienced in</h2>
+                        <h2>{sectionHeading}</h2>
                         <div className="main-logo-slider-box">
                             <Slider {...settings} className="logo-slider">
                                 {challenges.map((challenge, index) => (
                                     <div key={index} className="box card-blur-bg-2">
-                                        <Image loading="lazy" src={challenge.image} alt={challenge.title} />
+                                        {typeof challenge.image === 'string' ? (
+                                            <img loading="lazy" src={challenge.image} alt={challenge.title} />
+                                        ) : (
+                                            <Image loading="lazy" src={challenge.image} alt={challenge.title} />
+                                        )}
                                         <h3>{challenge.title}</h3>
                                     </div>
                                 ))}
@@ -88,9 +108,7 @@ export default function Section5() {
 
                         </div>
 
-                        <p>
-                        Let&apos;s optimize your business presence
-                        </p>
+                        <p>{sectionSpan}</p>
                     </div>
 
                 </div>

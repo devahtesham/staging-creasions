@@ -25,7 +25,7 @@ export const metadata = pageMetadata;
 export default async function SoftwareDevelopmentDallas({ template, slug }) {
 
   const pageData = await getServiceDetailPage(template, slug)
-  console.log('[pageData]', pageData)
+  // console.log('[pageData]', pageData)
   return (
     <main className="software-development">
 

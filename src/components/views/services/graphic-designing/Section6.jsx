@@ -13,92 +13,95 @@ import Card8 from '/public/services/graphic-designing/gd-sec06-card08.png'
 import Card9 from '/public/services/graphic-designing/gd-sec06-card09.png'
 import Card10 from '/public/services/graphic-designing/gd-sec06-card10.png'
 
-export default function Section6() {
+export default function Section6({ portfolioData }) {
+    // Transform API data to component format or use fallback
+    const projects = portfolioData?.projects || [];
+    const sectionSpan = portfolioData?.section_span || "See Our Work";
+    const sectionHeading = portfolioData?.section_heading || "Top Graphic Agencies in Dallas";
+
     return (
         <section className='sec-06'>
             <div className="container">
                 <div className="row">
                     <div className="col-lg-12">
-                        <h4>See Our Work</h4>
-                        <h2>Top Graphic Agencies in Dallas</h2>
+                        <h4>{sectionSpan}</h4>
+                        <h2>{sectionHeading}</h2>
                         <div className="catelog-container">
                             <div className="catelog">
-                                <div className="card-agency">
-                                    <div className="card-img">
-                                        <Image src={Card1} alt="card1" />
+                                {projects.slice(0, 5).map((project, index) => (
+                                    <div key={index} className="card-agency">
+                                        <div className="card-img">
+                                            {project.image_url ? (
+                                                <img src={project.image_url} alt={project.title || `card${index + 1}`} />
+                                            ) : (
+                                                <Image src={[Card1, Card2, Card3, Card4, Card5][index] || Card1} alt={project.title || `card${index + 1}`} />
+                                            )}
+                                        </div>
+                                        {project.title && project.content && (
+                                            <div className="card-content">
+                                                <h4>{project.title}</h4>
+                                                <p>{project.content?.replace(/<[^>]*>/g, '') || ''}</p>
+                                            </div>
+                                        )}
                                     </div>
-                                </div>
-                                <div className="card-agency">
-                                    <div className="card-img">
-                                        <Image src={Card2} alt="card2" />
-                                    </div>
-                                    <div className="card-content">
-                                        <h4>Construction Company Brochure Design</h4>
-                                        <p>Professional, polished, and high-impact.</p>
-                                    </div>
-                                </div>
-
-                                <div className="card-agency">
-                                    <div className="card-img">
-                                        <Image src={Card3} alt="card3" />
-                                    </div>
-                                </div>
-                                <div className="card-agency">
-                                    <div className="card-img">
-                                        <Image src={Card4} alt="card4" />
-                                    </div>
-                                    <div className="card-content">
-                                        <h4>Technology<br />Logo Design</h4>
-                                        <p>Modern branding for an eCommerce startup.</p>
-                                    </div>
-                                </div>
-                                <div className="card-agency">
-                                    <div className="card-img">
-                                        <Image src={Card5} alt="card5" />
-                                    </div>
-                                </div>
+                                ))}
                             </div>
                             <div className="catelog">
-
-                                <div className="card-agency">
-                                    <div className="card-img">
-                                        <Image src={Card6} alt="card6" />
-                                    </div>
-                                    <div className="card-content">
-                                        <h4>Retail<br /> T-Shirt Design</h4>
-                                        <p>Creative and customer focused.</p>
-                                    </div>
-                                </div>
-                                <div className="card-agency">
-                                    <div className="card-img">
-                                        <Image src={Card7} alt="card7" />
-                                    </div>
-                                </div>
-                                <div className="card-agency">
-                                    <div className="card-img">
-                                        <Image src={Card8} alt="card8" />
-                                    </div>
-                                    <div className="card-content">
-                                        <h4>Bank<br /> Logo Design</h4>
-                                        <p>Sophisticated and trustworthy visuals.</p>
-                                    </div>
-                                </div>
-
-                                <div className="card-agency">
-                                    <div className="card-img">
-                                        <Image src={Card9} alt="card9" />
-                                    </div>
-                                </div>
-                                <div className="card-agency">
-                                    <Link href="/portfolio/graphic-design">
-                                        <div className="card-overlay-text">
-                                            VIEW FULL PORTFOLIO
+                                {projects.slice(5, 10).map((project, index) => {
+                                    const actualIndex = index + 5;
+                                    const isLastProject = actualIndex === projects.length - 1 && project.link;
+                                    
+                                    if (isLastProject) {
+                                        return (
+                                            <div key={actualIndex} className="card-agency">
+                                                <Link href={project.link}>
+                                                    <div className="card-overlay-text">
+                                                        {project.title || "VIEW FULL PORTFOLIO"}
+                                                    </div>
+                                                    <div className="card-img">
+                                                        {project.image_url ? (
+                                                            <img src={project.image_url} alt={project.title || "portfolio"} />
+                                                        ) : (
+                                                            <Image src={Card10} alt={project.title || "portfolio"} />
+                                                        )}
+                                                    </div>
+                                                </Link>
+                                            </div>
+                                        );
+                                    }
+                                    
+                                    return (
+                                        <div key={actualIndex} className="card-agency">
+                                            <div className="card-img">
+                                                {project.image_url ? (
+                                                    <img src={project.image_url} alt={project.title || `card${actualIndex + 1}`} />
+                                                ) : (
+                                                    <Image src={[Card6, Card7, Card8, Card9, Card10][index] || Card6} alt={project.title || `card${actualIndex + 1}`} />
+                                                )}
+                                            </div>
+                                            {project.title && project.content && (
+                                                <div className="card-content">
+                                                    <h4>{project.title}</h4>
+                                                    <p>{project.content?.replace(/<[^>]*>/g, '') || ''}</p>
+                                                </div>
+                                            )}
                                         </div>
-                                        <div className="card-img">
-                                            <Image src={Card10} alt="card10" />
-                                        </div>
-                                    </Link>
-                                </div>
+                                    );
+                                })}
+                                
+                                {/* Fallback to default portfolio link if no projects with links */}
+                                {!projects.some(p => p.link) && (
+                                    <div className="card-agency">
+                                        <Link href="/portfolio/graphic-design">
+                                            <div className="card-overlay-text">
+                                                VIEW FULL PORTFOLIO
+                                            </div>
+                                            <div className="card-img">
+                                                <Image src={Card10} alt="portfolio" />
+                                            </div>
+                                        </Link>
+                                    </div>
+                                )}
                             </div>
                         </div>
 

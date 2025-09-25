@@ -13,94 +13,78 @@ import Card8 from '/public/services/graphic-designing/gd-sec06-card08.png'
 import Card9 from '/public/services/graphic-designing/gd-sec06-card09.png'
 import Card10 from '/public/services/graphic-designing/gd-sec06-card10.png'
 
-export default function Section6() {
+export default function Section6({ portfolioData }) {
+    const sectionSpan = portfolioData?.section_span || "Why Choose";
+    const sectionHeading = portfolioData?.section_heading || "Why Choose Creasions for Local Listing Management in Dallas?";
+    const projects = portfolioData?.projects || [];
+    
+    const defaultCards = [
+        { image: Card1, title: "", description: "" },
+        { image: Card2, title: "100% Manual Optimization", description: "100% Manual Optimization - No Automation" },
+        { image: Card3, title: "", description: "" },
+        { image: Card4, title: "Monthly Reporting & Tracking", description: "Comprehensive Monthly Reporting & Tracking." },
+        { image: Card5, title: "", description: "" },
+        { image: Card6, title: "Dallas Local Listing Experts", description: "Experienced Local Listing Management Company Dallas" },
+        { image: Card7, title: "", description: "" },
+        { image: Card8, title: "Manager", description: "Dedicated Account Manager" },
+        { image: Card9, title: "", description: "" },
+        { image: Card10, title: "No Contracts, Just Results!", description: "No Long-Term Contracts - Proven Results!" }
+    ];
+    
+    const displayProjects = projects.length > 0 ? projects : defaultCards;
+    const defaultImages = [Card1, Card2, Card3, Card4, Card5, Card6, Card7, Card8, Card9, Card10];
+    
+    // Split projects into two catalogs (first 5 and remaining)
+    const firstCatalog = displayProjects.slice(0, 5);
+    const secondCatalog = displayProjects.slice(5, 10);
+
     return (
         <section className='sec-06'>
             <div className="container">
                 <div className="row">
                     <div className="col-lg-12">
-                        <h4>Why Choose</h4>
-                        <h2>Why Choose Creasions for Local Listing Management in Dallas?</h2>
+                        <h4>{sectionSpan}</h4>
+                        <h2 dangerouslySetInnerHTML={{ __html: sectionHeading.replace(/\n/g, '<br />') }} />
                         <div className="catelog-container">
                             <div className="catelog">
-                                <div className="card-agency">
-                                    <div className="card-img">
-                                        <Image src={Card1} alt="card1" />
+                                {firstCatalog.map((project, index) => (
+                                    <div key={index} className="card-agency">
+                                        <div className="card-img">
+                                            {project.image_url && typeof project.image_url === 'string' ? (
+                                                <img src={project.image_url} alt={project.title || `card${index + 1}`} />
+                                            ) : (
+                                                <Image src={defaultImages[index] || Card1} alt={project.title || `card${index + 1}`} />
+                                            )}
+                                        </div>
+                                        {project.title && (
+                                            <div className="card-content">
+                                                <h4 dangerouslySetInnerHTML={{ __html: project.title.replace(/\n/g, '<br />') }} />
+                                                <p>{project.description?.replace(/<[^>]*>/g, '') || ''}</p>
+                                            </div>
+                                        )}
                                     </div>
-                                </div>
-                                <div className="card-agency">
-                                    <div className="card-img">
-                                        <Image src={Card2} alt="card2" />
-                                    </div>
-                                    <div className="card-content">
-                                        <h4>100% Manual Optimization</h4>
-                                        <p>100% Manual Optimization - No Automation</p>
-                                    </div>
-                                </div>
-
-                                <div className="card-agency">
-                                    <div className="card-img">
-                                        <Image src={Card3} alt="card3" />
-                                    </div>
-                                </div>
-                                <div className="card-agency">
-                                    <div className="card-img">
-                                        <Image src={Card4} alt="card4" />
-                                    </div>
-                                    <div className="card-content">
-                                        <h4>Monthly Reporting & Tracking</h4>
-                                        <p>Comprehensive Monthly Reporting & Tracking.</p>
-                                    </div>
-                                </div>
-                                <div className="card-agency">
-                                    <div className="card-img">
-                                        <Image src={Card5} alt="card5" />
-                                    </div>
-                                </div>
+                                ))}
                             </div>
                             <div className="catelog">
-
-                                <div className="card-agency">
-                                    <div className="card-img">
-                                        <Image src={Card6} alt="card6" />
+                                {secondCatalog.map((project, index) => (
+                                    <div key={index + 5} className="card-agency">
+                                        <div className="card-img">
+                                            {project.image_url && typeof project.image_url === 'string' ? (
+                                                <img src={project.image_url} alt={project.title || `card${index + 6}`} />
+                                            ) : (
+                                                <Image src={defaultImages[index + 5] || Card6} alt={project.title || `card${index + 6}`} />
+                                            )}
+                                        </div>
+                                        {project.title && (
+                                            <div className="card-content">
+                                                <h4 dangerouslySetInnerHTML={{ __html: project.title.replace(/\n/g, '<br />') }} />
+                                                <p>{project.description?.replace(/<[^>]*>/g, '') || ''}</p>
+                                            </div>
+                                        )}
                                     </div>
-                                    <div className="card-content">
-                                        <h4>Dallas Local Listing Experts</h4>
-                                        <p>Experienced Local Listing Management Company Dallas</p>
-                                    </div>
-                                </div>
-                                <div className="card-agency">
-                                    <div className="card-img">
-                                        <Image src={Card7} alt="card7" />
-                                    </div>
-                                </div>
-                                <div className="card-agency">
-                                    <div className="card-img">
-                                        <Image src={Card8} alt="card8" />
-                                    </div>
-                                    <div className="card-content">
-                                        <h4>Manager</h4>
-                                        <p>Dedicated Account Manager</p>
-                                    </div>
-                                </div>
-
-                                <div className="card-agency">
-                                    <div className="card-img">
-                                        <Image src={Card9} alt="card9" />
-                                    </div>
-                                </div>
-                                <div className="card-agency">
-                                    <div className="card-img">
-                                        <Image src={Card10} alt="card8" />
-                                    </div>
-                                    <div className="card-content">
-                                        <h4>No Contracts,<br />Just Results!</h4>
-                                        <p>No Long-Term Contracts - Proven Results!</p>
-                                    </div>
-                                </div>
+                                ))}
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>

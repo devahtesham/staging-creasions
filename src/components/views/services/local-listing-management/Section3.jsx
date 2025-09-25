@@ -12,15 +12,51 @@ import ServiceImg5 from "/public/services/branding/branding-sec-03-5.webp";
 import Link from "next/link";
 
 
-export default function Section3() {
-    const [activeTab, setActiveTab] = useState("tabs-1");
+export default function Section3({ transformedServicesData }) {
+    // Helper function to decode HTML entities
+    const decodeHtmlEntities = (str) => {
+        return str
+            .replace(/&amp;/g, '&')
+            .replace(/&lt;/g, '<')
+            .replace(/&gt;/g, '>')
+            .replace(/&quot;/g, '"')
+            .replace(/&#39;/g, "'")
+            .replace(/&nbsp;/g, ' ');
+    };
 
-    const services = [
+    const sectionHeading = transformedServicesData?.section_heading || "Our Local Listing Management Services in Dallas";
+    const apiServices = transformedServicesData?.transformedServices || [];
+    
+    // Transform API transformedServices to component format
+    const transformedServices = apiServices.length > 0 ? apiServices.map((service, index) => {
+        // Parse HTML content to extract text and list items
+        const parseContent = (htmlContent) => {
+            if (!htmlContent) return { text: '', listItems: [] };
+            
+            const textMatch = htmlContent.match(/<p[^>]*>([^<]*)<\/p>/);
+            const text = textMatch ? decodeHtmlEntities(textMatch[1]) : decodeHtmlEntities(htmlContent.replace(/<[^>]*>/g, '').split('📌')[0]);
+            
+            const listMatches = htmlContent.match(/📌[^📌]*/g) || [];
+            const listItems = listMatches.map(item => decodeHtmlEntities(item.replace(/<[^>]*>/g, '').trim()));
+            
+            return { text, listItems };
+        };
+        
+        const { text, listItems } = parseContent(service.description);
+        const defaultImages = [ServiceImg1, ServiceImg2, ServiceImg3, ServiceImg4, ServiceImg5];
+        
+        return {
+            id: `tabs-${index + 1}`,
+            title: service.title,
+            description: text,
+            image: service.icon_url && typeof service.icon_url === 'string' ? service.icon_url : defaultImages[index],
+            list: listItems.length > 0 ? listItems : null
+        };
+    }) : [
         {
             id: "tabs-1",
             title: "Google Business Profile Optimization",
-            description:
-                "Our listing service in Dallas ensures your Google Business Profile (formerly Google My Business) is accurate, optimized, and engaging.",
+            description: "Our listing service in Dallas ensures your Google Business Profile (formerly Google My Business) is accurate, optimized, and engaging.",
             image: ServiceImg1,
             list: [
                 "📌 Business Name, Address, Phone Number (NAP) Optimization",
@@ -32,8 +68,7 @@ export default function Section3() {
         {
             id: "tabs-2",
             title: "Business Listings on Top Directories",
-            description:
-                "We claim, verify, and optimize your business across:",
+            description: "We claim, verify, and optimize your business across:",
             image: ServiceImg2,
             list:[
                 "📌 Google My Business,",
@@ -48,15 +83,13 @@ export default function Section3() {
         {
             id: "tabs-3",
             title: "Local Citation Audit & Cleanup",
-            description:
-                "Incorrect or duplicate listings hurt SEO and customer trust. Our local listing management agency in Dallas conducts NAP audits, removes duplicates, and fixes inconsistencies.",
+            description: "Incorrect or duplicate listings hurt SEO and customer trust. Our local listing management agency in Dallas conducts NAP audits, removes duplicates, and fixes inconsistencies.",
             image: ServiceImg3,
         },
         {
             id: "tabs-4",
             title: "Online Review Management",
-            description:
-                "Boost your brand reputation with our automated review generation and response services.",
+            description: "Boost your brand reputation with our automated review generation and response transformedServices.",
             image: ServiceImg4,
             list:[
                 "📌 Monitor & Respond to Customer Reviews",
@@ -67,11 +100,12 @@ export default function Section3() {
         {
             id: "tabs-5",
             title: "Voice Search & Mapping Services",
-            description:
-                "We ensure your business is listed on voice search platforms (Google Assistant, Alexa, Siri) and GPS mapping services (Google Maps, Apple Maps, Waze).",
+            description: "We ensure your business is listed on voice search platforms (Google Assistant, Alexa, Siri) and GPS mapping transformedServices (Google Maps, Apple Maps, Waze).",
             image: ServiceImg5,
         },
     ];
+    
+    const [activeTab, setActiveTab] = useState(transformedServices[0]?.id || "tabs-1");
 
     const handleTabChange = (id) => {
         setActiveTab(id);
@@ -84,9 +118,7 @@ export default function Section3() {
                     <div className="row p-0 border-0">
                         <div className="col-lg-12">
                             <div className="text text-22 text-center">
-                                <h2>
-                                    Our Local Listing <br /> Management Services in Dallas
-                                </h2>
+                                <h2 dangerouslySetInnerHTML={{ __html: sectionHeading.replace(/\n/g, '<br />') }} />
                             </div>
                         </div>
                     </div>
@@ -94,7 +126,7 @@ export default function Section3() {
                         <div className="col-lg-12">
                             
                             <ul className="nav nav-tabs" >
-                                {services.map((service) => (
+                                {transformedServices.map((service) => (
                                     <li
                                         key={service.id}
                                         className={`nav-item ${activeTab === service.id ? "active" : ""}`}
@@ -110,7 +142,7 @@ export default function Section3() {
                                 ))}
                             </ul>
                             <div className="tab-content brand-mobile-slider">
-                                {services.map((service) => (
+                                {transformedServices.map((service) => (
                                     <div
                                         key={service.id}
                                         className={`tab-pane ${activeTab === service.id ? "active show" : ""}`}
@@ -142,16 +174,27 @@ export default function Section3() {
                                             </div>
                                             <div className="col-lg-6">
                                                 <div className="img-box">
-                                                    <Image
-                                                        width={915}
-                                                        height={687}
-                                                        src={service.image}
-                                                        className="img-fluid wp-post-image"
-                                                        alt={service.title}
-                                                        decoding="async"
-                                                        loading="lazy"
-                                                        fetchPriority="high"
-                                                    />
+                                                    {typeof service.image === 'string' ? (
+                                                        <img
+                                                            width={915}
+                                                            height={687}
+                                                            src={service.image}
+                                                            className="img-fluid wp-post-image"
+                                                            alt={service.title}
+                                                            loading="lazy"
+                                                        />
+                                                    ) : (
+                                                        <Image
+                                                            width={915}
+                                                            height={687}
+                                                            src={service.image}
+                                                            className="img-fluid wp-post-image"
+                                                            alt={service.title}
+                                                            decoding="async"
+                                                            loading="lazy"
+                                                            fetchPriority="high"
+                                                        />
+                                                    )}
                                                 </div>
                                             </div>
                                         </div>

@@ -13,26 +13,28 @@ import Section4 from "@/components/views/services/internet-marketing-agency/Sect
 import Section7 from "@/components/views/services/internet-marketing-agency/Section7";
 import Section8 from "@/components/views/services/internet-marketing-agency/Section8";
 import Testimonials from "@/components/views/services/internet-marketing-agency/Testimonial";
-import Faq from "@/components/layout/Faq";
-import { faqData } from "@/components/mocks/internet-marketing-agency/faqMocks";
+import Faq from "./Faq";
+import { getServiceDetailPage } from '@/utils/helper';
 
 
 export const metadata = pageMetadata; 
 
 
-export default function InternetMarketingDallas() {
+export default async function InternetMarketingDallas( { template, slug } ) {
+  const pageData = await getServiceDetailPage(template, slug)
+  // console.log('[pageData]', pageData)
   return (
     
       <main className="internet-marketing-agency">
-        <IntroSection />
-        <Section1 />
-        <Section2 />
-        <Section3 />
-        <Section4 />
-        <Testimonials />
-        <Section7 />
-        <Section8 />
-        <Faq data={faqData} />
+        <IntroSection bannerData={pageData?.banner} />
+        <Section1 servicesTabsData={pageData?.services_tabs_section_image} />
+        <Section2 standOutData={pageData?.stand_out_section} />
+        <Section3 informationCardData={pageData?.information_card} />
+        <Section4 technologyData={pageData?.technnology_used} />
+        <Testimonials reviewsData={pageData?.reviews || []} />
+        <Section7 expertiesData={pageData?.our_experties_section} />
+        <Section8 aboutUsData={pageData?.about_us_section} />
+        <Faq allFaqs={pageData?.faqs || []} />
       </main>
   );
 }

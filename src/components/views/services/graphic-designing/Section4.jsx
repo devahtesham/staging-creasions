@@ -12,14 +12,15 @@ import SliderImg5 from '/public/services/graphic-designing/gd-sec04-05.png';
 import SliderImg6 from '/public/services/graphic-designing/gd-sec04-06.png';
 
 
-const slideData = [
-    { title: "Corporate & Business", imgSrc: SliderImg1 },
-    { title: "Construction", imgSrc: SliderImg2 },
-    { title: "Tech & SaaS", imgSrc: SliderImg3 },
-    { title: "eCommerce", imgSrc: SliderImg4 },
-    { title: "Art & Entertainment", imgSrc: SliderImg5 },
-    { title: "Local Businesses", imgSrc: SliderImg6 },
-];
+const getSlideData = (industriesData) => {
+    if (industriesData?.industries) {
+        return industriesData.industries.map((industry, index) => ({
+            title: industry.title,
+            imgSrc: industry.image_url
+        }));
+    }
+    return [];
+};
 
 const sliderSettings = {
     infinite: true,
@@ -55,7 +56,11 @@ const sliderSettings = {
 const GraphicDesigningCard = memo(({ title, imgSrc }) => (
     <div className="col-lg-12">
         <div className="box">
-            <Image src={imgSrc} className="img-fluid" alt={title} priority />
+            {typeof imgSrc === 'string' ? (
+                <img src={imgSrc} className="img-fluid" alt={title} />
+            ) : (
+                <Image src={imgSrc} className="img-fluid" alt={title} priority />
+            )}
             <div className="text">
                 <h4>{title}</h4>
             </div>
@@ -65,14 +70,22 @@ const GraphicDesigningCard = memo(({ title, imgSrc }) => (
 
 GraphicDesigningCard.displayName = 'GraphicDesigningCard';
 
-const Section4 = () => (
-    <section className="sec-04">
+const Section4 = ({ industriesData }) => {
+    const slideData = getSlideData(industriesData);
+    
+    // Don't render if no data
+    if (!slideData || slideData.length === 0) {
+        return null;
+    }
+    
+    return (
+        <section className="sec-04">
         <div className="container">
             <div className="row">
                 <div className="col-lg-12">
                     <div className="header">
-                        <h4>INDUSTRIES WE SERVE</h4>
-                        <p>From startups to established enterprises, our graphic creative agency in Dallas caters to various industries</p>
+                        <h4>{industriesData?.section_heading || "INDUSTRIES WE SERVE"}</h4>
+                        <p>{industriesData?.content?.replace(/<[^>]*>/g, '') || "From startups to established enterprises, our graphic creative agency in Dallas caters to various industries"}</p>
                     </div>
                 </div>
             </div>
@@ -92,6 +105,7 @@ const Section4 = () => (
             </div>
         </div>
     </section>
-);
+    );
+}
 
 export default Section4;

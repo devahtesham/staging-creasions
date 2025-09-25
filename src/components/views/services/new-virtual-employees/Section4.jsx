@@ -12,8 +12,17 @@ import Category5Img from '/public/services/new-virtual-employees/ve-sec04-05.png
 import Category6Img from '/public/services/new-virtual-employees/ve-sec04-06.png'
 import Category7Img from '/public/services/new-virtual-employees/ve-sec04-07.png'
 
-export default function Section4() {
-    var challenges = [
+export default function Section4({ challengesData }) {
+    const sectionHeading = challengesData?.section_heading || "Talent Acquisition Challenges";
+    const sectionText = challengesData?.section_text?.replace(/<[^>]*>/g, '') || "At Creasions Digital, we excel in managing complex talent acquisition programs. Through a seamless blend of cutting-edge technology and proven human expertise, we provide our clients with a competitive edge in the people business.";
+    const sectionsCards = challengesData?.sections_cards || [];
+
+    const defaultImages = [Category1Img, Category2Img, Category3Img, Category4Img, Category5Img, Category6Img, Category7Img];
+    
+    const challenges = sectionsCards.length > 0 ? sectionsCards.map((card, index) => ({
+        title: card.icon_title,
+        image: card.icon_url || defaultImages[index] || Category1Img,
+    })) : [
         {
             title: "RPO",
             image: Category1Img,
@@ -42,7 +51,6 @@ export default function Section4() {
             title: "Reference Checks",
             image: Category7Img,
         },
-
     ]
 
     var settings = {
@@ -84,12 +92,16 @@ export default function Section4() {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-12">
-                        <h2>Talent Acquisition Challenges</h2>
+                        <h2>{sectionHeading}</h2>
                         <div className="main-logo-slider-box">
                             <Slider {...settings} className="logo-slider">
                                 {challenges.map((challenge, index) => (
                                     <div key={index} className="box card-blur-bg-2">
-                                        <Image loading="lazy" src={challenge.image} alt={challenge.title} />
+                                        {typeof challenge.image === 'string' ? (
+                                            <img loading="lazy" src={challenge.image} alt={challenge.title} />
+                                        ) : (
+                                            <Image loading="lazy" src={challenge.image} alt={challenge.title} />
+                                        )}
                                         <h3>{challenge.title}</h3>
                                     </div>
                                 ))}
@@ -97,9 +109,7 @@ export default function Section4() {
 
                         </div>
 
-                        <p>
-                            At Creasions Digital, we excel in managing complex talent acquisition programs. Through a seamless blend of cutting-edge technology and proven human expertise, we provide our clients with a competitive edge in the people business.
-                        </p>
+                        <p>{sectionText}</p>
                     </div>
 
                 </div>

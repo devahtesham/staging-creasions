@@ -6,7 +6,7 @@ import Slider from 'react-slick';
 import Ratings from '/public/services/virtual-employees/ve-testimonial-ratings.png'
 
 
-const clients = [
+const defaultClients = [
     {
         name: 'John M.',
         testimonial:
@@ -38,7 +38,7 @@ const clients = [
     {
         name: 'Ashley B.',
         testimonial:
-            "They made our business voice-search-ready! We’re now appearing on Alexa and Google Assistant searches.",
+            "They made our business voice-search-ready! We're now appearing on Alexa and Google Assistant searches.",
         position: 'Dallas Pet Grooming',
         imgSrc: Ratings.src
     },
@@ -51,7 +51,22 @@ const clients = [
     },
 ];
 
-const Testimonials = () => {
+const Testimonials = ({ clientsData }) => {
+    const sectionHeading = clientsData?.section_heading || "Meet Our Top Clients";
+    const sectionText = clientsData?.section_text?.replace(/<[^>]*>/g, '') || "Explore some of the clients we've assisted!";
+    const apiClients = clientsData?.clients || [];
+    
+    // Transform API clients to component format
+    const transformedClients = apiClients.length > 0 
+        ? apiClients.map(client => ({
+            name: client.name,
+            testimonial: client.description?.replace(/<[^>]*>/g, '') || '',
+            position: client.position,
+            imgSrc: Ratings.src
+          }))
+        : defaultClients;
+    
+    const clients = transformedClients;
     const settings1 = {
         arrows: false,
         dots: true,
@@ -86,8 +101,8 @@ const Testimonials = () => {
                 <div className="row align-items-center">
                     <div className="col-lg-12">
                         <div className="text let text-center">
-                            <h2>Meet Our Top Clients</h2>
-                            <p>Explore some of the clients we&apos;ve assisted!</p>
+                            <h2>{sectionHeading}</h2>
+                            <p>{sectionText}</p>
                         </div>
                     </div>
                 </div>

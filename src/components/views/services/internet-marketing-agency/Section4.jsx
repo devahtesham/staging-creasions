@@ -28,10 +28,66 @@ import payperclick2 from '/public/services/internet-marketing-agency/pay-per-cli
 import payperclick3 from '/public/services/internet-marketing-agency/pay-per-click-03.jpeg'
 import payperclick4 from '/public/services/internet-marketing-agency/pay-per-click-04.png'
 
-export default function Section4() {
+export default function Section4({ technologyData }) {
   const [activeTab, setActiveTab] = useState('tab0');
+  
+  const sectionHeading = technologyData?.section_heading || "Technologies and Platforms We use for Search Engine Optimization";
+  const sectionsCards = technologyData?.sections_cards || [];
+  
+  // Transform API data to component format
+  const transformedTabs = sectionsCards.length > 0 ? sectionsCards.map((section, index) => ({
+    id: `tab${index}`,
+    title: section.tab_heading,
+    technologies: section.related_technologies || []
+  })) : [
+    { id: 'tab0', title: 'Search Engine Optimization', technologies: [] },
+    { id: 'tab1', title: 'Social Media Marketing', technologies: [] },
+    { id: 'tab2', title: 'Email marketing', technologies: [] },
+    { id: 'tab3', title: 'Pay per Click', technologies: [] }
+  ];
 
   const renderContent = () => {
+    const currentTab = transformedTabs.find(tab => tab.id === activeTab);
+    if (!currentTab) return null;
+    
+    const technologies = currentTab.technologies;
+    const defaultImages = {
+      'tab0': [section4img01, section4img02, section4img03, section4img04, section4img05, section4img06, section4img07, section4img08, section4img09, section4img10, section4img11, section4img12],
+      'tab1': [socialmediamarketing1, socialmediamarketing2, socialmediamarketing3, socialmediamarketing4, socialmediamarketing5],
+      'tab2': [emailmarketing1, emailmarketing2, emailmarketing3, emailmarketing4],
+      'tab3': [payperclick1, payperclick2, payperclick3, payperclick4]
+    };
+    
+    const fallbackImages = defaultImages[activeTab] || [];
+    
+    if (technologies.length > 0) {
+      // Render dynamic content
+      return (
+        <div className="tab-content">
+          <div className="row align-items-center">
+            <div className="col-lg-12">
+              <div className="img-box">
+                {technologies.map((tech, index) => (
+                  <div key={index} className="box">
+                    {tech.icon_url ? (
+                      <img src={tech.icon_url} alt={tech.icon_title || 'Technology'} />
+                    ) : (
+                      <Image src={fallbackImages[index] || section4img01} alt={tech.icon_title || 'Technology'} />
+                    )}
+                    <div className="content-box">
+                      <h6>{tech.icon_title || 'Technology'}</h6>
+                      <p>{tech.icon_description?.replace(/<[^>]*>/g, '') || ''}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    }
+    
+    // Fallback to hardcoded content
     switch (activeTab) {
       case 'tab0':
         return <div className="tab-content">
@@ -255,38 +311,20 @@ export default function Section4() {
         <div className="row">
           <div className="col-lg-12">
             <div className="text text-center">
-              <h2>Technologies and Platforms<br/> We use for Search Engine Optimization</h2>
+              <h2 dangerouslySetInnerHTML={{ __html: sectionHeading.replace(/\n/g, '<br/>') }} />
             </div>
                           <div className="tabs-container">
                 <div className="tabs">
 
-                  <button
-                    className={activeTab === 'tab0' ? 'active' : ''}
-                    onClick={() => setActiveTab('tab0')}
-                  >
-                    Search Engine Optimization
-                  </button>
-
-                  <button
-                    className={activeTab === 'tab1' ? 'active' : ''}
-                    onClick={() => setActiveTab('tab1')}
-                  >
-                    Social Media Marketing
-                  </button>
-
-                  <button
-                    className={activeTab === 'tab2' ? 'active' : ''}
-                    onClick={() => setActiveTab('tab2')}
-                  >
-                    Email marketing
-                  </button>
-
-                  <button
-                    className={activeTab === 'tab3' ? 'active' : ''}
-                    onClick={() => setActiveTab('tab3')}
-                  >
-                    Pay per Click
-                  </button>
+                  {transformedTabs.map((tab) => (
+                    <button
+                      key={tab.id}
+                      className={activeTab === tab.id ? 'active' : ''}
+                      onClick={() => setActiveTab(tab.id)}
+                    >
+                      {tab.title}
+                    </button>
+                  ))}
 
                 </div>
                 {renderContent()}

@@ -23,26 +23,26 @@ import WebsiteDevelopmentDallas from "@/components/services/website-development-
 export default function ServicesWrapper({ params }) {
     // const router = useRouter();
     const [template, slug] = params.slug
-
+    console.log('[template]', template)
     // Template mapping object
     const templateComponents = {
-        'web-development': WebsiteDevelopmentDallas,
-        'brand-agency': BrandingAgencyDallas,
-        'graphic-design': GraphicDesigningDallas,
-        'software-development': SoftwareDevelopmentDallas,
-        'website-design': WebsiteDesignDallas,
-        'application-development': ApplicationDevelopmentDallas,
-        'virtual-employ': VirtualEmployeesServicesDallas,
-        'reputation-management': ReputationManagementDallas,
-        'internet-marketing': InternetMarketingDallas,
-        'listing-service': ListingServiceDallas,
+        'web-development': WebsiteDevelopmentDallas,    // new code requied
+        'brand-agency': BrandingAgencyDallas,           // new code requied
+        'website-design': WebsiteDesignDallas,          // new code requied
+        'digital-marketing': DigitalMarketingDallas,    // new code requied
+        'graphic-design': GraphicDesigningDallas,                           // DONE
+        'software-development': SoftwareDevelopmentDallas,                 // DONE
+        'application-development': ApplicationDevelopmentDallas,           // DONE
+        'virtual-employees': VirtualEmployeesServicesDallas,               // DONE
+        'reputation-management': ReputationManagementDallas,               // DONE
+        'internet-marketing': InternetMarketingDallas,                     // DONE
+        'listing-service': ListingServiceDallas,                           // DONE
         'content-marketing': ContentMarketingDallas,
         'email-marketing': EmailMarketingDallas,
         'search-engine-marketing': SearchEngineMarketingDallas,
         'ecommerce-marketing': EcommerceMarketingDallas,
         'social-media-marketing': SocialMediaMarketingDallas,
         'seo-service': SeoServicesDallas,
-        'digital-marketing': DigitalMarketingDallas,
     };
 
     // Get the component based on template name

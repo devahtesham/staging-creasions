@@ -12,10 +12,13 @@ import ServiceImg5 from "/public/services/branding/branding-sec-03-5.webp";
 import Link from "next/link";
 
 
-export default function Section3() {
+export default function Section3({ expertiesData }) {
     const [activeTab, setActiveTab] = useState("tabs-1");
-
-    const services = [
+    
+    const sectionHeading = expertiesData?.section_heading || "Our Reputation Management Services in Dallas";
+    const expertiesCards = expertiesData?.experties_cards || [];
+    
+    const defaultServices = [
         {
             id: "tabs-1",
             title: "Online Review Management",
@@ -44,7 +47,7 @@ export default function Section3() {
             id: "tabs-3",
             title: "Social Media Reputation Management",
             description:
-                "Your social media presence plays a major role in your brand’s reputation. We help you:",
+                "Your social media presence plays a major role in your brand's reputation. We help you:",
             image: ServiceImg3,
             list:[
                 "📌 Remove negative comments and fake accounts",
@@ -77,6 +80,45 @@ export default function Section3() {
             ]
         },
     ];
+    
+    // Transform API data to component format
+    const transformedServices = expertiesCards.length > 0 ? expertiesCards.map((card, index) => {
+        const infoCard = card.info_cards?.[0];
+        if (!infoCard) return null;
+        
+        // Helper function to decode HTML entities
+        const decodeHtmlEntities = (str) => {
+            return str
+                .replace(/&amp;/g, '&')
+                .replace(/&lt;/g, '<')
+                .replace(/&gt;/g, '>')
+                .replace(/&quot;/g, '"')
+                .replace(/&#39;/g, "'")
+                .replace(/&nbsp;/g, ' ');
+        };
+
+        // Parse list items from text_description
+        const description = infoCard.text_description?.replace(/<[^>]*>/g, '') || '';
+        const listMatches = infoCard.text_description?.match(/📌[^📌]*/g) || [];
+        const list = listMatches.map(item => {
+            // Remove HTML tags and decode entities
+            const cleanItem = item.replace(/<[^>]*>/g, '').trim();
+            return decodeHtmlEntities(cleanItem);
+        });
+        
+        // Get description without list items
+        const cleanDescription = decodeHtmlEntities(description.replace(/📌[^📌]*/g, '').trim());
+        
+        return {
+            id: `tabs-${index + 1}`,
+            title: infoCard.text_heading,
+            description: cleanDescription,
+            image: infoCard.image_url || [ServiceImg1, ServiceImg2, ServiceImg3, ServiceImg4, ServiceImg5][index] || ServiceImg1,
+            list: list.length > 0 ? list : []
+        };
+    }).filter(Boolean) : defaultServices;
+    
+    const services = transformedServices;
 
     const handleTabChange = (id) => {
         setActiveTab(id);
@@ -89,9 +131,7 @@ export default function Section3() {
                     <div className="row p-0 border-0">
                         <div className="col-lg-12">
                             <div className="text text-22 text-center">
-                                <h2>
-                                    Our Reputation<br/> Management Services in Dallas
-                                </h2>
+                                <h2 dangerouslySetInnerHTML={{ __html: sectionHeading.replace(/\n/g, '<br/>') }} />
                             </div>
                         </div>
                     </div>
@@ -147,16 +187,25 @@ export default function Section3() {
                                             </div>
                                             <div className="col-lg-6">
                                                 <div className="img-box">
-                                                    <Image
-                                                        width={915}
-                                                        height={687}
-                                                        src={service.image}
-                                                        className="img-fluid wp-post-image"
-                                                        alt={service.title}
-                                                        decoding="async"
-                                                        loading="lazy"
-                                                        fetchPriority="high"
-                                                    />
+                                                    {typeof service.image === 'string' ? (
+                                                        <img
+                                                            src={service.image}
+                                                            className="img-fluid wp-post-image"
+                                                            alt={service.title}
+                                                            loading="lazy"
+                                                        />
+                                                    ) : (
+                                                        <Image
+                                                            width={915}
+                                                            height={687}
+                                                            src={service.image}
+                                                            className="img-fluid wp-post-image"
+                                                            alt={service.title}
+                                                            decoding="async"
+                                                            loading="lazy"
+                                                            fetchPriority="high"
+                                                        />
+                                                    )}
                                                 </div>
                                             </div>
                                         </div>

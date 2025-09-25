@@ -32,12 +32,12 @@ export default function Section1({ pageData }) {
                     <div className="row">
                         <div className="col-lg-12">
                             <div className="text text-center text-22">
-                                {pageData?.services_tabs_section_text ? (
+                                {pageData?.banner?.services_tabs_section_text_2 ? (
                                     <div dangerouslySetInnerHTML={{
-                                        __html: pageData.services_tabs_section_text
+                                        __html: pageData.banner.services_tabs_section_text_2
                                     }} />
                                 ) : (
-                                    <p className="">{pageData?.services_tabs_section_text}</p>
+                                    <p className="">{pageData?.banner.services_tabs_section_text_2}</p>
                                 )}
                             </div>
                         </div>

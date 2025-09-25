@@ -147,7 +147,7 @@ const Section2 = ({ pageData }) => {
       return pageData.services_tab_section.services.map((service, index) => ({
         id: `tabs-${index + 1}`,
         title: service.title,
-        description: service.content.replace(/<[^>]*>/g, ''), // Strip HTML tags for plain text
+        description: service?.content?.replace(/<[^>]*>/g, ''), // Strip HTML tags for plain text
         imageUrl: service.icon_url, // Use icon URL from API
         mobileImageUrl: service.icon_url,
         buttonLink: service.button_link,

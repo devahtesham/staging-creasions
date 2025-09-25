@@ -7,7 +7,26 @@ import Image from 'next/image';
 import TestiImg1 from '/public/testi-img-01.png';
 import TestiImg2 from '/public/testi-img-02.png';
 
-export default function Testimonials() {
+export default function Testimonials({ reviewsData }) {
+    // Transform reviews data to component format
+    const transformReviewsData = (reviews) => {
+        if (!reviews || reviews.length === 0) {
+            // Fallback to TestimonialMocks if no reviews data
+            return TestimonialMocks;
+        }
+        
+        return reviews.map((review, index) => ({
+            slide_id: review.id || index,
+            review: {
+                company: review.reviewer_company_name,
+                client_name: review.reviewer_title,
+                comment: review.review_text
+            },
+            service: review.reviewer_service_name
+        }));
+    };
+
+    const testimonials = transformReviewsData(reviewsData);
 
     const settings1 = {
         dots: true,
@@ -40,7 +59,7 @@ export default function Testimonials() {
                             <Slider
                                 {...settings1}
                             >
-                                {TestimonialMocks.map(slide => (
+                                {testimonials.map(slide => (
                                     <div key={slide.slide_id} className="main-testi-box">
                                         <h4>{slide.review.company}</h4>
                                         <h5>{slide.review.client_name}</h5>

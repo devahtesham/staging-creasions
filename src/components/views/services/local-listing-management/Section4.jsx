@@ -64,27 +64,35 @@ const tools = [
 
 ];
 
-export default function Section4() {
+export default function Section4({ technologiesData }) {
+    const sectionHeading = technologiesData?.section_heading || "Work With Certified Local Listing Management Experts";
+    const sectionText = technologiesData?.section_text?.replace(/<[^>]*>/g, '') || "Ensure accurate and optimized business listings across multiple platforms with our local listing management services in Dallas. Our team is certified in top listing management tools to improve your local SEO, increase brand visibility, and attract more customers.";
+    const technologies = technologiesData?.technologies || [];
+    
+    // Get platform title from the first technology section
+    const platformTitle = technologies.length > 0 && technologies[0]?.technology_heading 
+        ? technologies[0].technology_heading 
+        : "Platforms & Tools We Use For Local Listing Management";
+    
+    // Get technology tools from the first technology section
+    const dynamicTools = technologies.length > 0 && technologies[0]?.technologies 
+        ? technologies[0].technologies 
+        : [];
+    
+    const displayTools = dynamicTools.length > 0 ? dynamicTools : tools;
+
     return (
         <section className="section4">
             <div className="max-w-5xl mx-auto">
-                <h2>
-                    Work With Certified<br />
-                    Local Listing Management Experts
-                </h2>
-                <p>
-                    Ensure accurate and optimized business listings across multiple platforms with our local listing management services in Dallas.
-                    Our team is certified in top listing management tools to improve your local SEO, increase brand visibility, and attract more customers.
-                </p>
-                <p className="platform-title">
-                    Platforms & Tools We Use For Local Listing Management
-                </p>
+                <h2>{sectionHeading.split(" ").slice(0, 3).join(" ")}<br />{sectionHeading.split(" ").slice(3).join(" ")}</h2>
+                <p>{sectionText}</p>
+                <p className="platform-title">{platformTitle}</p>
                 <div className="icon-grid">
-                    {tools.map((tool, idx) => (
+                    {displayTools.map((tool, idx) => (
                         <div key={idx} className="icon-item">
                             <img
-                                src={tool.src.src}
-                                alt={tool.alt}
+                                src={tool.image_url || (tool.src ? tool.src.src : '')}
+                                alt={tool.alt || `Technology ${idx + 1}`}
                                 className="icon-img"
                                 width="80"
                                 height="80"

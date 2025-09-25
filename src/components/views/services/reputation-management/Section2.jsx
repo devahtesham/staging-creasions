@@ -8,13 +8,28 @@ import SecIcon4 from '/public/services/local-listing-management/llm-sec02-i04.pn
 import SecIcon5 from '/public/services/local-listing-management/llm-sec02-i05.png';
 
 
-export default function Section2() {
+export default function Section2({ achievementsData }) {
+    const sectionHeading = achievementsData?.section_heading || "Why Choose Our Reputation Management Services in Dallas?";
+    const sectionText = achievementsData?.section_text?.replace(/<[^>]*>/g, '') || "Your business listings are more than just online directories; they are essential for SEO, customer trust, and brand visibility. Our Local Listing Management Company in Dallas helps you:";
+    const features = achievementsData?.features || [];
+    
+    const defaultFeatures = [
+        { title: "Proven ORM Strategies", text: "We use AI-powered tools, SEO, and content marketing to suppress negative search results and highlight positive brand mentions.", icon_url: SecIcon1 },
+        { title: "Expert Crisis Management", text: "Our team monitors your brand 24/7 and reacts quickly to potential reputation risks.", icon_url: SecIcon2 },
+        { title: "Comprehensive ORM Solutions", text: "From Google search reputation cleanup to social media damage control, we cover all aspects of reputation management.", icon_url: SecIcon3 },
+        { title: "Customized Approach", text: "We analyze your brand's online presence and tailor ORM strategies that fit your business needs.", icon_url: SecIcon4 },
+        { title: "Fast & Guaranteed Results", text: "We guarantee a 75% reduction in negative content visibility within 90 days or your money back!", icon_url: SecIcon5 }
+    ];
+    
+    const displayFeatures = features.length > 0 ? features : defaultFeatures;
+    const defaultIcons = [SecIcon1, SecIcon2, SecIcon3, SecIcon4, SecIcon5];
+
     return (
         <section className="sec-02">
             <div className="container">
                 <div className="row text-center">
-                    <h2>Why Choose Our Reputation<br/> Management Services in Dallas?</h2>
-                    <p>Your business listings are more than just online directories; they are essential for SEO, customer trust, and<br/> brand visibility. Our Local Listing Management Company in Dallas helps you:</p>
+                    <h2 dangerouslySetInnerHTML={{ __html: sectionHeading.replace(/\n/g, '<br/>') }} />
+                    <p>{sectionText}</p>
                 </div>
             </div>
             <div className="container">
@@ -22,31 +37,17 @@ export default function Section2() {
                     <div className="col-lg-12">
                         <div className="card-container">
                             <div className="card-row">
-                                <div className="card card-blur-bg-1">
-                                    <Image src={SecIcon1} className="img-fluid" alt="Icon 1" />
-                                    <h3>Proven ORM Strategies</h3>
-                                    <p>We use AI-powered tools, SEO, and content marketing to suppress negative search results and highlight positive brand mentions.</p>
-                                </div>
-                                <div className="card card-blur-bg-1">
-                                    <Image src={SecIcon2} className="img-fluid" alt="Icon 2" />
-                                    <h3>Expert Crisis Management</h3>
-                                    <p>Our team monitors your brand 24/7 and reacts quickly to potential reputation risks.</p>
-                                </div>
-                                <div className="card card-blur-bg-1">
-                                    <Image src={SecIcon3} className="img-fluid" alt="Icon 3" />
-                                    <h3>Comprehensive ORM Solutions</h3>
-                                    <p>From Google search reputation cleanup to social media damage control, we cover all aspects of reputation management.</p>
-                                </div>
-                                <div className="card card-blur-bg-1">
-                                    <Image src={SecIcon4} className="img-fluid" alt="Icon 4" />
-                                    <h3>Customized Approach</h3>
-                                    <p>We analyze your brand’s online presence and tailor ORM strategies that fit your business needs.</p>
-                                </div>
-                                <div className="card card-blur-bg-1">
-                                    <Image src={SecIcon5} className="img-fluid" alt="Icon 5" />
-                                    <h3>Fast & Guaranteed Results</h3>
-                                    <p>We guarantee a 75% reduction in negative content visibility within 90 days or your money back!</p>
-                                </div>
+                                {displayFeatures.map((feature, index) => (
+                                    <div key={index} className="card card-blur-bg-1">
+                                        {feature.icon_url ? (
+                                            <img src={feature.icon_url} className="img-fluid" alt={feature.title} />
+                                        ) : (
+                                            <Image src={defaultIcons[index] || SecIcon1} className="img-fluid" alt={feature.title} />
+                                        )}
+                                        <h3>{feature.title}</h3>
+                                        <p>{feature.text?.replace(/<[^>]*>/g, '') || ''}</p>
+                                    </div>
+                                ))}
                             </div>
                         </div>
                     </div>
