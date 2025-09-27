@@ -37,12 +37,12 @@ export default function ServicesWrapper({ params }) {
         'reputation-management': ReputationManagementDallas,               // DONE
         'internet-marketing': InternetMarketingDallas,                     // DONE
         'listing-service': ListingServiceDallas,                           // DONE
-        'content-marketing': ContentMarketingDallas,
-        'email-marketing': EmailMarketingDallas,
-        'search-engine-marketing': SearchEngineMarketingDallas,
-        'ecommerce-marketing': EcommerceMarketingDallas,
-        'social-media-marketing': SocialMediaMarketingDallas,
-        'seo-service': SeoServicesDallas,
+        'content-marketing': ContentMarketingDallas,                       // DONE
+        'email-marketing': EmailMarketingDallas,                           // DONE
+        'search-engine-marketing': SearchEngineMarketingDallas,              // DONE
+        'ecommerce-marketing': EcommerceMarketingDallas,                    // DONE
+        'social-media-marketing': SocialMediaMarketingDallas,                // DONE
+        'seo-service': SeoServicesDallas,                                    // pending due to content
     };
 
     // Get the component based on template name

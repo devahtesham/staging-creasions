@@ -7,40 +7,71 @@ import section5img03 from '/public/services/email-marketing/section5img03.png'
 import section5img04 from '/public/services/email-marketing/section5img04.png'
 import section5img05 from '/public/services/email-marketing/section5img05.png'
 
-export default function Section5() {
+export default function Section5({ expertiesData }) {
+  const sectionHeading = expertiesData?.section_heading || "Why Choose Us as Your Email Marketing Agency in Dallas?";
+  const backgroundImage = expertiesData?.section_background || section5bg.src;
+  const expertiseCards = expertiesData?.sections_cards?.sections_cards || [];
+
+  // Helper function to decode HTML entities
+  const decodeHtmlEntities = (str) => {
+    return str
+      .replace(/&amp;/g, '&')
+      .replace(/&lt;/g, '<')
+      .replace(/&gt;/g, '>')
+      .replace(/&quot;/g, '"')
+      .replace(/&#39;/g, "'")
+      .replace(/&nbsp;/g, ' ');
+  };
+
+  const defaultCards = [
+    {
+      title: "Proven Track Record",
+      description: "Hundreds of successful campaigns across industries.",
+      icon_url: section5img01
+    },
+    {
+      title: "Certified Email Marketing Experts",
+      description: "Experienced in Mailchimp, Klaviyo, HubSpot, ActiveCampaign, Constant Contact, and more.",
+      icon_url: section5img02
+    },
+    {
+      title: "Custom Strategies",
+      description: "No generic solutions—tailored email campaigns for your business.",
+      icon_url: section5img03
+    },
+    {
+      title: "Advanced Personalization & AI Automation",
+      description: "Maximize engagement with hyper-targeted campaigns.",
+      icon_url: section5img04
+    },
+    {
+      title: "Data-Driven Approach",
+      description: "Optimized email performance through continuous testing.",
+      icon_url: section5img05
+    }
+  ];
+
+  const defaultImages = [section5img01, section5img02, section5img03, section5img04, section5img05];
+  const displayCards = expertiseCards.length > 0 ? expertiseCards : defaultCards;
   return (
-    <section className="section-05" style={{backgroundImage:`url(${section5bg.src})` }}>
+    <section className="section-05" style={{backgroundImage:`url(${backgroundImage})` }}>
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
             <div className="text">
-                <h2>Why Choose Us as Your Email <br/>Marketing Agency in Dallas?</h2>
+                <h2 dangerouslySetInnerHTML={{ __html: sectionHeading.replace(/\n/g, '<br/>') }} />
                 <div className="email-agency-grid">
-                    <div className="agency-box">
-                        <Image src={section5img01}/>
-                        <h5>Proven Track <br/>Record</h5>
-                        <p>Hundreds of successful campaigns across industries.</p>
-                    </div>
-                    <div className="agency-box">
-                        <Image src={section5img02}/>
-                        <h5>Certified Email <br/>Marketing Experts</h5>
-                        <p>Experienced in Mailchimp, Klaviyo, HubSpot, ActiveCampaign, Constant Contact, and more.</p>
-                    </div>
-                    <div className="agency-box">
-                        <Image src={section5img03}/>
-                        <h5>Custom <br/>Strategies</h5>
-                        <p>No generic solutions—tailored email campaigns for your business.</p>
-                    </div>
-                    <div className="agency-box">
-                        <Image src={section5img04}/>
-                        <h5>Advanced <br/>Personalization & <br/>AI Automation</h5>
-                        <p>Maximize engagement with hyper-targeted campaigns.</p>
-                    </div>
-                    <div className="agency-box">
-                        <Image src={section5img05}/>
-                        <h5>Data-Driven <br/>Approach</h5>
-                        <p>Optimized email performance through continuous testing.</p>
-                    </div>
+                    {displayCards.map((card, index) => (
+                        <div key={index} className="agency-box">
+                            {card.icon_url && typeof card.icon_url === 'string' ? (
+                                <img src={card.icon_url} alt={card.title} />
+                            ) : (
+                                <Image src={defaultImages[index] || section5img01} alt={card.title} />
+                            )}
+                            <h5 dangerouslySetInnerHTML={{ __html: decodeHtmlEntities(card.title).replace(/\n/g, '<br/>') }} />
+                            <p>{decodeHtmlEntities(card.description?.replace(/<[^>]*>/g, '') || '')}</p>
+                        </div>
+                    ))}
                 </div>
             </div>
           </div>

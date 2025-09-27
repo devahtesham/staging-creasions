@@ -14,27 +14,29 @@ import Section5 from "@/components/views/services/social-media-marketing/Section
 import Section6 from "@/components/views/services/social-media-marketing/Section6";
 import Section7 from "@/components/views/services/social-media-marketing/Section7";
 import Testimonials from "@/components/views/services/social-media-marketing/Testimonial";
-import Faq from "@/components/layout/Faq";
-import { faqData } from "@/components/mocks/social-media-marketing/faqMocks";
+import Faq from "./Faq";
+import { getServiceDetailPage } from "@/utils/helper";
 
 
 export const metadata = pageMetadata; 
 
 
-export default function SocialMediaMarketingDallas() {
+export default async function SocialMediaMarketingDallas( { template, slug } ) {
+  const pageData = await getServiceDetailPage(template, slug)
+  console.log('[pageData]', pageData)
   return (
     
       <main className="email-marketing">
-        <IntroSection />
-        <Section1 />
-        <Section2 />
-        <Section6 />
-        <Section3 />
-        <Section4 />
-        <Section5 />
-        <Testimonials />
-        <Faq data={faqData} />
-        <Section7 />
+        <IntroSection bannerData={pageData?.banner} />
+        <Section1 bannerData={pageData?.banner} />
+        <Section2 standOutData={pageData?.stand_out_section} />
+        <Section6 achievementsData={pageData?.our_achievements_section} />
+        <Section3 servicesData={pageData?.our_services_section} expertiesData={pageData?.our_experties} />
+        <Section4 technologiesData={pageData?.technologies_we_work_section} />
+        <Section5 profileData={pageData?.our_profile} />
+        <Testimonials reviewsData={pageData?.reviews || []} />
+        <Faq allFaqs={pageData?.faqs || []} />  
+        <Section7 aboutUsData={pageData?.about_us} />
       </main>
   );
 }

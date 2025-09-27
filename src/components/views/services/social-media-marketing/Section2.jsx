@@ -9,13 +9,20 @@ import SliderImg2 from '/public/services/social-media-marketing/sliderimg02.png'
 import SliderImg3 from '/public/services/social-media-marketing/sliderimg03.png';
 import SliderImg4 from '/public/services/social-media-marketing/sliderimg04.png';
 
-
-const slideData = [
-    {  imgSrc: SliderImg1 },
-    { imgSrc: SliderImg2 },
-    { imgSrc: SliderImg3 },
-    {imgSrc: SliderImg4 },
-];
+const getSlideData = (standOutData) => {
+    if (standOutData?.image && Array.isArray(standOutData.image)) {
+        return standOutData.image.map(imageUrl => ({
+            imgSrc: imageUrl && typeof imageUrl === 'string' ? imageUrl : SliderImg1
+        }));
+    }
+    
+    return [
+        { imgSrc: SliderImg1 },
+        { imgSrc: SliderImg2 },
+        { imgSrc: SliderImg3 },
+        { imgSrc: SliderImg4 },
+    ];
+};
 
 const sliderSettings = {
     infinite: true,
@@ -52,28 +59,36 @@ const sliderSettings = {
 const GraphicDesigningCard = memo(({imgSrc }) => (
     <div className="col-lg-12">
         <div className="box">
-            <Image src={imgSrc} className="img-fluid "  priority />
+            {typeof imgSrc === 'string' ? (
+                <img src={imgSrc} className="img-fluid" alt="Social Media Marketing" />
+            ) : (
+                <Image src={imgSrc} className="img-fluid" priority alt="Social Media Marketing" />
+            )}
         </div>
     </div>
 ));
 
 GraphicDesigningCard.displayName = 'GraphicDesigningCard';
 
-const Section2 = () => (
-    <section className="section-02">
-        <div className="container-fluid p-0">
-            <div className="row slider">
-                <Slider {...sliderSettings}>
-                    {slideData.map((slide, index) => (
-                        <GraphicDesigningCard
-                            key={index}
-                            imgSrc={slide.imgSrc}
-                        />
-                    ))}
-                </Slider>
+const Section2 = ({ standOutData }) => {
+    const slideData = getSlideData(standOutData);
+
+    return (
+        <section className="section-02">
+            <div className="container-fluid p-0">
+                <div className="row slider">
+                    <Slider {...sliderSettings}>
+                        {slideData.map((slide, index) => (
+                            <GraphicDesigningCard
+                                key={index}
+                                imgSrc={slide.imgSrc}
+                            />
+                        ))}
+                    </Slider>
+                </div>
             </div>
-        </div>
-    </section>
-);
+        </section>
+    );
+};
 
 export default Section2;

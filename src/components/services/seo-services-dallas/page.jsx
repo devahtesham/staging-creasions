@@ -13,14 +13,16 @@ import Section4 from "@/components/views/services/seo-services/Section4";
 import Section5 from "@/components/views/services/seo-services/Section5";
 import Section6 from "@/components/views/services/seo-services/Section6";
 import Testimonials from "@/components/views/services/seo-services/Testimonial";
-import Faq from "@/components/layout/Faq";
-import { faqData } from "@/components/mocks/seo-services/faqMocks";
+import Faq from "./Faq";
+import { getServiceDetailPage } from "@/utils/helper";
 
 
 export const metadata = pageMetadata; 
 
 
-export default function SeoServicesDallas() {
+export default async function SeoServicesDallas( { template, slug } ) {
+  const pageData = await getServiceDetailPage(template, slug)
+  console.log('[pageData]', pageData)
   return (
     
       <main className="seo-services">
@@ -32,7 +34,7 @@ export default function SeoServicesDallas() {
         <Testimonials />
         <Section5 />
         <Section6 />
-        <Faq data={faqData} />
+        <Faq allFaqs={pageData?.faqs || []} />  
       </main>
   );
 }

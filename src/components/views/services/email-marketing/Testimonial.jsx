@@ -8,7 +8,18 @@ import TestiImg1 from '/public/testi-img-01.png';
 import TestiImg2 from '/public/testi-img-02.png';
 import testimonialbg from '/public/services/email-marketing/testimonial-bg.png'
 
-export default function Testimonials() {
+export default function Testimonials({ reviewsData }) {
+    const reviews = reviewsData && Array.isArray(reviewsData) && reviewsData.length > 0 
+        ? reviewsData.map(review => ({
+            slide_id: review.id,
+            review: {
+                company: review.reviewer_company_name,
+                client_name: review.reviewer_title,
+                comment: review.review_text
+            },
+            service: review.reviewer_service_name
+          }))
+        : TestimonialMocks;
 
     const settings1 = {
         dots: true,
@@ -41,7 +52,7 @@ export default function Testimonials() {
                             <Slider
                                 {...settings1}
                             >
-                                {TestimonialMocks.map(slide => (
+                                {reviews.map(slide => (
                                     <div key={slide.slide_id} className="main-testi-box">
                                         <h4>{slide.review.company}</h4>
                                         <h5>{slide.review.client_name}</h5>

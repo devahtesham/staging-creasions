@@ -12,25 +12,27 @@ import Section4 from "@/components/views/services/ecommerce-marketing-agency/Sec
 import Section5 from "@/components/views/services/ecommerce-marketing-agency/Section5";
 import Section8 from "@/components/views/services/ecommerce-marketing-agency/Section8";
 import Testimonials from "@/components/views/services/ecommerce-marketing-agency/Testimonial";
-import Faq from "@/components/layout/Faq";
-import { faqData } from "@/components/mocks/ecommerce-marketing-agency/faqMocks";
+import Faq from "./Faq";
+import { getServiceDetailPage } from "@/utils/helper";
 
 
 export const metadata = pageMetadata; 
 
 
-export default function EcommerceMarketingDallas() {
+export default async function EcommerceMarketingDallas({ template, slug }) {  
+  const pageData = await getServiceDetailPage(template, slug)
+  console.log('[pageData]', pageData)
   return (
     
       <main className="ecommerce-marketing-agency">
-        <IntroSection />
-        <Section1 />
-        <Section3 />
-        <Section4 />
-        <Testimonials />
-        <Section5 />
-        <Section8 />
-        <Faq data={faqData} />
+        <IntroSection bannerData={pageData?.banner} />
+        <Section1 standOutData={pageData?.stand_out_section} />
+        <Section3 achievementsData={pageData?.our_achievements_section} />
+        <Section4 servicesData={pageData?.our_services_section} />
+        <Testimonials reviewsData={pageData?.reviews || []} />
+        <Section5 technologiesData={pageData?.technnologies_section} />
+        <Section8 aboutUsData={pageData?.about_us} />
+        <Faq allFaqs={pageData?.faqs || []} />
       </main>
   );
 }

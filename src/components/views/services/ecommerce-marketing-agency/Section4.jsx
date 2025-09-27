@@ -8,82 +8,85 @@ import PerformanceVector from '/public/services/email-marketing/PerformanceVecto
 import bgimage from '/public/services/email-marketing/section3-bg.png'
 import Image from 'next/image'
 
-export default function Section4() {
+export default function Section4({ servicesData }) {
+  const sectionHeading = servicesData?.section_heading || "Our Ecommerce Marketing Services in Dallas";
+  const servicesCards = servicesData?.services_cards || [];
+  const backgroundImage = servicesData?.section_background || bgimage.src;
+
+  // Helper function to decode HTML entities and parse content
+  const decodeHtmlEntities = (str) => {
+    return str
+      .replace(/&amp;/g, '&')
+      .replace(/&lt;/g, '<')
+      .replace(/&gt;/g, '>')
+      .replace(/&quot;/g, '"')
+      .replace(/&#39;/g, "'")
+      .replace(/&nbsp;/g, ' ');
+  };
+
+  const parseContent = (htmlContent) => {
+    if (!htmlContent) return { text: '', listItems: [] };
+    
+    // Split by <p> tags and extract paragraphs
+    const paragraphs = htmlContent.split(/<\/p>/).map(p => p.replace(/<p[^>]*>/, '').trim()).filter(p => p);
+    
+    // First paragraph is usually the main text
+    const mainText = paragraphs.length > 0 ? decodeHtmlEntities(paragraphs[0]) : '';
+    
+    // Extract remaining paragraphs as list items (excluding <br> tags)
+    const listItems = paragraphs.slice(1)
+      .filter(item => item && item !== '<br>')
+      .map(item => decodeHtmlEntities(item.replace(/<[^>]*>/g, '').trim()))
+      .filter(item => item);
+    
+    return { text: mainText, listItems };
+  };
+
+  const defaultServices = [
+    {
+      title: "Ecommerce SEO - Rank Higher & Drive Organic Traffic",
+      description: "<p>Get found by high-intent customers with our Ecommerce SEO services in Dallas. We optimize your store for maximum search engine visibility through:</p><p>Keyword research & on-page optimization</p><p>Product page SEO & structured data implementation</p><p>Link building & off-page SEO strategies</p><p>Site speed optimization & mobile-friendly enhancements</p>",
+      icon_url: CampaignVector
+    },
+    {
+      title: "Email & SMS Marketing - Retain & Nurture Customers",
+      description: "<p>Boost customer lifetime value (CLV) with targeted email & SMS marketing campaigns, including:</p><p>Automated abandoned cart recovery emails</p><p>Personalized product recommendations</p><p>Loyalty & rewards program promotions</p><p>Seasonal sales & limited-time offers</p>",
+      icon_url: EmailVector
+    }
+  ];
+
+  const defaultIcons = [CampaignVector, EmailVector, NewsletterVector, eCommerceVector, SegmentationVector, PerformanceVector];
+  const displayServices = servicesCards.length > 0 ? servicesCards : defaultServices;
   return (
-    <section className="section-03" style={{ backgroundImage: `url(${bgimage.src})` }}>
+    <section className="section-03" style={{ backgroundImage: `url(${backgroundImage})` }}>
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
             <div className="text text-center">
-                <h2>Our Ecommerce<br/> Marketing Services in Dallas</h2>
+                <h2 dangerouslySetInnerHTML={{ __html: sectionHeading.replace(/\n/g, '<br/>') }} />
             </div>
             <div className="services-grid">
-                <div className="services-box">
-                    <Image src={CampaignVector}/>
-                    <h5>Ecommerce SEO - Rank Higher & Drive Organic Traffic</h5>
-                    <p>Get found by high-intent customers with our Ecommerce SEO services in Dallas. We optimize your store for maximum search engine visibility through:</p>
-                    <ul>
-                        <li>Keyword research & on-page optimization</li>
-                        <li>Product page SEO & structured data implementation</li>
-                        <li>Link building & off-page SEO strategies</li>
-                        <li>Site speed optimization & mobile-friendly enhancements</li>
-                    </ul>
-                </div>
-                <div className="services-box">
-                    <Image src={EmailVector}/>
-                    <h5>Email & SMS Marketing - Retain & Nurture Customers</h5>
-                    <p>Boost customer lifetime value (CLV) with targeted email & SMS marketing campaigns, including:</p>
-                    <ul>
-                      <li>Automated abandoned cart recovery emails</li>
-                      <li>Personalized product recommendations</li>
-                      <li>Loyalty & rewards program promotions</li>
-                      <li>Seasonal sales & limited-time offers</li>
-                    </ul>
-                </div>
-                <div className="services-box">
-                    <Image src={NewsletterVector}/>
-                    <h5>Social Media Marketing - Expand Your Online Reach</h5>
-                    <p>Social media is a powerful tool for Ecommerce brands. Our Ecommerce marketing experts in Dallas specialize in:</p>
-                    <ul>
-                        <li>Facebook & Instagram ad campaigns</li>
-                        <li>Pinterest & TikTok marketing for online stores</li>
-                        <li>Social media content creation & management</li>
-                        <li>Influencer & affiliate marketing partnerships</li>
-                    </ul>
-                </div>
-                <div className="services-box">
-                    <Image src={eCommerceVector}/>
-                    <h5>Conversion Rate Optimization (CRO) - Maximize Every Click</h5>
-                    <p>Optimize your Ecommerce website to convert more visitors into paying customers with:</p>
-                    <ul>
-                      <li>Landing page optimization & A/B testing</li>
-                      <li>Cart abandonment recovery strategies</li>
-                      <li>Heatmap analysis & user behavior tracking</li>
-                      <li>Personalized shopping experiences & AI-driven recommendations</li>
-                    </ul>
-                </div>
-                <div className="services-box">
-                    <Image src={SegmentationVector}/>
-                    <h5>Pay-Per-Click (PPC) Advertising - Get Instant Sales</h5>
-                    <p>As a leading Ecommerce marketing company in Dallas, we create high-converting PPC campaigns that generate fast, measurable results using:</p>
-                    <ul>
-                        <li>Google Ads (Search, Display & Shopping Ads)</li>
-                        <li>Bing Ads & Retargeting Campaigns</li>
-                        <li>Facebook & Instagram Ecommerce Advertising</li>
-                        <li>Amazon PPC & eCommerce marketplace advertising</li>
-                    </ul>
-                </div>
-                <div className="services-box">
-                    <Image src={PerformanceVector}/>
-                    <h5>Marketplace Optimization - Sell More on Amazon & eBay</h5>
-                    <p>Our Ecommerce marketing agency in Dallas helps you dominate online marketplaces with:</p>
-                    <ul>
-                        <li>Amazon & eBay store optimization</li>
-                        <li>Product listing enhancements & keyword targeting</li>
-                        <li>Competitor analysis & pricing strategies</li>
-                        <li>Amazon FBA consulting & advertising management</li>
-                    </ul>
-                </div>
+                {displayServices.map((service, index) => {
+                  const { text, listItems } = parseContent(service.description);
+                  return (
+                    <div key={index} className="services-box">
+                        {service.icon_url && typeof service.icon_url === 'string' ? (
+                            <img src={service.icon_url} alt={service.title} />
+                        ) : (
+                            <Image src={defaultIcons[index] || CampaignVector} alt={service.title} />
+                        )}
+                        <h5>{service.title}</h5>
+                        <p>{text}</p>
+                        {listItems.length > 0 && (
+                          <ul>
+                            {listItems.map((item, itemIndex) => (
+                              <li key={itemIndex}>{item}</li>
+                            ))}
+                          </ul>
+                        )}
+                    </div>
+                  );
+                })}
             </div>
           </div>
         </div>
