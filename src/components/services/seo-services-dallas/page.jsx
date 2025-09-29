@@ -21,19 +21,20 @@ export const metadata = pageMetadata;
 
 
 export default async function SeoServicesDallas( { template, slug } ) {
-  const pageData = await getServiceDetailPage(template, slug)
+  const transformedTemp = template.split("-")[0];
+  const pageData = await getServiceDetailPage(transformedTemp, slug)
   console.log('[pageData]', pageData)
   return (
     
       <main className="seo-services">
-        <IntroSection />
-        <Section1 />
-        <Section2 />
-        <Section3 />
-        <Section4 />
-        <Testimonials />
-        <Section5 />
-        <Section6 />
+        <IntroSection bannerData={pageData?.banner} />
+        <Section1 standOutData={pageData?.stand_out_section} />
+        <Section2 servicesData={pageData?.our_services_section} />
+        <Section3 servicesCardsData={pageData?.services_cards} />
+        <Section4 technologiesData={pageData?.technologies_we_use} />
+        <Testimonials reviewsData={pageData?.reviews || []} />
+        <Section5 profileData={pageData?.view_profile} />
+        <Section6 cardsData={pageData?.cards} />
         <Faq allFaqs={pageData?.faqs || []} />  
       </main>
   );

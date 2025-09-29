@@ -1,23 +1,152 @@
 body {
   overflow-x: clip;
+  background-color: #040208;
+  scroll-behavior: smooth;
+}
+
+@media (min-width: 1500px) {
+    .container{
+        max-width: 1400px;
+    }
 }
 
 .website-design .inner-title {
-  min-height: 620px;
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
-  background-color: #fff;
   color: #fff;
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
 }
 
-.website-design .inner-title .heading {
-  max-width: 1030px;
-  margin-top: 100px;
+section{
+  position: relative;
+  z-index: 1;
+}
+
+canvas.backgroundHover {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+}
+
+.website-design .section-06 {
+    padding-bottom: 187px;
+}
+
+.website-design .section-06 .text h2 {
+    font-size: 40px;
+    line-height: normal;
+    letter-spacing: 0;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.website-design .section-06 .text p {
+    opacity: 1;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 0.2px;
+    color:#fff;
+}
+
+.website-design .section-06 .bulletMainBox {
+    margin-top: 80px;
+}
+
+.website-design .section-06 .bulletMainBox .text h2 {
+    -webkit-text-fill-color: #fff;
+    letter-spacing: 3px;
+    transition: 1s;
+}
+
+.website-design .section-06 .bulletMainBox li.active .text h2 {
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 3px;
+    transition: 1s;
+}
+
+.website-design .section-06 .bulletMainBox .bulletScroll li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding-bottom: 100px;
+}
+
+.website-design .section-06 .bulletMainBox .bulletScroll li .text {
+    max-width: 666px;
+}
+
+.website-design .section-06 .bulletMainBox .bulletScroll {
+    padding-left: 80px;
+}
+
+.website-design .section-06 .bulletMainBox .bulletScroll li::before {
+    content: "";
+    position: absolute;
+    left: -80px;
+    top: 20px;
+    background: #3A32F6;
+    height: 26px;
+    width: 26px;
+    border-radius: 100%;
+}
+
+.website-design .section-06 .bulletMainBox .bulletScroll li::after {
+    content: "";
+    position: absolute;
+    background: #3A32F6;
+    top: 20px;
+    left: -69px;
+    width: 4px;
+    height: 0%;
+    transition: 1s all;
+}
+
+.website-design .section-06 .bulletMainBox .bulletScroll li.active::after {
+    height: 100%;
+    transition: 1s all;
+}
+
+.website-design .section-06 .bulletMainBox .bulletScroll li:last-child {
+    padding-bottom: 0;
+}
+
+.website-design .section-06 .bulletMainBox .bulletScroll li .imgBox, .website-design .section-06 .bulletMainBox .bulletScroll li .imgBox img {
+    overflow: hidden;
+    transition: 1s all;
+    border-radius: 30px;
+}
+
+.website-design .section-06 .bulletMainBox .bulletScroll li .imgBox{
+  opacity: 0;
+  transition: 1s all;
+}
+.website-design .section-06 .bulletMainBox .bulletScroll li.active .imgBox{
+  opacity: 1;
+  transition: 1s all;
+}
+
+.website-design .section-06 .bulletMainBox .bulletScroll li .imgBox:hover, .website-design .section-06 .bulletMainBox .bulletScroll li .imgBox img:hover {
+    transition: 1s;
+    transform: scale(1.1);
+}
+
+.bggradient {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.website-design .inner-title {
+    padding: 180px 0 100px;
 }
 
 .website-design .mission-sec .box-2 h4 {
@@ -27,25 +156,107 @@ body {
 
 .website-design .inner-title .heading h1 {
   color: #fff;
-  font-size: 75px;
+  font-size: 95px;
+  font-weight: 700;
+  line-height: 105px;
 }
 
 .website-design .inner-title .heading p {
   color: #fff;
-  font-size: 22px;
-  margin-top: 10px;
+ font-size: 25px;
+    margin-top: 10px;
+    font-weight: 300;
+    line-height: 32px;
 }
 
 .website-design .inner-title .heading p a{
   color: #fff;
+  border-bottom: 1px solid white;
+}
+
+
+.website-design .web-sec-5 .text h2 {
+  max-width: 100%;
+  font-size: 82px;
+  line-height: 82px;
+  letter-spacing: -0.5px;
+  color:#151516 !important;
+  background: none;
+  text-align: center;
+  -webkit-text-fill-color:#151516;
+  margin-bottom: 60px !important;
+}
+
+
+.website-design .web-sec-5 .image-gridBox {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    gap: 18px;
+}
+
+.website-design .web-sec-5 .image-gridBox img {
+    width: 100%;
+    height: auto;
+}
+
+.website-design .web-sec-5 .t-btn {
+    background: linear-gradient(
+226deg, #2724CB, #5931AD);
+    padding: 14px 24px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: auto;
+    max-width: fit-content;
+    font-size: 16px;
+    line-height: 16px;
+    border-radius: 40px;
+    transition: 0.3s;
+    margin-top: 50px;
+}
+
+.website-design .web-sec-5 .t-btn svg {
+    transition: 0.3s;
+}
+
+.website-design .web-sec-5 .t-btn:hover svg {
+    transform: rotate(45deg);
+}
+
+.website-design .web-sec-5 {
+  background-color: #fff;
+  padding: 150px 0;
+}
+
+.website-design .web-sec-5 .container {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.website-design .web-sec-5 .text h2 {
+  max-width: 80%;
+  line-height: 1;
+  margin: auto;
+  text-align: center;
+}
+.website-design .web-sec-5 .text h2 {
+  line-height: 1;
+}
+
+.website-design .web-sec-5 .text .box {
+  border-bottom: 1px solid #000;
+  padding: 30px 0;
+  display: flex;
+  align-items: center;
+  column-gap: 25px;
+  flex-direction: column;
 }
 
 /* Section 2 */
-
-.website-design .gradian-bg {
-  background: #130a2b;
-  background: linear-gradient(360deg, rgb(19 10 43) 0%, rgb(0 0 0) 100%);
-}
 
 .website-design .web-sec-1 .img-box img {
   max-width: 100%;
@@ -140,9 +351,216 @@ body {
   line-height: 1.7em;
 }
 
+.marquee {
+    z-index: 2;
+}
+
 /* Section 3 */
 .website-design .web-sec-3 {
-  padding: 7% 0;
+  padding: 162px 0 285px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.web-sec-3 .text h2 {
+    font-size: 40px;
+    letter-spacing: 0;
+    margin: 0;
+}
+
+.web-sec-3 .text p {
+    opacity: 1 !important;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 32px;
+    max-width: 1170px;
+    letter-spacing: 0.2px;
+    margin-top: 10px;
+}
+
+.section-02 {
+    position: relative;
+    background: transparent;
+    overflow: hidden;
+}
+
+.section-02::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, transparent 0%, transparent 40%, #000000 90%);
+    z-index: 2;
+}
+
+.section-02 div{
+  position: relative;
+  z-index: 1;
+}
+
+.section-02::after
+ {
+    content: "";
+    width: 200%;
+    left: -50%;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    background: #1126E1;
+    height: 214px;
+    filter: blur(100px);
+    z-index: 0;
+}
+
+.web-sec-3 .bootomImage {
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: fit-content;
+    background: linear-gradient(0deg, #000000 0%, transparent 100%);
+    z-index: -1;
+}
+
+.section02fullScreen {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+  overflow: hidden;
+  
+}
+
+.section02fullScreen .col-lg-12{
+  position: relative;
+}
+
+.section02fullScreen .text h2 {
+    font-size: 40px;
+    line-height: 41px;
+    font-weight: 700;
+}
+
+.section02fullScreen .text p {
+    font-weight: 300;
+    max-width: 968px;
+    margin: 0 auto 0;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 0.1px;
+    margin-bottom: 40px;
+}
+
+.section02fullScreen .text .t-btn {
+    background: linear-gradient(226deg, #2724CB, #5931AD);
+    padding: 14px 24px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    font-size: 16px;
+    line-height: 16px;
+    border-radius: 40px;
+    transition: 0.3s;
+}
+
+.section02fullScreen .text .t-btn svg {
+    transition: 0.3s;
+}
+
+.section02fullScreen .text .t-btn:hover svg {
+    transform: rotate(45deg);
+}
+
+.section02fullScreen .text {
+  position: absolute;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    top: 0;
+    flex-direction: column;
+    width: 100%;
+    z-index: 0;
+}
+
+.section02fullScreen .text.fixed {
+  position: fixed;
+}
+
+section.section02fullScreen .img-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 100vh;
+    margin-bottom: 100vh;
+}
+
+section.section02fullScreen .img-box img:nth-child(2), section.section02fullScreen .img-box img:nth-child(4) {
+    margin-top: 500px;
+}
+
+.web-sec-3 .slick-list {
+    overflow: unset;
+}
+
+.web-sec-3 .slider .box {
+    height: 100%;
+    padding: 25px 45px 25px 25px;
+    border: 1px solid rgba(129, 124, 221, 0.605);
+    border-radius: 20px;
+    min-height: 480px;
+    background: rgba(3, 100, 255, 0.35);
+    color: #fff;
+    transform: rotate(4deg);
+    backdrop-filter:blur(10px);
+}
+
+.web-sec-3 .slider .col-lg-12 {
+    padding: 0 30px;
+}
+
+.web-sec-3 .slider .box img {
+    margin-bottom: 40px;
+}
+
+.web-sec-3 .slider .box h5 {
+    font-size: 22px;
+    line-height: unset;
+    font-family: 'Syne';
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 17px;
+    color:#fff;
+}
+
+.web-sec-3 .slider .box p {
+    font-weight: 300;
+    margin: 0;
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: 0.1px;
+    color:#fff;
+}
+
+.web-sec-3 .slider {
+    margin-top: 94px;
+}
+
+.web-sec-3 .slick-track .slick-slide:nth-child(2n) .box {
+        background: rgba(133, 76, 255, 0.35);
+    transform: rotate(-4deg);
 }
 
 .website-design .web-design-3 .main-box {
@@ -204,22 +622,26 @@ body {
 
 /* Section 4 */
 .website-design .home-sec-04 {
-  padding: 150px 0 0;
-  background: url(/services/web-design/sec04-bg.webp);
+  padding: 135px 0 0;
+  /* background: url(/services/web-design/sec04-bg.webp); */
 }
 
 .website-design .platform-sec {
   background-size: cover !important;
   background-repeat: no-repeat !important;
   background-position: center center !important;
-  padding-bottom: 120px;
+  padding-bottom: 65px;
+  background: none;
 }
 .website-design .techno-sec {
   position: relative;
 }
 
 .website-design .home-sec-04 .text h3 {
-  font-size: 55px;
+      font-size: 40px;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 40px;
 }
 
 .website-design .home-sec-04 ul.nav.nav-tabs {
@@ -521,6 +943,100 @@ body {
 
   /* Testimonials */
 }
+
+@media only screen and (max-width: 1440px) {
+  .website-design .inner-title .heading h1 {
+    font-size: 70px;
+    line-height: 80px;
+}
+.website-design .inner-title .heading p {
+    font-size: 20px;
+    line-height: 29px;
+}
+
+.website-design .inner-title {
+    padding: 180px 0 40px;
+}
+
+section.section02fullScreen .img-box img {
+    width: 390px;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+section.section02fullScreen .img-box {
+    justify-content: center;
+}
+
+.website-design .section-06 .bulletMainBox .bulletScroll li .imgBox, .website-design .section-06 .bulletMainBox .bulletScroll li .imgBox img {
+    max-width: 350px;
+    height: fit-content;
+    object-fit: cover;
+}
+
+.website-design .section-06 .bulletMainBox .bulletScroll li .text {
+    max-width: 600px;
+}
+
+.website-design .section-06 .bulletMainBox .text h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.website-design .section-06 .bulletMainBox .text p {
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.website-design .section-06 .bulletMainBox .bulletScroll li::before {
+    left: -50px;
+}
+
+.website-design .section-06 .bulletMainBox .bulletScroll li::after {
+    left: -39px;
+}
+
+.website-design .section-06 {
+    padding-bottom: 100px;
+}
+
+.website-design .web-sec-5 .container {
+    padding: 0;
+}
+
+.website-design .web-sec-5 {
+    padding: 100px 0;
+}
+
+.web-sec-3 .slider .box {
+    padding: 20px 20px 20px 15px;
+    min-height: 440px;
+}
+
+.web-sec-3 .slider .box img {
+    margin-bottom: 20px;
+}
+
+.web-sec-3 .slider .box h5 {
+    font-size: 19px;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+
+.web-sec-3 .slider .box p {
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.website-design .platform-sec {
+    padding-bottom: 0;
+}
+
+.website-design .home-sec-07 {
+    padding-bottom: 100px;
+}
+}
+
 @media only screen and (max-width: 1199px) {
   .website-design .web-sec-2 .row {
     padding: 30px 0;
@@ -555,7 +1071,46 @@ body {
   .website-design .home-sec-04 {
     padding: 60px 0 0;
   }
+
+  header .header-nav ul li a {
+    font-size: 15px;
 }
+
+section.section02fullScreen .img-box img:nth-child(2), section.section02fullScreen .img-box img:nth-child(4) {
+    margin-top: 300px;
+}
+
+section.section02fullScreen .img-box img {
+    height: auto;
+}
+
+.website-design .section-06 .bulletMainBox .bulletScroll li .imgBox, .website-design .section-06 .bulletMainBox .bulletScroll li .imgBox img {
+    max-width: 280px;
+}
+
+.website-design .section-06 .bulletMainBox .bulletScroll li .text {
+    max-width: 550px;
+}
+
+.website-design .section-06 .bulletMainBox .bulletScroll li {
+    padding-bottom: 50px;
+}
+
+.website-design .web-sec-5 .text h2 {
+    font-size: 60px;
+    margin-bottom: 30px !important;
+    line-height: normal;
+}
+
+.web-sec-3 .slider {
+    margin-top: 20px;
+}
+
+.website-design .web-sec-3 {
+    padding: 100px 0 100px;
+}
+}
+
 @media only screen and (max-width: 1024px) {
   .website-design .web-sec-2 .text h4 br {
     display: none;
@@ -678,6 +1233,7 @@ body {
     height: 36px;
   }
 }
+
 @media only screen and (max-width: 991px) {
   .website-design .inner-title .heading h1 {
     font-size: 32px;
@@ -812,6 +1368,62 @@ body {
   .website-design .home-sec-07 .text h2 {
     font-size: 28px;
   }
+
+  .website-design .inner-title .heading h1 {
+    line-height: 45px;
+}
+
+.section02fullScreen .text p {
+    max-width: 700px;
+    font-size: 16px;
+    line-height: 25px;
+    color: #fff;
+}
+
+.website-design .section-06 .text p {
+    font-size: 16px;
+    line-height: 27px;
+    margin: 0;
+}
+
+.website-design .section-06 .bulletMainBox {
+    margin-top: 50px;
+}
+
+.website-design .section-06 .bulletMainBox .bulletScroll {
+    padding-left: 50px;
+}
+
+.website-design .section-06 .bulletMainBox .bulletScroll li {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+}
+
+.website-design .section-06 .bulletMainBox .bulletScroll li .text {
+    max-width: 100%;
+}
+
+.website-design .section-06 .bulletMainBox .bulletScroll li .imgBox, .website-design .section-06 .bulletMainBox .bulletScroll li .imgBox img {
+    max-width: unset;
+}
+
+.website-design .web-sec-5 .image-gridBox {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.web-sec-3 .slider .col-lg-12 {
+    padding: 0 20px;
+}
+
+.website-design .web-sec-3 .text h2 {
+    font-size: 40px;
+}
+
+.website-design .web-sec-3 .text p {
+    font-size: 16px;
+    line-height: 27px;
+}
 }
 
 @media only screen and (max-width: 767px) {
@@ -938,7 +1550,67 @@ body {
     height: 36px;
     top: 60px;
   }
+
+  .section02fullScreen .text p {
+    max-width: 550px;
+    margin-bottom: 20px;
 }
+
+.section02fullScreen .text h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+section.section02fullScreen .img-box img {
+    max-width: 100%;
+}
+
+
+section.section02fullScreen .img-box img:nth-child(2), section.section02fullScreen .img-box img:nth-child(4) {
+    margin-top: 250px;
+}
+
+.website-design .section-06 .text h2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+.website-design .section-06 .text p {
+    text-align: center;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.website-design .section-06 .bulletMainBox .text h2 {
+    font-size: 20px;
+}
+
+.website-design .section-06 .bulletMainBox .text p {
+    font-size: 15px;
+}
+
+.website-design .web-sec-3 .text h2 {
+    text-align: center;
+}
+
+.website-design .web-sec-3 .text p {
+    text-align: center;
+    font-size: 15px;
+}
+
+.web-sec-3 .slider .box {
+    min-height: 100%;
+}
+
+canvas.backgroundHover {
+    display: none;
+}
+
+br{
+  display: none;
+}
+}
+
 @media only screen and (max-width: 575px) {
   .website-design .text-22 p {
     font-size: 13px !important;
@@ -1039,4 +1711,63 @@ body {
   .website-design .home-sec-07 {
     padding: 40px 0 0;
   }
+
+  .section02fullScreen .text h2 {
+    font-size: 25px;
+    line-height: 35px;
+}
+
+.section02fullScreen .text p {
+    max-width: 300px;
+    font-size: 15px;
+}
+
+section.section02fullScreen .img-box img:nth-child(2), section.section02fullScreen .img-box img:nth-child(4) {
+    margin-top: 140px;
+}
+
+.website-design .section-06 .bulletMainBox .bulletScroll li .imgBox, .website-design .section-06 .bulletMainBox .bulletScroll li .imgBox img {
+    max-width: 260px;
+    width: 100%;
+    height: fit-content;
+}
+
+.website-design .section-06 .bulletMainBox .bulletScroll {
+    padding: 0;
+}
+
+.website-design .web-sec-5 .text h2 {
+    font-size: 40px;
+}
+
+.website-design .web-sec-5 .image-gridBox {
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+}
+
+.website-design .web-sec-3 {
+    padding: 70px 0;
+}
+
+.web-sec-3 .slider .col-lg-12 {
+    padding: 0 5px;
+}
+
+.web-sec-3 .slider .box {
+    transform: rotate(0deg) !important;
+}
+
+.website-design .home-sec-04 .text h3 {
+    text-align: center;
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.website-design .web-sec-5 {
+    padding: 50px 0;
+}
+
+.website-design .web-sec-5 .t-btn {
+    margin-top: 25px;
+}
 }

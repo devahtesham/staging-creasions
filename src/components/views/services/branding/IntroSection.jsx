@@ -1,25 +1,20 @@
 import Link from 'next/link'
 import React from 'react'
 
-export default function IntroSection() {
+export default function IntroSection({ bannerData }) {
   return (
-    <section
-      className="inner-title"
-      style={{
-        backgroundImage:
-          "url(/services/web-design/web-design-bg.webp)"
-      }}
-    >
+    <section className="inner-title">
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
             <div className="heading">
               <h1>
-                Top Branding Agency Dallas Build a Powerful Brand Identity
+                {bannerData?.banner_title_heading || "Branding Services"}
               </h1>
-              <p>
-                Creasions, a leading <Link href="/services/branding-agency-dallas">branding agency Dallas</Link>, specializes in digital branding services designed to create unique and impactful brand identities. Through strategic innovation, creative design, and audience-driven messaging, we help businesses establish a strong market presence. As a trusted branding agency in Dallas, our goal is to craft memorable and effective brand experiences that drive engagement and business growth.
-              </p>
+              <div dangerouslySetInnerHTML={{ 
+                __html: bannerData?.banner_text || 
+                "Creasions establishes itself as a prominent digital branding agency, delivering comprehensive branding agency services in the USA. With a focus on innovation and strategic thinking, Creasions is dedicated to shaping distinctive brand identities that resonate with target audiences." 
+              }} />
             </div>
           </div>
         </div>

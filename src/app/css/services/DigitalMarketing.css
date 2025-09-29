@@ -1,23 +1,31 @@
 body {
   overflow-x: clip;
+  background-color: #040208;
+  scroll-behavior: smooth;
+}
+
+@media (min-width: 1500px) {
+    .container{
+        max-width: 1400px;
+    }
 }
 
 .digital-marketing .inner-title {
-  min-height: 620px;
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
-  background-color: #fff;
   color: #fff;
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
 }
 
-.digital-marketing .inner-title .heading {
-  max-width: 1100px;
-  margin-top: 100px;
+.bggradient {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.digital-marketing .inner-title {
+    padding: 180px 0 100px;
 }
 
 .digital-marketing .mission-sec .box-2 h4 {
@@ -27,13 +35,16 @@ body {
 
 .digital-marketing .inner-title .heading h1 {
   color: #fff;
-  font-size: 56px;
+     font-size: 95px;
+    font-weight: 700;
+    line-height: 105px;
 }
 
 .digital-marketing .inner-title .heading p {
   color: #fff;
-  font-size: 22px;
-  margin-top: 10px;
+  font-size: 25px;
+    margin-top: 10px;
+    font-weight: 300;
 }
 
 .digital-marketing .inner-title .heading p a{
@@ -117,7 +128,6 @@ body {
 .digital-marketing .sticky-sec .row {
   position: sticky;
   top: 0;
-  background: #080413;
 }
 
 .digital-marketing .web-sec-2 {
@@ -132,16 +142,27 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+section.dropsection {
+    padding-top: 100px;
+}
+.dropsection .imgfalldrop {
+    width: 100%;
+    height: fit-content;
+}
 
 .digital-marketing .web-sec-2 .text p {
-  color: #ffffffa6;
-  font-size: 16px;
-  line-height: 1.7em;
+color: #FFFFFF;
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 300;
+    letter-spacing: 0.1px;
+    margin-bottom: 0;
+    margin-top: 20px;
 }
 
 .digital-marketing .web-sec-2 .row {
   border-bottom: 1px solid #ffffff75;
-  padding: 80px 0;
+  padding: 40px 0;
 }
 .digital-marketing .web-sec-2 .video-box video {
   width: 100%;
@@ -369,15 +390,237 @@ body {
 
 /* Section 5 */
 .digital-marketing .digital-sec-05 {
-  padding: 150px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* background-position: center bottom; */
-  background-image: url("/services/digital-marketing/sec05-bg.webp") !important;
+  padding: 180px 0;
 }
 
+section{
+  position: relative;
+  z-index: 1;
+}
+
+canvas.backgroundHover {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+}
+
+.digital-marketing .section-06 .bulletMainBox .bulletScroll li .imgBox {
+    width: 364px;
+    height: 224px;
+}
+
+.digital-marketing .section-06 .bulletMainBox li.active .text h2 {
+    -webkit-text-fill-color: transparent;
+    transition: 1s;
+}
+
+.digital-marketing .section-06 {
+    padding-bottom: 50px;
+    padding-top: 150px;
+}
+
+.digital-marketing .section-06 .text h2 {
+    font-size: 40px;
+    line-height: normal;
+    letter-spacing: 0;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.digital-marketing .section-06 .text p {
+    opacity: 1;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 0.2px;
+    color:#fff;
+}
+
+.digital-marketing .section-06 .bulletMainBox {
+    margin-top: 80px;
+}
+
+.digital-marketing .section-06 .bulletMainBox .text h2 {
+    -webkit-text-fill-color: #fff;
+    letter-spacing: 3px;
+    transition: 1s;
+}
+
+.digital-marketing .section-06 .bulletMainBox .bulletScroll li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding-bottom: 100px;
+}
+
+.digital-marketing .section-06 .bulletMainBox .bulletScroll li .text {
+    max-width: 666px;
+}
+
+.digital-marketing .section-06 .bulletMainBox .bulletScroll {
+    padding-left: 80px;
+}
+
+.digital-marketing .section-06 .bulletMainBox .bulletScroll li::before {
+    content: "";
+    position: absolute;
+    left: -80px;
+    top: 20px;
+    background: #3A32F6;
+    height: 26px;
+    width: 26px;
+    border-radius: 100%;
+}
+
+
+.section-02 .text h4 {
+    color: #FFFFFF;
+    font-size: 40px;
+    margin-bottom: 0;
+}
+
+.section-02 .box {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.section-02 .box .text {
+    background: rgba(71, 70, 70, 0.3);
+    backdrop-filter: blur(3px);
+    padding: 0 100px;
+    border-radius: 0 33px 33px 0;
+    border: 1px solid #2B27FA;
+    max-width: 100%;
+    margin: 0;
+    height: 576px;
+    display: flex
+;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-02 .box .text p {
+    color: #BEBEBE;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.text {}
+
+.section-02 .slider {
+    position: relative;
+}
+
+.section-02 .slider .customDotNumbers {
+    position: absolute;
+    bottom: 40px;
+    right: 174px;
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Lato';
+    font-weight: 500;
+}
+
+.section-02 .slider .slide-arrow {right: auto;left: 0;bottom: 40px;top: auto;}
+
+.section-02 .slider .prev-arrow {
+    right: 110px;
+    left: auto;
+    z-index: 9;
+}
+
+.section-02 .slider .next-arrow {
+    right: 44px;
+    left: auto;
+}
+
+.section-02 .slider .slide-arrow::before {
+    content: none;
+}
+
+.section-02 .text {
+    margin-left: auto;
+    /* margin-bottom: -80px; */
+    max-width: 750px;
+}
+
+.section-02 .slider {
+    margin-top: -100px;
+}
+
+.digital-marketing .section-06 .bulletMainBox .bulletScroll li::after {
+    content: "";
+    position: absolute;
+    background: #3A32F6;
+    top: 20px;
+    left: -69px;
+    width: 4px;
+    height: 0%;
+    transition: 1s all;
+}
+
+.digital-marketing .section-06 .bulletMainBox .bulletScroll li.active::after {
+    height: 100%;
+    transition: 1s all;
+}
+
+.digital-marketing .section-06 .bulletMainBox .bulletScroll li:last-child {
+    padding-bottom: 0;
+}
+
+.digital-marketing .section-06 .bulletMainBox .bulletScroll li .imgBox, .digital-marketing .section-06 .bulletMainBox .bulletScroll li .imgBox img {
+    overflow: hidden;
+    transition: 1s all;
+    border-radius: 30px;
+}
+
+.digital-marketing .section-06 .bulletMainBox .bulletScroll li .imgBox{
+  opacity: 0;
+  transition: 1s all;
+}
+.digital-marketing .section-06 .bulletMainBox .bulletScroll li.active .imgBox{
+  opacity: 1;
+  transition: 1s all;
+}
+
+.digital-marketing .section-06 .bulletMainBox .bulletScroll li .imgBox:hover, .digital-marketing .section-06 .bulletMainBox .bulletScroll li .imgBox img:hover {
+    transition: 1s;
+    transform: scale(1.1);
+}
+
+section.dropsection {
+    position: relative;
+}
+
+section.dropsection::after {content: "";position: absolute;left: 0;right: 0;bottom: 0;background: linear-gradient(0deg, #040208d1 50%, transparent 100%);width: 100%;height: 100%;z-index: 0;}
+
 .digital-marketing .digital-sec-05 .text h3 {
-  font-size: 55px;
+     font-size: 45px;
+    font-weight: 700;
+    line-height: 60px;
+    -webkit-text-fill-color: #fff;
+    text-transform: capitalize;
+}
+
+.marquee {
+    z-index: 2;
+}
+
+
+section.dropsection .container-fluid.p-0 {
+    position: relative;
+    z-index: 1;
 }
 
 .digital-marketing .text h3 {
@@ -405,6 +648,12 @@ body {
   background-image: url(/small-tabbing-bg.png);
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.section-02 .box img {
+    width: 530px;
+    max-width: 530px;
+    min-width: 530px;
 }
 .digital-marketing .digital-sec-05 ul.nav.nav-tabs a.nav-link.active,
 .digital-marketing .digital-sec-05 ul.nav.nav-tabs a.nav-link:hover {
@@ -484,21 +733,7 @@ body {
   left: 0;
   z-index: 999;
 }
-/* .digital-sec-05 .main-tabbing-content .main-box .box .img-box {
-  background-color: white;
-  width: 83px;
-  height: 83px;
-  flex-shrink: 0;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-}
-.digital-sec-05 .main-tabbing-content .main-box .box .img-box img {
-  height: 65px;
-  object-fit: contain;
-} */
+
 .digital-marketing .digital-sec-05 .main-tabbing-content .main-box .align-boxes {
   display: flex;
   column-gap: 15px;
@@ -674,6 +909,427 @@ body {
   }
 }
 
+.floatingButtonsBox{
+  position: relative;
+  width: 100%;
+  height: 0px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 400px;
+  max-width: 1934px;
+}
+
+.floatingButtonsBox .t-btn {
+    padding: 14px 24px;
+    color: #fff;
+    border-radius: 40px;
+    width: fit-content;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    background: #4A35F4;
+    backdrop-filter: blur(80px);
+    position: absolute;
+    bottom: 0;
+}
+
+.floatingButtonsBox .btnBox:nth-child(+2n) .t-btn {
+    background: #AE5FF0;
+}
+
+.floatingButtonsBox .btnBox:nth-child(+3n) .t-btn {
+    background: #5600AE;
+}
+
+.floatingButtonsBox .btnBox:nth-child(+4n) .t-btn {
+    background: #528AF9;
+}
+
+.floatingButtonsBox .btnBox:nth-child(+5n) .t-btn {
+    background: #8A1BF4;
+}
+
+.floatingButtonsBox .btnBox:nth-child(+6n) .t-btn {
+    background: #0F77BB;
+}
+
+
+.floatingButtonsBox .btnBox:nth-child(1) .t-btn {
+    right: 266px;
+    bottom: 96px;
+    transform: rotate(5deg);
+}
+
+.floatingButtonsBox .btnBox:nth-child(2) .t-btn {
+    bottom: 50px;
+    left: 100px;
+    transform: rotate(25deg);
+}
+
+.floatingButtonsBox .btnBox:nth-child(3) .t-btn {
+    bottom: 155px;
+    transform: rotate(25deg);
+}
+
+.floatingButtonsBox .btnBox:nth-child(4) .t-btn {
+    left: 375px;
+}
+
+.floatingButtonsBox .btnBox:nth-child(5) .t-btn {
+    left: 400px;
+    bottom: 50px;
+}
+
+.floatingButtonsBox .btnBox:nth-child(6) .t-btn {
+    bottom: 96px;
+    left: 256px;
+    transform: rotate(-4deg);
+}
+
+.floatingButtonsBox .btnBox:nth-child(7) .t-btn {
+    left: 520px;
+    bottom: 100px;
+}
+
+.floatingButtonsBox .btnBox:nth-child(8) .t-btn {
+    left: 600px;
+}
+
+.floatingButtonsBox .btnBox:nth-child(9) .t-btn {
+    left: 660px;
+    bottom: 50px;
+}
+
+.floatingButtonsBox .btnBox:nth-child(10) .t-btn {
+    left: 768px;
+    transform: rotate(32deg);
+    bottom: 61px;
+}
+
+.floatingButtonsBox .btnBox:nth-child(11) .t-btn {right: 0;bottom: 100px ;}
+
+.floatingButtonsBox .btnBox:nth-child(12) .t-btn {
+    right: 20px;
+    bottom: 50px;
+}
+
+.floatingButtonsBox .btnBox:nth-child(13) .t-btn {
+    right: 0;
+    bottom: 0px;
+}
+
+.floatingButtonsBox .btnBox:nth-child(14) .t-btn {
+    right: 370px;
+}
+
+.floatingButtonsBox .btnBox:nth-child(15) .t-btn {
+    right: 164px;
+    transform: rotate(-29deg);
+    bottom: 44px;
+}
+
+.floatingButtonsBox .btnBox:nth-child(16) .t-btn {
+    right: 724px;
+}
+
+.floatingButtonsBox .btnBox:nth-child(17) .t-btn {
+    right: 600px;
+    bottom: 50px;
+}
+
+.floatingButtonsBox .btnBox:nth-child(18) .t-btn {
+    right: 400px;
+    bottom: 71px;
+    transform: rotate(14deg);
+}
+
+.floatingButtonsBox .btnBox:nth-child(19) .t-btn {
+    right: 759px;
+    bottom: 83px;
+    transform: rotate(-15deg);
+}
+
+.floatingButtonsBox .btnBox:nth-child(20) .t-btn {
+    left: 0;
+}
+
+@keyframes jumble {
+      0%   { transform: translate(0, 0); }
+      20%  { transform: translate(-2px, 1px); }
+      40%  { transform: translate(2px, -1px); }
+      60%  { transform: translate(-1px, 2px); }
+      80%  { transform: translate(1px, -2px); }
+      100% { transform: translate(0, 0); }
+    }
+    .floatingButtonsBox:hover .btnBox:not(:hover) {
+      animation: jumble 0.5s ease-in-out infinite;
+    }
+    .floatingButtonsBox .btnBox:hover {
+      /* transform: scale(1.1); */
+      background-color: inherit;
+      animation: none;
+    }
+
+@media only screen and (max-width: 1900px){
+    .floatingButtonsBox {
+    max-width: 1900px;
+    margin-right: auto;
+    margin-left: auto;
+}
+  .floatingButtonsBox .btnBox:nth-child(10) .t-btn {
+    left: 720px;
+    transform: rotate(21deg);
+    bottom: 92px;
+}
+.floatingButtonsBox .btnBox:nth-child(19) .t-btn{
+    right: 719px;
+    bottom: 109px;
+    transform: rotate(9deg);
+}
+}
+@media only screen and (max-width: 1800px){
+    .floatingButtonsBox {
+    max-width: 1800px;
+    margin-right: auto;
+    margin-left: auto;
+}
+  .floatingButtonsBox .btnBox:nth-child(15) .t-btn {
+    right: 149px;
+    transform: rotate(-45deg);
+    bottom: 55px;
+}
+
+.floatingButtonsBox .btnBox:nth-child(14) .t-btn {
+    right: 338px;
+}
+.floatingButtonsBox .btnBox:nth-child(16) .t-btn {
+    right: 695px;
+}
+
+    .floatingButtonsBox .btnBox:nth-child(19) .t-btn {
+        right: 700px;
+        bottom: 99px;
+        transform: rotate(0deg);
+    }
+        .floatingButtonsBox .btnBox:nth-child(10) .t-btn {
+        left: 691px;
+        transform: rotate(-25deg);
+        bottom: 147px;
+    }
+}
+@media only screen and (max-width: 1700px){
+    .floatingButtonsBox {
+    max-width: 1700px;
+    margin-right: auto;
+    margin-left: auto;
+}
+  .floatingButtonsBox {
+    margin-top: 300px;
+}
+
+.floatingButtonsBox .btnBox:nth-child(8) .t-btn {
+    left: 539px;
+}
+    .floatingButtonsBox .btnBox:nth-child(15) .t-btn {
+        right: 118px;
+        transform: rotate(-60deg);
+        bottom: 68px;
+    }
+    .floatingButtonsBox .btnBox:nth-child(14) .t-btn {
+        right: 290px;
+    }
+        .floatingButtonsBox .btnBox:nth-child(16) .t-btn {
+        right: 655px;
+    }
+    .floatingButtonsBox .btnBox:nth-child( .t-btn1)
+ {
+    right: 250px;
+    bottom: 97px;
+    transform: rotate(20deg);
+}
+.floatingButtonsBox .btnBox:nth-child(18) .t-btn {
+    right: 330px;
+    bottom: 71px;
+    transform: rotate(14deg);
+}
+.floatingButtonsBox .btnBox:nth-child(17) .t-btn {
+    right: 530px;
+    bottom: 50px;
+}
+    .floatingButtonsBox .btnBox:nth-child(19) .t-btn {
+        right: 597px;
+        bottom: 99px;
+        transform: rotate(0deg);
+    }
+}
+@media only screen and (max-width: 1600px){
+  .floatingButtonsBox {
+    max-width: 1400px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+    .floatingButtonsBox .btnBox:nth-child(8) .t-btn {
+        left: 550px;
+        bottom: 149px;
+    }
+        .floatingButtonsBox .btnBox:nth-child(19) .t-btn {
+        right: 206px;
+        bottom: 156px;
+        transform: rotate(0deg);
+    }
+    .floatingButtonsBox .btnBox:nth-child(10) .t-btn
+ {
+        left: 744px;
+        transform: rotate(-31deg);
+        bottom: 157px;
+    }
+
+    .floatingButtonsBox .btnBox:nth-child(1) .t-btn
+ {
+    right: 238px;
+    bottom: 106px;
+    transform: rotate(5deg);
+}
+}
+@media only screen and (max-width: 1440px){
+  .floatingButtonsBox {
+    max-width: 1200px;
+}
+
+.floatingButtonsBox .btnBox:nth-child(17) .t-btn {
+    right: auto;
+    left: 240px;
+    bottom: 147px;
+}
+
+.floatingButtonsBox .btnBox:nth-child(18) .t-btn {
+    bottom: 198px;
+    transform: rotate(6deg);
+    right: 335px;
+}
+
+.floatingButtonsBox .btnBox:nth-child(8) .t-btn {
+    left: 530px;
+}
+
+.floatingButtonsBox .btnBox:nth-child(19) .t-btn {
+    right: 22px;
+    transform: rotate(17deg);
+    bottom: 170px;
+}
+
+.floatingButtonsBox .btnBox:nth-child(1) .t-btn {
+    right: auto;
+    left: -22px;
+    transform: rotate(47deg);
+    bottom: 100px;
+}
+}
+@media only screen and (max-width: 1199px){
+  .floatingButtonsBox {
+    margin-top: 400px;
+    max-width: 1026px;
+}
+
+.floatingButtonsBox .btnBox:nth-child(16) .t-btn {
+    bottom: 197px;
+    right: auto;
+    left: 137px;
+}
+
+.floatingButtonsBox .btnBox:nth-child(4) .t-btn {
+    bottom: 193px;
+    transform: rotate(45deg);
+    left: 366px;
+}
+
+.floatingButtonsBox .btnBox:nth-child(18) .t-btn {
+    transform: rotate(0deg);
+    right: 314px;
+    bottom: 198px;
+}
+
+.floatingButtonsBox .btnBox:nth-child(10) .t-btn {
+    left: auto;
+    right: 45px;
+    bottom: 241px;
+    transform: rotate(-22deg);
+}
+
+.floatingButtonsBox .btnBox:nth-child(9) .t-btn {
+    left: 209px;
+    bottom: 233px;
+    transform: rotate(29deg);
+}
+}
+@media only screen and (max-width: 1024px){
+  .floatingButtonsBox .t-btn {
+    position: relative;
+    transform: unset !important;
+    left: unset !important;
+    right: unset !important;
+    bottom: unset !important;
+    top: unset !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    font-size: 13px;
+}
+
+.floatingButtonsBox {
+    margin: 0;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    justify-items: center;
+    padding: 50px 15px;
+}
+
+.floatingButtonsBox .btnBox {
+    width: 100%;
+}
+}
+@media only screen and (max-width: 991px){
+  .floatingButtonsBox {
+    grid-template-columns: 1fr 1fr;
+}
+}
+@media only screen and (max-width: 767px){
+  section.dropsection {
+    padding-top: 0 !important;
+}
+
+section.dropsection .text h2 {
+    font-size: 30px;
+}
+}
+@media only screen and (max-width: 575px){
+    .floatingButtonsBox {
+    grid-template-columns: 1fr;
+}
+    section.dropsection .text h2 {
+        font-size: 25px;
+    }
+
+    .floatingButtonsBox {
+    height: 500px;
+    overflow-x: hidden;
+    padding: 0 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.floatingButtonsBox .t-btn {
+    padding: 15px;
+}
+
+.floatingButtonsBox::-webkit-scrollbar {
+  width: 5px;
+}
+}
+
 @media only screen and (max-width: 1600px) {
   .digital-marketing .digital-marketing-sec-4 a.t-btn.t-btn-arrow-contact.t-btn-arrow {
     max-width: 310px !important;
@@ -689,8 +1345,43 @@ body {
     left: -30px;
     z-index: 999;
   }
+
+  .section-02 .text {
+    max-width: 700px;
+}
+}
+@media only screen and (max-width: 1440px) {
+  section.dropsection h2 {
+    margin: 0 !important;
+}
+
+.section-02 .text {
+        max-width: 550px;
+    }
+
+    .section-02 .box img {
+    width: 450px;
+    max-width: 450px;
+    min-width: 450px;
+}
+
+.section-02 .box .text {
+    padding: 0 40px;
+    height: 500px;
+}
+
+.section-02 .slider {
+    margin-top: -60px;
+}
+
+.section-02 .text {
+    max-width: 600px;
+}
 }
 @media only screen and (max-width: 1199px) {
+    section.dropsection {
+    padding-top: 50px;
+}
   .digital-marketing .web-sec-2 .row {
     padding: 30px 0;
   }
@@ -719,6 +1410,54 @@ body {
   .digital-marketing .digital-sec-05 {
     padding: 60px 0 0;
   }
+
+  header .header-nav ul li a {
+    font-size: 15px;
+}
+
+.digital-marketing .inner-title .heading h1 {
+    font-size: 70px;
+    line-height: 80px;
+}
+
+.digital-marketing .inner-title .heading p {
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.digital-marketing .section-06 .bulletMainBox .bulletScroll li::before {
+    left: -50px;
+}
+
+.digital-marketing .section-06 .bulletMainBox .bulletScroll li::after {
+    left: -39px;
+}
+
+.digital-marketing .section-06 .bulletMainBox .bulletScroll li .text {
+    max-width: 500px;
+}
+
+.digital-marketing .section-06 .text h2 {
+    font-size: 30px;
+}
+.section-02 .box .text p {
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.section-02 .text h4 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.section-02 .text {
+    max-width: 440px;
+    margin-bottom: -20px;
+}
+
+section.section-02 {
+    padding-top: 70px;
+}
 }
 
 @media only screen and (max-width: 1024px) {
@@ -955,6 +1694,79 @@ body {
   .digital-marketing .home-sec-07 .text h2 {
     font-size: 28px;
   }
+  canvas.backgroundHover {
+    display: none;
+}
+br{
+  display: none;
+}
+
+.digital-marketing .inner-title .heading h1 {
+    line-height: 50px;
+}
+
+.digital-marketing .inner-title {
+    min-height: 0;
+    padding-bottom: 40px;
+}
+
+.digital-marketing .section-06 {
+    padding-top: 70px;
+}
+
+.digital-marketing .section-06 .bulletMainBox .bulletScroll {
+    padding-left: 0;
+}
+
+.digital-marketing .section-06 .bulletMainBox .bulletScroll li::before, .digital-marketing .section-06 .bulletMainBox .bulletScroll li::after {
+    content: none;
+}
+
+.digital-marketing .section-06 .bulletMainBox .bulletScroll li {
+    flex-direction: column;
+    text-align: center;
+}
+
+.digital-marketing .section-06 .bulletMainBox .bulletScroll li .text {
+    max-width: 100%;
+}
+
+.digital-marketing .section-06 .bulletMainBox .bulletScroll li .imgBox {
+    max-width: 100%;
+    width: 100%;
+    height: fit-content;
+    margin-top: 20px;
+}
+
+.digital-marketing .section-06 .bulletMainBox .bulletScroll li .imgBox img {
+    width: 100%;
+    height: fit-content;
+}
+
+.digital-marketing .digital-sec-05 .text h3 {
+    line-height: 35px;
+    margin-bottom: 40px;
+}
+
+.section-02 .box img {
+    min-width: 300px;
+}
+
+.section-02 .slider {
+    margin: 0;
+}
+
+.section-02 .text {
+    max-width: 100%;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+.section-02 .box .text {
+    height: fit-content;
+    padding: 40px;
+}
 }
 @media only screen and (max-width: 767px) {
   .digital-marketing .web-sec-2 .text h4 {
@@ -1090,6 +1902,52 @@ body {
     height: 36px;
     top: 60px;
   }
+
+  .digital-marketing .section-06 .text h2, .digital-marketing .section-06 .text p {
+    text-align: center;
+}
+
+.section-02 .box .text {
+}
+
+.section-02 .box {
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-02 .box img {
+    min-width: 100%;
+    width: 100%;
+    max-width: 100%;
+}
+
+.section-02 .box .text {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 33px;
+}
+
+.section-02 .box .text {}
+
+.section-02 .slider .slide-arrow {
+    bottom: -8px;
+    left: 50%;
+    right: auto;
+    transform: translateY(-50%);
+}
+
+.section-02 .slider .next-arrow {
+    left: 53%;
+}
+
+.section-02 .slider .prev-arrow {
+    left: 35%;
+}
+
+.section-02 .slider .customDotNumbers {
+    bottom: -20px;
+    right: 50%;
+    transform: translateY(-50%);
+}
 }
 @media only screen and (max-width: 575px) {
   .digital-marketing .inner-title .heading p {
@@ -1190,4 +2048,71 @@ body {
   .digital-marketing .home-sec-07 {
     padding: 40px 0 0;
   }
+
+      .section-02 .slider .customDotNumbers {
+        bottom: -50px;
+        left: 0;
+        transform: translateY(0%);
+        width: 100%;
+        min-width: 100%;
+        text-align: center;
+    }
+
+    .digital-marketing .inner-title .heading h1 {
+    line-height: 35px;
+}
+
+.digital-marketing .inner-title .heading p {
+    line-height: 23px;
+}
+
+.digital-marketing .section-06 .text h2 {
+    font-size: 25px;
+}
+
+.digital-marketing .section-06 .text p {
+    font-size: 15px;
+    line-height: 26px;
+}
+
+.digital-marketing .section-06 .bulletMainBox .bulletScroll li {
+    padding-bottom: 50px;
+}
+
+.digital-marketing .digital-sec-05 .text h3 {
+    font-size: 25px;
+    text-align: center;
+}
+
+.section-02 .text h4 {
+    font-size: 22px;
+}
+
+section.section-02 {
+    padding-top: 20px;
+}
+
+.section-02 .box .text {
+    padding: 25px;
+    height: 600px;
+}
+
+.section-02 .slider .slide-arrow {
+    bottom: -40px;
+    transform: translate(0);
+}
+
+.section-02 .slider .prev-arrow {
+    left: 0;
+}
+
+.section-02 .slider .next-arrow {
+    left: auto;
+    right: 10px;
+}
+
+.digital-marketing .home-sec-07 {
+    padding-top: 100px;
+}
+
 }

@@ -1,23 +1,21 @@
 body {
   overflow-x: clip;
 }
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1400px;
+    }
+  }
 
-.branding .inner-title {
-  min-height: 620px;
-  display: flex;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-  background-color: #fff;
-  color: #fff;
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
+.pageBg {
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
 }
 
-.branding .inner-title .heading {
-  max-width: 1030px;
-  margin-top: 100px;
+.branding .inner-title {
+ padding-top: 180px;
+ padding-bottom: 90px;
 }
 
 .branding .mission-sec .box-2 h4 {
@@ -25,15 +23,32 @@ body {
   text-align: center;
 }
 
+.dropsection .imgfalldrop {
+    width: 100%;
+    height: fit-content;
+}
+
 .branding .inner-title .heading h1 {
   color: #fff;
-  font-size: 66px;
+    font-size: 95px;
+    font-weight: 700;
+    line-height: 105px;
+}
+
+.mainFaqBox button.toogleBtn.toogleBtn-hidden svg, .mainFaqBox .upprtext svg {
+    visibility: hidden;
 }
 
 .branding .inner-title .heading p {
-  color: #fff;
-  font-size: 22px;
-  margin-top: 10px;
+ color: #fff;
+    font-size: 25px;
+    margin-top: 10px;
+    font-weight: 300;
+    margin-bottom: 0;
+}
+
+main.branding {
+    background: #040208;
 }
 
 .branding .inner-title .heading p a{
@@ -42,14 +57,54 @@ body {
 
 /* Section 2 */
 
-.branding .gradian-bg {
-  background: #130a2b;
-  background: linear-gradient(360deg, rgb(19 10 43) 0%, rgb(0 0 0) 100%);
+.branding .branding-sec-5 .container {
+    z-index: 1;
+    position: relative;
+}
+
+.branding .branding-sec-5 .nav-tabs {
+    justify-content: center;
+}
+
+section.dropsection {
+    padding-top: 100px;
+}
+
+.branding .branding-sec-5::after {
+    background:linear-gradient(0deg, #020106f0 50%, #00000000);
+    content: "";
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: revert-layer;
+    right: revert-layer;
+    width: 100%;
+    height: 100%;
+}
+
+.branding .branding-sec-5 {
+    position: relative;
+}
+
+.branding .branding-sec-5 .banner-video {
+    position: absolute !important;
+    width: 100% !important;
+    left: 0;
+    top: auto;
+    z-index: 0;
+    bottom: 0;
+}
+
+.branding .branding-sec-5 .banner-video video{
+    width: 100% !important;
+    height: 385px;
+    object-fit: cover;
 }
 
 .branding .web-sec-1 .img-box img {
-  max-width: 100%;
-  width: 93%;
+ max-width: 100%;
+    width: 100%;
+    border-radius: 30px;
 }
 
 /* Section 3 */
@@ -64,15 +119,136 @@ body {
   padding: 5% 0 5%;
 }
 
-.branding .web-sec-2 .row {
-  border-bottom: 1px solid #ffffff75;
-  padding: 60px 120px;
+.mainFaqBox button.toogleBtn, .mainFaqBox .upprtext {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border: 0;
+    margin-bottom: 50px;
+    background: transparent;
+     transition: 0.3s;
 }
 
-.branding .sticky-sec .row {
-  position: sticky;
-  top: 0;
-  background: #080413;
+.mainFaqBox button.toogleBtn span:nth-child(1), .mainFaqBox .upprtext span:nth-child(1) {
+    color: #878C91;
+    font-size: 20px;
+    font-family: '__nextjs-Geist';
+}
+
+.mainFaqBox .upprtext span:nth-child(1){
+  color:#fff;
+}
+
+.mainFaqBox button.toogleBtn span:nth-child(2), .mainFaqBox .upprtext span:nth-child(2) {
+    color: #FFFFFF;
+    font-family: 'Syne';
+    font-size: 35px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+.customFaqBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    padding: 0;
+}
+
+.customFaqBox .two-box {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.customFaqBox .two-box.secondBox {
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.customFaqBox .two-box .t-btn-arrow {
+    min-width: fit-content;
+    background: linear-gradient(
+50deg, #2724CB, #5931AD);
+    padding: 14px 24px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.customFaqBox .two-box .t-btn-arrow:hover {
+    background: linear-gradient(
+224deg, #2724CB, #5931AD);
+    transition: 0.3s;
+}
+
+.customFaqBox .two-box p {
+    color: #878C91;
+    font-size: 16px;
+    margin: 0;
+    font-family: 'Lato';
+    letter-spacing: -0.2px;
+    max-width: 632px;
+    line-height: 25px;
+}
+
+.customFaqBox .imgBox {
+    max-width: 281px;
+}
+
+.customFaqBox .imgBox img {
+    border-radius: 12px;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transform: rotate(-10deg);
+}
+
+.customFaqBox .text {
+    width: 100%;
+}
+
+.customFaqBox .two-box span.counter {
+    color: #ffff;
+    font-size: 80px;
+    font-family: 'Lato';
+    letter-spacing: -1px;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.customFaqBox .two-box span {
+    color: #878C91;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 56px;
+}
+
+.mainFaqBox button.toogleBtn.toogleBtn-hidden {
+    margin-bottom: 0;
+    transition: 0.3s;
+        height: 0;
+    overflow: hidden;
+}
+
+.mainFaqBox .dataBox.open .row {
+    padding: 40px;
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: rgba(71, 70, 70, 0.3);
+    border-radius: 33px;
+    backdrop-filter: blur(4px);
+    border: 1px solid #2b27fa78;
+    margin-bottom: 40px;
+}
+
+.mainFaqBox .dataBox.open .row .upprtext {
+    margin-bottom: 0;
+    padding: 0;
 }
 
 /* Headings and Paragarphs */
@@ -124,13 +300,15 @@ body {
 }
 
 .branding .text p {
-  color: #ffffffa6;
-  font-size: 18px;
-  line-height: 1.7em;
+  color: #fff;
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 300;
+    letter-spacing: 0.1px;
 }
 
 .branding .web-sec-2.web-design-2 h2 {
-  font-size: 44px;
+  font-size: 40px;
 }
 
 /* Section 3 */
@@ -150,14 +328,11 @@ body {
 
 .branding .branding-sec-03 {
   padding: 200px 0 120px;
-  background-color: #fff;
   padding-bottom: 0;
 }
 
-.branding .branding-sec-03 .marquee {
-  margin-top: 0px;
-  margin-bottom: 10px;
-  padding: 50px;
+.branding .marquee {
+  margin-top: 0px ;
 }
 
 .branding .sec-03 .marquee .track {
@@ -173,10 +348,6 @@ body {
   to {
     transform: translateX(-100%);
   }
-}
-
-.branding .branding-sec-03 .sticky-sec .row {
-  background-color: #fff;
 }
 
 .branding .branding-sec-03 .sticky-sec .row .text p {
@@ -238,13 +409,6 @@ body {
 }
 
 /* Section 4 */
-.branding section#services_provide {
-  background: #000;
-}
-
-.branding section#services_provide {
-  background: #000;
-}
 
 .branding .brading-sec-5 {
   padding: 120px 0;
@@ -258,7 +422,7 @@ body {
   overflow: hidden;
   padding: 100px 0;
   /* background-image: url(/Services-We-Provide-bg-1-1.webp) !important; */
-  background-color: black;
+  /* background-color: black; */
   background-size: 100% 100%;
   background-position: top center;
   position: relative;
@@ -284,9 +448,12 @@ body {
   text-align: center !important;
 }
 
-.branding section#services_provide .text h2 {
-  text-align: left;
+.testiSection {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
+
 .branding #services_provide .tab-content > .tab-pane h2{
   margin-bottom: 0;
   font-family: 'Lato', sans-serif;
@@ -415,10 +582,6 @@ body {
 
 .branding .branding-sec-5 {
   padding: 120px 0;
-  background-image: url(/services/branding/sec-5-bg.webp);
-  background-position: bottom center;
-  background-size: 100%;
-  background-repeat: no-repeat;
 }
 
 .branding .branding-sec-5 .text p {
@@ -436,8 +599,103 @@ body {
   color: #fff;
 }
 
+.section6 .box .content-box
+{
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #5431b0;
+    background: #fff;
+    box-shadow: 10px 10px 15px 0 rgba(48, 39, 199, .25);
+    width: 280px;
+    padding: 16px;
+    display: none;
+    transition: 1.5s;
+    position: absolute;
+    top: 85px;
+    left: 0;
+    z-index: 999;
+}
+
+.section6 .box:hover .content-box {
+    display: block;
+    position: absolute;
+    left: 0;
+    z-index: 999;
+    text-align:left;
+}
+
+.section6 .box .content-box h6 {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: Lato, sans-serif;
+    background: linear-gradient(270deg, #8354ff, #9591ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #fff0;
+    line-height: 20px !important;
+    margin-bottom: 10px;
+}
+
+.section6 .box .content-box p{
+      font-size: 12px;
+    color: #1e1e1e;
+    line-height: 1.3em;
+    font-weight: 400;
+}
+
+
+.branding .section6 .text h2 {
+    background: transparent;
+    -webkit-text-fill-color: white;
+}
+
+.branding .section6 .text h6 {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Lato';
+    line-height: 56px;
+}
+
+section.section6 {
+    padding-top: 149px;
+    padding-bottom: 49px;
+}
+
+.gridBoxes .box {
+    margin: 0 10px 0 0px;
+}
+
+.gridBoxes {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 37px;
+    flex-wrap: wrap;
+}
+
+.section4 img{
+    margin:7.5px;
+}
+
+
+.section6 .box {
+    position: relative;
+    display: inline-flex;
+}
+
+.section4 .img-box{
+  text-align: center;
+
+      flex-wrap: wrap;
+    display: flex
+;
+    justify-content: center;
+}
+
 .branding .branding-sec-5 .nav-tabs {
-  justify-content: normal;
+  /* justify-content: normal; */
   column-gap: 10px;
   margin: 20px 0 80px;
   row-gap: 10px;
@@ -446,15 +704,17 @@ body {
 }
 
 .branding .branding-sec-5 ul.nav.nav-tabs .nav-link {
-  text-transform: uppercase;
-  border-radius: 30px;
-  padding: 15px 10px;
+  text-transform: capitalize;
+  border-radius: 2000px;
+  padding: 29px 25px;
   border: 0;
-  background-color: #000;
+      background: linear-gradient(158deg, #000000, #1B1B1B);
+    box-shadow: inset 0px 3px 3px #ffffff33;
   background-size: cover;
   color: #fff;
-  font-weight: 500;
-  font-size: 15px;
+  font-weight: 600;
+  font-size: 16px;
+      line-height: 10px;
 }
 .branding .button-readmore {
   margin-top: 20px;
@@ -618,6 +878,427 @@ body {
   }
 }
 
+.floatingButtonsBox{
+  position: relative;
+  width: 100%;
+  height: 0px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 400px;
+  max-width: 1934px;
+}
+
+.floatingButtonsBox .t-btn {
+    padding: 14px 24px;
+    color: #fff;
+    border-radius: 40px;
+    width: fit-content;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    background: #4A35F4;
+    backdrop-filter: blur(80px);
+    position: absolute;
+    bottom: 0;
+}
+
+.floatingButtonsBox .btnBox:nth-child(+2n) .t-btn {
+    background: #AE5FF0;
+}
+
+.floatingButtonsBox .btnBox:nth-child(+3n) .t-btn {
+    background: #5600AE;
+}
+
+.floatingButtonsBox .btnBox:nth-child(+4n) .t-btn {
+    background: #528AF9;
+}
+
+.floatingButtonsBox .btnBox:nth-child(+5n) .t-btn {
+    background: #8A1BF4;
+}
+
+.floatingButtonsBox .btnBox:nth-child(+6n) .t-btn {
+    background: #0F77BB;
+}
+
+
+.floatingButtonsBox .btnBox:nth-child(1) .t-btn {
+    right: 266px;
+    bottom: 96px;
+    transform: rotate(5deg);
+}
+
+.floatingButtonsBox .btnBox:nth-child(2) .t-btn {
+    bottom: 50px;
+    left: 100px;
+    transform: rotate(25deg);
+}
+
+.floatingButtonsBox .btnBox:nth-child(3) .t-btn {
+    bottom: 155px;
+    transform: rotate(25deg);
+}
+
+.floatingButtonsBox .btnBox:nth-child(4) .t-btn {
+    left: 375px;
+}
+
+.floatingButtonsBox .btnBox:nth-child(5) .t-btn {
+    left: 400px;
+    bottom: 50px;
+}
+
+.floatingButtonsBox .btnBox:nth-child(6) .t-btn {
+    bottom: 96px;
+    left: 256px;
+    transform: rotate(-4deg);
+}
+
+.floatingButtonsBox .btnBox:nth-child(7) .t-btn {
+    left: 520px;
+    bottom: 100px;
+}
+
+.floatingButtonsBox .btnBox:nth-child(8) .t-btn {
+    left: 600px;
+}
+
+.floatingButtonsBox .btnBox:nth-child(9) .t-btn {
+    left: 660px;
+    bottom: 50px;
+}
+
+.floatingButtonsBox .btnBox:nth-child(10) .t-btn {
+    left: 768px;
+    transform: rotate(32deg);
+    bottom: 61px;
+}
+
+.floatingButtonsBox .btnBox:nth-child(11) .t-btn {right: 0;bottom: 100px ;}
+
+.floatingButtonsBox .btnBox:nth-child(12) .t-btn {
+    right: 20px;
+    bottom: 50px;
+}
+
+.floatingButtonsBox .btnBox:nth-child(13) .t-btn {
+    right: 0;
+    bottom: 0px;
+}
+
+.floatingButtonsBox .btnBox:nth-child(14) .t-btn {
+    right: 370px;
+}
+
+.floatingButtonsBox .btnBox:nth-child(15) .t-btn {
+    right: 164px;
+    transform: rotate(-29deg);
+    bottom: 44px;
+}
+
+.floatingButtonsBox .btnBox:nth-child(16) .t-btn {
+    right: 724px;
+}
+
+.floatingButtonsBox .btnBox:nth-child(17) .t-btn {
+    right: 600px;
+    bottom: 50px;
+}
+
+.floatingButtonsBox .btnBox:nth-child(18) .t-btn {
+    right: 400px;
+    bottom: 71px;
+    transform: rotate(14deg);
+}
+
+.floatingButtonsBox .btnBox:nth-child(19) .t-btn {
+    right: 759px;
+    bottom: 83px;
+    transform: rotate(-15deg);
+}
+
+.floatingButtonsBox .btnBox:nth-child(20) .t-btn {
+    left: 0;
+}
+
+@keyframes jumble {
+      0%   { transform: translate(0, 0); }
+      20%  { transform: translate(-2px, 1px); }
+      40%  { transform: translate(2px, -1px); }
+      60%  { transform: translate(-1px, 2px); }
+      80%  { transform: translate(1px, -2px); }
+      100% { transform: translate(0, 0); }
+    }
+    .floatingButtonsBox:hover .btnBox:not(:hover) {
+      animation: jumble 0.5s ease-in-out infinite;
+    }
+    .floatingButtonsBox .btnBox:hover {
+      /* transform: scale(1.1); */
+      background-color: inherit;
+      animation: none;
+    }
+
+@media only screen and (max-width: 1900px){
+    .floatingButtonsBox {
+    max-width: 1900px;
+    margin-right: auto;
+    margin-left: auto;
+}
+  .floatingButtonsBox .btnBox:nth-child(10) .t-btn {
+    left: 720px;
+    transform: rotate(21deg);
+    bottom: 92px;
+}
+.floatingButtonsBox .btnBox:nth-child(19) .t-btn{
+    right: 719px;
+    bottom: 109px;
+    transform: rotate(9deg);
+}
+}
+@media only screen and (max-width: 1800px){
+    .floatingButtonsBox {
+    max-width: 1800px;
+    margin-right: auto;
+    margin-left: auto;
+}
+  .floatingButtonsBox .btnBox:nth-child(15) .t-btn {
+    right: 149px;
+    transform: rotate(-45deg);
+    bottom: 55px;
+}
+
+.floatingButtonsBox .btnBox:nth-child(14) .t-btn {
+    right: 338px;
+}
+.floatingButtonsBox .btnBox:nth-child(16) .t-btn {
+    right: 695px;
+}
+
+    .floatingButtonsBox .btnBox:nth-child(19) .t-btn {
+        right: 700px;
+        bottom: 99px;
+        transform: rotate(0deg);
+    }
+        .floatingButtonsBox .btnBox:nth-child(10) .t-btn {
+        left: 691px;
+        transform: rotate(-25deg);
+        bottom: 147px;
+    }
+}
+@media only screen and (max-width: 1700px){
+    .floatingButtonsBox {
+    max-width: 1700px;
+    margin-right: auto;
+    margin-left: auto;
+}
+  .floatingButtonsBox {
+    margin-top: 300px;
+}
+
+.floatingButtonsBox .btnBox:nth-child(8) .t-btn {
+    left: 539px;
+}
+    .floatingButtonsBox .btnBox:nth-child(15) .t-btn {
+        right: 118px;
+        transform: rotate(-60deg);
+        bottom: 68px;
+    }
+    .floatingButtonsBox .btnBox:nth-child(14) .t-btn {
+        right: 290px;
+    }
+        .floatingButtonsBox .btnBox:nth-child(16) .t-btn {
+        right: 655px;
+    }
+    .floatingButtonsBox .btnBox:nth-child( .t-btn1)
+ {
+    right: 250px;
+    bottom: 97px;
+    transform: rotate(20deg);
+}
+.floatingButtonsBox .btnBox:nth-child(18) .t-btn {
+    right: 330px;
+    bottom: 71px;
+    transform: rotate(14deg);
+}
+.floatingButtonsBox .btnBox:nth-child(17) .t-btn {
+    right: 530px;
+    bottom: 50px;
+}
+    .floatingButtonsBox .btnBox:nth-child(19) .t-btn {
+        right: 597px;
+        bottom: 99px;
+        transform: rotate(0deg);
+    }
+}
+@media only screen and (max-width: 1600px){
+  .floatingButtonsBox {
+    max-width: 1400px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+    .floatingButtonsBox .btnBox:nth-child(8) .t-btn {
+        left: 550px;
+        bottom: 149px;
+    }
+        .floatingButtonsBox .btnBox:nth-child(19) .t-btn {
+        right: 206px;
+        bottom: 156px;
+        transform: rotate(0deg);
+    }
+    .floatingButtonsBox .btnBox:nth-child(10) .t-btn
+ {
+        left: 744px;
+        transform: rotate(-31deg);
+        bottom: 157px;
+    }
+
+    .floatingButtonsBox .btnBox:nth-child(1) .t-btn
+ {
+    right: 238px;
+    bottom: 106px;
+    transform: rotate(5deg);
+}
+}
+@media only screen and (max-width: 1440px){
+  .floatingButtonsBox {
+    max-width: 1200px;
+}
+
+.floatingButtonsBox .btnBox:nth-child(17) .t-btn {
+    right: auto;
+    left: 240px;
+    bottom: 147px;
+}
+
+.floatingButtonsBox .btnBox:nth-child(18) .t-btn {
+    bottom: 198px;
+    transform: rotate(6deg);
+    right: 335px;
+}
+
+.floatingButtonsBox .btnBox:nth-child(8) .t-btn {
+    left: 530px;
+}
+
+.floatingButtonsBox .btnBox:nth-child(19) .t-btn {
+    right: 22px;
+    transform: rotate(17deg);
+    bottom: 170px;
+}
+
+.floatingButtonsBox .btnBox:nth-child(1) .t-btn {
+    right: auto;
+    left: -22px;
+    transform: rotate(47deg);
+    bottom: 100px;
+}
+}
+@media only screen and (max-width: 1199px){
+  .floatingButtonsBox {
+    margin-top: 400px;
+    max-width: 1026px;
+}
+
+.floatingButtonsBox .btnBox:nth-child(16) .t-btn {
+    bottom: 197px;
+    right: auto;
+    left: 137px;
+}
+
+.floatingButtonsBox .btnBox:nth-child(4) .t-btn {
+    bottom: 193px;
+    transform: rotate(45deg);
+    left: 366px;
+}
+
+.floatingButtonsBox .btnBox:nth-child(18) .t-btn {
+    transform: rotate(0deg);
+    right: 314px;
+    bottom: 198px;
+}
+
+.floatingButtonsBox .btnBox:nth-child(10) .t-btn {
+    left: auto;
+    right: 45px;
+    bottom: 241px;
+    transform: rotate(-22deg);
+}
+
+.floatingButtonsBox .btnBox:nth-child(9) .t-btn {
+    left: 209px;
+    bottom: 233px;
+    transform: rotate(29deg);
+}
+}
+@media only screen and (max-width: 1024px){
+  .floatingButtonsBox .t-btn {
+    position: relative;
+    transform: unset !important;
+    left: unset !important;
+    right: unset !important;
+    bottom: unset !important;
+    top: unset !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    font-size: 13px;
+}
+
+.floatingButtonsBox {
+    margin: 0;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    justify-items: center;
+    padding: 50px 15px;
+}
+
+.floatingButtonsBox .btnBox {
+    width: 100%;
+}
+}
+@media only screen and (max-width: 991px){
+  .floatingButtonsBox {
+    grid-template-columns: 1fr 1fr;
+}
+}
+@media only screen and (max-width: 767px){
+  section.dropsection {
+    padding-top: 0 !important;
+}
+
+section.dropsection .text h2 {
+    font-size: 30px;
+}
+}
+@media only screen and (max-width: 575px){
+    .floatingButtonsBox {
+    grid-template-columns: 1fr;
+}
+    section.dropsection .text h2 {
+        font-size: 25px;
+    }
+
+    .floatingButtonsBox {
+    height: 500px;
+    overflow-x: hidden;
+    padding: 0 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.floatingButtonsBox .t-btn {
+    padding: 15px;
+}
+
+.floatingButtonsBox::-webkit-scrollbar {
+  width: 5px;
+}
+}
+
 @media only screen and (max-width: 1600px) {
   /* .branding .inner-title .heading {
     padding-left: 50px;
@@ -639,7 +1320,51 @@ body {
     margin-right: 15px;
   }
 }
+
+@media only screen and (max-width:1440px){
+  .mainFaqBox .dataBox.open .row .upprtext span:nth-child(2) {
+    font-size: 25px;
+}
+section.dropsection h2 {
+    margin: 0 !important;
+}
+}
+
 @media only screen and (max-width: 1199px) {
+  .branding .home-sec-07 {
+    padding: 100px 0;
+}
+  .branding .home-sec-07 .main-testi-nav .box img {
+    width: 100%;
+    height: fit-content;
+}
+  section.section6 {
+    padding-top: 80px;
+    padding-bottom: 0px;
+}
+  .branding .branding-sec-5 {
+    padding: 80px 0;
+}
+  section.dropsection {
+    padding-top: 50px;
+}
+  .customFaqBox .two-box span {
+    font-size: 14px;
+    line-height: 40px;
+}
+  .customFaqBox .two-box span.counter {
+    font-size: 50px;
+}
+  .customFaqBox .imgBox {
+    max-width: 150px;
+}
+
+  .branding .web-sec-2 {
+    padding-bottom: 20px;
+}
+  header .header-nav ul li a {
+    font-size: 15px;
+}
   .branding .inner-title .heading {
     padding-left: 0px;
     text-align: left;
@@ -675,6 +1400,19 @@ body {
   }
 }
 @media only screen and (max-width: 1024px) {
+
+  .branding .branding-sec-5 ul.nav.nav-tabs .nav-link{
+    padding: 19px 20px;
+    font-size: 14px;
+}
+  .mainFaqBox button.toogleBtn span:nth-child(2) {
+    font-size: 25px;
+}
+  .branding .text p {
+    font-size: 15px;
+    line-height: 26px;
+    margin-bottom: 0;
+}
   .branding .inner-title .heading h1 {
     font-size: 48px;
     text-align: left;
@@ -683,10 +1421,14 @@ body {
     font-size: 18px;
     text-align: left;
   }
+  .branding .web-sec-1 .img-box img {
+    height: fit-content;
+}
 
   .branding .inner-title {
-    min-height: 550px;
-  }
+    padding-top: 140px;
+    padding-bottom: 50px;
+}
   .branding .branding-sec-03 .text h4{
     font-size: 22px;
   }
@@ -742,6 +1484,26 @@ body {
 }
 
 @media only screen and (max-width: 991px) {
+
+  .customFaqBox .two-box.secondBox {
+    flex-direction: column;
+    text-align: center !important;
+}
+  .gridBoxes {
+    gap: 0px;
+}
+.customFaqBox {
+    flex-direction: column;
+    text-align: center;
+}
+
+.customFaqBox .two-box {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+    justify-content: center;
+}
+
   .branding .text h4 br {
     display: none;
   }
@@ -770,12 +1532,20 @@ body {
     text-align: center;
   }
   .branding .branding-sec-03 .text p {
-    text-align: left;
+    text-align: center;
   }
   .branding .branding-sec-03 .row.align-items-center.pb-0.reverse-webdesign{
     display: flex;
     flex-direction: column-reverse;
   }
+
+  .mainFaqBox .dataBox.open .row .upprtext span:nth-child(3) {
+    display: none;
+}
+
+.mainFaqBox .dataBox.open .row .upprtext {
+    margin-bottom: 20px;
+}
 
   .branding .web-sec-4 .text {
     max-width: 100%;
@@ -869,6 +1639,14 @@ body {
 
 }
 @media only screen and (max-width: 767px) {
+
+  .branding .web-sec-2.web-design-2 h2 {
+    text-align: center;
+}
+
+  .branding .inner-title .heading h1 {
+    line-height: 40px;
+}
   .branding .inner-title .heading p {
     font-size: 13px;
     text-align: center;
@@ -876,9 +1654,6 @@ body {
   .branding .inner-title .heading h1 {
     font-size: 32px;
     text-align: center;
-  }
-  .branding .inner-title {
-    min-height: 450px;
   }
   .branding .text h4 {
     font-size: 18px;
@@ -890,10 +1665,32 @@ body {
     font-size: 22px;
     margin-bottom: 20px;
   }
+      .branding .text p {
+        text-align: center;
+    }
+
+    .mainFaqBox .dataBox.open .row {
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+    .mainFaqBox button.toogleBtn svg {
+    height: 20px;
+    width: 20px;
+    transform: scale(2.5);
+}
+
+.mainFaqBox button.toogleBtn {
+    margin-bottom: 30px;
+}
+
+    .mainFaqBox button.toogleBtn span:nth-child(2), .mainFaqBox .upprtext span:nth-child(2) {
+    text-align: center;
+}
 
   .branding .web-sec-2 {
     padding-left: 10px;
-    padding-right: 20px;
+    padding-right: 10px;
   }
   .branding .web-sec-5 .mid-box p strong {
     margin-top: 0px;
@@ -1024,9 +1821,77 @@ body {
   }
   
   .branding .web-sec-2.web-design-2 h2 {
-    font-size: 24px;
+    font-size: 17px;
   }
   
+  .branding .marquee img {
+    height: fit-content;
+}
+
+.customFaqBox .two-box {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin-bottom: 10px;
+}
+
+    .branding .branding-sec-5 {
+        padding: 40px 0;
+    }
+
+        .branding .branding-sec-5 .text p {
+        letter-spacing: 0px;
+        text-align: center;
+    }
+
+        .branding .branding-sec-5 .text h4 {
+        text-align: center;
+    }
+
+        section.section6 {
+        padding-top: 50px;
+    }
+
+    .branding .section6 .text h2 {
+    font-size: 17px;
+    text-align: center;
+}
+
+.section6 .box img {
+    height: fit-content;
+    width: fit-content;
+}
+
+.gridBoxes {
+    justify-content: center;
+    text-align: center;
+}
+
+.section6 .box .content-box{
+    display: none !important;
+}
+
+.customFaqBox .two-box.secondBox {
+        gap: 20px;
+    }
+
+    .mainFaqBox .dataBox.open .row .upprtext span:nth-child(2) {
+        font-size: 15px;
+    }
+
+.mainFaqBox .dataBox.open .row .upprtext span:nth-child(1) {
+    display: none;
+}
+
+    .mainFaqBox button.toogleBtn span:nth-child(2) {
+        font-size: 16px;
+    }
+
+.branding .branding-sec-03 {
+    padding: 110px 15px 120px;
+    padding-bottom: 0;
+}
+
   .branding .home-sec-07 .main-testi-box p {
     font-size: 13px;
 }

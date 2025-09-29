@@ -26,10 +26,10 @@ export default function ServicesWrapper({ params }) {
     console.log('[template]', template)
     // Template mapping object
     const templateComponents = {
-        'web-development': WebsiteDevelopmentDallas,    // new code requied
-        'brand-agency': BrandingAgencyDallas,           // new code requied
-        'website-design': WebsiteDesignDallas,          // new code requied
-        'digital-marketing': DigitalMarketingDallas,    // new code requied
+        'web-development': WebsiteDevelopmentDallas,                        // DONE
+        'website-design': WebsiteDesignDallas,                              // DONE
+        'digital-marketing': DigitalMarketingDallas,                        // DONE
+        'brand-agency': BrandingAgencyDallas,                               //DONE
         'graphic-design': GraphicDesigningDallas,                           // DONE
         'software-development': SoftwareDevelopmentDallas,                 // DONE
         'application-development': ApplicationDevelopmentDallas,           // DONE
@@ -39,10 +39,10 @@ export default function ServicesWrapper({ params }) {
         'listing-service': ListingServiceDallas,                           // DONE
         'content-marketing': ContentMarketingDallas,                       // DONE
         'email-marketing': EmailMarketingDallas,                           // DONE
-        'search-engine-marketing': SearchEngineMarketingDallas,              // DONE
-        'ecommerce-marketing': EcommerceMarketingDallas,                    // DONE
-        'social-media-marketing': SocialMediaMarketingDallas,                // DONE
-        'seo-service': SeoServicesDallas,                                    // pending due to content
+        'search-engine-marketing': SearchEngineMarketingDallas,            // DONE
+        'ecommerce-marketing': EcommerceMarketingDallas,                   // DONE
+        'social-media-marketing': SocialMediaMarketingDallas,              // DONE
+        'seo-service': SeoServicesDallas,                                  // DONE
     };
 
     // Get the component based on template name

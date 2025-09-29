@@ -457,8 +457,14 @@ export const getAllMenuPages = async () => {
 };
 
 export const getServiceDetailPage = async (template,slug) => {
+  let url;
+  if(template === 'brand-agency'){
+    url = `${BASE_URL}/api/${template}-template/${slug}?slug=true`;
+  }else{
+    url = `${BASE_URL}/api/${template}-service-template/${slug}?slug=true`;
+  }
   try {
-    const response = await fetch(`${BASE_URL}/api/${template}-service-template/${slug}?slug=true`, {
+    const response = await fetch(url, {
       method: 'GET',
       headers: {
         'Accept': 'application/json',
@@ -499,4 +505,33 @@ export const transformButtonUrl = (url) => {
 export const getpageSlugByHeading = (heading) => {
   return heading?.toLowerCase()?.split(' ').join('-');
 }
+
+/**
+ * Fetches mega menu data from the API
+ * @returns {Promise<Array>} Promise that resolves to the menu data
+ */
+export const fetchMegaMenu = async () => {
+  console.log('fetchMegaMenu')
+  try {
+    const response = await fetch(`${BASE_URL}/api/menu`, {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+        'Authorization': `Bearer ${STATIC_TOKEN}`,
+        'Content-Type': 'application/json'
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    return data?.data || [];
+
+  } catch (error) {
+    console.error('Error fetching mega menu:', error);
+    return [];
+  }
+};
 

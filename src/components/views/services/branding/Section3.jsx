@@ -1,13 +1,53 @@
-import React from 'react'
+"use client";
+import React, { useState } from "react";
+import Link from "next/link";
 import Image from 'next/image'
-
 
 import Image1 from '/public/services/branding/branding-01.webp'
 import Image2 from '/public/services/branding/branding-02.webp'
+import faqcustombg from '/public/services/branding/faqcustombg.png'
 
 import Marquee from '/public/services/branding/marquee.png'
 
-export default function Section3() {
+export default function Section3({ whyChooseData }) {
+      const [openIndex, setOpenIndex] = useState(1);
+    
+      const toggleAccordion = (index) => {
+        setOpenIndex(openIndex === index ? null : index);
+      };
+    
+      // Fallback accordion items if API data is not available
+      const fallbackAccordianItems = [
+        {
+            no:"01",
+          heading: " Leveraging Digital Marketing Expertise",
+          answer:"Leveraging digital marketing for any business requires a broad set of talent, tools, and strength in numbers. Let our team take care of the heavy lifting while we work with you to identify which services will benefit you the most and how we can maximize your reach with each marketing channel. Leveraging digital marketing for any business requires a broad set of talent, tools, and strength in numbers. Let our team take care .",
+          image: Image1,
+          percentage: "+98%",
+          link:"#"
+        },
+        {
+            no:"02",
+          heading: "Why choose Creasions for Branding Services",
+          answer:"Leveraging digital marketing for any business requires a broad set of talent, tools, and strength in numbers. Let our team take care of the heavy lifting while we work with you to identify which services will benefit you the most and how we can maximize your reach with each marketing channel. Leveraging digital marketing for any business requires a broad set of talent, tools, and strength in numbers. Let our team take care .",
+          image: Image2,
+          percentage: "+98%",
+          link:"#"
+        }
+      ];
+
+      // Use API data if available, otherwise fallback to static data
+      const AccordianItems = whyChooseData?.features?.length > 0 
+        ? whyChooseData.features.map((feature, index) => ({
+            no: String(index + 1).padStart(2, '0'),
+            heading: feature.title,
+            answer: feature.text,
+            image: feature.image || feature.background_image_url || (index === 0 ? Image1 : Image2),
+            percentage: feature.achievement_heading || "+98%",
+            link: feature.button_link || "#",
+            buttonText: feature.buttton_text || "Get Started"
+          }))
+        : fallbackAccordianItems;
     return (
         <div className='sec-03'>
             <div className="marquee">
@@ -27,51 +67,94 @@ export default function Section3() {
                 ))}
             </div>
             <section className='branding-sec-03'>
-                <div className="container-fluid pl-0 sticky-sec">
-                    <div className="row align-items-center pb-0">
-                        <div className="col-lg-5 col-md-12">
-                            <div className="img-box">
-                                <Image
-                                    decoding="async"
-                                    src={Image1}
-                                    alt="Website Design"
-                                    className="lazy img-fluid w-100 entered loaded"
-                                />
-                            </div>
-                        </div>
-                        <div className="col-lg-6 col-md-12">
-                            <div className="text box-2">
-                                <h4>
-                                    The Importance of Branding Services for Companies, Brands, Businesses, and E-commerce Stores
-
-                                </h4>
-                                <p>
-                                    In the fast-paced world of modern commerce, where every pixel counts, branding services stand as the cornerstone for companies, brands, businesses, and e-commerce stores. Imagine your brand emerging from the digital noise, crafted by visionary designers whose expertise turns abstract ideas into compelling visual stories. These services don’t just create logos; they shape identities that resonate, inspire, and connect deeply with your audience. For e-commerce stores, a distinctive brand can be the difference between fleeting visits and loyal customers. In essence, effective branding is the secret weapon that transforms businesses, blending creativity with strategic precision to leave an indelible mark in the marketplace.
-
-
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="row align-items-center pb-0 reverse-webdesign">
-                        <div className="offset-lg-1 col-lg-6 col-md-12">
-                            <div className="text box-2">
-                                <h4>Why Choose Creasions - The Leading Branding Agency Dallas?
-                                </h4>
-                                <p>
-                                    Choosing Creasions as your branding agency Dallas means partnering with a team dedicated to creativity, strategy, and precision. Our expert branding services blend innovation with minimalism, ensuring your brand stands out in the competitive market. From logo design and brand identity development to strategic messaging, we craft solutions that make an impact. At Creasions, a top branding agency in Dallas, we focus on delivering sleek, memorable designs that resonate with your audience and build long-term brand loyalty. Elevate your brand with Creasions—where creativity meets strategy for lasting success.
-                                </p>
-                            </div>
-                        </div>
-                        <div className="col-lg-5 p-0 col-md-12">
-                            <div className="img-box">
-
-                                <Image
-                                    decoding="async"
-                                    src={Image2}
-                                    alt="Mobile App Design"
-                                    className="lazy img-fluid w-100 entered loaded"
-                                />
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-12">
+                            <div className="mainFaqBox">
+                            {AccordianItems.map((item, index) => (
+                                <div key={index} className="FaqBox">
+                                <button
+                                    onClick={() => toggleAccordion(index)}
+                                    className={`toogleBtn toogleBtn-wrapper ${openIndex === index ? "toogleBtn-hidden" : ""}`}
+                                >
+                                    <span>{item.no}</span>
+                                    <span>{item.heading}</span>
+                                    <span><svg width="71" height="71" viewBox="0 0 71 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M30.2812 47.877L48.1652 47.877L48.1652 29.993" stroke="white" strokeWidth="3" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+                                    <path d="M23.1211 22.834L47.914 47.6269" stroke="white" strokeWidth="3" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+                                    </svg>
+                                    </span>
+                                </button>
+            
+                                {openIndex === index && (
+                                    <div className={`dataBox ${openIndex === index ? "open" : ""}`}>
+                                    <div className="row" style={{backgroundImage: `url(${faqcustombg.src})`}}>
+                                        <div className="upprtext">
+                                            <span>{item.no}</span>
+                                            <span>{item.heading}</span>
+                                            <span><svg width="71" height="71" viewBox="0 0 71 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M30.2812 47.877L48.1652 47.877L48.1652 29.993" stroke="white" strokeWidth="3" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+                                            <path d="M23.1211 22.834L47.914 47.6269" stroke="white" strokeWidth="3" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+                                            </svg>
+                                            </span>
+                                        </div>
+                                        <div className="customFaqBox">
+                                        <div className="imgBox">
+                                            {item.image && (
+                                                <div className="faq-image">
+                                                <Image
+                                                    src={item.image}
+                                                    alt="FAQ Related Visual"
+                                                    className="img-fluid"
+                                                    width={400}
+                                                    height={300}
+                                                    unoptimized={typeof item.image === 'string' && item.image.startsWith('http')}
+                                                />
+                                                </div>
+                                            )}
+                                        </div>
+                                        <div className="text">
+                                            <div className="two-box">
+                                                <span className="counter">{item.percentage}</span>
+                                                <span>Successful Projects</span>
+                                            </div>
+                                            <div className="two-box secondBox">
+                                            <div dangerouslySetInnerHTML={{ __html: item.answer }} />
+                                            <Link className="t-btn t-btn-arrow" href={item.link}>
+                                            {item.buttonText || "Get Started"} 
+                                            <svg
+                                                width="24"
+                                                height="24"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                d="M14.4297 5.92969L20.4997 11.9997L14.4297 18.0697"
+                                                stroke="white"
+                                                strokeWidth="1.5"
+                                                strokeMiterlimit="10"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                />
+                                                <path
+                                                d="M3.5 12H20.33"
+                                                stroke="white"
+                                                strokeWidth="1.5"
+                                                strokeMiterlimit="10"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                />
+                                            </svg>
+                                            </Link>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                )}
+                                </div>
+                            ))}
                             </div>
                         </div>
                     </div>

@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import VideoOptimizer from '@/components/ui/VideoOptimizer';
 
 import Image from "next/image";
 
@@ -10,13 +11,14 @@ import ServiceImg4 from "/public/services/branding/branding-sec-03-4.webp";
 import ServiceImg5 from "/public/services/branding/branding-sec-03-5.webp";
 import ServiceImg6 from "/public/services/branding/branding-sec-03-6.webp";
 import ServiceImg7 from "/public/services/branding/branding-sec-03-7.webp";
-import Link from "next/link";
+import brandingtabsvideoposter from "/public/services/branding/brandingtabsvideoposter.png";
 
 
-export default function Section5() {
+export default function Section5({ ourServicesData }) {
     const [activeTab, setActiveTab] = useState("tabs-1");
 
-    const services = [
+    // Fallback services data
+    const fallbackServices = [
         {
             id: "tabs-1",
             title: "Logo Design",
@@ -68,6 +70,16 @@ export default function Section5() {
         },
     ];
 
+    // Use API data if available, otherwise fallback to static data
+    const services = ourServicesData?.services?.length > 0 
+        ? ourServicesData.services.map((service, index) => ({
+            id: `tabs-${index + 1}`,
+            title: service.title,
+            description: service.description,
+            image: service.image || fallbackServices[index]?.image || ServiceImg1
+          }))
+        : fallbackServices;
+
     const handleTabChange = (id) => {
         setActiveTab(id);
     };
@@ -75,12 +87,18 @@ export default function Section5() {
     return (
         <div className="gradian-bg">
             <section className="branding-sec-5 mobile-screen-slider">
+                <div className="banner-video">
+                    <VideoOptimizer
+                        src="/video/brandingtabsvideo.mp4"
+                        poster={brandingtabsvideoposter}
+                    />
+                </div>
                 <div className="container">
                     <div className="row p-0 border-0">
                         <div className="col-lg-12">
                             <div className="text text-22 text-center">
                                 <h2>
-                                    Our Creative <br /> Branding Agency Services.
+                                    {ourServicesData?.section_heading || "Our Creative Branding Agency Services."}
                                 </h2>
                             </div>
                         </div>
@@ -116,9 +134,9 @@ export default function Section5() {
                                             <div className="col-lg-6">
                                                 <div className="text">
                                                     <h4>{service.title}</h4>
-                                                    <p>{service.description}</p>
+                                                    <div dangerouslySetInnerHTML={{ __html: service.description }} />
                                                 </div>
-                                                <div className="button-readmore">
+                                                {/* <div className="button-readmore">
                                                     <Link
                                                         href="#"
                                                         value={service.title}
@@ -126,7 +144,7 @@ export default function Section5() {
                                                     >
                                                         Get In Touch
                                                     </Link>
-                                                </div>
+                                                </div> */}
                                             </div>
                                             <div className="col-lg-6">
                                                 <div className="img-box">
@@ -139,6 +157,7 @@ export default function Section5() {
                                                         decoding="async"
                                                         loading="lazy"
                                                         fetchPriority="high"
+                                                        unoptimized={typeof service.image === 'string' && service.image.startsWith('http')}
                                                     />
                                                 </div>
                                             </div>

@@ -1,27 +1,95 @@
-import React from 'react'
+"use client";
 
-import Laptop1 from "/public/services/web-design/laptop-1.webp"
-import Image from 'next/image'
+import React, { memo } from "react";
+import Slider from "react-slick";
+import Image from "next/image";
 
-export default function Section1() {
+import SliderImg1 from '/public/services/web-development/sliderimg01.png';
+import SliderImg2 from '/public/services/web-development/sliderimg02.png';
+import SliderImg3 from '/public/services/web-development/sliderimg03.png';
+
+
+// Fallback images in case API doesn't provide images
+const fallbackSlideData = [
+    {  imgSrc: SliderImg1 },
+    { imgSrc: SliderImg2 },
+    { imgSrc: SliderImg3 },
+];
+
+const sliderSettings = {
+    infinite: true,
+    speed: 1500,
+    arrows: false,
+    dots: false,
+    autoplay: true,
+    autoplaySpeed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    cssEase: "linear",
+    responsive: [
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 3,
+            },
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+            },
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+            },
+        },
+    ],
+};
+
+const WebsiteDesign = memo(({imgSrc }) => (
+    <div className="col-lg-12">
+        <div className="box">
+            <Image 
+              src={imgSrc} 
+              alt="banner image" 
+              className="img-fluid" 
+              priority 
+              width={400}
+              height={300}
+              unoptimized={typeof imgSrc === 'string' && imgSrc.startsWith('http')}
+            />
+            <h5></h5>
+            <p></p>
+        </div>
+    </div>
+));
+
+WebsiteDesign.displayName = 'WebsiteDesign';
+
+const Section1 = ({ bannerData }) => {
+    // Use API images if available, otherwise fallback to static images
+    const slideData = bannerData?.background_image_url?.length > 0 
+        ? bannerData.background_image_url.map(imgUrl => ({ imgSrc: imgUrl }))
+        : fallbackSlideData;
+
     return (
-        <section className="web-sec-1">
+        <section className="section-02">
             <div className="container-fluid p-0">
-                <div className="row">
-                    <div className="col-lg-12 p-0">
-                        <div className="img-box">
-                            <Image
-                                decoding="async"
-                                loading='lazy'
-                                src={Laptop1}
-                                alt="Web Design Laptop"
-                                className="img-fluid"
+                <div className="row slider">
+                    <Slider {...sliderSettings}>
+                        {slideData.map((slide, index) => (
+                            <WebsiteDesign
+                                key={index}
+                                imgSrc={slide.imgSrc}
                             />
-                        </div>
-                    </div>
+                        ))}
+                    </Slider>
                 </div>
             </div>
         </section>
+    );
+};
 
-    )
-}
+export default Section1;
