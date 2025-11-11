@@ -535,3 +535,122 @@ export const fetchMegaMenu = async () => {
   }
 };
 
+export const fetchPortfolioMainPage = async () => {
+  console.log('fetchPortfolioMainPage')
+  try {
+    const response = await fetch(`${BASE_URL}/api/portfolio`, {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+        'Authorization': `Bearer ${STATIC_TOKEN}`,
+        'Content-Type': 'application/json'
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    return data?.data || [];
+
+  } catch (error) {
+    console.error('Error fetching mega menu:', error);
+    return [];
+  }
+};
+export const fetchPortfolioCategory = async () => {
+  console.log('portfolio-categories')
+  try {
+    const response = await fetch(`${BASE_URL}/api/portfolio-categories`, {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+        'Authorization': `Bearer ${STATIC_TOKEN}`,
+        'Content-Type': 'application/json'
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    return data?.data || [];
+
+  } catch (error) {
+    console.error('Error fetching mega menu:', error);
+    return [];
+  }
+};
+export const fetchPortfolioCategoryBySlug = async (slug) => {
+  console.log('fetchPortfolioCategoryBySlug')
+  try {
+    const response = await fetch(`${BASE_URL}/api/portfolio-subcategoriess/slug/${slug}`, {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+        'Authorization': `Bearer ${STATIC_TOKEN}`,
+        'Content-Type': 'application/json'
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    return data?.data || [];
+
+  } catch (error) {
+    console.error('Error fetching mega menu:', error);
+    return [];
+  }
+};
+export const getSubCategoryByCatSlug = async (slug) => {
+  try {
+    const response = await fetch(`${BASE_URL}/api/portfolio-grandcategories/subcategory/${slug}`, {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+        'Authorization': `Bearer ${STATIC_TOKEN}`,
+        'Content-Type': 'application/json'
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    return data?.data || [];
+
+  } catch (error) {
+    console.error('Error fetching mega menu:', error);
+    return [];
+  }
+};
+export const fetchPortfolioGrandImagesBySlug = async (slug) => {
+  try {
+    const response = await fetch(`${BASE_URL}/api/portfolio-grandcategories/category/${slug}`, {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+        'Authorization': `Bearer ${STATIC_TOKEN}`,
+        'Content-Type': 'application/json'
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    return data?.data || [];
+
+  } catch (error) {
+    console.error('Error fetching mega menu:', error);
+    return [];
+  }
+};
+

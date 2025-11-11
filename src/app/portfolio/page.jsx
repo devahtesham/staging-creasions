@@ -11,19 +11,24 @@ import Link from "next/link";
 
 
 import { metadata as pageMetadata } from "@/components/mocks/metadata/portfolio/metadata";
+import { fetchPortfolioMainPage, fetchPortfolioCategory } from "@/utils/helper";
 
 
-export const metadata = pageMetadata; 
+export const metadata = pageMetadata;
 
 
-export default function OurPortfolio() {
+export default async function OurPortfolio() {
+  const portfolioMainPage = await fetchPortfolioMainPage();
+  const portfolioCategory = await fetchPortfolioCategory();
+  const portfolioData = portfolioMainPage[0]?.banner;
+  console.log('[portfolioCategory]', portfolioCategory);
   return (
     <div>
       <section className="inner-title" id="inner-title">
         <style>
           {`
                 #inner-title {
-                    background-image: url('/web-design-bg.webp') !important;
+                    background-image: url(${portfolioData?.background_image}) !important;
                 }
                 `}
         </style>
@@ -32,19 +37,29 @@ export default function OurPortfolio() {
             <div className="col-lg-12">
               <div className="heading">
                 <h1>
-                  Your Gateway <strong>to Portfolio Brilliance.</strong>
+                  {portfolioData?.section_heading}
                 </h1>
-                <p>
-                  Experience excellence through our portfolio showcase—a
-                  testament to skill, innovation, and dedication.
-                </p>
+                <p dangerouslySetInnerHTML={{ __html: portfolioData?.section_text }} />
+
               </div>
             </div>
           </div>
         </div>
       </section>
       <section className="parallax-sec">
-        <div className="img-box-1" id="logo-designs">
+        {
+          portfolioCategory && portfolioCategory.length > 0 && portfolioCategory.map((category,index) => (
+            <div className={`img-box-${index+1}`} id={category.slug}>
+              <div className="text-div">
+                <p>
+                  <Link href={`/portfolio/${category.slug}`} alt={category.text}>{category.text}</Link>
+                </p>
+              </div>
+              <Image src={category.image} alt={category.text} width={1920} height={980} />
+            </div>
+          ))
+        }
+        {/* <div className="img-box-1" id="logo-designs">
           <div className="text-div">
             <p>
               <Link href="/portfolio/logo-design" alt="logo design">LOGO DESIGNS</Link>
@@ -76,7 +91,7 @@ export default function OurPortfolio() {
             </p>
           </div>
           <Image src={Image4} alt="" />
-        </div>
+        </div> */}
       </section>
     </div>
   );

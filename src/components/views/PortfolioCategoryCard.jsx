@@ -14,7 +14,7 @@ export default function PortfolioCategoryCard({ imgSrc, link, caption }) {
   return (
     <div className="col-lg-3 col-md-4 col-sm-6 col-6">
       <div className="img-box">
-        <a href={link} data-fancybox="group" data-caption={caption}>
+        <a href={link} data-fancybox="group" data-caption={""}>
           <img src={imgSrc} alt={caption} className="img-fluid" />
         </a>
       </div>
