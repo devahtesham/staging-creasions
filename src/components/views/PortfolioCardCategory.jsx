@@ -8,7 +8,7 @@ export default function PortfolioCardCategory({ imgSrc, altText, link, title }) 
         <Link href={link}>
           <img
             src={imgSrc}
-            className="img-fluid"
+            className="img-fluid"                                 
             alt={altText}
           />
           <p>{title}</p>
