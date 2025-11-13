@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 export default function Hero() {
     return (
-        <section className="inner-title" style={{ background: 'linear-gradient(0deg, #000 0%, #130A2C 100%)' }}>
+        <section className="inner-title" style={{ background: 'linear-gradient(0deg, #00000000 0%, #130A2C 100%)' }}>
             <div className="container">
                 <div className="row">
                     <div className="col-lg-12">

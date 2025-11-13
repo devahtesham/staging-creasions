@@ -17,7 +17,7 @@ export default function Section2() {
                             high-performing site that drives results.
                         </p>
                         <a
-                            href="https://kadobu.com/business-operations/"
+                            href="https://kadobu.com/"
                             className="t-btn"
                             tabIndex="0"
                         >
@@ -38,12 +38,12 @@ export default function Section2() {
                         market trends, every insight guided us in crafting a sleek, intuitive
                         5-page website that blends aesthetics with performance.
                     </p>
-                    <button
+                    <a href="https://kadobu.com/"
                     className='t-btn'
-                        type="button"
+                        // type="button"
                     >
                         Visit Website
-                    </button>
+                    </a>
                 </div>
             </div>
         </section>

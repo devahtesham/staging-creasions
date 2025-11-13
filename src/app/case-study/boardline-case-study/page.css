@@ -41,10 +41,12 @@ body {
   font-family: "Domine", serif;
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
+  
 }
 html,
 body {
   overflow-x: hidden !important;
+  background: #000;
 }
 ::-webkit-scrollbar {
   width: 10px;
@@ -129,6 +131,10 @@ section.Hero-banner {
 .Boardline-01 .text h3 {
   font-size: 30px !important;
   padding: 2px 0;
+      background: linear-gradient(270deg, #b79bff 0%, #8264f8 52%, #c4c2ff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .text h3 {
@@ -151,6 +157,7 @@ section.Hero-banner {
 
 .Boardline-01 .text p {
   max-width: 90%;
+  color:#fff;
 }
 
 .Boardline-01 .Tool-text {
@@ -287,16 +294,20 @@ section.Hero-banner {
   padding: 70px 0px;
 }
 
-.Boardline-04 .text h3 {
+.Boardline-04 .text h3 , .Boardline-08 .text h3{
   font-size: 45px;
   font-weight: 600;
   color: #000000;
+      background: linear-gradient(270deg, #b79bff 0%, #8264f8 52%, #c4c2ff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 
 .Boardline-04 .text p {
   font-size: 18px;
-  color: #000000;
+  color: #fff;
   font-weight: 400;
   max-width: 770px;
   line-height: 32px;
@@ -373,7 +384,7 @@ img.mobile-img {
 .Boardline-08 .text p {
   font-size: 18px;
   line-height: 30px;
-  color: #000000;
+  color: #fff;
   max-width: 750px;
 }
 

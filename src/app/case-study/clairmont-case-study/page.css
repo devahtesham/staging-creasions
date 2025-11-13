@@ -45,6 +45,7 @@ body {
 html,
 body {
   overflow-x: hidden !important;
+  background: #000;
 }
 ::-webkit-scrollbar {
   width: 10px;
@@ -129,7 +130,12 @@ section.Hero-banner {
 .Clairmont-01 .text h3 {
   font-size: 30px !important;
   padding: 2px 0;
+      background: linear-gradient(270deg, #b79bff 0%, #8264f8 52%, #c4c2ff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
+
 
 .text h3 {
   color: #063349;
@@ -151,6 +157,7 @@ section.Hero-banner {
 
 .Clairmont-01 .text p {
   max-width: 90%;
+  color:#fff;
 }
 
 .Clairmont-01 .Tool-text {
@@ -359,14 +366,18 @@ img.mobile-img {
 }
 
 .Clairmont-06 .text h3 {
-    color: #000000;
+    
     font-size: 40px;
     font-weight: 600;
     padding: 5px 0;
+        background: linear-gradient(270deg, #b79bff 0%, #8264f8 52%, #c4c2ff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .Clairmont-06 .text p {
-    color: #000000;
+    color: #fff;
     font-size: 18px;
     font-weight: 400;
     line-height: 30px;

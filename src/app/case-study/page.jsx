@@ -2,15 +2,16 @@ import IntroSection from '@/components/views/case-study/IntroSection'
 import React from 'react'
 import '@/app/css/case-study/CaseStudy.css'
 import CaseStudiesGrid from '@/components/views/case-study/CaseStudiesGrid'
+import CursorLinesBackground from "@/components/views/services/web-development/CursorLinesBackground";
+import caseStudyBg from '/public/case-study/caseStudyBg.png'
 
 
 export default function page() {
     return (
-        <main className="case-study">
+        <main className="case-study" style={{backgroundImage: `url(${caseStudyBg.src})`}}>
+            <CursorLinesBackground />
             <IntroSection />
-            <div className="gradian-bg">
-                <CaseStudiesGrid />
-            </div>
+            <CaseStudiesGrid />
         </main>
     )
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import Section7_1 from '/public/clairmont/section-7-01.webp'
-import Section7_2 from '/public/clairmont/section-7-02.webp'
+import Section7_2 from '/public/case-study/Clairmont.jpg'
 
 export default function Section9() {
     return (
@@ -26,7 +26,7 @@ export default function Section9() {
                         <div
                             className="text-img-box img-box"
                         >
-                            <a href="#">
+                            <a href="/case-study/lres-case-study">
                                 <img
                                     src={Section7_1.src}
                                     alt=""
@@ -47,14 +47,14 @@ export default function Section9() {
                         <div
                             className="text-img-box-2"
                         >
-                            <a href="#">
+                            <a href="/case-study/clairmont-case-study">
                                 <img
                                     src={Section7_2.src}
                                     alt=""
                                 />
                             </a>
                             <div className="two-text">
-                                <h6>IT Consultancy</h6>
+                                <h6>Real Estate</h6>
                                 <span>
                                     <font style={{ verticalAlign: "inherit" }}>
                                         <font style={{ verticalAlign: "inherit" }}>____</font>
@@ -63,10 +63,10 @@ export default function Section9() {
                             </div>
                             <h4>
                                 <font style={{ verticalAlign: "inherit" }}>
-                                    <font style={{ verticalAlign: "inherit" }}>Jegnite</font>
+                                    <font style={{ verticalAlign: "inherit" }}>Clairmont</font>
                                 </font>
                             </h4>
-                            <p>We provide thoughtful IT and Engineering Management services.</p>
+                            <p>Clairmont Capital Group is a Los Angeles-based private equity firm focused.</p>
                         </div>
                     </div>
                 </div>

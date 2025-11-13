@@ -62,7 +62,7 @@ export default function Section7() {
                     </div>
                     <div className="text" style={{ marginTop: '60px'}}>
                                                     <Link
-                                href="#"
+                                href="https://kadobu.com/"
                                 className="t-btn"
                                 tabIndex="0" style={{ marginBottom: '0px' }}
                             >

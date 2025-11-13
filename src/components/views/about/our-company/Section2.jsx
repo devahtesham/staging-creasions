@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
 
-export default function Section2() {
+export default function Section2({ data }) {
     // const [bgTransform, setBgTransform] = useState(0);
 
     const [scrollIndex, setScrollIndex] = useState(0); // Content change based on scroll
@@ -55,43 +55,52 @@ export default function Section2() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 1.5 }}
                         >
-                            15
+                            {data?.section_title}
                         </motion.h1>
                     </div>
 
                     <div className="col-lg-4">
                         <div className="right-content">
-                        <motion.h2
+                            <motion.h2
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5 }}
                             >
-                                Year Market Experience
+                                {data?.section_heading}
                             </motion.h2>
                             <motion.p
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5 }}
                             >
-                                Leveraging over a decade of expertise in the industry.
+                                <div dangerouslySetInnerHTML={{ __html: data?.section_text }} />
                             </motion.p>
 
-                            <motion.h2
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5 }}
-                            >
-                                4600+ <br />Projects Done
-                            </motion.h2>
-                            <motion.p
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5 }}
-                            >
-                                A testament to our capability & reliability in handling diverse & complex projects.
-                            </motion.p>
+                            {
+                                data?.icon_boxes?.length > 0 && data?.icon_boxes?.map((item) => (
+                                    <>
+                                        <motion.h2
+                                            initial={{ opacity: 0, y: 20 }}
+                                            whileInView={{ opacity: 1, y: 0 }}
+                                            transition={{ duration: 0.5 }}
+                                        >
+                                            {/* 4600+ <br />Projects Done    */}
+                                            {item?.section_heading?.split('+')[0]}+
+                                            <br />
+                                            {item?.section_heading?.split('+')[1]}
+                                        </motion.h2>
+                                        <motion.p
+                                            initial={{ opacity: 0, y: 20 }}
+                                            whileInView={{ opacity: 1, y: 0 }}
+                                            transition={{ duration: 0.5 }}
+                                        >
+                                            <div dangerouslySetInnerHTML={{ __html: item?.section_text }} />
+                                        </motion.p>
+                                    </>
+                                ))
+                            }
 
-                            <motion.h2
+                            {/* <motion.h2
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5 }}
@@ -119,7 +128,7 @@ export default function Section2() {
                                 transition={{ duration: 0.5 }}
                             >
                                 Our commitment to excellence is reflected in our large base of satisfied customers.
-                            </motion.p>
+                            </motion.p> */}
                         </div>
                         <div className="right-content-mobile">
                             <motion.h2

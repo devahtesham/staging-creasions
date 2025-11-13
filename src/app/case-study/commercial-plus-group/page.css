@@ -1,0 +1,342 @@
+body{
+    background-color: #020000;
+    overflow-x: clip;
+}
+
+canvas.backgroundHover {
+    height: 100vh;
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    right: 0;
+    border: 0;
+}
+
+section {
+    position: relative;
+    z-index: 1;
+}
+
+
+section.heroBanner {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 200px;
+}
+
+section.heroBanner img {
+    width: 100%;
+    height: fit-content;
+    object-fit: contain;
+    margin-bottom: -250px;
+    margin-top: -140px;
+}
+
+.text h5 {
+    color: #c5a34a;
+    font-size: 25pt;
+    font-weight: 700;
+    font-family: 'Lato';
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+    margin-bottom: 10px;
+}
+
+.text h1 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 65px;
+    line-height: 68px;
+    font-family: '__nextjs-Geist';
+}
+
+
+section.commercial01 {
+    padding-top: 265px;
+}
+
+section.commercial01::before {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 150px;
+    background: #020000;
+    top: 0;
+    left:-25%;
+    z-index: 0;
+    filter: blur(40px);
+}
+
+.twoBox {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 50px;
+    padding-bottom: 70px;
+}
+
+section.commercial01 img {
+    width: 100%;
+    max-width: 100%;
+    height: fit-content;
+}
+
+section.commercial01 .twoBox img {
+    width: unset;
+    height: unset;
+    max-width: unset;
+}
+
+.text h6 {
+    color: #c5a34a;
+    margin: 0;
+    font-size: 30px;
+    font-family: 'apple';
+    font-style: italic;
+}
+
+.text h2 {
+    color: #fff;
+    margin: 0;
+    font-size: 40px;
+    font-family: '__nextjs-Geist';
+    letter-spacing: -1px;
+    line-height: 68px;
+}
+
+.text p {
+    color: #fff;
+    opacity: 0.7;
+    margin: 0;
+    font-size: 20px;
+    font-family: 'Lato';
+    line-height: 30px;
+}
+
+
+section.commercial02 {
+    padding-top: 100px;
+}
+
+section.commercial02 .text h2 {
+    line-height: 45px;
+}
+
+section.commercial02 .img-Box {display: flex;flex-direction: row;align-items: center;justify-content: center;gap: 29px;}
+
+section.commercial02 .img-Box img {
+    width: 100%;
+    height: fit-content;
+}
+
+
+section.commercial03 {
+    padding: 100px 40px 0;
+}
+
+section.commercial03 img {
+    width: 100%;
+    height: fit-content;
+    margin-top: 50px;
+    object-fit: contain;
+    object-position: center;
+}
+
+
+section.commercial04 {
+    padding-top: 100px;
+}
+
+section.commercial04 .twoBox {
+    gap: 30px;
+    padding-bottom: 0;
+}
+
+.contentBox {
+    padding: 50px 65px 58px 50px;
+    border-radius: 20px;
+    background: #ffffff12;
+    backdrop-filter: blur(2px);
+    border: 1px solid #8d71fa47;
+}
+
+.commercial02 .t-btn {background: #fff;color: #222222;font-size: 20px;font-weight: 700;line-height: 20px;border-radius: 2000px;padding: 20px 50px;border: 1px solid #fff;transition: 0.3s;}
+
+.commercial02 .t-btn:hover {
+    transition: 0.3s;
+    background: transparent;
+    color: #fff;
+}
+
+.btnBox {
+    margin-bottom: 160px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main.commercial-plus-group .img-Box{
+    position: relative;
+}
+
+main.commercial-plus-group .img-Box::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+section.heroBanner .text {
+    position: relative;
+    z-index: 1;
+}
+
+@media only screen and (max-width: 1440px) {
+    section.heroBanner img {
+    margin-bottom: -150px;
+    margin-top: -80px;
+}
+
+section.commercial01 {
+    padding-top: 170px;
+}
+
+section.commercial01 .twoBox img {
+    width: 200px;
+}
+}
+@media only screen and (max-width: 1199px) {
+    header .header-nav ul li a {
+    font-size: 15px;
+}
+
+.text h1 {
+    font-size: 45px;
+    line-height: 55px;
+}
+
+.text h5 {
+    font-size: 23px;
+}
+
+section.heroBanner img {
+    margin-bottom: -120px;
+}
+
+section.commercial01::before {
+    z-index: -1;
+}
+
+.text h2 {
+    font-size: 30px;
+    line-height: 50px;
+}
+
+section.commercial02 .text h2 {
+    line-height: 35px;
+}
+
+.contentBox {
+    padding: 30px 45px 38px 30px;
+}
+
+.text p {
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.btnBox {
+    margin-bottom: 70px;
+}
+}
+@media only screen and (max-width: 991px) {
+
+    canvas.backgroundHover{
+        display: none;
+    }
+    .twoBox {
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.text h6, .text h2, .text h5, .text p, .text h1 {
+    text-align: center;
+}
+
+br {
+    display: none;
+}
+}
+@media only screen and (max-width: 767px) {
+    .text h1 {
+    font-size: 30px;
+    line-height: 40px;
+}
+
+.text h5 {
+    font-size: 16px;
+}
+
+section.heroBanner img {
+    margin-bottom: -50px;
+}
+
+section.commercial01::before {
+    height: 100px;
+    top: -50px;
+}
+
+section.heroBanner .text {
+    z-index: 3;
+}
+
+section.commercial01 {
+    padding-top: 100px;
+}
+
+.text h6 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.text h2 {
+    font-size: 25px;
+    line-height: 34px;
+}
+
+.text p {
+    margin-top: 10px;
+}
+
+section.commercial02 {
+    padding-top: 60px;
+}
+
+section.commercial02 .img-Box {flex-direction: column;}
+
+section.commercial03 {
+    padding: 60px 5px 0;
+}
+
+section.commercial04 {
+    padding-top: 60px;
+}
+
+.contentBox {
+    padding: 25px;
+}
+
+.commercial02 .t-btn {
+    font-size: 16px;
+    padding: 10px 30px;
+}
+}

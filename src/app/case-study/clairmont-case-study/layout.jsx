@@ -1,6 +1,5 @@
 import React from 'react'
 import { Poppins, Domine } from "next/font/google";
-import Header from '@/components/views/case-study/clairmont-page/Header';
 
 
 export const poppins = Poppins({
@@ -17,11 +16,8 @@ export const domine = Domine({
 
 export default function PageLayout({ children }) {
     return (
-        <html>
-            <body className={`${poppins.className} px-24`}>
-                <Header />
+            <div className={`${poppins.className} px-24`}>
                 {children}
-            </body>
-        </html>
+            </div>
     )
 }

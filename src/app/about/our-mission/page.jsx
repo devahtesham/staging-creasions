@@ -12,19 +12,22 @@ import Card5Bg from '/public/our-mission/our-mission-sec03-05.png';
 import Card6Bg from '/public/our-mission/our-mission-sec03-06.png';
 
 import Image from 'next/image';
-import Faq from '@/components/layout/Faq';
-import { faqData } from '@/components/mocks/homeFaq';
+
 
 
 import { metadata as pageMetadata } from "@/components/mocks/metadata/our-mission/metadata";
+import { fetchOurMissionPage } from '@/utils/helper';
+import Faqs from './FAQs';
 
 
-export const metadata = pageMetadata; 
+export const metadata = pageMetadata;
 
 
 
 
-export default function Page() {
+export default async function Page() {
+    const [data] = await fetchOurMissionPage();
+    console.log('[data]', data);
     return (
         <main className="our-mission">
             <section className="inner-title" style={{ backgroundColor: '#000' }}>
@@ -49,87 +52,48 @@ export default function Page() {
             <div className="glass-bg">
                 <section className="sec-02">
                     <div className="container">
-                        <h4>Our Mission</h4>
-                        <p>
-                            At Creasions, our primary goal is to drive success in every project, regardless of time constraints, budget limitations, or evolving requirements. We are committed to achieving the goals you set forth, ensuring that your project reaches its full potential.
-                        </p>
+                        <div dangerouslySetInnerHTML={{ __html: data?.mission_intro?.section_title }} />
+                        <div dangerouslySetInnerHTML={{ __html: data?.mission_intro?.text }} />
+
                     </div>
                 </section>
 
 
                 <section className="sec-03">
                     <div className="container">
-                        <h1>6 Things We Value</h1>
+                        <div dangerouslySetInnerHTML={{ __html: data?.values_section?.section_title }} />
 
                         <div className="row">
-                            <div className="col-lg-4 col-md-6">
-                                <div className="img-box">
-                                    <Image src={Card1Bg} alt="card1" className="card-bg"/>
-                                    <div className="content">
-
-                                        <h2>Excellence</h2>
+                            {
+                                data?.values_section?.cards?.length > 0 && data?.values_section?.cards?.map((card) => (
+                                    <div className="col-lg-4 col-md-6">
+                                        <div className="img-box">
+                                            <Image src={card?.image} alt={card?.image} className="card-bg" width={394} height={649} />
+                                            <div className="content">
+                                                <h2>{card?.title}</h2>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-
-                            <div className="col-lg-4 col-md-6">
-                                <div className="img-box">
-                                    <Image src={Card2Bg} alt="card2" className="card-bg"/>
-                                    <div className="content">
-                                        <h2>Innovation</h2>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="col-lg-4 col-md-6">
-                                <div className="img-box">
-                                    <Image src={Card3Bg} alt="card3" className="card-bg"/>
-                                    <div className="content">
-                                        <h2>Integrity</h2>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div className="col-lg-4 col-md-6">
-                                <div className="img-box">
-                                    <Image src={Card4Bg} alt="card4" className="card-bg"/>
-                                    <div className="content">
-                                        <h2>Collaboration</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-4 col-md-6">
-                                <div className="img-box">
-                                    <Image src={Card5Bg} alt="card5" className="card-bg"/>
-                                    <div className="content">
-                                        <h2>Customer Value</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-4 col-md-6">
-                                <div className="img-box">
-                                    <Image src={Card6Bg} alt="card6" className="card-bg"/>
-                                    <div className="content">
-                                        <h2>Care & Share</h2>
-                                    </div>
-                                </div>
-                            </div>
+                                ))
+                            }
+                            
                         </div>
                     </div>
                 </section>
 
                 <section className="sec-04">
                     <div className="container">
-                        <h4>Driving Success in every Project</h4>
-
-                        <p>At Creasions, our primary goal is to drive success in every project, regardless of time constraints, budget limitations, or evolving requirements. We are committed to achieving the goals you set forth, ensuring that your project reaches its full potential.</p>
-                        <p>At Creasions, our goal is simple: we want to help every business succeed online. As a web development and digital agency, we specialize in creating strong brands, great websites, and smart marketing plans. Our team loves taking ideas and making them real, so your business can thrive.</p>
+                        <div dangerouslySetInnerHTML={{ __html: data?.success_section?.section_title }} />
+                        {
+                            data?.success_section?.paragraphs?.length > 0 && data?.success_section?.paragraphs?.map((p) => (
+                                <div dangerouslySetInnerHTML={{ __html: p }} />
+                            ))
+                        }
                     </div>
                 </section>
             </div>
 
-            <Faq data={faqData} />
+            <Faqs data={data?.faq_section?.faqs} />
         </main>
     )
 }

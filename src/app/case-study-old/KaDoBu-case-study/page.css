@@ -1,0 +1,623 @@
+/* KaDoBu Case Study Page Styles */
+
+
+.KaDoBu-case-study .inner-title {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    background: linear-gradient(to bottom, #130a2c, #000000);
+    position: relative;
+}
+
+.KaDoBu-case-study .inner-title .heading {
+    max-width: 100%;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.KaDoBu-case-study .inner-title .heading h2 {
+    font-size: 170px;
+    position: relative;
+    font-weight: bold;
+    z-index: 10;
+}
+
+.KaDoBu-case-study .bg {
+    position: absolute;
+    background-color: transparent;
+    border: 50px;
+    z-index: 0;
+    left: 0px;
+    top: 0px;
+    transform: translate(0, 0);
+    transition: all 1s ease-in-out;
+}
+
+.KaDoBu-case-study .bg .banner-bg {
+    opacity: 0;
+    animation: banner-bg 6s infinite;
+}
+
+
+@keyframes banner-bg {
+    0% {
+        opacity: 0.2;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.2;
+    }
+}
+
+.KaDoBu-case-study .inner-title .heading h5 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 20px;
+    position: relative;
+    z-index: 10;
+
+}
+
+.KaDoBu-01 {
+    position: relative;
+}
+
+.KaDoBu-01::before {
+    content: "";
+    height: 102%;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+    top: -1%;
+    right: 0;
+    bottom: 0;
+    filter: blur(80px);
+    background: linear-gradient(180deg, #0023B3 0%, #071564 43%, #0E081F 100%);
+}
+
+.KaDoBu-01 .container {
+    z-index: 1;
+    position: relative;
+}
+
+.KaDoBu-01::after {
+    content: "";
+    height: 751px;
+    width: 779px;
+    position: absolute;
+    background: #3127C6;
+    top: 60%;
+    right: -50px;
+    transform: translateY(-50%);
+    border-radius: 100%;
+    filter: blur(200px);
+}
+
+
+.KaDoBu-01 p {
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.4px;
+    color: #E5DEFF;
+}
+
+
+
+
+.KaDoBu-02 h3 {
+    font-size: 15px;
+    letter-spacing: 0.6px;
+    margin-bottom: 50px;
+}
+
+.KaDoBu-02 p {
+    max-width: 1000px;
+    margin: auto;
+    font-size: 35px;
+    line-height: 54px;
+    margin-bottom: 70px;
+}
+
+.KaDoBu-03 .wireframe-background {
+    background-image: url('/kadobu/kadobu-sec03-wireframe.png');
+    background-repeat: no-repeat;
+    background-size: 110%;
+    background-position: center top;
+    background-attachment: scroll;
+    height: 100vh;
+    animation: scrollBackground 10s linear infinite;
+    will-change: background-position;
+    transform: translateZ(0);
+}
+
+@keyframes scrollBackground {
+    0% {
+        background-position-y: 0%;
+    }
+
+    50% {
+        background-position-y: 100%;
+    }
+
+    100% {
+        background-position-y: 0%;
+    }
+}
+
+
+.KaDoBu-02 .t-btn, .KaDoBu-07 .t-btn, .KaDoBu-06 .t-btn {
+    padding: 30px 58px 29px 59px;
+    border-radius: 40px;
+    border: 0.8px solid #817cdd63;
+    background: #ffffff0d;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+    display: inline-block;
+    margin-bottom:140px;
+    position: relative;
+    z-index: 1;
+    transition: 0.3s;
+}
+
+.KaDoBu-02 .t-btn:hover, .KaDoBu-07 .t-btn:hover, .KaDoBu-06 .t-btn:hover {
+    transition: 0.3s;
+    background: #6B65D6 !important;
+}
+
+.KaDoBu-02 {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.KaDoBu-02 .container::after {
+    content: "";
+    background: #3127C6;
+    width: 205px;
+    height: 350px;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%);
+    filter: blur(150px);
+    z-index: 0;
+    animation: moveRightFade 10s infinite ease-in-out;
+}
+
+@keyframes moveRightFade {
+    0% {
+        transform: translate(-50%);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(70%); /* Move slightly to right */
+        opacity: 0.6; /* Fade */
+    }
+    100% {
+        transform: translate(-50%);
+        opacity: 1;
+    }
+}
+
+.KaDoBu-02 .container {
+    position: relative;
+    z-index: 1;
+    overflow-x:hidden;
+}
+
+.KaDoBu-03 h3 {
+    font-size: 65px;
+    line-height: 70px;
+    letter-spacing: 0.4px;
+    font-weight: 900;
+    color: #E5DEFF;
+    max-width: 530px;
+    margin: 0;
+    position: relative;
+}
+
+.KaDoBu-03 p {
+    color: #E5DEFF;
+    margin: 0;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.3px;
+    padding-left: 74px;
+}
+
+.KaDoBu-03 h3::after {
+    content: "";
+    background: #D9D9D9;
+    top: 0;
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    left: 120%;
+    border-radius: 500px;
+}
+
+
+.additional-section .text {
+    text-align: center;
+    background: linear-gradient(180deg, #0c071700 0%, #130d45ad 45%, #130D45 90%);
+    padding: 140px 0 0;
+    position: relative;
+    z-index: 1;
+    margin-top: -770px;
+}
+
+.additional-section {
+    overflow: hidden;
+}
+
+.additional-section img {
+    margin-top: -150px;
+}
+
+
+/* Sectoion 6 */
+.KaDoBu-06 {
+    padding: 120px 0;
+    background-color: #fff;
+}
+
+.KaDoBu-06 .img-box {
+    overflow: hidden;
+    transition: 0.3s;
+    margin-bottom: 30px;
+}
+
+.KaDoBu-06 .img-box img {
+    width: 100%;
+    height: fit-content;
+    object-position: top;
+    object-fit: contain;
+    /* transition: 8s; */
+}
+
+
+.KaDoBu-06 .text h3 {
+    color: #151516;
+    font-size: 55px;
+    letter-spacing: 0.4px;
+    font-weight: 700;
+    margin-bottom:10px;
+}
+
+.KaDoBu-06 .text p {
+    color: #1E1E1E;
+    font-size: 16px;
+    letter-spacing: 0.1px;
+    line-height: 22px;
+    margin-bottom: 70px;
+}
+
+.KaDoBu-06 .text span {
+    color: #1E1E1E;
+}
+
+/* .KaDoBu-06 .img-box:hover img {
+    object-position: bottom;
+} */
+
+.KaDoBu-06 .web-btn {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.KaDoBu-06 a.t-btn.t-btn-arrow.real-bg {
+    background-color: black;
+}
+
+
+
+
+
+/* Section 7 */
+.KaDoBu-07 {
+    padding: 140px 0px;
+        background-position: center;
+    background-size: cover;
+}
+
+.KaDoBu-07 .text {
+    padding-left: 50px;
+    text-align: center;
+}
+
+.KaDoBu-07 .text h3 {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 0px 0 30px;
+    letter-spacing: 0.6px;
+        text-transform: uppercase;
+
+}
+
+.KaDoBu-07 .text p {
+    font-size: 35px;
+    line-height: 54px;
+    color: #E5DEFF;
+    text-align: center;
+    margin: 0 auto 80px;
+    max-width: 90%;
+}
+
+.KaDoBu-07 .container, .KaDoBu-06 .container {
+    max-width: 1420px;
+}
+
+
+.KaDoBu-07 .img-box img {
+    width: 100% !important;
+    display: block;
+    margin: auto;
+}
+
+.KaDoBu-07 .img-box-1 img {
+    width: 100% !important;
+    display: block;
+    margin: auto;
+}
+
+
+
+
+body,
+.KaDoBu-case-study main {
+    background: linear-gradient(180deg, #0B0B2A 0%, #18183A 100%);
+    color: #fff;
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+}
+
+.KaDoBu-01,
+.KaDoBu-02,
+.KaDoBu-04{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.KaDoBu-06 {
+    padding-top: 140px;
+    padding-bottom: 150px;
+}
+
+.KaDoBu-01 h2,
+.KaDoBu-02 h3,
+.KaDoBu-03 h3,
+.KaDoBu-06 h3 {
+    color: #fff;
+}
+
+a.t-btn.t-btn-arrow.real-bg {
+    max-width: 420px;
+    padding: 13px 25px;
+    background: linear-gradient(347deg, #0d071e, #ffffff5c);
+    -webkit-backdrop-filter: blur(51px);
+    backdrop-filter: blur(51px);
+}
+
+a.t-btn.t-btn-arrow.real-bg:hover {
+    background: linear-gradient(270deg, #172ecf 29%, #6966cf 100%);
+}
+
+.KaDoBu-06 img {
+    border-radius: 16px;
+    box-shadow: 0 4px 24px #0002;
+}
+
+.KaDoBu-footer {
+    background: #0B0B2A;
+    color: #fff;
+    padding: 60px 0 30px 0;
+    text-align: center;
+}
+
+.KaDoBu-footer img {
+    max-width: 180px;
+    margin-bottom: 24px;
+}
+
+.space-btween {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+section#form-sec, .home-sec-10 {
+    display: none;
+}
+
+@media (max-width: 1600px) {
+    .KaDoBu-03 .wireframe-background {
+    background-size: 120%;
+}
+}
+@media (max-width: 1600px) {
+    .KaDoBu-06 .text p {
+    margin-bottom: 20px;
+}
+.KaDoBu-case-study .inner-title .heading h2 {
+    font-size: 130px;
+}
+.KaDoBu-01 h2 {
+    font-size: 45px !important;
+}
+.KaDoBu-01 p {
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.KaDoBu-03 .container
+ {
+    padding: 60px 0 !important;
+}
+
+    .KaDoBu-03 .wireframe-background {
+        background-size: 150% !important;
+    }
+
+    .KaDoBu-06 {
+    padding: 60px 0;
+}
+
+.KaDoBu-06 .text h3 {
+    font-size: 40px;
+}
+
+.KaDoBu-07 img {
+    height: fit-content;
+}
+
+}
+@media (max-width: 1199px) {
+    .KaDoBu-03 p {
+    font-size: 15px;
+    line-height: 25px;
+    padding-left: 30px;
+}
+.KaDoBu-03 h3::after {
+    left: 100%;
+}
+.KaDoBu-03 h3 {
+    font-size: 45px;
+    line-height: 50px;
+}
+    .KaDoBu-03 .wireframe-background {
+        background-size: 180% !important;
+    }
+    .KaDoBu-07 {
+    padding: 70px 0px;
+}
+.KaDoBu-07 .text {
+    padding-left: 0;
+}
+.KaDoBu-07 .text p
+ {
+    font-size: 25px;
+    line-height: 35px;
+    margin: 0 auto 50px;
+}
+.KaDoBu-02 .t-btn, .KaDoBu-07 .t-btn, .KaDoBu-06 .t-btn {
+    padding: 15px 40px 15px 40px;
+    font-size: 15px;
+    margin-bottom: 40px;
+}
+.KaDoBu-02 p {
+    font-size: 25px;
+    line-height: 35px;
+    margin-bottom: 40px;
+}
+.additional-section img {
+    margin-top: -70px;
+    height: fit-content !important;
+    object-fit: contain !important;
+}
+.additional-section .text
+ {
+    margin-top: -400px;
+    padding-bottom: 100px;
+}
+.KaDoBu-02 .container {
+    overflow-x: unset;
+}
+}
+@media (max-width: 991px) {
+
+    .KaDoBu-01,
+    .KaDoBu-02,
+    .KaDoBu-04,
+    .KaDoBu-06,
+    .KaDoBu-03 {
+        padding-top: 36px !important;
+        padding-bottom: 36px !important;
+        text-align: center;
+    }
+        .KaDoBu-case-study .inner-title .heading h2 {
+        font-size: 40px;
+    }
+    .KaDoBu-case-study .inner-title .heading h5 {
+    font-size: 15px;
+}
+.KaDoBu-case-study .inner-title .heading {
+    margin-top: 0;
+}
+.KaDoBu-01 h2 {
+        font-size: 25px !important;
+    }
+        .KaDoBu-02 p {
+        font-size: 15px;
+        line-height: 25px;
+    }
+    .additional-section .text {
+        margin-top: -80px;
+        padding-bottom: 0;
+            padding: 0 15px;
+    }
+    
+        .KaDoBu-03 p {
+        padding: 0 15px;
+    }
+        .KaDoBu-03 h3 {
+        font-size: 30px;
+        line-height: 35px;
+        margin-bottom: 20px;
+        padding: 0 15px;
+    }
+
+       .KaDoBu-03 .wireframe-background {
+        background-size: 440% !important;
+        height: 50vh;
+    }
+
+        .KaDoBu-03 {
+            padding: 0 !important;
+        
+    }
+        .KaDoBu-07 .text p {
+        font-size: 15px;
+        line-height: 25px;
+        margin: 0 auto 50px;
+    }
+
+    .KaDoBu-07 .img-box img {
+    margin-bottom: 30px !important;
+}
+.KaDoBu-07 .text {
+        padding: 0;
+        margin: 0 !important;
+    }
+
+    .KaDoBu-02 h3 {
+    margin-bottom: 15px;
+}
+.additional-section {
+    padding: 15px 0;
+}
+
+    .KaDoBu-03 .container {
+        padding:0 0 60px 0 !important;
+    }
+
+
+.KaDoBu-07 img
+ {
+        margin-bottom: 30px !important;
+        max-width: 80% !important;
+
+
+                max-height: fit-content;
+    }
+
+}

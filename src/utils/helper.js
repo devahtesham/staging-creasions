@@ -654,3 +654,76 @@ export const fetchPortfolioGrandImagesBySlug = async (slug) => {
   }
 };
 
+
+
+// ===================== ABOUT PAGE ENDS ===================== 
+export const fetchOurPartnerPage = async () => {
+  try {
+    const response = await fetch(`${BASE_URL}/api/about/our-partners`, {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+        'Authorization': `Bearer ${STATIC_TOKEN}`,
+        'Content-Type': 'application/json'
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    return data?.data || [];
+
+  } catch (error) {
+    console.error('Error fetching mega menu:', error);
+    return [];
+  }
+};
+export const fetchOurMissionPage = async () => {
+  try {
+    const response = await fetch(`${BASE_URL}/api/about/our-mission`, {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+        'Authorization': `Bearer ${STATIC_TOKEN}`,
+        'Content-Type': 'application/json'
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    return data?.data || [];
+
+  } catch (error) {
+    console.error('Error fetching mega menu:', error);
+    return [];
+  }
+};
+export const fetchOurCompanyPage = async () => {
+  try {
+    const response = await fetch(`${BASE_URL}/api/about/our-company`, {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+        'Authorization': `Bearer ${STATIC_TOKEN}`,
+        'Content-Type': 'application/json'
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    return data?.data || [];
+
+  } catch (error) {
+    console.error('Error fetching mega menu:', error);
+    return [];
+  }
+};
+

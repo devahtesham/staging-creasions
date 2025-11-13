@@ -5,10 +5,6 @@ export default function IntroSection() {
   return (
     <section
       className="inner-title"
-      style={{
-        backgroundImage:
-          "url(/services/web-development/web-developemnt-bg-1.webp)"
-      }}
     >
       <div className="container">
         <div className="row">

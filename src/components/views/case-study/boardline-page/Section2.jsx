@@ -110,7 +110,7 @@ export default function Section2() {
                     </div>
                 </div>
                 <div className="row">
-                    <div class="col-lg-12 col-md-12"><div class="text-down text-center"><h4>Project Timeline</h4></div></div>
+                    <div className="col-lg-12 col-md-12"><div className="text-down text-center"><h4>Project Timeline</h4></div></div>
 
                     <div className="col-lg-12">
                         <div className="img-bottom">
