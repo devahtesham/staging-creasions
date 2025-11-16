@@ -1,6 +1,9 @@
 import React from 'react';
 
-const Section3 = () => {
+const Section3 = ({ data }) => {
+    const title = data?.title || 'Introduction and Problem'
+    const text = data?.text || '<p>LRES is a property management company offering clients with services to rent their property...</p>'
+
     return (
         <section 
             className="sec-03 wow fadeIn" 
@@ -14,14 +17,8 @@ const Section3 = () => {
                         style={{ visibility: 'visible', animationDuration: '1s', animationName: 'fadeInUp' }}
                     >
                         <div className="text">
-                            <h2>Introduction and Problem</h2>
-                            <p>
-                                LRES is a property management company offering clients with services to rent their 
-                                property as well as find properties that are available to rent. When the company 
-                                came to us, their website was dull and lacked life. Furthermore, it was difficult 
-                                to navigate and lacked structure. It lacked content or any point of interest and 
-                                did not provide much for visitors viewing the website.
-                            </p>
+                            <h2>{title}</h2>
+                            <div dangerouslySetInnerHTML={{ __html: text }} />
                         </div>
                     </div>
                 </div>

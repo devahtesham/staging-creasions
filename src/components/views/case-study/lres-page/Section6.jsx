@@ -1,6 +1,17 @@
 import React from 'react';
 
-const Section6 = () => {
+const Section6 = ({ data }) => {
+    const title = data?.title || 'Website Layout'
+    const images = data?.images || [
+        'https://clients.muhammadprojects.com/new-muhammad/wp-content/uploads/2023/08/web-1-3.png',
+        'https://clients.muhammadprojects.com/new-muhammad/wp-content/uploads/2023/08/web-2-3.png',
+        'https://clients.muhammadprojects.com/new-muhammad/wp-content/uploads/2023/08/web-3-3.png'
+    ]
+    const buttonUrl = data?.button_url || 'https://mylres.com/'
+    const buttonText = data?.button_text || 'Visit Live Site'
+
+    const animationClasses = ['fadeInLeft', 'fadeInUp', 'fadeInRight']
+
     return (
         <section className="sec-06">
             <div className="container">
@@ -11,53 +22,28 @@ const Section6 = () => {
                         style={{ visibility: 'visible', animationDuration: '1s', animationName: 'fadeInUp' }}
                     >
                         <div className="text">
-                            <h2>Website Layout</h2>
+                            <h2>{title}</h2>
                         </div>
                     </div>
                 </div>
 
                 <div className="row">
-                    <div 
-                        className="col-lg-4 col-md-6 wow fadeInLeft" 
-                        data-wow-duration="1s" 
-                        style={{ visibility: 'visible', animationDuration: '1s', animationName: 'fadeInLeft' }}
-                    >
-                        <div className="text web web-1">
-                            <img 
-                                src="https://clients.muhammadprojects.com/new-muhammad/wp-content/uploads/2023/08/web-1-3.png" 
-                                className="img-fluid" 
-                                alt="" 
-                            />
+                    {images.slice(0, 3).map((image, index) => (
+                        <div 
+                            key={index}
+                            className={`col-lg-4 col-md-6 wow ${animationClasses[index]}`} 
+                            data-wow-duration="1s" 
+                            style={{ visibility: 'visible', animationDuration: '1s', animationName: animationClasses[index] }}
+                        >
+                            <div className={`text web web-${index + 1}`}>
+                                <img 
+                                    src={image} 
+                                    className="img-fluid" 
+                                    alt={`Website Layout ${index + 1}`} 
+                                />
+                            </div>
                         </div>
-                    </div>
-
-                    <div 
-                        className="col-lg-4 col-md-6 wow fadeInUp" 
-                        data-wow-duration="1s" 
-                        style={{ visibility: 'visible', animationDuration: '1s', animationName: 'fadeInUp' }}
-                    >
-                        <div className="text web web-2">
-                            <img 
-                                src="https://clients.muhammadprojects.com/new-muhammad/wp-content/uploads/2023/08/web-2-3.png" 
-                                className="img-fluid" 
-                                alt="" 
-                            />
-                        </div>
-                    </div>
-
-                    <div 
-                        className="col-lg-4 col-md-6 wow fadeInRight" 
-                        data-wow-duration="1s" 
-                        style={{ visibility: 'visible', animationDuration: '1s', animationName: 'fadeInRight' }}
-                    >
-                        <div className="text web web-3">
-                            <img 
-                                src="https://clients.muhammadprojects.com/new-muhammad/wp-content/uploads/2023/08/web-3-3.png" 
-                                className="img-fluid" 
-                                alt="" 
-                            />
-                        </div>
-                    </div>
+                    ))}
                 </div>
 
                 <div 
@@ -66,12 +52,12 @@ const Section6 = () => {
                     style={{ visibility: 'visible', animationDuration: '2s', animationName: 'fadeInUp' }}
                 >
                     <a 
-                        href="https://mylres.com/" 
+                        href={buttonUrl} 
                         target="_blank" 
                         rel="noopener noreferrer" 
                         className="t-btn t-btn-b"
                     >
-                        Visit Live Site
+                        {buttonText}
                     </a>
                 </div>
             </div>

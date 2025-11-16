@@ -1,21 +1,17 @@
 import React from 'react'
 
-import BGImage from '/public/kadobu/Hero-bg.png'
-import Image from 'next/image'
-
-export default function Hero() {
+export default function Hero({ data }) {
+    const title = data?.title || 'KaDoBu & Company'
+    const subtitle = data?.subtitle || 'Strategic Visionaries Growth Pioneers Driving Success'
+    
     return (
         <section className="inner-title" style={{ background: 'linear-gradient(0deg, #00000000 0%, #130A2C 100%)' }}>
             <div className="container">
                 <div className="row">
                     <div className="col-lg-12">
                         <div className="heading">
-                            {/* <div className="bg">
-                                <Image src={BGImage} className="banner-bg" alt="banner-bg" />
-
-                            </div> */}
-                            <h2>KaDoBu <br/>& Company</h2>
-                            <h5>Strategic Visionaries Growth Pioneers Driving Success</h5>
+                            <h2 dangerouslySetInnerHTML={{ __html: title }} />
+                            <h5>{subtitle}</h5>
                         </div>
                     </div>
                 </div>

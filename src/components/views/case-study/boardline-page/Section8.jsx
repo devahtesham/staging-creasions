@@ -1,58 +1,33 @@
 import React from 'react'
-import Section6_1 from '/public/boardline/section-6-01.webp'
-import Section6_2 from '/public/boardline/section-6-02.webp'
-import Section6_3 from '/public/boardline/section-6-03.webp'
 
-export default function Section8() {
+export default function Section8({ data }) {
+    if (!data) return null
+
     return (
-
-
         <section className="Boardline-08">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-4 col-md-12">
                         <div className="text">
-                            <h3>
-                                Mobile
-                                <br /> Experience
-                            </h3>
+                            <h3 dangerouslySetInnerHTML={{ __html: data.title }} />
                         </div>
                     </div>
                     <div className="col-lg-8 col-md-12">
                         <div className="text">
-                            <p>
-                                Like most HOA Board Management Website, mobile dominates their
-                                customer base. We made mobile our first priority, ensuring that the
-                                browsing &amp; shopping experience was effortless.
-                            </p>
+                            <div dangerouslySetInnerHTML={{ __html: data.description }} />
                         </div>
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-lg-4 col-md-4">
-                        <div className="img-box">
-                            <img
-                                src={Section6_1.src}
-                                alt=""
-                            />
-                        </div>
-                    </div>
-                    <div className="col-lg-4 col-md-4">
-                        <div className="img-box-1">
-                            <img
-                                src={Section6_2.src}
-                                alt=""
-                            />
-                        </div>
-                    </div>
-                    <div className="col-lg-4 col-md-4">
-                        <div className="img-box">
-                            <img
-                                src={Section6_3.src}
-                                alt=""
-                            />
-                        </div>
-                    </div>
+                    {data.images?.map((image, index) => {  
+                        return (
+                            <div className="col-lg-4 col-md-4" key={index}>
+                                <div className={index === 1 ? "img-box-1" : "img-box"}>
+                                    <img src={image} alt={`Mobile ${index + 1}`} />
+                                </div>
+                            </div>
+                        )
+                    })}
                 </div>
             </div>
         </section>

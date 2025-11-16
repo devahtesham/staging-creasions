@@ -54,20 +54,37 @@ const ShuffleText = ({ text }) => {
   );
 };
 
-export default function Section5() {
+export default function Section5({ data }) {
+  const heading = data?.section_heading || 'tYPOGRAPHY'
+  const subHeading = data?.section_sub_heading || 'Helvetica Neue'
+  const text = data?.section_text || 'ABCDEFGHIJKLMNOPQRSTUVWXYZ,abcdefghijklmnopqrstuvwxyz,01234567890!@#$%^&*()'
+  
+  // Parse text into separate lines if it contains HTML or commas
+  const textLines = text.includes('<p>') 
+    ? text.split('</p>').filter(line => line.trim()).map(line => line.replace(/<\/?p>/g, '').trim())
+    : text.split(',').map(line => line.trim())
+
   return (
     <section className="caseStudySec04">
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
             <div className="text">
-              <h6>tYPOGRAPHY</h6>
-              <h2>Helvetica Neue</h2>
+              <h6>{heading}</h6>
+              <h2>{subHeading}</h2>
 
               <div className="jumbleLettersMain">
-                <ShuffleText text="ABCDEFGHIJKLMNOPQRSTUVWXYZ" />
-                <ShuffleText text="abcdefghijklmnopqrstuvwxyz" />
-                <ShuffleText text="01234567890!@#$%^&*()" />
+                {textLines.length > 0 ? (
+                  textLines.map((line, index) => (
+                    <ShuffleText key={index} text={line} />
+                  ))
+                ) : (
+                  <>
+                    <ShuffleText text="ABCDEFGHIJKLMNOPQRSTUVWXYZ" />
+                    <ShuffleText text="abcdefghijklmnopqrstuvwxyz" />
+                    <ShuffleText text="01234567890!@#$%^&*()" />
+                  </>
+                )}
               </div>
             </div>
           </div>

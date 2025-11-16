@@ -1,9 +1,14 @@
 import React from 'react'
-import Image from 'next/image'
 import logo from '/public/commercial/logo.png'
 import section02img from '/public/commercial/section02img.png'
 
-export default function Section2() {
+export default function Section2({ data }) {
+    const logoImage = data?.logo || logo.src
+    const badge = data?.badge || 'Car Wash, Gas Station, Retail'
+    const heading = data?.heading || 'Leading Real Estate and Business Advisors'
+    const text = data?.text || '<p>Commercial Plus Group has over 40 years of experience...</p>'
+    const sectionImage = data?.section_image || section02img.src
+
     return (
         <>
         <section className="commercial01">
@@ -12,15 +17,15 @@ export default function Section2() {
                     <div className="col-lg-12">
                         <div className="twoBox">
                             <div className="imgBox">
-                                <Image src={logo} alt="Image"/>
+                                <img src={logoImage} alt="Logo"/>
                             </div>
                             <div className="text">
-                                <h6>Car Wash, Gas Station, Retail</h6>
-                                <h2>Leading Real Estate and Business Advisors</h2>
-                                <p>Commercial Plus Group has over 40 years of experience representing entrepreneurs and growing companies. Today, Commercial Plus Group provides real estate and business advisory services throughout the country. We have industry professionals dedicated to pursuing client objectives through a culture of excellence, integrity, and hard work.</p>
+                                <h6>{badge}</h6>
+                                <h2>{heading}</h2>
+                                <div dangerouslySetInnerHTML={{ __html: text }} />
                             </div>
                         </div>
-                        <Image src={section02img} alt="image"/>
+                        <img src={sectionImage} alt="Section" />
                     </div>
                 </div>
             </div>

@@ -1,11 +1,17 @@
 import React from 'react';
 
-const Section2 = () => {
+const Section2 = ({ data }) => {
+  const backgroundImage = data?.background_image || 'https://clients.muhammadprojects.com/new-muhammad/wp-content/uploads/2023/08/bg-1-2.png'
+  const title = data?.title || 'Welcome to Property Management'
+  const buttonUrl = data?.button_url || 'https://mylres.com/'
+  const buttonText = data?.button_text || 'Visit Live Site'
+  const heroImage = data?.hero_image || 'https://clients.muhammadprojects.com/new-muhammad/wp-content/uploads/2023/08/tap-1-cut.png'
+
   return (
     <section
       className="sec-02 wow fadeIn"
       style={{
-        backgroundImage: 'url("https://clients.muhammadprojects.com/new-muhammad/wp-content/uploads/2023/08/bg-1-2.png")',
+        backgroundImage: `url("${backgroundImage}")`,
         visibility: 'visible',
         animationName: 'fadeIn'
       }}
@@ -22,16 +28,14 @@ const Section2 = () => {
             }}
           >
             <div className="text">
-              <h1>
-                Welcome to<br /> Property Management
-              </h1>
+              <h1>{title?.split(" ").slice(0, 2).join(" ")}<br />{title?.split(" ").slice(2).join(" ")}</h1>
               <a
-                href="https://mylres.com/"
+                href={buttonUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="t-btn"
               >
-                Visit Live Site
+                {buttonText}
               </a>
             </div>
           </div>
@@ -39,10 +43,10 @@ const Section2 = () => {
       </div>
 
       <img
-        src="https://clients.muhammadprojects.com/new-muhammad/wp-content/uploads/2023/08/tap-1-cut.png"
+        src={heroImage}
         className="img-fluid tap-1 wow fadeInRight"
         data-wow-duration="2s"
-        alt=""
+        alt="Hero"
         style={{
           visibility: 'visible',
           animationDuration: '2s',

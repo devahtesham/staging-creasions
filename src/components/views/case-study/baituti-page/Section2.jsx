@@ -2,7 +2,9 @@ import React from 'react'
 import VideoOptimizer from '@/components/ui/VideoOptimizer';
 import VideoThumbnail from '/public/baituti/videooverlay.png'
 
-export default function Section2() {
+export default function Section2({ data }) {
+    const videoUrl = data?.vedio_url || '/video/baitutiVideo.mp4'
+
     return (
         <>
         <section className="caseStudySec01">
@@ -11,7 +13,7 @@ export default function Section2() {
                     <div className="col-lg-12">
                         <div className="videoBox">
                             <VideoOptimizer
-                                src="/video/baitutiVideo.mp4"
+                                src={videoUrl}
                                 poster={VideoThumbnail}
                             />
                         </div>

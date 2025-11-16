@@ -1,9 +1,14 @@
 import React from 'react'
-import Image from 'next/image'
 import colorpallet01 from '/public/baituti/colorpallet01.png'
 import colorpallet02 from '/public/baituti/colorpallet02.png'
 
-export default function Section4() {
+export default function Section4({ data }) {
+    const title = data?.title || 'Style Guide'
+    const description = data?.description || '<p>Baituti Home identity is rooted in elegance, minimalism, and sophistication...</p>'
+    const cards = data?.cards || []
+    
+    const defaultImages = [colorpallet01.src, colorpallet02.src]
+
     return (
         <>
         <section className="caseStudySec03">
@@ -11,15 +16,27 @@ export default function Section4() {
                 <div className="row">
                     <div className="col-lg-12">
                         <div className="twoBox text">
-                            <h2>Style Guide</h2>
+                            <h2>{title}</h2>
                             <span className="divider"></span>
-                            <p>Baituti Home identity is rooted in elegance, minimalism, and sophistication. To ensure consistency across digital and print platforms, we developed a style guide featuring a modern palette inspired by rich interiors, refined typography, and clean layouts. This system allows the brand to communicate with clarity and maintain a premium look across every channel.</p>
+                            <div dangerouslySetInnerHTML={{ __html: description }} />
                         </div>
-                        <div className="text">
-                            <h6>Color Pallete</h6>
-                            <Image src={colorpallet01} alt='image'/>
-                            <Image src={colorpallet02} alt='image'/>
-                        </div>
+                        {cards.length > 0 ? (
+                            cards.map((card, index) => (
+                                <div key={index} className="text">
+                                    <h6>{card.section_heading}</h6>
+                                    {card.images?.map((image, imgIndex) => (
+                                        <img key={imgIndex} src={image} alt={`${card.section_heading} ${imgIndex + 1}`} />
+                                    ))}
+                                </div>
+                            ))
+                        ) : (
+                            <div className="text">
+                                <h6>Color Pallete</h6>
+                                {defaultImages.map((image, index) => (
+                                    <img key={index} src={image} alt={`Color Palette ${index + 1}`} />
+                                ))}
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>

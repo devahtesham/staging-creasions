@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import React from 'react'
 
-export default function IntroSection() {
+export default function IntroSection({ caseStudyIntro }) {
+  const data = caseStudyIntro?.data[0];
   return (
     <section
       className="inner-title"
@@ -11,11 +12,9 @@ export default function IntroSection() {
           <div className="col-lg-12">
             <div className="heading">
               <h1>
-                Case Studies
+                {data?.banner?.banner_title_heading}
               </h1>
-              <p>
-                Discover the best website development in the Dallas with Creasions Digital. We offer comprehensive web development packages to create scalable, innovative websites tailored to your business needs.
-              </p>
+              <div dangerouslySetInnerHTML={{ __html: data?.banner?.banner_text }} />
             </div>
           </div>
         </div>

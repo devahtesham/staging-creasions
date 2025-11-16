@@ -1692,4 +1692,9 @@ footer .copy-right-text.text-center::after {
   text-decoration: underline !important;
 }
 
+.commercial-plus-group-banner .text h1 {
+  margin-top: 0;
+    line-height: 65px;
+}
+
 /* end: NEW STYLING ..... */

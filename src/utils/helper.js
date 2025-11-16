@@ -456,11 +456,11 @@ export const getAllMenuPages = async () => {
   }
 };
 
-export const getServiceDetailPage = async (template,slug) => {
+export const getServiceDetailPage = async (template, slug) => {
   let url;
-  if(template === 'brand-agency'){
+  if (template === 'brand-agency') {
     url = `${BASE_URL}/api/${template}-template/${slug}?slug=true`;
-  }else{
+  } else {
     url = `${BASE_URL}/api/${template}-service-template/${slug}?slug=true`;
   }
   try {
@@ -720,6 +720,53 @@ export const fetchOurCompanyPage = async () => {
 
     const data = await response.json();
     return data?.data || [];
+
+  } catch (error) {
+    console.error('Error fetching mega menu:', error);
+    return [];
+  }
+};
+
+export const fetchCaseStudyPage = async () => {
+  try {
+    const response = await fetch(`${BASE_URL}/api/case-studies-website`, {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+        'Authorization': `Bearer ${STATIC_TOKEN}`,
+        'Content-Type': 'application/json'
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    return data?.data;
+
+  } catch (error) {
+    console.error('Error fetching mega menu:', error);
+    return [];
+  }
+};
+export const fetchCaseStudyTemplate= async (template,id) => {
+  try {
+    const response = await fetch(`${BASE_URL}/api/${template}/${id}`, {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+        'Authorization': `Bearer ${STATIC_TOKEN}`,
+        'Content-Type': 'application/json'
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    return data?.data;
 
   } catch (error) {
     console.error('Error fetching mega menu:', error);

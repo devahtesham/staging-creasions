@@ -1,8 +1,13 @@
 import React from 'react'
 import laptopImage from '/public/baituti/laptopImage.png'
-import Image from 'next/image'
 
-export default function Section3() {
+export default function Section3({ data }) {
+    const badge = data?.badge || 'The Challenge'
+    const text = data?.text || '<p>We did not just design a website for Baituti Home...</p>'
+    const buttonUrl = data?.button_url || 'https://www.baitutihome.com/'
+    const buttonText = data?.button_text || 'Visit Website'
+    const sectionImage = data?.section_image || laptopImage.src
+
     return (
         <>
         <section className="caseStudySec02">
@@ -10,14 +15,14 @@ export default function Section3() {
                 <div className="row">
                     <div className="col-lg-12">
                         <div className="text text-center">
-                            <h6>The Challenge</h6>
-                            <h3>We did not just design a website for Baituti Home, we elevated their entire digital presence.<br/> The UX is effortless, the visuals are luxuriously on-brand, and the content is purposefully curated.<br/> From concept to launch, we crafted a high-performing site that reflects their elegance and drives measurable results.</h3>
-                            <a href="https://www.baitutihome.com/" target='_blank' className='btn t-btn'>Visit Website</a>
+                            <h6>{badge}</h6>
+                            <div dangerouslySetInnerHTML={{ __html: text }} />
+                            <a href={buttonUrl} target='_blank' className='btn t-btn'>{buttonText}</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <Image src={laptopImage} alt='image' />
+            <img src={sectionImage} alt='Section' />
         </section>
         </>
     )

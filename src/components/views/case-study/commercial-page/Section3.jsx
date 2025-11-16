@@ -1,10 +1,14 @@
 import React from 'react'
-import Image from 'next/image'
 import section03img01 from '/public/commercial/section03img01.png'
 import section03img02 from '/public/commercial/section03img02.png'
 import section03img03 from '/public/commercial/section03img03.png'
 
-export default function Section3() {
+export default function Section3({ data }) {
+    const title = data?.title || 'Worldwide Design Framework'
+    const description = data?.description || '<p>Our design framework reflects professionalism, trust, and growth...</p>'
+    const defaultImages = [section03img01.src, section03img02.src, section03img03.src]
+    const images = data?.images?.length > 0 ? data.images : defaultImages
+
     return (
         <>
         <section className="commercial02">
@@ -13,14 +17,14 @@ export default function Section3() {
                     <div className="col-lg-12">
                         <div className="text">
                             <div className="twoBox">
-                                <h2>Worldwide<br/> Design <br/>Framework</h2>
-                                <p>Our design framework reflects professionalism, trust, and growth—values that define our brand. By combining modern aesthetics with timeless principles, we ensure a consistent identity across digital and print platforms. Every element, from typography to color selection, is crafted to communicate reliability, sophistication, and success in the real estate and financial sectors.</p>
+                                <h2>{title}</h2>
+                                <div dangerouslySetInnerHTML={{ __html: description }} />
                             </div>
                         </div>
                         <div className="img-Box">
-                            <Image src={section03img01} alt="image" />
-                            <Image src={section03img02} alt="image" />
-                            <Image src={section03img03} alt="image" />
+                            {images.slice(0, 3).map((image, index) => (
+                                <img key={index} src={image} alt={`Design ${index + 1}`} />
+                            ))}
                         </div>
                     </div>
                 </div>
